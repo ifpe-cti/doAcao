@@ -31,6 +31,9 @@ export class FichasMedicasComponent implements OnInit {
 
   constructor(private servicoFichaMedica: FichasMedicasService, private router:Router) { }
 
+  adicionarDadosFichaMedica(){
+    this.adicionarFichaMedica();
+  }
 
   adicionarFichaMedica(){
     
@@ -40,6 +43,7 @@ export class FichasMedicasComponent implements OnInit {
       this.pulso == null || this.bracoPunsionado == null ||
       this.reacoesAdversas == null || this.flebomistaResponsavel == null ||
       this.tipoDeDoacao == null || this.numeroDoTubo == null || this.volumeDoSangue == null){
+        alert("Alguns formulários estão com informações em falta"); // colocar o growl 
       } else{
    
      let novaFichaMedica: FichaMedica = {nomeUsuario: this.nomePaciente, hemoglobina:this.hemoglobina, pressaoArterial:this.pressaoArterial, 
@@ -57,7 +61,6 @@ export class FichasMedicasComponent implements OnInit {
        this.numeroDoTubo = "";
        this.volumeDoSangue = "";
       
-   
        this.servicoFichaMedica.adicionarFichaMedicaFirebase(novaFichaMedica);
    
        console.log("Nova ficha médica adicionada: " + novaFichaMedica.id);
