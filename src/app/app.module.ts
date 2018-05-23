@@ -33,6 +33,7 @@ import { FichasMedicasComponent } from './fichas-medicas/fichas-medicas.componen
 import { ChartModule } from 'primeng/chart';
 import { AgendamentoDeDoacoesComponent } from './agendamento-de-doacoes/agendamento-de-doacoes.component';
 import  { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { FichasMedicasService } from './fichas-medicas.service';
 // Import pra fazer o imput de calendário funcionar sem erros 
   
 
@@ -78,7 +79,7 @@ import  { BrowserAnimationsModule } from '@angular/platform-browser/animations';
    AngularFirestoreModule.enablePersistence(),
  ],
 
- providers: [UsuariosService],
+ providers: [UsuariosService, FichasMedicasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

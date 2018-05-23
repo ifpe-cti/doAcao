@@ -20,7 +20,6 @@ import { Observable } from 'rxjs';
 export class FichasMedicasService {
 
 
-
   constructor(private servicoFirebase: AngularFirestore) {
     this.fichaMedicaCollection = this.servicoFirebase.collection("fichas-medicas");
   }
