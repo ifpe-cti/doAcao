@@ -11,12 +11,13 @@ export interface FichaMedica{
     peso: String;
     altura: String;
     pulso: String
-    braçoPunsionado: String;
+    bracoPunsionado: String;
     reacoesAdversas: String;
     flebomistaResponsavel: String;
     tipoDeDoacao: String;
     numeroDoTubo: String;
     volumeDoSangue: String;
+    id?: String;
 
     
 

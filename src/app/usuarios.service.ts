@@ -55,8 +55,6 @@ export class UsuariosService {
   }
 
 
-
-
   apagarUsuarioFirebase(usuario): Promise<void> {
     return this.usuarioCollection.doc(usuario.id).delete();
   }
