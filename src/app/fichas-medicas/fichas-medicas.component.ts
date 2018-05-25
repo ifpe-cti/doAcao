@@ -30,10 +30,7 @@ export class FichasMedicasComponent implements OnInit {
   userUsuario: String;
 
   constructor(private servicoFichaMedica: FichasMedicasService, private router:Router) { }
-
-  adicionarDadosFichaMedica(){
-    this.adicionarFichaMedica();
-  }
+  
 
   adicionarFichaMedica(){
     

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Usuario} from './../models/usuario';
-import {UsuariosService} from './../usuarios.service';
-import {AgendamentoDoacao} from './../models/agendamentoDoacao';
+import {AgendamentoDeDoacoesService} from './../agendamento-de-doacoes.service';
+import {AgendamentoDoacao} from './../models/agendamento-de-doacoes';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-agendamento-de-doacoes',
@@ -10,30 +11,43 @@ import {AgendamentoDoacao} from './../models/agendamentoDoacao';
 })
 export class AgendamentoDeDoacoesComponent implements OnInit {
 
-  doadores: AgendamentoDoacao[];
-  loading: boolean;
+  constructor(private AgendamentoDeDoacoesService: AgendamentoDeDoacoesService, private router:Router) {}
 
-  agendamentosDataTable: any[];
+  dataAgendamento: Date;
+  nomeDoador:String;
+  numeroDocumento:String;
 
-  agendamento1: AgendamentoDoacao = {usuarioNome: "Joanne Gabriela", dataAgendamento: "07/08/2018"};
-  agendamento2: AgendamentoDoacao = {usuarioNome: "Milena Siqueira", dataAgendamento: "18/04/2018"};
 
-  constructor() {}
+  agendarDoacao(){
+   
+    if(this.dataAgendamento == null || this.nomeDoador == null || 
+    this.numeroDocumento == null){
+      alert("Há campos ainda não preenchidos")
+    } else{
+ 
+   let novoAgendamento: AgendamentoDoacao = {dataAgendamento:this.dataAgendamento,
+     nomeDoador:this.nomeDoador, numeroDocumentoDoador:this.numeroDocumento};
+
+     this.dataAgendamento = null;
+     this.nomeDoador = "";
+     this.numeroDocumento = "";
+  
+ 
+     this.AgendamentoDeDoacoesService.adicionarAgendamentoDeDoacao(novoAgendamento);
+ 
+     console.log("Nova doação agendada: " + novoAgendamento.nomeDoador + novoAgendamento.numeroDocumentoDoador);
+ 
+    this.router.navigate(['/inicial']);
+   
+    }
+       
+  }
+  }
+
 
   ngOnInit() {
-    this.doadores.push(this.agendamento1);
-    this.doadores.push(this.agendamento2);
 
-
-    this.loading = true;
-
-
-    this.agendamentosDataTable = [
-        {field: 'nomeUsuario', header: 'Nome do Doador'},
-        {field: 'dataAgendamento', header: 'Data Escolhida'},
-        
-    ];
-}
+  }
 
 
   }

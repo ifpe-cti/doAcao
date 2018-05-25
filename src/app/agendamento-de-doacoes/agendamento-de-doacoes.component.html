@@ -10,36 +10,37 @@
 
 <p></p>
 
+
 <div class="ui-g">
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"><p-calendar [(ngModel)]="date3" [showIcon]="true"></p-calendar></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"><p-button (onClick)="agendarDoacao()" label="Agendar"></p-button></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-</div>
-         
-
-<p-dataTable [value]="cars" [loading]="loading">
-    <p-column field="vin" header="Nome do Doador"></p-column>
-    <p-column field="year" header="Data escolhida"></p-column>
-</p-dataTable>
+    <div class="ui-g-4"></div>
+      <div class="ui-g-4"><p-calendar [(ngModel)]="dataAgendamento" [showIcon]="true"></p-calendar></div>
+        <div class="ui-g-4"></div>
+    </div>
 
 
-<p-dataTable [value]="cars">
-    <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header"></p-column>
-</p-dataTable>  
+<div class="ui-g">
+    <div class="ui-g-4"></div>
+      <div class="ui-g-4"><p></p> <input type="text" placeholder ="Nome do Doador" 
+        pInputText [(ngModel)] = "nomeDoador" required/></div>
+        <div class="ui-g-4"></div>
+    </div>
 
 
+    <div class="ui-g">
+        <div class="ui-g-4"></div>
+          <div class="ui-g-4">
+            <p></p> <input type="text" placeholder ="Número de Documento" 
+              pInputText [(ngModel)] = "numeroDocumento" required/>
+            </div>
+            <div class="ui-g-4"></div>
+        </div>
 
-
-
+    
+        <div class="ui-g">
+            <div class="ui-g-4"></div>
+              <div class="ui-g-4"><p-button (onClick)="agendarDoacao()" label="Agendar"></p-button></div>
+                <div class="ui-g-4"></div>
+            </div>
 
 </body>
    

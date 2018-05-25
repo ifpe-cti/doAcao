@@ -24,7 +24,7 @@ export class UsuariosService {
     this.usuarioCollection = this.servicoFirebase.collection("usuario");
   }
 
-  private usuarioCollection: AngularFirestoreCollection<Usuario>;
+  private usuarioCollection: AngularFirestoreCollection<Usuario>; // criação da coleção 
 
   cadastrarUsuarioFirebase(usuario: Usuario) {
     this.usuarioCollection.add(usuario).then(

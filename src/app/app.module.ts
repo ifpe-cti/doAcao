@@ -24,7 +24,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { UsuariosService } from './usuarios.service';
 import { InicialComponent } from './inicial/inicial.component'
 import { FirebaseConfig } from '../environments/firebase.config';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
 import * as firebase from 'firebase';
 import { RequisicaoDoExameComponent } from './requisicao-do-exame/requisicao-do-exame.component';
 import {DropdownModule} from 'primeng/dropdown';

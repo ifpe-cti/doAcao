@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FichaMedica } from './models/ficha-medica';
+import { AgendamentoDoacao } from './models/agendamento-de-doacoes';
 import { Routes, RouterModule } from '@angular/router';
 import { Message } from 'primeng/components/common/api';
 
@@ -12,29 +12,28 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
 import { Observable } from 'rxjs';
 
-
-
 @Injectable({
   providedIn: 'root'
 })
-export class FichasMedicasService {
+export class AgendamentoDeDoacoesService {
 
+ 
   constructor(private servicoFirebase: AngularFirestore) {
-    this.fichaMedicaCollection = this.servicoFirebase.collection("fichas-medicas");
+    this.agendamentosDoacoesCollection = this.servicoFirebase.collection("agendamento-de-doacoes");
   }
 
-  private fichaMedicaCollection: AngularFirestoreCollection<FichaMedica>;
+  private agendamentosDoacoesCollection: AngularFirestoreCollection<AgendamentoDoacao>;
 
-  adicionarFichaMedicaFirebase(fichaMedica: FichaMedica) {
-    this.fichaMedicaCollection.add(fichaMedica).then(
+  adicionarAgendamentoDeDoacao(agendamento: AgendamentoDoacao) {
+    this.agendamentosDoacoesCollection.add(agendamento).then(
       resultado => {
-        fichaMedica.id = resultado.id;
+        agendamento.id = resultado.id;
       });
   }
 
   
-  apagarFichaMedicaFirebase(fichaMedica): Promise<void> {
-    return this.fichaMedicaCollection.doc(fichaMedica.id).delete();
+  apagarAgendamentoDeDoacao(agendamento): Promise<void> {
+    return this.agendamentosDoacoesCollection.doc(agendamento.id).delete();
   }
 
 
