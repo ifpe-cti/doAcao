@@ -42,14 +42,12 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
     }
        
   }
-  }
+  
 
 
   ngOnInit() {
 
   }
 
-
-  }
 
 
