@@ -28,6 +28,7 @@ export class CadastroComponent implements OnInit {
   constructor(private servicoUsuario: UsuariosService, private router:Router) { }
   
 
+
   cadastroUsuario() {
    if(this.nomeUsuario == null || this.userUsuario == null || 
    this.dataNascimentoUsuario == null || this.senhaUsuario == null){
@@ -40,6 +41,7 @@ export class CadastroComponent implements OnInit {
     this.dataNascimentoUsuario = "";
     this.senhaUsuario = "";
 
+    
     this.servicoUsuario.cadastrarUsuarioFirebase(novoUsuario);
 
     console.log("Novo usuário cadastrado: " + novoUsuario.nome);
