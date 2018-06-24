@@ -23,10 +23,7 @@ export class LoginComponent implements OnInit {
       ) { }
 
        redirecionarCadastro(){
-
         this.router.navigate(['/cadastro']); 
-         
-
        }
 
   
@@ -45,15 +42,7 @@ export class LoginComponent implements OnInit {
 
 
         }
-       
-
-        // colocar um if
-           // se o usuario for nulo -> GROWL 
-           // se o usuario existir no banco -> route.navigate 
-
-
       });
-
      }
   
 
@@ -61,4 +50,3 @@ export class LoginComponent implements OnInit {
      
   }
 }
-

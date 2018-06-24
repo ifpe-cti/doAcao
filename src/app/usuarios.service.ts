@@ -2,10 +2,8 @@ import { Injectable } from '@angular/core';
 import { Usuario } from './models/usuario';
 import { Routes, RouterModule } from '@angular/router';
 import { Message } from 'primeng/components/common/api';
-
 import { routing } from './app.routing';
 import { Router } from '@angular/router';
-
 import { AngularFirestore, AngularFirestoreCollection } from "angularfire2/firestore";
 import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -35,7 +33,7 @@ export class UsuariosService {
 
 
   loginUsuario(user: String, senha: String): Observable<any> {
-    let meuObservable = new Observable<any>(observer => {
+    let usuario = new Observable<any>(observer => {
       let collectionFiltrada = this.servicoFirebase.collection<Usuario>('usuario', ref =>
         ref.where('user', '==', user)
            .where('senha', '==', senha));
@@ -51,7 +49,7 @@ export class UsuariosService {
       });
     });
 
-    return meuObservable;
+    return usuario;
   }
 
 
