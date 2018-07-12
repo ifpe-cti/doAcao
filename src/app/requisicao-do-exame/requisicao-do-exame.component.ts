@@ -11,16 +11,11 @@ export class RequisicaoDoExameComponent implements OnInit {
   sexosUsuario: String[];
   sexoEscolhido: String;
 
-  
-  constructor(private router:Router) {
-    }
+  constructor(private router:Router) {}
 
     voltarPaginaInicial(){
       this.router.navigate(['/inicial']);
     }
-
-
-
 
   ngOnInit() {
   }
