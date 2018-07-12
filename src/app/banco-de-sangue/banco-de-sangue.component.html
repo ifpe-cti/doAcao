@@ -2,7 +2,10 @@
 
 
   <div class="ui-g">
-    <div class="ui-g-4"></div>
+    <div class="ui-g-4">
+      <button pButton type="button" label="Voltar" 
+      (click) = "voltarPaginaInicial()"  class="ui-button-danger"></button>         
+    </div>
     <div class="ui-g-4"> <h3>Banco de sangue</h3>  
       <p-chart type="pie" [data]="data"></p-chart>
     </div>

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-requisicao-do-exame',
@@ -13,10 +12,12 @@ export class RequisicaoDoExameComponent implements OnInit {
   sexoEscolhido: String;
 
   
-  constructor() {
+  constructor(private router:Router) {
     }
 
-  
+    voltarPaginaInicial(){
+      this.router.navigate(['/inicial']);
+    }
 
 
 

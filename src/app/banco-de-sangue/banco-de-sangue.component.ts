@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-banco-de-sangue',
@@ -9,8 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class BancoDeSangueComponent implements OnInit {
 
   data: any;
+  
+  voltarPaginaInicial(){
+    this.router.navigate(['/inicial']);
+  }
+  
 
-  constructor() {
+  constructor(private router:Router) {
       this.data = {
           labels: ['O','B','A'],
           datasets: [

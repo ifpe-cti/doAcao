@@ -17,7 +17,10 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
   nomeDoador:String;
   numeroDocumento:String;
 
-
+   voltarPaginaInicial(){
+      this.router.navigate(['/inicial']);
+    }
+    
   agendarDoacao(){
    
     if(this.dataAgendamento == null || this.nomeDoador == null || 
@@ -40,6 +43,7 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
     this.router.navigate(['/inicial']);
    
     }
+ 
        
   }
 
