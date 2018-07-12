@@ -34,6 +34,10 @@ import { ChartModule } from 'primeng/chart';
 import { AgendamentoDeDoacoesComponent } from './agendamento-de-doacoes/agendamento-de-doacoes.component';
 import  { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { FichasMedicasService } from './fichas-medicas.service';
+import { AngularFireAuthModule } from "angularfire2/auth";
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AuthGuard } from './auth-guard.service';
+import { AuthService } from './auth.service'
 // Import pra fazer o imput de calendário funcionar sem erros 
   
 
@@ -75,11 +79,13 @@ import { FichasMedicasService } from './fichas-medicas.service';
    ChartModule,
    BrowserAnimationsModule,
    
-   AngularFireModule.initializeApp(FirebaseConfig),
+   AngularFirestoreModule.enablePersistence(),
+   AngularFireAuthModule,
+   AngularFireModule.initializeApp(FirebaseConfig, 'angular-auth-firebase'),
    AngularFirestoreModule.enablePersistence(),
  ],
 
- providers: [UsuariosService, FichasMedicasService],
+ providers: [UsuariosService, FichasMedicasService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

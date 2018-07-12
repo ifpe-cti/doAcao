@@ -4,6 +4,7 @@ import {UsuariosService} from './../usuarios.service';
 import {Message} from 'primeng/components/common/api';
 
 import {Router} from '@angular/router';
+import { AuthService } from '../../../node_modules/angular2-google-login';
 
 
 
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   
     constructor(private servicoUsuario: UsuariosService, private router:Router
-      ) { }
+      , _googleAuth: AuthService) { }
 
        redirecionarCadastro(){
         this.router.navigate(['/cadastro']); 
@@ -39,8 +40,6 @@ export class LoginComponent implements OnInit {
           this.servicoUsuario.usuarioLogado = usuario; 
           
           this.router.navigate(['/inicial']); 
-
-
         }
       });
      }

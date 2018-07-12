@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
     "angular-material": "^1.1.9",
+    "angular2-google-login": "^1.0.9",
     "angularfire": "^2.3.0",
     "angularfire2": "^5.0.0-rc.5-next",
     "bootstrap": "^4.1.1",
@@ -39,6 +40,15 @@
     "@angular/cli": "~6.0.1",
     "@angular/compiler-cli": "^6.0.0",
     "@angular/language-service": "^6.0.0",
+
+    "@angular-devkit/build-optimizer": "0.0.42",
+    "@angular-devkit/core": "0.0.29",
+    "@angular-devkit/schematics": "0.0.52",
+    "@ngtools/json-schema": "1.1.0",
+    "@ngtools/webpack": "1.9.7",
+    "@schematics/angular": "0.1.17",
+    "webpack": "3.10.0",
+
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
@@ -54,5 +64,6 @@
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2"
+    
   }
 }
