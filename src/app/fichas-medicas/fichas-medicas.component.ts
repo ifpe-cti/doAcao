@@ -31,7 +31,9 @@ export class FichasMedicasComponent implements OnInit {
 
   constructor(private servicoFichaMedica: FichasMedicasService, private router:Router) { }
   
-
+  voltarPaginaInicial(){
+    this.router.navigate(['/inicial']);
+   }
   adicionarFichaMedica(){
     
     if(this.nomePaciente == null || this.hemoglobina == null || 

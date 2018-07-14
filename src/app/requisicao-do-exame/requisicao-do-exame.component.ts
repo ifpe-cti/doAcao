@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router} from '@angular/router';
 
 
 
@@ -13,13 +14,11 @@ export class RequisicaoDoExameComponent implements OnInit {
   sexoEscolhido: String;
 
   
-  constructor() {
-    }
+  constructor(private router:Router) {}
 
-  
-
-
-
+    voltarPaginaInicial(){
+      this.router.navigate(['/inicial']);
+     }
 
   ngOnInit() {
   }
