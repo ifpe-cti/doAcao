@@ -42,7 +42,7 @@ import  { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import * as firebase from '../environments/firebase';
+import * as firebase from 'firebase/app';
 import { FirebaseConfig } from '../environments/firebase.config';
 import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
 
@@ -90,9 +90,9 @@ import { FichasMedicasService } from './fichas-medicas.service';
     ChartModule,
     BrowserAnimationsModule,
 
-    
-    AngularFireModule.initializeApp(firebase, 'angular-auth-firebase',),
+   
     AngularFireModule.initializeApp(FirebaseConfig),
+    AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFirestoreModule.enablePersistence(),
@@ -103,5 +103,4 @@ import { FichasMedicasService } from './fichas-medicas.service';
   bootstrap: [AppComponent]
 
 })
-
 export class AppModule { }
