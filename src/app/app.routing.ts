@@ -10,8 +10,10 @@ import { RequisicaoDoExameComponent } from './requisicao-do-exame/requisicao-do-
 import { BancoDeSangueComponent } from './banco-de-sangue/banco-de-sangue.component';
 import { FichasMedicasComponent } from './fichas-medicas/fichas-medicas.component';
 import { AgendamentoDeDoacoesComponent } from './agendamento-de-doacoes/agendamento-de-doacoes.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
+import { AuthGuard } from './auth-guard.service';
 
 const APP_ROUTES: Routes = [
 { path: '', component: LoginComponent },
@@ -22,9 +24,7 @@ const APP_ROUTES: Routes = [
 { path: 'banco-de-sangue', component: BancoDeSangueComponent },
 { path: 'fichas-medicas', component: FichasMedicasComponent },
 { path: 'agendamento-de-doacoes', component: AgendamentoDeDoacoesComponent },
-
-
-
+{ path: 'dashboard', canActivate: [AuthGuard],component: DashboardComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);

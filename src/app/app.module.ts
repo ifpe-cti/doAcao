@@ -1,9 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
+import { routing } from './app.routing';
 import { FormsModule } from '@angular/forms';
+import { environment } from '../environments/environment';
+
+//component
+
+import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { InicialComponent } from './inicial/inicial.component'
+import { RequisicaoDoExameComponent } from './requisicao-do-exame/requisicao-do-exame.component';
+import { BancoDeSangueComponent } from './banco-de-sangue/banco-de-sangue.component';
+import { FichasMedicasComponent } from './fichas-medicas/fichas-medicas.component';
+import { AgendamentoDeDoacoesComponent } from './agendamento-de-doacoes/agendamento-de-doacoes.component';
+
+//module
+
 import {ButtonModule} from 'primeng/primeng';
 import {EditorModule} from 'primeng/primeng'; 
 import {InputTextModule} from 'primeng/primeng';
@@ -18,68 +32,76 @@ import {GrowlModule} from 'primeng/primeng';
 import {DialogModule} from 'primeng/primeng';
 import {MessagesModule} from 'primeng/primeng';
 import {InputTextareaModule} from 'primeng/primeng';
-import { routing } from './app.routing';
+import {DropdownModule} from 'primeng/dropdown';
+import { ChartModule } from 'primeng/chart';
+import  { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+
+
+//angularFire
+
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabase } from 'angularfire2/database';
-import { UsuariosService } from './usuarios.service';
-import { InicialComponent } from './inicial/inicial.component'
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import * as firebase from '../environments/firebase';
 import { FirebaseConfig } from '../environments/firebase.config';
 import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
-import * as firebase from 'firebase';
-import { RequisicaoDoExameComponent } from './requisicao-do-exame/requisicao-do-exame.component';
-import {DropdownModule} from 'primeng/dropdown';
-import { BancoDeSangueComponent } from './banco-de-sangue/banco-de-sangue.component';
-import { FichasMedicasComponent } from './fichas-medicas/fichas-medicas.component';
-import { ChartModule } from 'primeng/chart';
-import { AgendamentoDeDoacoesComponent } from './agendamento-de-doacoes/agendamento-de-doacoes.component';
-import  { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+
+//service
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth-guard.service';
+import { UsuariosService } from './usuarios.service';
 import { FichasMedicasService } from './fichas-medicas.service';
-// Import pra fazer o imput de calendário funcionar sem erros 
-  
 
 
 @NgModule({
- declarations: [
-   AppComponent,
- 
-   LoginComponent,
-   CadastroComponent,
-   InicialComponent,
-   RequisicaoDoExameComponent,
-   BancoDeSangueComponent,
-   FichasMedicasComponent,
-   AgendamentoDeDoacoesComponent,
- ],
 
- imports: [
-   BrowserModule,
-   GrowlModule,
-   FormsModule, 
-   ButtonModule,
-   EditorModule,
-   InputTextModule,
-   PasswordModule,
-   TabMenuModule,
-   routing,
-   DataListModule,
-   ScheduleModule,
-   CalendarModule,
-   DataTableModule,
-   SharedModule,
-   GrowlModule,
-   DialogModule,
-   InputTextareaModule,
-   CardModule,
-   InputTextModule,
-   DropdownModule,
-   ChartModule,
-   BrowserAnimationsModule,
-   
-   AngularFireModule.initializeApp(FirebaseConfig),
-   AngularFirestoreModule.enablePersistence(),
- ],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    DashboardComponent,
+    CadastroComponent,
+    InicialComponent,
+    RequisicaoDoExameComponent,
+    BancoDeSangueComponent,
+    FichasMedicasComponent,
+    AgendamentoDeDoacoesComponent,
+  ],
 
- providers: [UsuariosService, FichasMedicasService],
+  imports: [
+    BrowserModule,
+    routing,
+    FormsModule,
+    ButtonModule,
+    EditorModule,
+    InputTextModule,
+    PasswordModule,
+    TabMenuModule,
+    DataListModule,
+    ScheduleModule,
+    CalendarModule,
+    DataTableModule,
+    SharedModule,
+    GrowlModule,
+    DialogModule,
+    InputTextareaModule,
+    CardModule,
+    InputTextModule,
+    DropdownModule,
+    ChartModule,
+    BrowserAnimationsModule,
+
+    
+    AngularFireModule.initializeApp(firebase, 'angular-auth-firebase',),
+    AngularFireModule.initializeApp(FirebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule.enablePersistence(),
+  ],
+
+  providers: [AuthService, AuthGuard, UsuariosService, FichasMedicasService,],
+
   bootstrap: [AppComponent]
+
 })
+
 export class AppModule { }
