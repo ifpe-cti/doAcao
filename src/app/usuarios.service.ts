@@ -31,9 +31,7 @@ export class UsuariosService {
       });
   }
 
-
-// adicionar
-
+  
   loginUsuario(user: String, senha: String): Observable<any> {
     let usuario = new Observable<any>(observer => {
       let collectionFiltrada = this.servicoFirebase.collection<Usuario>('usuario', ref =>
@@ -53,6 +51,7 @@ export class UsuariosService {
 
     return usuario;
   }
+
 
 
   apagarUsuarioFirebase(usuario): Promise<void> {

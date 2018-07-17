@@ -7,7 +7,7 @@ import {Router} from '@angular/router';
 
 
 @Component({
-  selector: 'inicial',
+  selector: 'inicial-hemope',
   templateUrl: './inicial.component.html',
   styleUrls: ['./inicial.component.css']
 })

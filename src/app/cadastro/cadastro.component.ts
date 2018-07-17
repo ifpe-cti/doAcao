@@ -34,7 +34,7 @@ export class CadastroComponent implements OnInit {
    } else{
 
   let novoUsuario: Usuario = {nome: this.nomeUsuario, user:this.userUsuario, senha:this.senhaUsuario, 
-    dataNascimento: this.dataNascimentoUsuario}; // criação de um objeto da classe Usuario
+    dataNascimento: this.dataNascimentoUsuario, tipo: "usuario"}; // criação de um objeto da classe Usuario
 
     // limpa os campos de inserção de dados do html do cadastro
     this.nomeUsuario = "";
@@ -49,9 +49,18 @@ export class CadastroComponent implements OnInit {
     this.router.navigate(['/login']); 
   
    }
+
+
+  let usuarioHemope: Usuario = {nome: "hemope", user:"hemope", senha:"hemope", 
+  dataNascimento: "17/07/2018", tipo: "hemope"};
+
+  this.servicoUsuario.cadastrarUsuarioFirebase(usuarioHemope);
       
  }
      
+
+
+
   ngOnInit() {
 
   }

@@ -23,19 +23,19 @@ export class LoginComponent implements OnInit {
     email: '',
     password: ''
   };
-  
-    constructor(private servicoUsuario: UsuariosService, private router:Router
-     , private authService: AuthService, ) { }
+ 
+    constructor(private servicoUsuario: UsuariosService, private router:Router, private authService: AuthService) { }
 
-     signInWithGoogle() {
+  signInWithGoogle() {
       this.authService.signInWithGoogle()
       .then((res) => {
           this.router.navigate(['dashboard'])
         })
       .catch((err) => console.log(err));
     }
-
-    signInWithEmail() {
+   
+    
+signInWithEmail() {
       this.authService.signInRegular(this.user.email, this.user.password)
         .then((res) => {
           console.log(res);
@@ -48,6 +48,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/cadastro']); 
        }
 
+    
   
     loginUsuario(user, senha){
       user = this.userUsuario;
@@ -57,13 +58,17 @@ export class LoginComponent implements OnInit {
           alert("Usuário não cadastrado no banco.")
         } else{
           console.log("Usuario "+ usuario.nome + " logado.");
-
           this.servicoUsuario.usuarioLogado = usuario; 
-          
-          this.router.navigate(['/inicial']); 
-
-
+         
+          if(usuario.tipo = "hemope"){
+             this.router.navigate(['/inicial-hemope']);
+          } 
+          if(usuario.tipo = "usuario"){
+            this.router.navigate(['/inicial-usuario']);
+          }
         }
+
+
       });
      }
   

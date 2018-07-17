@@ -10,11 +10,12 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-import { InicialComponent } from './inicial/inicial.component'
+import { InicialComponent } from './inicial-hemope/inicial.component'
 import { RequisicaoDoExameComponent } from './requisicao-do-exame/requisicao-do-exame.component';
 import { BancoDeSangueComponent } from './banco-de-sangue/banco-de-sangue.component';
 import { FichasMedicasComponent } from './fichas-medicas/fichas-medicas.component';
 import { AgendamentoDeDoacoesComponent } from './agendamento-de-doacoes/agendamento-de-doacoes.component';
+import { InicialUsuarioComponent } from './inicial-usuario/inicial-usuario.component';
 
 //module
 
@@ -34,7 +35,7 @@ import {MessagesModule} from 'primeng/primeng';
 import {InputTextareaModule} from 'primeng/primeng';
 import {DropdownModule} from 'primeng/dropdown';
 import { ChartModule } from 'primeng/chart';
-import  { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 
 //angularFire
@@ -53,6 +54,7 @@ import { UsuariosService } from './usuarios.service';
 import { FichasMedicasService } from './fichas-medicas.service';
 
 
+
 @NgModule({
 
   declarations: [
@@ -65,6 +67,7 @@ import { FichasMedicasService } from './fichas-medicas.service';
     BancoDeSangueComponent,
     FichasMedicasComponent,
     AgendamentoDeDoacoesComponent,
+    InicialUsuarioComponent,
   ],
 
   imports: [
@@ -88,16 +91,18 @@ import { FichasMedicasService } from './fichas-medicas.service';
     InputTextModule,
     DropdownModule,
     ChartModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule,      
 
-   
     AngularFireModule.initializeApp(FirebaseConfig),
     AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFirestoreModule.enablePersistence(),
-  ],
 
+   
+   
+  ],
+// 
   providers: [AuthService, AuthGuard, UsuariosService, FichasMedicasService,],
 
   bootstrap: [AppComponent]

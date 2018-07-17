@@ -7,6 +7,7 @@ export interface Usuario{
 	senha:String;
 	id?: String;
 	dataNascimento:String;
+	tipo:String;
 
 
 } 
