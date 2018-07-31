@@ -19,36 +19,9 @@ export class LoginComponent implements OnInit {
   userUsuario: String;
   senhaUsuario: String;
 
-  user = {
-    email: '',
-    password: ''
-  };
   
-    constructor(private servicoUsuario: UsuariosService, private router:Router
-     , private authService: AuthService, ) { }
-
-     signInWithGoogle() {
-      this.authService.signInWithGoogle()
-      .then((res) => {
-          this.router.navigate(['dashboard'])
-        })
-      .catch((err) => console.log(err));
-    }
-
-    signInWithEmail() {
-      this.authService.signInRegular(this.user.email, this.user.password)
-        .then((res) => {
-          console.log(res);
-          this.router.navigate(['dashboard']);
-        })
-        .catch((err) => console.log('error: ' + err));
-    }
-
-       redirecionarCadastro(){
-        this.router.navigate(['/cadastro']); 
-       }
-
-  
+    constructor(private servicoUsuario: UsuariosService, private router:Router) { }
+    
     loginUsuario(user, senha){
       user = this.userUsuario;
       senha = this.senhaUsuario;
@@ -61,13 +34,17 @@ export class LoginComponent implements OnInit {
           this.servicoUsuario.usuarioLogado = usuario; 
           
           this.router.navigate(['/inicial']); 
-
-
         }
       });
-     }
-  
+    }
 
+    redirecionarLoginGoogle(){
+      this.router.navigate(['/login-google']);
+    }
+    redirecionarCadastro(){
+      this.router.navigate(['/cadastro']); 
+     }
+   
   ngOnInit() {
      
   }

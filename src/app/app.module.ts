@@ -15,6 +15,7 @@ import { RequisicaoDoExameComponent } from './requisicao-do-exame/requisicao-do-
 import { BancoDeSangueComponent } from './banco-de-sangue/banco-de-sangue.component';
 import { FichasMedicasComponent } from './fichas-medicas/fichas-medicas.component';
 import { AgendamentoDeDoacoesComponent } from './agendamento-de-doacoes/agendamento-de-doacoes.component';
+import { LoginGoogleComponent } from './login-google/login-google.component';
 
 //module
 
@@ -65,6 +66,7 @@ import { FichasMedicasService } from './fichas-medicas.service';
     BancoDeSangueComponent,
     FichasMedicasComponent,
     AgendamentoDeDoacoesComponent,
+    LoginGoogleComponent,
   ],
 
   imports: [

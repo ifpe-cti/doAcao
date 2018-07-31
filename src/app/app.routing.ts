@@ -11,6 +11,7 @@ import { BancoDeSangueComponent } from './banco-de-sangue/banco-de-sangue.compon
 import { FichasMedicasComponent } from './fichas-medicas/fichas-medicas.component';
 import { AgendamentoDeDoacoesComponent } from './agendamento-de-doacoes/agendamento-de-doacoes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginGoogleComponent } from './login-google/login-google.component';
 
 
 import { AuthGuard } from './auth-guard.service';
@@ -24,6 +25,7 @@ const APP_ROUTES: Routes = [
 { path: 'banco-de-sangue', component: BancoDeSangueComponent },
 { path: 'fichas-medicas', component: FichasMedicasComponent },
 { path: 'agendamento-de-doacoes', component: AgendamentoDeDoacoesComponent },
+{ path: 'login-google', component: LoginGoogleComponent },
 { path: 'dashboard', canActivate: [AuthGuard],component: DashboardComponent}
 ];
 
