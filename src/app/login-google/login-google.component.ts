@@ -18,9 +18,8 @@ export class LoginGoogleComponent implements OnInit {
     password: ''
   };
 
-  constructor(private servicoUsuario: UsuariosService, private router:Router
-
-    , private authService: AuthService, ) { }
+  constructor(private servicoUsuario: UsuariosService, private router:Router,
+     private authService: AuthService, ) { }
     
     redirecionarLoginGoogle(){
       this.router.navigate(['/inicial']); 
@@ -44,7 +43,7 @@ export class LoginGoogleComponent implements OnInit {
     }
 
        redirecionarCadastro(){
-        this.router.navigate(['/cadastro']); 
+        this.router.navigate(['/inicial']); 
        }
 
   
