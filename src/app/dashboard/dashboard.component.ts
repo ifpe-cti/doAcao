@@ -40,7 +40,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.items = [
-      {label: 'Página Inicial', icon: 'fa-calendar', routerLink:'/inicial'},
+      {label: 'Página Inicial', icon: 'fa-calendar', routerLink:'dashboard'},
       {label: 'Sair', icon: 'fa-book', routerLink:'/login'},
   ];
   }

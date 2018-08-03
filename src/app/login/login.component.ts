@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Usuario} from './../models/usuario';
 import {UsuariosService} from './../usuarios.service';
 import {Message} from 'primeng/components/common/api';
-
+import { MenuItem } from 'primeng/primeng';
 import {Router} from '@angular/router';
 import { AuthService } from '../auth.service';
 
@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
   
     constructor(private servicoUsuario: UsuariosService, private router:Router) { }
     
+
     loginUsuario(user, senha){
       user = this.userUsuario;
       senha = this.senhaUsuario;
@@ -46,6 +47,6 @@ export class LoginComponent implements OnInit {
      }
    
   ngOnInit() {
-     
+   
   }
 }
