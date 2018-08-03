@@ -31,7 +31,7 @@ export class BancoDeSangueComponent implements OnInit {
           };
   }
   voltarPaginaInicial(){
-    this.router.navigate(['/inicial']);
+    this.router.navigate(['dashboard']);
    }
 
 ngOnInit() {

@@ -17,7 +17,7 @@ export class RequisicaoDoExameComponent implements OnInit {
   constructor(private router:Router) {}
 
     voltarPaginaInicial(){
-      this.router.navigate(['/inicial']);
+      this.router.navigate(['dashboard']);
      }
 
   ngOnInit() {

@@ -18,7 +18,7 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
   numeroDocumento:String;
 
   voltarPaginaInicial(){
-    this.router.navigate(['/inicial']);
+    this.router.navigate(['dashboard']);
    }
    
   agendarDoacao(){
@@ -40,7 +40,7 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
  
      console.log("Nova doação agendada: " + novoAgendamento.nomeDoador + novoAgendamento.numeroDocumentoDoador);
  
-    this.router.navigate(['/inicial']);
+    this.router.navigate(['dashboard']);
    
     }
        

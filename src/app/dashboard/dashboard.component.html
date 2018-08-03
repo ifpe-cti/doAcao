@@ -1,37 +1,48 @@
-<div class="container">
-  <!-- Static navbar -->
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Angular2AuthFirebase</a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a>Home</a></li>
-          <li><a>About</a></li>
-          <li><a>Contact</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="" (click)="authService.logout()">Logout</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div><!--/.container-fluid -->
-  </nav>
-  <!-- Main component for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <h1>Welcome to Dashboard</h1>
-    <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-    <p *ngIf="!authService.isLoggedIn()">
-      <a class="btn btn-lg btn-primary" href="" role="button" (click)="authService.logout()">Login</a>
-    </p>
-    <p *ngIf="authService.isLoggedIn()">
-      <a class="btn btn-lg btn-primary" href="" role="button" (click)="authService.logout()">Logout</a>
-    </p>
-  </div>
-</div> <!-- /container -->
+<div class="container"> </div>
+         <body>
+    
+        <div><p-tabMenu [model]="items"></p-tabMenu></div>
+        
+        <div class="ui-g">
+        
+            <div class="ui-g-4"></div>
+        
+            <div class="ui-g-4"> <input type="text" pInputText placeholder="O que você procura?">   
+                    <button pButton type="button" icon="fa-search" class="ui-button-secondary"></button></div>
+                  <div>  <p *ngIf="authService.isLoggedIn()">
+                      <a class="btn btn-primary" href="" role="button" (click)="authService.logout()">Logout</a> </div>
+                </div>
+                <div>
+                <p-card>
+                        <p-header>
+                            Agendar doações
+                        </p-header>
+                        <button pButton type="button" label="Ir" 
+                      class="ui-button-danger" (click)="redirecionarAgendamentoDeDoacoes()"></button>
+                    </p-card> 
+                <p></p>
+                <p-card>
+                        <p-header>
+                        Fichas Médicas
+                        </p-header>
+                        <button pButton type="button" label="Ir" 
+                      class="ui-button-danger" (click) = "redirecionarFichaMedicas()"></button>
+                    </p-card> 
+                <p></p>
+                <p-card>
+                        <p-header>
+                        Inclusão de requisição de exames
+                        </p-header>  
+                         <button pButton type="button" label="Ir" 
+                      class="ui-button-danger" (click)="redirecionarInclusaodeExames()"></button>
+                    </p-card> 
+                <p></p>
+                <p-card>
+                        <p-header>
+                        Banco de sangue
+                        </p-header>
+                        <button pButton type="button" label="Ir" 
+                        class="ui-button-danger" (click)=redirecionarBancoDeSangue()></button>
+                    </p-card> 
+        </div>
+        </body>

@@ -22,7 +22,7 @@ export class LoginGoogleComponent implements OnInit {
      private authService: AuthService, ) { }
     
     redirecionarLoginGoogle(){
-      this.router.navigate(['/inicial']); 
+      this.router.navigate(['dashboard']); 
     }
 
     signInWithGoogle() {
@@ -47,7 +47,7 @@ export class LoginGoogleComponent implements OnInit {
         </button>
 */
        redirecionarCadastro(){
-        this.router.navigate(['/inicial']); 
+        this.router.navigate(['/dashboard']); 
        }
 
   

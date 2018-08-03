@@ -32,7 +32,7 @@ export class FichasMedicasComponent implements OnInit {
   constructor(private servicoFichaMedica: FichasMedicasService, private router:Router) { }
   
   voltarPaginaInicial(){
-    this.router.navigate(['/inicial']);
+    this.router.navigate(['dashboard']);
    }
   adicionarFichaMedica(){
     
@@ -64,7 +64,7 @@ export class FichasMedicasComponent implements OnInit {
    
        console.log("Nova ficha médica adicionada: " + novaFichaMedica.id);
    
-      this.router.navigate(['/inicial']);
+      this.router.navigate(['dashboard']);
      
 
   }
