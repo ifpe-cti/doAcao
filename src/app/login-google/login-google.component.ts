@@ -31,7 +31,7 @@ export class LoginGoogleComponent implements OnInit {
         .then((res) => {
             this.router.navigate(['dashboard'])
           })
-        .catch((err) => console.log(err));
+        .catch((err) => console.log(err)); //erro aqui
   }
   
     signInWithEmail() {
@@ -40,7 +40,7 @@ export class LoginGoogleComponent implements OnInit {
           console.log(res);
           this.router.navigate(['dashboard']);
         })
-        .catch((err) => console.log('error: ' + err));
+        .catch((err) => console.log('error: ' + err)); //erro aqui
     }
 
        redirecionarCadastro(){

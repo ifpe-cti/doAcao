@@ -1,33 +1,30 @@
 <body>
-      <div class="ui-g">
-      <div class="ui-g-4"></div>
-         <div class="ui-g-4 ui-md-4">
-         <div class="ui-inputgroup"> 
-             <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-             <input  [(ngModel)]= "userUsuario" 
-                type="text" size="27" pInputText placeholder="Username">  
-             <label for="float-input"></label>              
+        <div class="ui-g">
+        <div class="ui-g-4"></div>
+           <div class="ui-g-4 ui-md-4">
+           <div class="ui-inputgroup"> 
+               <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+               <input  [(ngModel)]= "userUsuario" 
+                  type="text" size="27" pInputText placeholder="Username">  
+               <label for="float-input"></label>              
+      </div>
+  <p></p>                             
+       <p-growl [(value)]="msgs"></p-growl>
+       <span class="ui-float-label">
+               <input id="float-input" [(ngModel)]= "senhaUsuario" type="password" size="30" pInputText> 
+               <label for="float-input">Senha</label>
+  </span> 
+  <p></p>
+       <button pButton type="button" label="Login" 
+       (click) = "loginUsuario()"  class="ui-button-danger"></button>
+  <p></p>
+           Ainda não possui uma conta?
+  <p></p>
+          <button pButton type="button" label="Cadastre-se!" 
+          (click) = "redirecionarCadastro()"  class="ui-button-danger"></button>
+          <button pButton type="button" label="Entre com o Google" 
+          (click) = "redirecionarLoginGoogle()"  class="ui-button-danger"></button>
     </div>
-
-
-<p></p>
-                                    
-     <p-growl [(value)]="msgs"></p-growl>
-     <span class="ui-float-label">
-             <input id="float-input" [(ngModel)]= "senhaUsuario" type="password" size="30" pInputText> 
-             <label for="float-input">Senha</label>
-</span> 
-<p></p>
-     <button pButton type="button" label="Login" 
-     (click) = "loginUsuario()"  class="ui-button-danger"></button>
-<p></p>
-         Ainda não possui uma conta?
-<p></p>
-        <button pButton type="button" label="Cadastre-se!" 
-        (click) = "redirecionarCadastro()"  class="ui-button-danger"></button>
-        <button pButton type="button" label="Entre com o Google" 
-        (click) = "redirecionarLoginGoogle()"  class="ui-button-danger"></button>
-</div>
-     <div class="ui-g-4"></div>
-     </div>
-</body>
+       <div class="ui-g-4"></div>
+       </div>
+  </body>

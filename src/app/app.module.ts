@@ -92,9 +92,8 @@ import { FichasMedicasService } from './fichas-medicas.service';
     ChartModule,
     BrowserAnimationsModule,
 
-   
     AngularFireModule.initializeApp(FirebaseConfig),
-    AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
+    //AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFirestoreModule.enablePersistence(),
