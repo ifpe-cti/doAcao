@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
 
           this.servicoUsuario.usuarioLogado = usuario; 
           
-          this.router.navigate(['/inicial']); 
+          this.router.navigate(['dashboard']); 
         }
       });
     }
