@@ -16,6 +16,10 @@ import { BancoDeSangueComponent } from './banco-de-sangue/banco-de-sangue.compon
 import { FichasMedicasComponent } from './fichas-medicas/fichas-medicas.component';
 import { AgendamentoDeDoacoesComponent } from './agendamento-de-doacoes/agendamento-de-doacoes.component';
 import { LoginGoogleComponent } from './login-google/login-google.component';
+import { InicialHemopeComponent } from './inicial-hemope/inicial-hemope.component';
+import { VisualizacaoAgendamentosComponent } from './visualizacao-agendamentos/visualizacao-agendamentos.component';
+import { VisualizacaoFichasMedicasComponent } from './visualizacao-fichas-medicas/visualizacao-fichas-medicas.component';
+import { VisualizacaoBancoDeSangueComponent } from './visualizacao-banco-de-sangue/visualizacao-banco-de-sangue.component';
 
 //module
 
@@ -52,6 +56,9 @@ import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
 import { UsuariosService } from './usuarios.service';
 import { FichasMedicasService } from './fichas-medicas.service';
+import { RoteamentoService } from './roteamento.service';
+
+
 
 
 @NgModule({
@@ -67,6 +74,10 @@ import { FichasMedicasService } from './fichas-medicas.service';
     FichasMedicasComponent,
     AgendamentoDeDoacoesComponent,
     LoginGoogleComponent,
+    InicialHemopeComponent,
+    VisualizacaoAgendamentosComponent,
+    VisualizacaoFichasMedicasComponent,
+    VisualizacaoBancoDeSangueComponent,
   ],
 
   imports: [
@@ -99,7 +110,7 @@ import { FichasMedicasService } from './fichas-medicas.service';
     AngularFirestoreModule.enablePersistence(),
   ],
 
-  providers: [AuthService, AuthGuard, UsuariosService, FichasMedicasService,],
+  providers: [AuthService, AuthGuard, UsuariosService, FichasMedicasService],
 
   bootstrap: [AppComponent]
 

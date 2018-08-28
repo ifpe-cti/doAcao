@@ -9,6 +9,10 @@ import { Router} from '@angular/router';
 
 export class BancoDeSangueComponent implements OnInit {
 
+    // ADICIONAR OPÇÃO "ALTERAR DADOS DO BANCO DE SANGUE", 
+    // FUNÇÃO NA QUAL SERÁ POSSÍVEL INFORMAR NOVOS VALORES
+    
+
   data: any;
 
   constructor(private router:Router) {

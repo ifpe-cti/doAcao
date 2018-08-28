@@ -1,12 +1,15 @@
+import { FichaMedica } from './ficha-medica';
 
 export interface Usuario{
 
 	nome:String;
 	user:String;
-
-	senha:String;
-	id?: String;
 	dataNascimento:String;
+	senha:String;
+	fichasMedicas:FichaMedica [];
+
+	id?: String;
+
 
 
 } 

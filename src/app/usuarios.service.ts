@@ -22,7 +22,7 @@ export class UsuariosService {
     this.usuarioCollection = this.servicoFirebase.collection("usuario");
   }
 
-  private usuarioCollection: AngularFirestoreCollection<Usuario>; // criação da coleção 
+  private usuarioCollection: AngularFirestoreCollection<Usuario>;  
 
   cadastrarUsuarioFirebase(usuario: Usuario) {
     this.usuarioCollection.add(usuario).then(
@@ -30,9 +30,6 @@ export class UsuariosService {
         usuario.id = resultado.id;
       });
   }
-
-
-// adicionar
 
   loginUsuario(user: String, senha: String): Observable<any> {
     let usuario = new Observable<any>(observer => {
@@ -52,6 +49,27 @@ export class UsuariosService {
     });
 
     return usuario;
+  }
+
+  getUsuarioByName(nomeCompleto: String){
+    let usuario = new Observable<any>(observer => {
+      let collectionFiltrada = this.servicoFirebase.collection<Usuario>('usuario', ref =>
+        ref.where('nome', '==', nomeCompleto));
+          
+      let resultados = collectionFiltrada.snapshotChanges().subscribe(result => {
+        let document;
+        result.map(documents => {
+          let id = documents.payload.doc.id;
+          let data = documents.payload.doc.data();
+          document = { id: id, ...data };
+        });
+        observer.next(document);
+        observer.complete();
+      });
+    });
+
+    return usuario;
+
   }
 
 

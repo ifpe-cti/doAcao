@@ -12,6 +12,12 @@ import { FichasMedicasComponent } from './fichas-medicas/fichas-medicas.componen
 import { AgendamentoDeDoacoesComponent } from './agendamento-de-doacoes/agendamento-de-doacoes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginGoogleComponent } from './login-google/login-google.component';
+import { InicialHemopeComponent } from './inicial-hemope/inicial-hemope.component';
+import { VisualizacaoAgendamentosComponent } from './visualizacao-agendamentos/visualizacao-agendamentos.component';
+import { VisualizacaoFichasMedicasComponent } from './visualizacao-fichas-medicas/visualizacao-fichas-medicas.component';
+import { VisualizacaoBancoDeSangueComponent } from './visualizacao-banco-de-sangue/visualizacao-banco-de-sangue.component';
+
+
 
 
 import { AuthGuard } from './auth-guard.service';
@@ -26,7 +32,11 @@ const APP_ROUTES: Routes = [
 { path: 'fichas-medicas', component: FichasMedicasComponent },
 { path: 'agendamento-de-doacoes', component: AgendamentoDeDoacoesComponent },
 { path: 'login-google', component: LoginGoogleComponent },
-{ path: 'dashboard', canActivate: [AuthGuard],component: DashboardComponent}
+{ path: 'dashboard', canActivate: [AuthGuard],component: DashboardComponent},
+{ path: 'visualizacao-agendamentos', component: VisualizacaoAgendamentosComponent },
+{ path: 'visualizacao-fichas-medicas', component: VisualizacaoFichasMedicasComponent },
+{ path: 'visualizacao-banco-de-sangue', component: VisualizacaoBancoDeSangueComponent },
+
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);

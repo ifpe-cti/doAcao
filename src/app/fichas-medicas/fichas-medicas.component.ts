@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FichaMedica } from '../models/ficha-medica';
 import { FichasMedicasService } from '../fichas-medicas.service';
 import { Router} from '@angular/router';
+import { UsuariosService } from '../usuarios.service';
+import { Observable } from '../../../node_modules/rxjs';
 
 @Component({
   selector: 'app-fichas-medicas',
@@ -10,7 +12,7 @@ import { Router} from '@angular/router';
 })
 export class FichasMedicasComponent implements OnInit {
 
-  nomePaciente: String;
+  nomeDoador: String;
   hemoglobina: String;
   pressaoArterial: String;
   temperatura: String;
@@ -23,33 +25,43 @@ export class FichasMedicasComponent implements OnInit {
   tipoDeDoacao: String;
   numeroDoTubo: String;
   volumeDoSangue: String;
-
-
-
-  // fazer método de busca que relacione o nome complleto do usuário com um usuário
+  usuarioResgatadoPeloNome: Observable<any>;
+  
   userUsuario: String;
 
-  constructor(private servicoFichaMedica: FichasMedicasService, private router:Router) { }
+  constructor(private servicoFichaMedica: FichasMedicasService, private router:Router, 
+  private servicoUsuario: UsuariosService) { }
   
   voltarPaginaInicial(){
     this.router.navigate(['dashboard']);
    }
+
+
+
+   getUsuario(nomeCompleto:String){
+    nomeCompleto = this.nomeDoador;
+    this.usuarioResgatadoPeloNome =  this.servicoUsuario.getUsuarioByName(nomeCompleto); 
+   }
+
   adicionarFichaMedica(){
     
-    if(this.nomePaciente == null || this.hemoglobina == null || 
+    if(this.nomeDoador == null || this.hemoglobina == null || 
       this.pressaoArterial == null || this.temperatura == null ||
       this.peso == null || this.altura == null ||
       this.pulso == null || this.bracoPunsionado == null ||
       this.reacoesAdversas == null || this.flebomistaResponsavel == null ||
       this.tipoDeDoacao == null || this.numeroDoTubo == null || this.volumeDoSangue == null){
-        alert("Alguns formulários estão com informações em falta"); // colocar o growl 
+        alert("Algumas informações necessárias estão com o campo vazio"); // colocar o growl 
       } else{
+
+      this.getUsuario(this.nomeDoador);
    
-     let novaFichaMedica: FichaMedica = {nomeUsuario: this.nomePaciente, hemoglobina:this.hemoglobina, pressaoArterial:this.pressaoArterial, 
+     let novaFichaMedica: FichaMedica = {doador: this.usuarioResgatadoPeloNome, hemoglobina:this.hemoglobina, pressaoArterial:this.pressaoArterial, 
        temperatura: this.temperatura, peso: this.peso, altura: this.altura, pulso: this.pulso, bracoPunsionado: this.bracoPunsionado,
       reacoesAdversas: this.reacoesAdversas,  flebomistaResponsavel: this.flebomistaResponsavel, tipoDeDoacao:this.tipoDeDoacao,
       numeroDoTubo:this.numeroDoTubo, volumeDoSangue:this.volumeDoSangue};
-       this.nomePaciente = "";
+      
+       this.nomeDoador = "";
        this.hemoglobina = "";
        this.pressaoArterial = "";
        this.temperatura = "";
@@ -61,14 +73,18 @@ export class FichasMedicasComponent implements OnInit {
        this.volumeDoSangue = "";
       
        this.servicoFichaMedica.adicionarFichaMedicaFirebase(novaFichaMedica);
-   
+
        console.log("Nova ficha médica adicionada: " + novaFichaMedica.id);
    
-      this.router.navigate(['dashboard']);
+       this.router.navigate(['inicial-hemope']);
      
 
   }
   }
+
+
+  
+
   ngOnInit() {
   }
 

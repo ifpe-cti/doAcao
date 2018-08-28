@@ -1,10 +1,9 @@
-import { Usuario } from './usuario';
+import { Observable } from '../../../node_modules/rxjs';
 
 
 export interface FichaMedica{
 
-    nomeUsuario: String;
-    // mudar nome do usuário para tipo "Usuário"
+    doador: Observable<any>;
     hemoglobina: String;
     pressaoArterial: String;
     temperatura: String; 
@@ -17,6 +16,7 @@ export interface FichaMedica{
     tipoDeDoacao: String;
     numeroDoTubo: String;
     volumeDoSangue: String;
+    
     id?: String;
 
     

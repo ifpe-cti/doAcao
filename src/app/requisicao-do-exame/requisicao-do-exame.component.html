@@ -4,31 +4,33 @@
   
   <div class="ui-g-12"><p-button (onClick)="voltarPaginaInicial()" label="Voltar"></p-button></div>
   <div class="ui-g-4"></div>
+
   <div class="ui-g-4"> <h3>Dados Pessoais</h3>
     <span class="ui-float-label">
-      <input id="float-input" type="text" size="30" pInputText> 
+
+      <input id="float-input" [(ngModel)]= "nomeDoador" type="text" size="30" pInputText> 
       <label for="float-input">Nome Completo</label>
   </span>
   
   <p></p>
   
   <span class="ui-float-label">
-    <input id="float-input" type="text" size="30" pInputText> 
+    <input id="float-input" [(ngModel)]= "numeroDocumento" type="text" size="30" pInputText> 
     <label for="float-input">Número de Documento</label>
   </span>
   
   <p></p>
   
   <span class="ui-float-label">
-    <input id="float-input" type="text" size="30" pInputText> 
+    <input id="float-input" [(ngModel)]= "tipoDocumento " type="text" size="30" pInputText> 
     <label for="float-input">Tipo de Documento</label>
   </span>
   
   <p></p>
   
   <span class="ui-float-label">
-    <input id="float-input" type="text" size="30" pInputText> 
-    <label for="float-input">órgão Expeditor</label>
+    <input id="float-input" [(ngModel)]= "orgaoExpeditor" type="text" size="30" pInputText> 
+    <label for="float-input">Órgão Expeditor</label>
   </span>
   
   <p></p>
@@ -37,14 +39,14 @@
   <h3>Filiação</h3>
   
   <span class="ui-float-label">
-    <input id="float-input" type="text" size="30" pInputText> 
+    <input id="float-input" [(ngModel)]= "nomePai" type="text" size="30" pInputText> 
     <label for="float-input">Nome do Pai</label>
   </span>
   
   <p></p>
   
   <span class="ui-float-label">
-    <input id="float-input" type="text" size="30" pInputText> 
+    <input id="float-input" [(ngModel)]= "nomeMae" type="text" size="30" pInputText> 
     <label for="float-input">Nome da Mãe</label>
   </span>
   
@@ -53,14 +55,14 @@
   <h3>Informações Técnicas</h3>
   
   <span class="ui-float-label">
-    <input id="float-input" type="text" size="30" pInputText> 
+    <input id="float-input" [(ngModel)]= "tecnicoResponsavel" type="text" size="30" pInputText> 
     <label for="float-input">Técnico Responsável</label>
   </span>
   
   <p></p>
   
   <span class="ui-float-label">
-    <input id="float-input" type="text" size="30" pInputText> 
+    <input id="float-input" [(ngModel)]= "etiquetaAmostra" type="text" size="30" pInputText> 
     <label for="float-input">Etiqueta da Amostra</label>
   </span>
   

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/primeng';
 import {UsuariosService} from './../usuarios.service';
-import {Message} from 'primeng/components/common/api';
+
 import {Router} from '@angular/router';
 
 
