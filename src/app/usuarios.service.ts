@@ -25,6 +25,7 @@ export class UsuariosService {
   private usuarioCollection: AngularFirestoreCollection<Usuario>;  
 
   cadastrarUsuarioFirebase(usuario: Usuario) {
+    console.log(usuario)
     this.usuarioCollection.add(usuario).then(
       resultado => {
         usuario.id = resultado.id;

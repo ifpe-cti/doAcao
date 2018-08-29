@@ -17,48 +17,56 @@ import { FichaMedica } from '../models/ficha-medica';
 
 export class CadastroComponent implements OnInit {
 
-
+  usuario:Usuario;
   msgs: Message[] = [];
   nomeUsuario: String;
   userUsuario: String;
   dataNascimentoUsuario: String;
   senhaUsuario: String;
   controladorIdUsuario: number;
-  fichasMedicas: FichaMedica[];
+  fichasMedicas: FichaMedica[] = [];
  
 
   constructor(private servicoUsuario: UsuariosService, private router:Router,
-  private roteamentoService: RoteamentoService) { }
+  private roteamentoService: RoteamentoService) {
+
+    this.usuario = {nome:"", user:"", dataNascimento:"", senha:"", 
+    fichasMedicas: []}
+
+   }
   
 
   cadastroUsuario() { 
-   if(this.nomeUsuario == null || this.userUsuario == null || 
+   /*if(this.nomeUsuario == null || this.userUsuario == null || 
    this.dataNascimentoUsuario == null || this.senhaUsuario == null){
    } else{
-
-  let novoUsuario: Usuario = {nome: this.nomeUsuario, user:this.userUsuario, senha:this.senhaUsuario, 
+*;
+  /*let novoUsuario: Usuario = {nome: this.nomeUsuario, user:this.userUsuario, senha:this.senhaUsuario, 
     dataNascimento: this.dataNascimentoUsuario, fichasMedicas: this.fichasMedicas}; // criação de um objeto da classe Usuario
 
     // limpa os campos do html do cadastro uma vez que os dados já foram salvos 
     this.nomeUsuario = "";
     this.userUsuario = "";
     this.dataNascimentoUsuario = "";
-    this.senhaUsuario = "";
-
-    this.servicoUsuario.cadastrarUsuarioFirebase(novoUsuario);
-
-    console.log("Novo usuário cadastrado: " + novoUsuario.nome);
+    this.senhaUsuario = "";*/
 
     this.router.navigate(['/login']); 
+
+    this.servicoUsuario.cadastrarUsuarioFirebase(this.usuario);
+
+    console.log("Novo usuário cadastrado: " + this.usuario.nome);
+
+   
   
-   }
+   } 
+   
+   ngOnInit() {
+  
+  }  
       
  }
-     
-  ngOnInit() {
 
-  }
-    
-  }  
+     
+ 
 
   

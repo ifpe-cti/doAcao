@@ -37,7 +37,6 @@ export class FichasMedicasComponent implements OnInit {
    }
 
 
-
    getUsuario(nomeCompleto:String){
     nomeCompleto = this.nomeDoador;
     this.usuarioResgatadoPeloNome =  this.servicoUsuario.getUsuarioByName(nomeCompleto); 

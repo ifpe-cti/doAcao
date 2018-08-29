@@ -64,7 +64,7 @@ export class LoginComponent implements OnInit {
              this.router.navigate(['/inicial-hemope']);
           } 
           if(usuario.tipo = "usuario"){
-            this.router.navigate(['/inicial-usuario']);
+            this.router.navigate(['/inicial']);
           }
         }
 

@@ -10,6 +10,7 @@ export interface Usuario{
 
 	id?: String;
 
+	
 
 
 } 
