@@ -45,15 +45,11 @@ export class CadastroComponent implements OnInit {
     dataNascimento: this.dataNascimentoUsuario, fichasMedicas: this.fichasMedicas}; // criação de um objeto da classe Usuario
 
     // limpa os campos do html do cadastro uma vez que os dados já foram salvos 
-    this.nomeUsuario = "";
-    this.userUsuario = "";
-    this.dataNascimentoUsuario = "";
-    this.senhaUsuario = "";*/
-
-    this.router.navigate(['/login']); 
+   */
 
     this.servicoUsuario.cadastrarUsuarioFirebase(this.usuario);
-
+    this.router.navigate(['/login']); 
+    
     console.log("Novo usuário cadastrado: " + this.usuario.nome);
 
    

@@ -4,6 +4,7 @@ import {AgendamentoDeDoacoesService} from './../agendamento-de-doacoes.service';
 import {AgendamentoDoacao} from './../models/agendamento-de-doacoes';
 import { Router} from '@angular/router';
 
+
 @Component({
   selector: 'app-agendamento-de-doacoes',
   templateUrl: './agendamento-de-doacoes.component.html',
@@ -11,43 +12,38 @@ import { Router} from '@angular/router';
 })
 export class AgendamentoDeDoacoesComponent implements OnInit {
 
-  constructor(private AgendamentoDeDoacoesService: AgendamentoDeDoacoesService, private router:Router) {}
+  constructor(private AgendamentoDeDoacoesService: AgendamentoDeDoacoesService, 
+    private router:Router) {
 
-  dataAgendamento: Date;
-  nomeDoador:String;
-  numeroDocumento:String;
+      this.agendamentoDoacao = {nomeDoador:"", dataAgendamento: null, 
+      numeroDocumentoDoador:""
+    }
+  }
+
+
+  agendamentoDoacao: AgendamentoDoacao;
+    
 
   voltarPaginaInicial(){
     this.router.navigate(['dashboard']);
    }
    
   agendarDoacao(){
-   
-    if(this.dataAgendamento == null || this.nomeDoador == null || 
-    this.numeroDocumento == null){
-      alert("Há campos ainda não preenchidos")
-    } else{
  
-   let novoAgendamento: AgendamentoDoacao = {dataAgendamento:this.dataAgendamento,
-     nomeDoador:this.nomeDoador, numeroDocumentoDoador:this.numeroDocumento};
-
-     this.dataAgendamento = null;
-     this.nomeDoador = "";
-     this.numeroDocumento = "";
-  
+     this.AgendamentoDeDoacoesService.adicionarAgendamentoDeDoacao(this.agendamentoDoacao);
  
-     this.AgendamentoDeDoacoesService.adicionarAgendamentoDeDoacao(novoAgendamento);
- 
-     console.log("Nova doação agendada: " + novoAgendamento.nomeDoador + novoAgendamento.numeroDocumentoDoador);
+     console.log("Nova doação agendada: " + this.agendamentoDoacao.nomeDoador + 
+     this.agendamentoDoacao.numeroDocumentoDoador);
  
     this.router.navigate(['dashboard']);
    
     }
-       
-  }
 
-
-  ngOnInit() {
+      ngOnInit() {
 
   }
-}
+}  
+  
+
+
+ 

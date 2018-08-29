@@ -12,7 +12,7 @@
 
 <div class="ui-g">
     <div class="ui-g-4"></div>
-      <div class="ui-g-4"><p-calendar [(ngModel)]="dataAgendamento" [showIcon]="true"></p-calendar></div>
+      <div class="ui-g-4"><p-calendar [(ngModel)]="agendamentoDoacao.dataAgendamento" [showIcon]="true"></p-calendar></div>
         <div class="ui-g-4"></div>
     </div>
 
@@ -20,7 +20,7 @@
 <div class="ui-g">
     <div class="ui-g-4"></div>
       <div class="ui-g-4"><p></p> <input type="text" placeholder ="Nome do Doador" 
-        pInputText [(ngModel)] = "nomeDoador" required/></div>
+        pInputText [(ngModel)] = "agendamentoDoacao.nomeDoador" required/></div>
         <div class="ui-g-4"></div>
     </div>
 
@@ -29,7 +29,7 @@
         <div class="ui-g-4"></div>
           <div class="ui-g-4">
             <p></p> <input type="text" placeholder ="Número de Documento" 
-              pInputText [(ngModel)] = "numeroDocumento" required/>
+              pInputText [(ngModel)] = "agendamentoDoacao.numeroDocumentoDoador" required/>
             </div>
             <div class="ui-g-4"></div>
         </div>
