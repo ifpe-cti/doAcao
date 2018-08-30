@@ -32,7 +32,9 @@ const APP_ROUTES: Routes = [
 { path: 'fichas-medicas', component: FichasMedicasComponent },
 { path: 'agendamento-de-doacoes', component: AgendamentoDeDoacoesComponent },
 { path: 'login-google', component: LoginGoogleComponent },
-{ path: 'dashboard', canActivate: [AuthGuard],component: DashboardComponent},
+{ path: 'dashboard'
+// canActivate: [AuthGuard]
+,component: DashboardComponent},
 { path: 'visualizacao-agendamentos', component: VisualizacaoAgendamentosComponent },
 { path: 'visualizacao-fichas-medicas', component: VisualizacaoFichasMedicasComponent },
 { path: 'visualizacao-banco-de-sangue', component: VisualizacaoBancoDeSangueComponent },
