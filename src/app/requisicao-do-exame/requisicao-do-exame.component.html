@@ -1,0 +1,78 @@
+<body>
+
+ <div class="ui-g">
+  
+  <div class="ui-g-12"><p-button (onClick)="voltarPaginaInicial()" label="Voltar"></p-button></div>
+  <div class="ui-g-4"></div>
+
+  <div class="ui-g-4"> <h3>Dados Pessoais</h3>
+    <span class="ui-float-label">
+
+      <input id="float-input" [(ngModel)]= "requisicaoExames.nomeDoador" type="text" size="30" pInputText> 
+      <label for="float-input">Nome Completo</label>
+  </span>
+  
+  <p></p>
+  
+  <span class="ui-float-label">
+    <input id="float-input" [(ngModel)]= "requisicaoExames.numeroDocumento" type="text" size="30" pInputText> 
+    <label for="float-input">Número de Documento</label>
+  </span>
+  
+  <p></p>
+  
+  <span class="ui-float-label">
+    <input id="float-input" [(ngModel)]= "requisicaoExames.tipoDocumento " type="text" size="30" pInputText> 
+    <label for="float-input">Tipo de Documento</label>
+  </span>
+  
+  <p></p>
+  
+  <span class="ui-float-label">
+    <input id="float-input" [(ngModel)]= "requisicaoExames.orgaoExpeditor" type="text" size="30" pInputText> 
+    <label for="float-input">Órgão Expeditor</label>
+  </span>
+  
+  <p></p>
+  
+  
+  <h3>Filiação</h3>
+  
+  <span class="ui-float-label">
+    <input id="float-input" [(ngModel)]= "requisicaoExames.nomePai" type="text" size="30" pInputText> 
+    <label for="float-input">Nome do Pai</label>
+  </span>
+  
+  <p></p>
+  
+  <span class="ui-float-label">
+    <input id="float-input" [(ngModel)]= "requisicaoExames.nomeMae" type="text" size="30" pInputText> 
+    <label for="float-input">Nome da Mãe</label>
+  </span>
+  
+  <p></p>
+  
+  <h3>Informações Técnicas</h3>
+  
+  <span class="ui-float-label">
+    <input id="float-input" [(ngModel)]= "requisicaoExames.tecnicoResponsavel" type="text" size="30" pInputText> 
+    <label for="float-input">Técnico Responsável</label>
+  </span>
+  
+  <p></p>
+  
+  <span class="ui-float-label">
+    <input id="float-input" [(ngModel)]= "requisicaoExames.etiquetaAmostra" type="text" size="30" pInputText> 
+    <label for="float-input">Etiqueta da Amostra</label>
+  </span>
+  
+  <p></p>
+  
+  <button pButton type="button" label="Enviar Dados" 
+       (click) = "adicionarRequisicaoExame()"  class="ui-button-danger"></button> </div>
+
+  
+  <div class="ui-g-4"></div>
+</div>
+
+</body>

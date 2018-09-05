@@ -1,0 +1,25 @@
+<body>
+<div class="ui-g">
+    <div class="ui-g-4"></div>
+    <div class="ui-g-4"><h3>Formulário de Cadastro</h3>
+    
+<p></p> <input type="text" placeholder ="Nome" 
+  pInputText [(ngModel)] = "usuario.nome" required/> 
+
+<p></p> <input type="text" placeholder="Usuário"
+ pInputText [(ngModel)] = "usuario.user" required/> 
+
+ <p></p> <input type="text" placeholder="Data de Nascimento"
+ pInputText [(ngModel)] = "usuario.dataNascimento" required/>
+
+<p></p> <input type="password" placeholder="Senha"
+ pPassword [(ngModel)] = "usuario.senha" required/>
+<p></p>
+
+<button pButton type="button" label="Enviar dados" 
+     (click) = "cadastroUsuario()"  class="ui-button-danger"></button>
+
+</div>
+    <div class="ui-g-4"></div>
+</div>
+</body>

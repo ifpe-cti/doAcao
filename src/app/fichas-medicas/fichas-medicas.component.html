@@ -1,0 +1,93 @@
+<body>
+
+    <div class="ui-g">
+        <div class="ui-g-12"><p-button (onClick)="voltarPaginaInicial()" label="Voltar"></p-button></div>
+        <div class="ui-g-4"></div>
+        <div class="ui-g-4"><h2>Fichas Médicas</h2> 
+        </div>
+        <div class="ui-g-4"></div>
+    </div>
+
+
+    <div class="ui-g">
+        <div class="ui-g-4"></div>
+        <div class="ui-g-4"><h4>Dados do Doador</h4> 
+        </div>
+        <div class="ui-g-4"></div>
+    </div>
+
+
+    <div class="ui-g">
+        <div class="ui-g-4"> <span class="ui-float-label">
+            <input id="float-input" [(ngModel)] = "fichaMedica.nomeDoador" type="text" size="153" pInputText> 
+            <label for="float-input">Nome Completo</label>
+        </span></div>
+        <div class="ui-g-4"></div>
+        <div class="ui-g-4"></div>
+    </div>
+
+
+<p></p>
+    <div class="ui-g">
+        <div class="ui-g-12 ui-md-6 ui-lg-3">
+             <input type="text" pInputText placeholder="Hemoglobina" [(ngModel)] = "fichaMedica.hemoglobina" /></div>
+        <div class="ui-g-12 ui-md-6 ui-lg-3"> 
+            <input type="text" pInputText placeholder="Pressão Aterial" [(ngModel)] = "pressaoArterial"/></div>
+        <div class="ui-g-12 ui-md-6 ui-lg-3"> 
+            <input type="text" pInputText placeholder="Temperatura" [(ngModel)] = "temperatura"/></div>
+        <div class="ui-g-12 ui-md-6 ui-lg-3"> 
+            <input type="text" pInputText placeholder="Peso" [(ngModel)] = "peso"/></div>
+    </div>
+
+    <div class="ui-g">
+        <div class="ui-g-12 ui-md-6 ui-lg-3"> 
+            <input type="text" pInputText placeholder="Altura" [(ngModel)] = "fichaMedica.altura"/></div>
+        <div class="ui-g-12 ui-md-6 ui-lg-3"> 
+            <input type="text" pInputText placeholder="Pulso" [(ngModel)] = "pulso"/></div>
+        <div class="ui-g-12 ui-md-6 ui-lg-3"> 
+            <input type="text" pInputText placeholder="Braço Puncionado" [(ngModel)] = "fichaMedica.bracoPunsionado"/></div>
+        <div class="ui-g-12 ui-md-6 ui-lg-3">
+            <input type="text" pInputText placeholder="Reações Adversas" [(ngModel)] = "fichaMedica.reacoesAdversas"/></div>
+    </div>
+ 
+    <p></p>
+
+    <div class="ui-g">
+        <div class="ui-g-4"></div>
+        <div class="ui-g-4"><h4>Informações sobre a Coleta</h4> 
+        </div>
+        <div class="ui-g-4"></div>
+    </div>
+
+<p></p>
+
+    <div class="ui-g">
+        <div class="ui-g-12 ui-md-6 ui-lg-3"> 
+            <input type="text" pInputText placeholder="Flebomista Responsável" [(ngModel)] = "fichaMedica.flebomistaResponsavel"/></div>
+        <div class="ui-g-12 ui-md-6 ui-lg-3"> 
+            <input type="text" pInputText placeholder=" Tipo de Doação" [(ngModel)] = "fichaMedica.tipoDeDoacao"/></div>
+        <div class="ui-g-12 ui-md-6 ui-lg-3"> 
+            <input type="text" pInputText placeholder="Número do Tubo" [(ngModel)] = "fichaMedica.numeroDoTubo"/></div>
+        <div class="ui-g-12 ui-md-6 ui-lg-3">
+            <input type="text" pInputText placeholder="Volume do Sangue" [(ngModel)] = "fichaMedica.volumeDoSangue"/></div>
+    </div>
+
+    <p></p>
+
+
+     <div class="ui-g">
+        <div class="ui-g-2"></div>
+        <div class="ui-g-2"></div>
+        <div class="ui-g-2"></div>
+        <div class="ui-g-2"></div>
+        <div class="ui-g-2"></div>
+        
+        <div class="ui-g-2"><button pButton type="button" label="Confirmar Dados" 
+          (click) = "adicionarFichaMedica()"  class="ui-button-danger"></button>
+     </div>
+    </div>
+
+
+</body>
+
+

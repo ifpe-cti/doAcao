@@ -1,0 +1,48 @@
+<body>
+    
+        <div><p-tabMenu [model]="items"></p-tabMenu></div>
+
+<div class="ui-g">
+<p>START HERE!</p>
+    <div class="ui-g-4"></div>
+
+    <div class="ui-g-4"> <input type="text" pInputText placeholder="O que você procura?">   
+            <button pButton type="button" icon="fa-search" class="ui-button-secondary"></button></div>
+        </div>
+        <div>
+        <p-card>
+                <p-header>
+                    Agendar doação
+                </p-header>
+                <button pButton type="button" label="Ir" 
+              class="ui-button-danger" (click)="redirecionarAgendamentoDeDoacoes()"></button>
+            </p-card> 
+        <p></p>
+        <p-card>
+                <p-header>
+                Visualizar minhas fichas médicas
+                </p-header>
+                <button pButton type="button" label="Ir" 
+              class="ui-button-danger" (click) = "redirecionarFichaMedicas()"></button>
+            </p-card> 
+        <p></p>
+        <p-card>
+                <p-header>
+               Solicitar inclusão de requisição de exames
+                </p-header>  
+                 <button pButton type="button" label="Ir" 
+              class="ui-button-danger" (click)="redirecionarInclusaodeExames()"></button>
+            </p-card> 
+        <p></p>
+        <p-card>
+                <p-header>
+               Informações sobre o banco de sangue
+                </p-header>
+                <button pButton type="button" label="Ir" 
+                class="ui-button-danger" (click)=redirecionarBancoDeSangue()></button>
+            </p-card> 
+</div>
+</body>
+
+
+ 
