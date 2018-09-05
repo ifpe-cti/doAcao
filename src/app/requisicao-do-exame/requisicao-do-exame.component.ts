@@ -33,7 +33,7 @@ export class RequisicaoDoExameComponent implements OnInit {
 
          console.log("Nova ficha médica adicionada: " + this.requisicaoExames.id);
 
-         this.router.navigate(['inicial-hemope']);
+         this.router.navigate(['dashboard']);
         
       }
 
