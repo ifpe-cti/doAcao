@@ -3,7 +3,7 @@ import { Observable } from '../../../node_modules/rxjs';
 
 export interface FichaMedica{
 
-    doador: Observable<any>;
+    nomeDoador: String; 
     hemoglobina: String;
     pressaoArterial: String;
     temperatura: String; 
@@ -16,6 +16,7 @@ export interface FichaMedica{
     tipoDeDoacao: String;
     numeroDoTubo: String;
     volumeDoSangue: String;
+
     
     id?: String;
 

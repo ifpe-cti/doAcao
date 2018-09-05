@@ -19,7 +19,7 @@
 
     <div class="ui-g">
         <div class="ui-g-4"> <span class="ui-float-label">
-            <input id="float-input" type="text" size="153" pInputText> 
+            <input id="float-input" [(ngModel)] = "nomeDoador.hemoglobina" type="text" size="153" pInputText> 
             <label for="float-input">Nome Completo</label>
         </span></div>
         <div class="ui-g-4"></div>
@@ -30,7 +30,7 @@
 <p></p>
     <div class="ui-g">
         <div class="ui-g-12 ui-md-6 ui-lg-3">
-             <input type="text" pInputText placeholder="Hemoglobina" [(ngModel)] = "hemoglobina" /></div>
+             <input type="text" pInputText placeholder="Hemoglobina" [(ngModel)] = "fichaMedica.hemoglobina" /></div>
         <div class="ui-g-12 ui-md-6 ui-lg-3"> 
             <input type="text" pInputText placeholder="Pressão Aterial" [(ngModel)] = "pressaoArterial"/></div>
         <div class="ui-g-12 ui-md-6 ui-lg-3"> 
@@ -41,13 +41,13 @@
 
     <div class="ui-g">
         <div class="ui-g-12 ui-md-6 ui-lg-3"> 
-            <input type="text" pInputText placeholder="Altura" [(ngModel)] = "altura"/></div>
+            <input type="text" pInputText placeholder="Altura" [(ngModel)] = "fichaMedica.altura"/></div>
         <div class="ui-g-12 ui-md-6 ui-lg-3"> 
             <input type="text" pInputText placeholder="Pulso" [(ngModel)] = "pulso"/></div>
         <div class="ui-g-12 ui-md-6 ui-lg-3"> 
-            <input type="text" pInputText placeholder="Braço Puncionado" [(ngModel)] = "bracoPunsionado"/></div>
+            <input type="text" pInputText placeholder="Braço Puncionado" [(ngModel)] = "fichaMedica.bracoPunsionado"/></div>
         <div class="ui-g-12 ui-md-6 ui-lg-3">
-            <input type="text" pInputText placeholder="Reações Adversas" [(ngModel)] = "reacoesAdversas"/></div>
+            <input type="text" pInputText placeholder="Reações Adversas" [(ngModel)] = "fichaMedica.reacoesAdversas"/></div>
     </div>
  
     <p></p>
@@ -63,13 +63,13 @@
 
     <div class="ui-g">
         <div class="ui-g-12 ui-md-6 ui-lg-3"> 
-            <input type="text" pInputText placeholder="Flebomista Responsável" [(ngModel)] = "flebomistaResponsavel"/></div>
+            <input type="text" pInputText placeholder="Flebomista Responsável" [(ngModel)] = "fichaMedica.flebomistaResponsavel"/></div>
         <div class="ui-g-12 ui-md-6 ui-lg-3"> 
-            <input type="text" pInputText placeholder=" Tipo de Doação" [(ngModel)] = "tipoDeDoacao"/></div>
+            <input type="text" pInputText placeholder=" Tipo de Doação" [(ngModel)] = "fichaMedica.tipoDeDoacao"/></div>
         <div class="ui-g-12 ui-md-6 ui-lg-3"> 
-            <input type="text" pInputText placeholder="Número do Tubo" [(ngModel)] = "numeroDoTubo"/></div>
+            <input type="text" pInputText placeholder="Número do Tubo" [(ngModel)] = "fichaMedica.numeroDoTubo"/></div>
         <div class="ui-g-12 ui-md-6 ui-lg-3">
-            <input type="text" pInputText placeholder="Volume do Sangue" [(ngModel)] = "volumeDoSangue"/></div>
+            <input type="text" pInputText placeholder="Volume do Sangue" [(ngModel)] = "fichaMedica.volumeDoSangue"/></div>
     </div>
 
     <p></p>

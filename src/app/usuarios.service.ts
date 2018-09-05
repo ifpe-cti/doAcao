@@ -48,7 +48,6 @@ export class UsuariosService {
         observer.complete();
       });
     });
-
     return usuario;
   }
 

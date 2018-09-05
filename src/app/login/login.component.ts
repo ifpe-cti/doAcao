@@ -61,13 +61,13 @@ export class LoginComponent implements OnInit {
           alert("Usuário não cadastrado no banco.")
         } else{
           console.log("Usuario "+ usuario.nome + " logado.");
-          this.servicoUsuario.usuarioLogado = usuario; 
+          // this.servicoUsuario.usuarioLogado = usuario; 
          
           if(usuario.tipo = "hemope"){
              this.router.navigate(['/inicial-hemope']);
           } 
           if(usuario.tipo = "usuario"){
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/incial']);
           }
         }
 

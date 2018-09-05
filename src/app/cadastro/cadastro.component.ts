@@ -31,7 +31,7 @@ export class CadastroComponent implements OnInit {
   private roteamentoService: RoteamentoService) {
 
     this.usuario = {nome:"", user:"", dataNascimento:"", senha:"", 
-    fichasMedicas: []}
+    fichasMedicas: [], tipo: "usuario"}
 
    }
   

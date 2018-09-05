@@ -3,7 +3,7 @@ import { Observable } from "../../../node_modules/rxjs";
 
 export interface RequisicaoDeExames{
 
-    doador: Observable<any>;
+    nomeDoador: String;
     numeroDeDocumentoDoador: String;
     tipoDeDocumentoDoador: String;
     orgaoExpeditorDoador: String;
