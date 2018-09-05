@@ -19,7 +19,7 @@
 
     <div class="ui-g">
         <div class="ui-g-4"> <span class="ui-float-label">
-            <input id="float-input" [(ngModel)] = "nomeDoador.hemoglobina" type="text" size="153" pInputText> 
+            <input id="float-input" [(ngModel)] = "fichaMedica.nomeDoador" type="text" size="153" pInputText> 
             <label for="float-input">Nome Completo</label>
         </span></div>
         <div class="ui-g-4"></div>
@@ -81,6 +81,7 @@
         <div class="ui-g-2"></div>
         <div class="ui-g-2"></div>
         <div class="ui-g-2"></div>
+        
         <div class="ui-g-2"><button pButton type="button" label="Confirmar Dados" 
           (click) = "adicionarFichaMedica()"  class="ui-button-danger"></button>
      </div>

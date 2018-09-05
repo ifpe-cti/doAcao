@@ -51,10 +51,10 @@ export class UsuariosService {
     return usuario;
   }
 
-  getUsuarioByName(nomeCompleto: String){
+  getUsuarioByDocumento(numeroDocumento: String){
     let usuario = new Observable<any>(observer => {
       let collectionFiltrada = this.servicoFirebase.collection<Usuario>('usuario', ref =>
-        ref.where('nome', '==', nomeCompleto));
+        ref.where('nome', '==', numeroDocumento)); // OBSERVAR!!!!!!!!!
           
       let resultados = collectionFiltrada.snapshotChanges().subscribe(result => {
         let document;

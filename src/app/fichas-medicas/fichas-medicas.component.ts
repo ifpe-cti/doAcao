@@ -27,16 +27,10 @@ export class FichasMedicasComponent implements OnInit {
     this.router.navigate(['dashboard']);
    }
 
-
-  
-
   adicionarFichaMedica(){
   
-      
        this.servicoFichaMedica.adicionarFichaMedicaFirebase(this.fichaMedica);
-
        console.log("Nova ficha médica adicionada: " + this.fichaMedica.id);
-   
        this.router.navigate(['inicial-hemope']);
      
 
