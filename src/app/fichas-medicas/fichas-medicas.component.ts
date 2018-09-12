@@ -13,7 +13,7 @@ export class FichasMedicasComponent implements OnInit {
 
 
   fichaMedica: FichaMedica;
-  text: string;
+  cpfUsuario: String;
   results: String [];
 
 
@@ -26,13 +26,14 @@ export class FichasMedicasComponent implements OnInit {
   }
 
   autoComplete(event){
-   this.servicoUsuario.filtrarUsuariosPorCPF(this.text);
+   this.servicoUsuario.filtrarUsuariosPorCPF(this.cpfUsuario);
 
-   for(let i = 0; i < this.servicoUsuario.usuariosFiltrados.length; i ++){
+   for(let i = 0; i < this.servicoUsuario.usuariosFiltrados.length; i++){
     this.results.push(this.servicoUsuario.usuariosFiltrados[i].nome);
    }
   }
-  
+
+
   
     
   

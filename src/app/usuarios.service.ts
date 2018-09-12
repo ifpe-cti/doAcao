@@ -16,7 +16,8 @@ import { Observable } from 'rxjs';
 export class UsuariosService {
 
   usuarioLogado: Usuario;
-  usuariosFiltrados : Usuario [];
+
+  usuariosFiltrados : String [];
   todosOsUsuarios: Usuario [];
 
   constructor(private servicoFirebase: AngularFirestore) {
@@ -52,7 +53,6 @@ export class UsuariosService {
 
 
   filtrarUsuariosPorCPF(cpf: String){
-
     this.listarTodos()
     .subscribe(meuObservable => 
       this.todosOsUsuarios = meuObservable as Usuario[]
@@ -60,11 +60,18 @@ export class UsuariosService {
 
   for(let i = 0; i < this.todosOsUsuarios.length; i++){
       if(this.todosOsUsuarios[i].cpf == cpf){ // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 
-        this.usuariosFiltrados.push(this.todosOsUsuarios[i]);
+        this.usuariosFiltrados.push(this.todosOsUsuarios[i].nome);
       }
     }
-   
   }
+
+ 
+   
+   search(event) {
+     this.mylookupservice.getResults(event.query).then(data => {
+         this.results = data;
+     });
+ }
 
   retornarUsuariosFiltrados(){
     return this.usuariosFiltrados;
