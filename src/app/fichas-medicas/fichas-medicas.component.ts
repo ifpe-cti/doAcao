@@ -13,7 +13,9 @@ export class FichasMedicasComponent implements OnInit {
 
 
   fichaMedica: FichaMedica;
-  
+  text: string;
+  results: String [];
+
 
   constructor(private servicoFichaMedica: FichasMedicasService, private router:Router, 
   private servicoUsuario: UsuariosService) { 
@@ -22,6 +24,15 @@ export class FichasMedicasComponent implements OnInit {
     flebomistaResponsavel:"", tipoDeDoacao:"", numeroDoTubo:"", volumeDoSangue:""}
 
   }
+
+
+  
+    search(event) {
+        this.mylookupservice.getResults(event.query).then(data => {
+            this.results = data;
+        });
+    }
+
   
   voltarPaginaInicial(){
     this.router.navigate(['dashboard']);

@@ -66,7 +66,9 @@ export class UsuariosService {
    
   }
 
-  
+  retornarUsuariosFiltrados(){
+    return this.usuariosFiltrados;
+  }
 
   loginUsuario(user: String, senha: String): Observable<any> {
     let usuario = new Observable<any>(observer => {
