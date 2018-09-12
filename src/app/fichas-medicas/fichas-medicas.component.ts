@@ -32,8 +32,6 @@ export class FichasMedicasComponent implements OnInit {
        this.servicoFichaMedica.adicionarFichaMedicaFirebase(this.fichaMedica);
        console.log("Nova ficha médica adicionada: " + this.fichaMedica.id);
        this.router.navigate(['dashboard']);
-     
-
   }
 
   ngOnInit() {

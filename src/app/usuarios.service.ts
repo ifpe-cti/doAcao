@@ -33,7 +33,6 @@ export class UsuariosService {
       });
   }
 
-
  
   listarTodos(): Observable<any[]> {
     let resultados: any[] = [];
@@ -49,17 +48,30 @@ export class UsuariosService {
         observer.complete();
       }); });
     return meuObservable;
-  } 
- 
-
-  filtrarUsuariosPorCPF(cpf: String){
-    for(let i = 0; i < this.todosOsUsuarios.length; i++){
-      if(this.todosOsUsuarios[i].cpf == cpf){
+  }
+/**
+ *  for(let i = 0; i < this.todosOsUsuarios.length; i++){
+      if(this.todosOsUsuarios[i].cpf == cpf){ // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 
         this.usuariosFiltrados.push(this.todosOsUsuarios[i]);
       }
     }
+ * 
+ */
 
+
+  filtrarUsuariosPorCPF(cpf: String){
+
+    this.listarTodos()
+    .subscribe(meuObservable => 
+      this.todosOsUsuarios = meuObservable as Usuario[]
+    );
+
+   
   }
+
+  
+  
+
 
   loginUsuario(user: String, senha: String): Observable<any> {
     let usuario = new Observable<any>(observer => {
