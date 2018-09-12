@@ -49,15 +49,6 @@ export class UsuariosService {
       }); });
     return meuObservable;
   }
-/**
- *  for(let i = 0; i < this.todosOsUsuarios.length; i++){
-      if(this.todosOsUsuarios[i].cpf == cpf){ // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 
-        this.usuariosFiltrados.push(this.todosOsUsuarios[i]);
-      }
-    }
- * 
- */
-
 
   filtrarUsuariosPorCPF(cpf: String){
 
@@ -66,6 +57,11 @@ export class UsuariosService {
       this.todosOsUsuarios = meuObservable as Usuario[]
     );
 
+  for(let i = 0; i < this.todosOsUsuarios.length; i++){
+      if(this.todosOsUsuarios[i].cpf == cpf){ // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 
+        this.usuariosFiltrados.push(this.todosOsUsuarios[i]);
+      }
+    }
    
   }
 
