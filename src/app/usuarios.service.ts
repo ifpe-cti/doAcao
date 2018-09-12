@@ -65,13 +65,16 @@ export class UsuariosService {
     }
   }
 
- 
-   
-   search(event) {
+ /**
+  *  search(event) {
      this.mylookupservice.getResults(event.query).then(data => {
          this.results = data;
      });
  }
+  * 
+  */
+   
+  
 
   retornarUsuariosFiltrados(){
     return this.usuariosFiltrados;

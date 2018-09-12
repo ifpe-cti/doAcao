@@ -29,7 +29,7 @@ export class FichasMedicasComponent implements OnInit {
    this.servicoUsuario.filtrarUsuariosPorCPF(this.cpfUsuario);
 
    for(let i = 0; i < this.servicoUsuario.usuariosFiltrados.length; i++){
-    this.results.push(this.servicoUsuario.usuariosFiltrados[i].nome);
+    //   this.results.push(this.servicoUsuario.usuariosFiltrados[i].nome);
    }
   }
 
