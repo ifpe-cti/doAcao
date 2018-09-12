@@ -74,7 +74,6 @@ export class UsuariosService {
   * 
   */
    
-  
 
   retornarUsuariosFiltrados(){
     return this.usuariosFiltrados;
