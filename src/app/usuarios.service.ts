@@ -50,6 +50,7 @@ export class UsuariosService {
     return meuObservable;
   }
 
+
   filtrarUsuariosPorCPF(cpf: String){
 
     this.listarTodos()
@@ -66,8 +67,6 @@ export class UsuariosService {
   }
 
   
-  
-
 
   loginUsuario(user: String, senha: String): Observable<any> {
     let usuario = new Observable<any>(observer => {
