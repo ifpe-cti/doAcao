@@ -15,8 +15,9 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class UsuariosService {
 
-
   usuarioLogado: Usuario;
+  usuariosFiltrados : Usuario [];
+  todosOsUsuarios: Usuario [];
 
   constructor(private servicoFirebase: AngularFirestore) {
     this.usuarioCollection = this.servicoFirebase.collection("usuario");
@@ -30,6 +31,34 @@ export class UsuariosService {
       resultado => {
         usuario.id = resultado.id;
       });
+  }
+
+
+ 
+  listarTodos(): Observable<any[]> {
+    let resultados: any[] = [];
+    let meuObservable = new Observable<any[]>(observer => {
+      this.usuarioCollection.snapshotChanges().subscribe(result => {
+        result.map(documents => {
+          let id = documents.payload.doc.id;
+          let data = documents.payload.doc.data();
+          let document = { id: id, ...data };
+          resultados.push(document);
+        });
+        observer.next(resultados);
+        observer.complete();
+      }); });
+    return meuObservable;
+  } 
+ 
+
+  filtrarUsuariosPorCPF(cpf: String){
+    for(let i = 0; i < this.todosOsUsuarios.length; i++){
+      if(this.todosOsUsuarios[i].cpf == cpf){
+        this.usuariosFiltrados.push(this.todosOsUsuarios[i]);
+      }
+    }
+
   }
 
   loginUsuario(user: String, senha: String): Observable<any> {

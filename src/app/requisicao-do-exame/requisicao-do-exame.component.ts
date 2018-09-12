@@ -24,7 +24,10 @@ export class RequisicaoDoExameComponent implements OnInit {
 
     }
 
-
+    voltarPaginaInicial(){
+      this.router.navigate(['dashboard']);
+     }
+  
 
   adicionarRequisicaoExame(){
 

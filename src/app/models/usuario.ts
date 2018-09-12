@@ -8,6 +8,7 @@ export interface Usuario{
 	senha:String;
 	fichasMedicas:FichaMedica [];
 	tipo: String;
+	cpf: String;
 
 	id?: String;
 

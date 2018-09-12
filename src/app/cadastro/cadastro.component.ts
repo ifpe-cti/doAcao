@@ -18,20 +18,14 @@ import { FichaMedica } from '../models/ficha-medica';
 export class CadastroComponent implements OnInit {
 
   usuario:Usuario;
-  msgs: Message[] = [];
-  nomeUsuario: String;
-  userUsuario: String;
-  dataNascimentoUsuario: String;
-  senhaUsuario: String;
-  controladorIdUsuario: number;
-  fichasMedicas: FichaMedica[] = [];
+
  
 
   constructor(private servicoUsuario: UsuariosService, private router:Router,
   private roteamentoService: RoteamentoService) {
 
     this.usuario = {nome:"", user:"", dataNascimento:"", senha:"", 
-    fichasMedicas: [], tipo: "usuario"}
+    fichasMedicas: [], tipo: "usuario", cpf: ""}
 
    }
   
