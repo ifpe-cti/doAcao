@@ -28,9 +28,10 @@ export class FichasMedicasComponent implements OnInit {
   autoComplete(){
    this.servicoUsuario.filtrarUsuariosPorCPF(this.text);
 
-   // this.servicoFichaMedica.
-
+   for(let i = 0; i < this.servicoUsuario.usuariosFiltrados.length; i ++){
+    this.results.push(this.servicoUsuario.usuariosFiltrados[i].nome );
    }
+  }
 
   
   
