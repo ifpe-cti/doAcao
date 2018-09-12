@@ -25,24 +25,13 @@ export class FichasMedicasComponent implements OnInit {
 
   }
 
-  autoComplete(){
+  autoComplete(event){
    this.servicoUsuario.filtrarUsuariosPorCPF(this.text);
 
    for(let i = 0; i < this.servicoUsuario.usuariosFiltrados.length; i ++){
     this.results.push(this.servicoUsuario.usuariosFiltrados[i].nome);
    }
   }
-/**
- *  search(event) {
-    this.mylookupservice.getResults(event.query).then(data => {
-        this.results = data;
-    });
-}
- * 
- */
- 
-
-
   
   
     
