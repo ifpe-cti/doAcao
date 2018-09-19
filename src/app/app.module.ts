@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_BOOTSTRAP_LISTENER } from '@angular/core';
 import { routing } from './app.routing';
 import { FormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
@@ -108,11 +108,18 @@ import { RoteamentoService } from './roteamento.service';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFirestoreModule.enablePersistence(),
-  ],
+  ], 
 
   providers: [AuthService, AuthGuard, UsuariosService, FichasMedicasService],
 
   bootstrap: [AppComponent]
+
+
+
+
+
+
+  
 
 })
 export class AppModule { }
