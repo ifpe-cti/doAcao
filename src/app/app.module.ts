@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, APP_BOOTSTRAP_LISTENER } from '@angular/core';
 import { routing } from './app.routing';
 import { FormsModule } from '@angular/forms';
-import { environment } from '../environments/environment';
 
 //component
 
@@ -20,6 +19,7 @@ import { InicialHemopeComponent } from './inicial-hemope/inicial-hemope.componen
 import { VisualizacaoAgendamentosComponent } from './visualizacao-agendamentos/visualizacao-agendamentos.component';
 import { VisualizacaoFichasMedicasComponent } from './visualizacao-fichas-medicas/visualizacao-fichas-medicas.component';
 import { VisualizacaoBancoDeSangueComponent } from './visualizacao-banco-de-sangue/visualizacao-banco-de-sangue.component';
+import { ListagemDeUsuariosComponent } from './listagem-de-usuarios/listagem-de-usuarios.component';
 
 //module
 
@@ -56,10 +56,7 @@ import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
 import { UsuariosService } from './usuarios.service';
 import { FichasMedicasService } from './fichas-medicas.service';
-import { ListagemDeUsuariosComponent } from './listagem-de-usuarios/listagem-de-usuarios.component';
-
-
-
+import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
 
 
 @NgModule({
@@ -112,16 +109,10 @@ import { ListagemDeUsuariosComponent } from './listagem-de-usuarios/listagem-de-
     AngularFirestoreModule.enablePersistence(),
   ], 
 
-  providers: [AuthService, AuthGuard, UsuariosService, FichasMedicasService],
+  providers: [AuthService, AuthGuard, UsuariosService, FichasMedicasService, AgendamentoDeDoacoesService],
 
   bootstrap: [AppComponent]
 
-
-
-
-
-
-  
 
 })
 export class AppModule { }
