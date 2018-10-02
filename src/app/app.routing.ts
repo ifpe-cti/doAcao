@@ -16,6 +16,7 @@ import { InicialHemopeComponent } from './inicial-hemope/inicial-hemope.componen
 import { VisualizacaoAgendamentosComponent } from './visualizacao-agendamentos/visualizacao-agendamentos.component';
 import { VisualizacaoFichasMedicasComponent } from './visualizacao-fichas-medicas/visualizacao-fichas-medicas.component';
 import { VisualizacaoBancoDeSangueComponent } from './visualizacao-banco-de-sangue/visualizacao-banco-de-sangue.component';
+import { ListagemDeUsuariosComponent } from './listagem-de-usuarios/listagem-de-usuarios.component';
 
 
 
@@ -38,6 +39,7 @@ const APP_ROUTES: Routes = [
 { path: 'visualizacao-agendamentos', component: VisualizacaoAgendamentosComponent },
 { path: 'visualizacao-fichas-medicas', component: VisualizacaoFichasMedicasComponent },
 { path: 'visualizacao-banco-de-sangue', component: VisualizacaoBancoDeSangueComponent },
+{ path: 'listagem-de-usuarios', component: ListagemDeUsuariosComponent },
 
 ];
 
