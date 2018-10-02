@@ -57,6 +57,7 @@ import { AuthGuard } from './auth-guard.service';
 import { UsuariosService } from './usuarios.service';
 import { FichasMedicasService } from './fichas-medicas.service';
 import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
+import { DashboardHemopeComponent } from './dashboard-hemope/dashboard-hemope.component';
 
 
 @NgModule({
@@ -77,6 +78,7 @@ import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
     VisualizacaoFichasMedicasComponent,
     VisualizacaoBancoDeSangueComponent,
     ListagemDeUsuariosComponent,
+    DashboardHemopeComponent,
   ],
 
   imports: [
