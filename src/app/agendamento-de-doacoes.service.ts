@@ -24,7 +24,7 @@ export class AgendamentoDeDoacoesService {
 
   listarTodos(){
     let resultados: any[] = [];
-    let meuObservable = new Observable<any[]>(observer => {
+    let agendamentos = new Observable<any[]>(observer => {
       this.agendamentosDoacoesCollection.snapshotChanges().subscribe(result => {
         result.map(documents => {
           let id = documents.payload.doc.id;
@@ -35,7 +35,7 @@ export class AgendamentoDeDoacoesService {
         observer.next(resultados);
         observer.complete();
       }); });
-    return meuObservable;
+    return agendamentos;
   }
 
   apagarAgendamentoDeDoacao(agendamento): Promise<void> {

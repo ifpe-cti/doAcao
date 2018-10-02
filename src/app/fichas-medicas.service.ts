@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { FichaMedica } from './models/ficha-medica';
 import { AngularFirestore, AngularFirestoreCollection } from "angularfire2/firestore";
-
-
-
+import {Observable} from 'rxjs/Observable';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +21,21 @@ export class FichasMedicasService {
       });
   }
 
+  listarTodos(){
+    let resultados: any[] = [];
+    let fichasMedicas = new Observable<any[]>(observer => {
+      this.fichaMedicaCollection.snapshotChanges().subscribe(result => {
+        result.map(documents => {
+          let id = documents.payload.doc.id;
+          let data = documents.payload.doc.data();
+          let document = { id: id, ...data };
+          resultados.push(document);
+        });
+        observer.next(resultados);
+        observer.complete();
+      }); });
+    return fichasMedicas;
+  }
   
   apagarFichaMedicaFirebase(fichaMedica): Promise<void> {
     return this.fichaMedicaCollection.doc(fichaMedica.id).delete();
