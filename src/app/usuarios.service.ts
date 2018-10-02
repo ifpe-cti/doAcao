@@ -30,7 +30,7 @@ export class UsuariosService {
  
   listarTodos(): Observable<any[]> {
     let resultados: any[] = [];
-    let meuObservable = new Observable<any[]>(observer => {
+    let usuarios = new Observable<any[]>(observer => {
       this.usuarioCollection.snapshotChanges().subscribe(result => {
         result.map(documents => {
           let id = documents.payload.doc.id;
@@ -41,7 +41,7 @@ export class UsuariosService {
         observer.next(resultados);
         observer.complete();
       }); });
-    return meuObservable;
+    return usuarios;
   }
 
 

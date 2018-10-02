@@ -1,4 +1,4 @@
-<p>
-  AQUI DEVERÁ CONTER A LISTA DE PACIENTES E QUANDO CLICAR EM UM, A PÁGINA DEVERÁ SER REDIRECIONADA PARA A FICHA MÉDICA DELE
-  ROTAS COM PARÂMETROS 
-</p>
+<p-dataTable [style]="{'width':'900px'}" [value]="fichasMedicas" selectionMode="single" [contextMenu]="cm" [(selection)]="fichaMedicaSelecionada">
+  <p-column field="nomeDoador" header="Nome do Doador"></p-column>
+  <p-column field="numeroDoTubo" header="Número do tubo"></p-column>
+</p-dataTable>

@@ -56,6 +56,7 @@ import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
 import { UsuariosService } from './usuarios.service';
 import { FichasMedicasService } from './fichas-medicas.service';
+import { ListagemDeUsuariosComponent } from './listagem-de-usuarios/listagem-de-usuarios.component';
 
 
 
@@ -78,6 +79,7 @@ import { FichasMedicasService } from './fichas-medicas.service';
     VisualizacaoAgendamentosComponent,
     VisualizacaoFichasMedicasComponent,
     VisualizacaoBancoDeSangueComponent,
+    ListagemDeUsuariosComponent,
   ],
 
   imports: [

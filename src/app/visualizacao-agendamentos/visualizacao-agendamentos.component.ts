@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {AgendamentoDeDoacoesService} from './../agendamento-de-doacoes.service';
-import {AgendamentoDoacao} from './../models/agendamento-de-doacoes';
 import { Router} from '@angular/router';
 
 @Component({
@@ -11,13 +10,13 @@ import { Router} from '@angular/router';
 export class VisualizacaoAgendamentosComponent implements OnInit {
 
   agendamentoDoacoes: any[] = [];
-  userSelecionado;
+  agendamentoSelecionado;
 
-  constructor(private AgendamentoDeDoacoesService: AgendamentoDeDoacoesService, 
+  constructor(private agendamentoDeDoacoesService: AgendamentoDeDoacoesService, 
     private router:Router) { }
 
   listarTodos(){
-    this.AgendamentoDeDoacoesService.listarTodos().subscribe(agendamentoDoacoes => {
+    this.agendamentoDeDoacoesService.listarTodos().subscribe(agendamentoDoacoes => {
       this.agendamentoDoacoes = agendamentoDoacoes;
     });
   }
