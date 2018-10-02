@@ -1,3 +1,4 @@
-<p>
-  AQUI DEVERÁ FICAR O DATA TABLE COM TODAS AS DOAÇÕES LISTADAS 
-</p>
+<p-dataTable [style]="{'width':'900px'}" [value]="agendamentoDoacoes" selectionMode="single" [contextMenu]="cm" [(selection)]="userSelecionado">
+  <p-column field="nomeDoador" header="Username"></p-column>
+  <p-column field="dataAgendamento" header="Senha"></p-column>
+</p-dataTable>

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {Usuario} from './../models/usuario';
 import {UsuariosService} from './../usuarios.service';
 import {Message} from 'primeng/components/common/api';
-import { RoteamentoService } from './../roteamento.service';
 import { Router} from '@angular/router';
 import { FichaMedica } from '../models/ficha-medica';
 
@@ -21,8 +20,7 @@ export class CadastroComponent implements OnInit {
 
  
 
-  constructor(private servicoUsuario: UsuariosService, private router:Router,
-  private roteamentoService: RoteamentoService) {
+  constructor(private servicoUsuario: UsuariosService, private router:Router) {
 
     this.usuario = {nome:"", user:"", dataNascimento:"", senha:"", 
     fichasMedicas: [], tipo: "usuario", cpf: ""}

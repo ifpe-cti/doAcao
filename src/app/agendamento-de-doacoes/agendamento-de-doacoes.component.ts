@@ -20,7 +20,6 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
     }
   }
 
-
   agendamentoDoacao: AgendamentoDoacao;
     
 
@@ -29,14 +28,11 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
    }
    
   agendarDoacao(){
- 
      this.AgendamentoDeDoacoesService.adicionarAgendamentoDeDoacao(this.agendamentoDoacao);
- 
      console.log("Nova doação agendada: " + this.agendamentoDoacao.nomeDoador + 
      this.agendamentoDoacao.numeroDocumentoDoador);
- 
-    this.router.navigate(['dashboard']);
-   
+     this.router.navigate(['dashboard']);
+  
     }
 
       ngOnInit() {
