@@ -58,6 +58,7 @@ import { UsuariosService } from './usuarios.service';
 import { FichasMedicasService } from './fichas-medicas.service';
 import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
 import { DashboardHemopeComponent } from './dashboard-hemope/dashboard-hemope.component';
+import { VisualizacaoRequisicaoExamesComponent } from './visualizacao-requisicao-exames/visualizacao-requisicao-exames.component';
 
 
 @NgModule({
@@ -79,6 +80,7 @@ import { DashboardHemopeComponent } from './dashboard-hemope/dashboard-hemope.co
     VisualizacaoBancoDeSangueComponent,
     ListagemDeUsuariosComponent,
     DashboardHemopeComponent,
+    VisualizacaoRequisicaoExamesComponent,
   ],
 
   imports: [
