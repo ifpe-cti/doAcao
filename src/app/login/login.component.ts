@@ -63,12 +63,10 @@ export class LoginComponent implements OnInit {
           console.log("Usuario "+ usuario.nome + " logado.");
           // this.servicoUsuario.usuarioLogado = usuario; 
          
-          if(usuario.tipo = "hemope"){
-             this.router.navigate(['/inicial-hemope']);
+          if(usuario.user == "hemope" && usuario.senha == "hemope"){
+             this.router.navigate(['/dashboard-hemope']);
           } 
-          if(usuario.tipo = "usuario"){
-            this.router.navigate(['/dashboard']);
-          }
+        
         }
 
 

@@ -15,12 +15,12 @@ import { BancoDeSangueComponent } from './banco-de-sangue/banco-de-sangue.compon
 import { FichasMedicasComponent } from './fichas-medicas/fichas-medicas.component';
 import { AgendamentoDeDoacoesComponent } from './agendamento-de-doacoes/agendamento-de-doacoes.component';
 import { LoginGoogleComponent } from './login-google/login-google.component';
-import { InicialHemopeComponent } from './inicial-hemope/inicial-hemope.component';
 import { VisualizacaoAgendamentosComponent } from './visualizacao-agendamentos/visualizacao-agendamentos.component';
 import { VisualizacaoFichasMedicasComponent } from './visualizacao-fichas-medicas/visualizacao-fichas-medicas.component';
 import { VisualizacaoBancoDeSangueComponent } from './visualizacao-banco-de-sangue/visualizacao-banco-de-sangue.component';
 import { ListagemDeUsuariosComponent } from './listagem-de-usuarios/listagem-de-usuarios.component';
 import { VisualizacaoRequisicaoExamesComponent } from './visualizacao-requisicao-exames/visualizacao-requisicao-exames.component';
+import { DashboardHemopeComponent } from './dashboard-hemope/dashboard-hemope.component';
 
 //module
 
@@ -58,7 +58,7 @@ import { AuthGuard } from './auth-guard.service';
 import { UsuariosService } from './usuarios.service';
 import { FichasMedicasService } from './fichas-medicas.service';
 import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
-import { DashboardHemopeComponent } from './dashboard-hemope/dashboard-hemope.component';
+
 
 
 
@@ -75,7 +75,6 @@ import { DashboardHemopeComponent } from './dashboard-hemope/dashboard-hemope.co
     FichasMedicasComponent,
     AgendamentoDeDoacoesComponent,
     LoginGoogleComponent,
-    InicialHemopeComponent,
     VisualizacaoAgendamentosComponent,
     VisualizacaoFichasMedicasComponent,
     VisualizacaoBancoDeSangueComponent,
