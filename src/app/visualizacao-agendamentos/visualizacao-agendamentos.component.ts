@@ -15,13 +15,10 @@ export class VisualizacaoAgendamentosComponent implements OnInit {
   constructor(private agendamentoDeDoacoesService: AgendamentoDeDoacoesService, 
     private router:Router) { }
 
-  listarTodos(){
+  ngOnInit() { 
     this.agendamentoDeDoacoesService.listarTodos().subscribe(agendamentoDoacoes => {
       this.agendamentoDoacoes = agendamentoDoacoes;
     });
-  }
-
-  ngOnInit() {
   }
 
 }
