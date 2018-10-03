@@ -15,13 +15,10 @@ export class VisualizacaoRequisicaoExamesComponent implements OnInit {
   constructor(private requisicaoExamesService: RequisicaoDeExameService, 
     private router:Router) { }
 
-  listarTodos(){
+  ngOnInit() {
     this.requisicaoExamesService.listarTodos().subscribe(requisicaoExames => {
       this.requisicaoExames = requisicaoExames;
     });
-  }
-
-  ngOnInit() {
   }
 
 }
