@@ -43,6 +43,10 @@ export class DashboardHemopeComponent implements OnInit {
       this.router.navigate(['/visualizacao-fichas-medicas']);
      }
 
+     redirecionarVisualizacaoRequisicaoExames(){
+      this.router.navigate(['/visualizacao-fichas-medicas']);
+     }
+
 
   ngOnInit() {
     this.items = [

@@ -17,6 +17,7 @@ import { VisualizacaoAgendamentosComponent } from './visualizacao-agendamentos/v
 import { VisualizacaoFichasMedicasComponent } from './visualizacao-fichas-medicas/visualizacao-fichas-medicas.component';
 import { VisualizacaoBancoDeSangueComponent } from './visualizacao-banco-de-sangue/visualizacao-banco-de-sangue.component';
 import { ListagemDeUsuariosComponent } from './listagem-de-usuarios/listagem-de-usuarios.component';
+import { VisualizacaoRequisicaoExamesComponent } from './visualizacao-requisicao-exames/visualizacao-requisicao-exames.component';
 
 
 
@@ -40,6 +41,7 @@ const APP_ROUTES: Routes = [
 { path: 'visualizacao-fichas-medicas', component: VisualizacaoFichasMedicasComponent },
 { path: 'visualizacao-banco-de-sangue', component: VisualizacaoBancoDeSangueComponent },
 { path: 'listagem-de-usuarios', component: ListagemDeUsuariosComponent },
+{ path: 'visualizacao-requisicao-exames', component: VisualizacaoRequisicaoExamesComponent },
 
 ];
 

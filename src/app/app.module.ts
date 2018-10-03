@@ -20,6 +20,7 @@ import { VisualizacaoAgendamentosComponent } from './visualizacao-agendamentos/v
 import { VisualizacaoFichasMedicasComponent } from './visualizacao-fichas-medicas/visualizacao-fichas-medicas.component';
 import { VisualizacaoBancoDeSangueComponent } from './visualizacao-banco-de-sangue/visualizacao-banco-de-sangue.component';
 import { ListagemDeUsuariosComponent } from './listagem-de-usuarios/listagem-de-usuarios.component';
+import { VisualizacaoRequisicaoExamesComponent } from './visualizacao-requisicao-exames/visualizacao-requisicao-exames.component';
 
 //module
 
@@ -58,7 +59,7 @@ import { UsuariosService } from './usuarios.service';
 import { FichasMedicasService } from './fichas-medicas.service';
 import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
 import { DashboardHemopeComponent } from './dashboard-hemope/dashboard-hemope.component';
-import { VisualizacaoRequisicaoExamesComponent } from './visualizacao-requisicao-exames/visualizacao-requisicao-exames.component';
+
 
 
 @NgModule({
