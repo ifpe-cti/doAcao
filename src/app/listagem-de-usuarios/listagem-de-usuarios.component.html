@@ -1,7 +1,21 @@
+<div class="ui-g">
+  <div class="ui-g-4"></div>
 
-<p-dataTable [style]="{'width':'900px'}" [value]="usuarios" selectionMode="single" [contextMenu]="cm" [(selection)]="usuarioSelcionado">
-  <p-column field="nome" header="Nome do usuário"></p-column>
-  <p-column field="dataNascimento" header="Data de Nascimento"></p-column>
-  <p-column field="cpf" header="CPF"></p-column>
-  <p-column field="user" header="User"></p-column>
-</p-dataTable>
+
+  <div class="ui-g-4">
+
+    <p-dataTable [style]="{'width':'900px'}" [value]="usuarios" selectionMode="single" [contextMenu]="cm" [(selection)]="usuarioSelcionado">
+      <p-column field="nome" header="Nome do usuário"></p-column>
+      <p-column field="dataNascimento" header="Data de Nascimento"></p-column>
+      <p-column field="cpf" header="CPF"></p-column>
+      <p-column field="user" header="User"></p-column>
+    </p-dataTable>
+
+  </div>
+
+
+  <div class="ui-g-4"></div>
+</div>
+
+
+
