@@ -1,4 +1,17 @@
-<p-dataTable [style]="{'width':'900px'}" [value]="fichasMedicas" selectionMode="single" [contextMenu]="cm" [(selection)]="fichaMedicaSelecionada">
+<div class="ui-g">
+  <div class="ui-g-4"></div>
+
+
+  <div class="ui-g-4">
+
+    <p-dataTable [style]="{'width':'900px'}" [value]="fichasMedicas" selectionMode="single" [contextMenu]="cm" [(selection)]="fichaMedicaSelecionada">
   <p-column field="nomeDoador" header="Nome do Doador"></p-column>
   <p-column field="numeroDoTubo" header="Número do tubo"></p-column>
 </p-dataTable>
+
+  </div>
+
+
+  <div class="ui-g-4"></div>
+</div>
+
