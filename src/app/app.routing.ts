@@ -12,7 +12,6 @@ import { FichasMedicasComponent } from './fichas-medicas/fichas-medicas.componen
 import { AgendamentoDeDoacoesComponent } from './agendamento-de-doacoes/agendamento-de-doacoes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginGoogleComponent } from './login-google/login-google.component';
-import { InicialHemopeComponent } from './inicial-hemope/inicial-hemope.component';
 import { VisualizacaoAgendamentosComponent } from './visualizacao-agendamentos/visualizacao-agendamentos.component';
 import { VisualizacaoFichasMedicasComponent } from './visualizacao-fichas-medicas/visualizacao-fichas-medicas.component';
 import { VisualizacaoBancoDeSangueComponent } from './visualizacao-banco-de-sangue/visualizacao-banco-de-sangue.component';
