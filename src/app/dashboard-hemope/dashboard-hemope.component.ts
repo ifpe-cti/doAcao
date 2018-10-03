@@ -44,7 +44,11 @@ export class DashboardHemopeComponent implements OnInit {
      }
 
      redirecionarVisualizacaoRequisicaoExames(){
-      this.router.navigate(['/visualizacao-fichas-medicas']);
+      this.router.navigate(['/visualizacao-requisicao-exames']);
+     }
+
+     redirecionarListagemUsuarios(){
+      this.router.navigate(['/listagem-de-usuarios']);
      }
 
 
