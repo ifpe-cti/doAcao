@@ -16,13 +16,10 @@ export class VisualizacaoFichasMedicasComponent implements OnInit {
   constructor(private fichasMedicasService: FichasMedicasService, 
     private router:Router) { }
 
-  listarTodos(){
+  ngOnInit() {
     this.fichasMedicasService.listarTodos().subscribe(fichasMedicas => {
       this.fichasMedicas = fichasMedicas;
     });
-  }
-
-  ngOnInit() {
   }
 
 }
