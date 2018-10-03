@@ -66,7 +66,6 @@ export class LoginComponent implements OnInit {
           if(usuario.tipo == "hemope"){
              this.router.navigate(['/dashboard-hemope']);
           } 
-
           else{
             this.router.navigate(['/dashboard']);
           }
