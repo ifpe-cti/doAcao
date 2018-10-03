@@ -1,3 +1,5 @@
-<p>
-  visualizacao-requisicao-exames works!
-</p>
+<p-dataTable [style]="{'width':'900px'}" [value]="requisicaoExames" selectionMode="single" [contextMenu]="cm" [(selection)]="requisicaoSelecionada">
+  <p-column field="nomeDoador" header="Nome do Doador"></p-column>
+  <p-column field="numeroDeDocumentoDoador" header="Número do documento"></p-column>
+  <p-column field="etiquetaDaAmostra" header="Etiqueta da amostra"></p-column>
+</p-dataTable>
