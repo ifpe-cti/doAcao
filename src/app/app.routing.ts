@@ -27,7 +27,6 @@ const APP_ROUTES: Routes = [
 { path: '', component: LoginComponent },
 { path: 'login', component: LoginComponent },
 { path: 'cadastro', component: CadastroComponent }, 
-// { path: 'inicial', component: InicialComponent },
 { path: 'requisicao-do-exame', component: RequisicaoDoExameComponent },
 { path: 'banco-de-sangue', component: BancoDeSangueComponent },
 { path: 'fichas-medicas', component: FichasMedicasComponent },
@@ -35,7 +34,6 @@ const APP_ROUTES: Routes = [
 { path: 'login-google', component: LoginGoogleComponent },
 { path: 'dashboard', component: DashboardComponent},
 { path: 'dashboard-hemope', component: DashboardHemopeComponent},
-// canActivate: [AuthGuard]
 { path: 'visualizacao-agendamentos', component: VisualizacaoAgendamentosComponent },
 { path: 'visualizacao-fichas-medicas', component: VisualizacaoFichasMedicasComponent },
 { path: 'visualizacao-banco-de-sangue', component: VisualizacaoBancoDeSangueComponent },

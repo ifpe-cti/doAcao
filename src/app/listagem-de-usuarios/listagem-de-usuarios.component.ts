@@ -8,6 +8,8 @@ import { Router} from '@angular/router';
   styleUrls: ['./listagem-de-usuarios.component.css']
 })
 export class ListagemDeUsuariosComponent implements OnInit {
+ 
+ 
 
   usuarios: any[] = [];
   usuarioSelecionado;
@@ -15,13 +17,10 @@ export class ListagemDeUsuariosComponent implements OnInit {
   constructor(private usuariosService: UsuariosService, 
     private router:Router) { }
 
-    listarTodos(){
-      this.usuariosService.listarTodos().subscribe(usuarios => {
-        this.usuarios = usuarios;
-      });
-    }
-
-  ngOnInit() {
+ ngOnInit() {
+    this.usuariosService.listarTodos().subscribe(usuarios => {
+        this.usuarios = usuarios;   
+       });
   }
 
 }

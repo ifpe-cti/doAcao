@@ -67,7 +67,7 @@ export class LoginComponent implements OnInit {
              this.router.navigate(['/dashboard-hemope']);
           } 
 
-          if(usuario.user =! "hemope"){
+          else{
             this.router.navigate(['/dashboard']);
           }
         
