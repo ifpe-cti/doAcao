@@ -15,6 +15,10 @@ export class VisualizacaoRequisicaoExamesComponent implements OnInit {
   constructor(private requisicaoExamesService: RequisicaoDeExameService, 
     private router:Router) { }
 
+    voltarPaginaInicial(){
+      this.router.navigate(['dashboard-hemope']);
+     }
+
   ngOnInit() {
     this.requisicaoExamesService.listarTodos().subscribe(requisicaoExames => {
       this.requisicaoExames = requisicaoExames;

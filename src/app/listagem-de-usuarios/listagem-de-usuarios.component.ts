@@ -17,6 +17,10 @@ export class ListagemDeUsuariosComponent implements OnInit {
   constructor(private usuariosService: UsuariosService, 
     private router:Router) { }
 
+    voltarPaginaInicial(){
+      this.router.navigate(['dashboard-hemope']);
+     }
+
  ngOnInit() {
     this.usuariosService.listarTodos().subscribe(usuarios => {
         this.usuarios = usuarios;   
