@@ -16,6 +16,10 @@ export class VisualizacaoFichasMedicasComponent implements OnInit {
   constructor(private fichasMedicasService: FichasMedicasService, 
     private router:Router) { }
 
+    voltarPaginaInicial(){
+      this.router.navigate(['dashboard-hemope']);
+     }
+
   ngOnInit() {
     this.fichasMedicasService.listarTodos().subscribe(fichasMedicas => {
       this.fichasMedicas = fichasMedicas;
