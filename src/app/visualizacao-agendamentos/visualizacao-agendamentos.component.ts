@@ -15,6 +15,10 @@ export class VisualizacaoAgendamentosComponent implements OnInit {
   constructor(private agendamentoDeDoacoesService: AgendamentoDeDoacoesService, 
     private router:Router) { }
 
+    voltarPaginaInicial(){
+      this.router.navigate(['dashboard-hemope']);
+     }
+
   ngOnInit() { 
     this.agendamentoDeDoacoesService.listarTodos().subscribe(agendamentoDoacoes => {
       this.agendamentoDoacoes = agendamentoDoacoes;

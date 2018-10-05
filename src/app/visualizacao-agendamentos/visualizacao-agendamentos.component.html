@@ -2,7 +2,7 @@
 
 <body>
 <div class="ui-g">
-    <div class="ui-g-1"></div>
+    <div class="ui-g-1"><p-button (onClick)="voltarPaginaInicial()" label="Voltar"></p-button></div>
     <div class="ui-g-1"></div>
     <div class="ui-g-1">   
         <p-dataTable [style]="{'width':'900px'}" [value]="agendamentoDoacoes" selectionMode="single" [contextMenu]="cm" [(selection)]="agendamentoSelecionado">
