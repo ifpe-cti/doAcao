@@ -35,7 +35,7 @@ export class BancoDeSangueComponent implements OnInit {
           };
   }
   voltarPaginaInicial(){
-    this.router.navigate(['dashboard']);
+    this.router.navigate(['dashboard-hemope']);
    }
 
 ngOnInit() {

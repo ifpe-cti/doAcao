@@ -25,7 +25,7 @@ export class RequisicaoDoExameComponent implements OnInit {
     }
 
     voltarPaginaInicial(){
-      this.router.navigate(['dashboard']);
+      this.router.navigate(['dashboard-hemope']);
      }
   
 

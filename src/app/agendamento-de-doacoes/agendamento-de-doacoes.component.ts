@@ -31,7 +31,7 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
      this.AgendamentoDeDoacoesService.adicionarAgendamentoDeDoacao(this.agendamentoDoacao);
      console.log("Nova doação agendada: " + this.agendamentoDoacao.nomeDoador + 
      this.agendamentoDoacao.numeroDocumentoDoador);
-     this.router.navigate(['dashboard']);
+     this.router.navigate(['dashboard-hemope']);
   
     }
 
