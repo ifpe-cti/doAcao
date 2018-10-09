@@ -42,6 +42,8 @@ import {DropdownModule} from 'primeng/dropdown';
 import { ChartModule } from 'primeng/chart';
 import  { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
+import {AutoCompleteModule} from 'primeng/autocomplete';
+
 
 //angularFire
 
@@ -105,6 +107,7 @@ import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
     DropdownModule,
     ChartModule,
     BrowserAnimationsModule,
+    AutoCompleteModule,
 
     AngularFireModule.initializeApp(FirebaseConfig),
     //AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),

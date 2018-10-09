@@ -13,7 +13,9 @@ import {UsuariosService} from './../usuarios.service';
 })
 export class RequisicaoDoExameComponent implements OnInit {
 
+  cpf: String;
   requisicaoExames: RequisicaoDeExames;
+  results:String [];
 
   
   constructor(private servicoRequisicaoExames: RequisicaoDeExameService, private router:Router,
@@ -28,6 +30,11 @@ export class RequisicaoDoExameComponent implements OnInit {
       this.router.navigate(['dashboard-hemope']);
      }
   
+     search(cpf) {
+      this.servicoUsuario.filtrarUsuariosPorCPF(cpf.query).subscribe(data => {
+          this.results = data;
+      });
+  } 
 
   adicionarRequisicaoExame(){
 

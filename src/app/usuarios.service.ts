@@ -10,14 +10,14 @@ export class UsuariosService {
 
   usuarioLogado: Usuario;
 
-  usuariosFiltrados : String [];
-  todosOsUsuarios: Usuario [];
+  //usuariosFiltrados: String[];
+  todosOsUsuarios: Usuario[];
 
   constructor(private servicoFirebase: AngularFirestore) {
     this.usuarioCollection = this.servicoFirebase.collection("usuario");
   }
 
-  private usuarioCollection: AngularFirestoreCollection<Usuario>;  
+  private usuarioCollection: AngularFirestoreCollection<Usuario>;
 
   cadastrarUsuarioFirebase(usuario: Usuario) {
     console.log(usuario)
@@ -27,7 +27,7 @@ export class UsuariosService {
       });
   }
 
- 
+
   listarTodos(): Observable<any[]> {
     let resultados: any[] = [];
     let usuarios = new Observable<any[]>(observer => {
@@ -40,43 +40,49 @@ export class UsuariosService {
         });
         observer.next(resultados);
         observer.complete();
-      }); });
+      });
+    });
     return usuarios;
   }
 
 
-  filtrarUsuariosPorCPF(cpf: String){
-    this.listarTodos()
-    .subscribe(meuObservable => 
-      this.todosOsUsuarios = meuObservable as Usuario[]
-    );
+  filtrarUsuariosPorCPF(cpf) {
+    return new Observable<String[]>(observer=>{
+      this.listarTodos()
+      .subscribe(meuObservable => {
+        this.todosOsUsuarios = meuObservable as Usuario[]
+        let usuariosFiltrados:String[] = []
+        for (let i = 0; i < this.todosOsUsuarios.length; i++) {
+          if (this.todosOsUsuarios[i].cpf.search(cpf) != -1) { // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 
+            usuariosFiltrados.push(this.todosOsUsuarios[i].nome);
+          }
+        }
 
-  for(let i = 0; i < this.todosOsUsuarios.length; i++){
-      if(this.todosOsUsuarios[i].cpf == cpf){ // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 
-        this.usuariosFiltrados.push(this.todosOsUsuarios[i].nome);
+        observer.next(usuariosFiltrados);
+        observer.complete();
       }
-    }
+      );
+    })
+    
   }
 
- /**
-  *  search(event) {
-     this.mylookupservice.getResults(event.query).then(data => {
-         this.results = data;
-     });
- }
-  * 
-  */
-   
-
-  retornarUsuariosFiltrados(){
-    return this.usuariosFiltrados;
+  /**
+   *  search(event) {
+      this.mylookupservice.getResults(event.query).then(data => {
+          this.results = data;
+      });
   }
+   * 
+   */
+
+
+ 
 
   loginUsuario(user: String, senha: String): Observable<any> {
     let usuario = new Observable<any>(observer => {
       let collectionFiltrada = this.servicoFirebase.collection<Usuario>('usuario', ref =>
         ref.where('user', '==', user)
-           .where('senha', '==', senha));
+          .where('senha', '==', senha));
       let resultados = collectionFiltrada.snapshotChanges().subscribe(result => {
         let document;
         result.map(documents => {
@@ -91,11 +97,11 @@ export class UsuariosService {
     return usuario;
   }
 
-  getUsuarioByDocumento(numeroDocumento: String){
+  getUsuarioByDocumento(numeroDocumento: String) {
     let usuario = new Observable<any>(observer => {
       let collectionFiltrada = this.servicoFirebase.collection<Usuario>('usuario', ref =>
         ref.where('nome', '==', numeroDocumento)); // OBSERVAR!!!!!!!!!
-          
+
       let resultados = collectionFiltrada.snapshotChanges().subscribe(result => {
         let document;
         result.map(documents => {

@@ -18,6 +18,8 @@
     <input id="float-input" [(ngModel)]= "requisicaoExames.numeroDeDocumentoDoador" type="text" size="30" pInputText> 
     <label for="float-input">Número de Documento</label>
   </span>
+
+  <p-autoComplete [(ngModel)]="cpf" [suggestions]="results" (completeMethod)="search($event)"></p-autoComplete>
   
   <p></p>
   
