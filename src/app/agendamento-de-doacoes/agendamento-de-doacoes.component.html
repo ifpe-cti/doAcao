@@ -1,7 +1,7 @@
 <body>
     
   <div class="ui-g">
-      <div class="ui-g-12"><p-button (onClick)="voltarPaginaInicial()" label="Voltar"></p-button></div>
+      <div class="ui-g-12"><p-tabMenu [model]="items"></p-tabMenu></div>
       <div class="ui-g-4"></div>
         <div class="ui-g-4"> <input type="text" pInputText placeholder="O que você procura?"> 
               <button pButton type="button" icon="fa-search" class="ui-button-secondary"></button></div>

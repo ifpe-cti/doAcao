@@ -1,48 +1,11 @@
 <div class="container"> </div>
-         <body>
-    <p>DASHBOARD HERE!</p>
-            <div><p-tabMenu [model]="items"></p-tabMenu></div>
-        
-        <div class="ui-g">
-        
-            <div class="ui-g-4"></div>
-        
-            <div class="ui-g-4"> <input type="text" pInputText placeholder="O que você procura?">   
-                    <button pButton type="button" icon="fa-search" class="ui-button-secondary"></button></div>
-                  <div>  <p *ngIf="authService.isLoggedIn()">
-                      <a class="btn btn-primary" href="" role="button" (click)="authService.logout()">Logout</a> </div>
-                </div>
-                <div>
-                <p-card>
-                        <p-header>
-                            Agendar doações
-                        </p-header>
-                        <button pButton type="button" label="Ir" 
-                      class="ui-button-danger" (click)="redirecionarAgendamentoDeDoacoes()"></button>
-                    </p-card> 
-                <p></p>
-                <p-card>
-                        <p-header>
-                        Fichas Médicas
-                        </p-header>
-                        <button pButton type="button" label="Ir" 
-                      class="ui-button-danger" (click) = "redirecionarFichaMedicas()"></button>
-                    </p-card> 
-                <p></p>
-                <p-card>
-                        <p-header>
-                        Inclusão de requisição de exames
-                        </p-header>  
-                         <button pButton type="button" label="Ir" 
-                      class="ui-button-danger" (click)="redirecionarInclusaodeExames()"></button>
-                    </p-card> 
-                <p></p>
-                <p-card>
-                        <p-header>
-                        Banco de sangue
-                        </p-header>
-                        <button pButton type="button" label="Ir" 
-                        class="ui-button-danger" (click)=redirecionarBancoDeSangue()></button>
-                    </p-card> 
-        </div>
-        </body>
+
+<body>
+
+    <h3 class="mensagem"> Bem vindo, usuário. O que você está procurando? </h3>
+
+    <div>
+        <p-tabMenu [model]="items"></p-tabMenu>
+    </div>
+
+</body>

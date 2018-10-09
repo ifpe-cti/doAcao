@@ -28,7 +28,7 @@ import {ButtonModule} from 'primeng/primeng';
 import {EditorModule} from 'primeng/primeng'; 
 import {InputTextModule} from 'primeng/primeng';
 import {PasswordModule} from 'primeng/primeng';
-import {TabMenuModule,MenuItem} from 'primeng/primeng';
+import {TabMenuModule, MenuItem} from 'primeng/primeng';
 import {DataListModule} from 'primeng/primeng';
 import {ScheduleModule} from 'primeng/primeng';
 import {CalendarModule} from 'primeng/primeng';
@@ -41,7 +41,6 @@ import {InputTextareaModule} from 'primeng/primeng';
 import {DropdownModule} from 'primeng/dropdown';
 import { ChartModule } from 'primeng/chart';
 import  { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
-
 import {AutoCompleteModule} from 'primeng/autocomplete';
 
 

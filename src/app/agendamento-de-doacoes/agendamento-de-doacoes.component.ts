@@ -3,6 +3,7 @@ import {Usuario} from './../models/usuario';
 import {AgendamentoDeDoacoesService} from './../agendamento-de-doacoes.service';
 import {AgendamentoDoacao} from './../models/agendamento-de-doacoes';
 import { Router} from '@angular/router';
+import { MenuItem } from 'primeng/primeng';
 
 
 @Component({
@@ -21,7 +22,8 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
   }
 
   agendamentoDoacao: AgendamentoDoacao;
-    
+  items: MenuItem[];
+  activeItem: MenuItem;
 
   voltarPaginaInicial(){
     this.router.navigate(['dashboard']);
@@ -36,7 +38,13 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
     }
 
       ngOnInit() {
+        this.items = [
+          {label: '  Agendamento doações', icon: '', routerLink:'/agendamento-de-doacoes'},
+          {label: '  Fichas médicas', icon: '', routerLink:'/fichas-medicas'},
+          {label: '  Banco de Sangue', icon: '', routerLink:'/dashboard'},
+        ];
 
+        this.activeItem = this.items[1];
   }
 }  
   
