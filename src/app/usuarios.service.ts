@@ -54,7 +54,7 @@ export class UsuariosService {
         let usuariosFiltrados:String[] = []
         for (let i = 0; i < this.todosOsUsuarios.length; i++) {
           if (this.todosOsUsuarios[i].cpf.search(cpf) != -1) { // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 
-            usuariosFiltrados.push(this.todosOsUsuarios[i].nome);
+            usuariosFiltrados.push(this.todosOsUsuarios[i].cpf);
           }
         }
 
