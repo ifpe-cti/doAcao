@@ -42,7 +42,6 @@ export class DashboardComponent implements OnInit {
       { label: '  Agendamento doações', icon: 'fa-calendar', routerLink: '/agendamento-de-doacoes' },
       { label: '  Fichas médicas', icon: 'fa-book', routerLink: '/fichas-medicas' },
       { label: '  Solicitação de doação', icon: 'fa-book', routerLink: '' },
-  
     ];
   }
 }

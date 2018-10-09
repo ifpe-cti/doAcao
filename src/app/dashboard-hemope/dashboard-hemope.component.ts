@@ -16,10 +16,11 @@ export class DashboardHemopeComponent implements OnInit {
     private usuarioService: UsuariosService  ) { }
 
     items: MenuItem[];
+    activeItem: MenuItem;
     gruposUsuario: any[];
     //idUsuarioLogado = this.usuarioService.usuarioLogado.id;
 
-    redirecionarInclusaodeExames(){
+    /** redirecionarInclusaodeExames(){
       this.router.navigate(['/requisicao-do-exame']);
      }
 
@@ -49,18 +50,22 @@ export class DashboardHemopeComponent implements OnInit {
 
      redirecionarListagemUsuarios(){
       this.router.navigate(['/listagem-de-usuarios']);
-     }
+     } */
+
 
 
   ngOnInit() {
     this.items = [
-      {label: '  Adicioanr exame', icon: 'fa-book', routerLink:'/requisicao-de-exames'},
-      {label: '  Adicionar ficha médica', icon: 'fa-book', routerLink:'/fichas-medicas'},
-      {label: '  Agendar doação', icon: 'fa-book', routerLink:'/agendamento-de-doacoes'},
-      {label: '  Todos os exames', icon: 'fa-book', routerLink:'/visualizacao-requisicao-exames'},
-      {label: '  Todas as fichas médicas', icon: 'fa-book', routerLink:'/visualizacao-fichas-medicas'},
-      {label: '  Todas os usuários', icon: 'fa-book', routerLink:'/listagem-usuarios'},
+      {label: '  Página inicial', icon: '', routerLink:'/dashboard-hemope'},
+      {label: '  Adicioanr exame', icon: '', routerLink:'/requisicao-de-exames'},
+      {label: '  Adicionar ficha médica', icon: '', routerLink:'/fichas-medicas'},
+      {label: '  Agendar doação', icon: '', routerLink:'/agendamento-de-doacoes'},
+      {label: '  Todos os exames', icon: '', routerLink:'/visualizacao-requisicao-exames'},
+      {label: '  Todas as fichas médicas', icon: '', routerLink:'/visualizacao-fichas-medicas'},
+      {label: '  Todas os usuários', icon: '', routerLink:'/listagem-usuarios'},
   ];
+
+    this.activeItem = this.items[0];
   }
 }
 

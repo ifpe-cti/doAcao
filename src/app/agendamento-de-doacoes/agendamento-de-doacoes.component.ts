@@ -23,8 +23,7 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
 
   agendamentoDoacao: AgendamentoDoacao;
   items: MenuItem[];
-  activeItem: MenuItem;
-
+ 
   voltarPaginaInicial(){
     this.router.navigate(['dashboard']);
    }
@@ -44,7 +43,7 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
           {label: '  Banco de Sangue', icon: '', routerLink:'/dashboard'},
         ];
 
-        this.activeItem = this.items[1];
+
   }
 }  
   
