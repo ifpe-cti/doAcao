@@ -10,7 +10,7 @@
             <div class="ui-g-4"> <input type="text" pInputText placeholder="O que você procura?">   
                     <button pButton type="button" icon="fa-search" class="ui-button-secondary"></button></div>
                   <div>  <p *ngIf="authService.isLoggedIn()">
-                      <a class="btn btn-primary" href="" role="button" (click)="authService.logout()">Logout</a> </div>
+                      <a class="btn btn-primary" href="" role="button" (click)="authService.logout()">Logout</a></div>
                 </div>
                 <div>
                 <p-card>
@@ -47,7 +47,7 @@
                     <p></p>
                     <p-card>
                       <p-header>
-                     Visualizar todos os agendamentos de doação 
+                    Visualizar todos os agendamentos de doações 
                       </p-header>
                       <button pButton type="button" label="Ir" 
                       class="ui-button-danger" (click)=redirecionarVisualizacaoAgendamentos()></button>
