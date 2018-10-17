@@ -4,6 +4,7 @@ import {AgendamentoDeDoacoesService} from './../agendamento-de-doacoes.service';
 import {AgendamentoDoacao} from './../models/agendamento-de-doacoes';
 import { Router} from '@angular/router';
 import { MenuItem } from 'primeng/primeng';
+import { MenusService } from '../menus.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { MenuItem } from 'primeng/primeng';
 export class AgendamentoDeDoacoesComponent implements OnInit {
 
   constructor(private AgendamentoDeDoacoesService: AgendamentoDeDoacoesService, 
-    private router:Router) {
+    private router:Router, private menusService: MenusService) {
 
       this.agendamentoDoacao = {nomeDoador:"", dataAgendamento: null, 
       numeroDocumentoDoador:""
@@ -37,12 +38,7 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
     }
 
       ngOnInit() {
-        this.items = [
-          {label: '  Agendamento doações', icon: '', routerLink:'/agendamento-de-doacoes'},
-          {label: '  Fichas médicas', icon: '', routerLink:'/fichas-medicas'},
-          {label: '  Banco de Sangue', icon: '', routerLink:'/dashboard'},
-        ];
-
+        this.items = this.menusService.itensUsuario;
 
   }
 }  

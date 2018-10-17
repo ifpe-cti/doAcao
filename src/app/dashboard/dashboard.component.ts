@@ -3,6 +3,7 @@ import { AuthService } from '../auth.service';
 import { MenuItem } from 'primeng/primeng';
 import { UsuariosService } from './../usuarios.service';
 import { Router } from '@angular/router';
+import { MenusService } from '../menus.service';
 
 
 @Component({
@@ -13,36 +14,14 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
 
   constructor(public authService: AuthService, private router: Router,
-    private usuarioService: UsuariosService) { }
+    private usuarioService: UsuariosService, private menusService: MenusService) { }
 
   items: MenuItem[];
   gruposUsuario: any[];
   //idUsuarioLogado = this.usuarioService.usuarioLogado.id;
 
-  redirecionarInclusaodeExames() {
-    this.router.navigate(['/requisicao-do-exame']);
-  }
-
-  redirecionarFichaMedicas() {
-    this.router.navigate(['/fichas-medicas']);
-  }
-
-
-  redirecionarBancoDeSangue() {
-    this.router.navigate(['/banco-de-sangue']);
-  }
-
-  redirecionarAgendamentoDeDoacoes() {
-    this.router.navigate(['/agendamento-de-doacoes']);
-  }
-
-
   ngOnInit() {
-    this.items = [
-      { label: '  Agendamento doações', icon: 'fa-calendar', routerLink: '/agendamento-de-doacoes' },
-      { label: '  Fichas médicas', icon: 'fa-book', routerLink: '/fichas-medicas' },
-      { label: '  Solicitação de doação', icon: 'fa-book', routerLink: '' },
-    ];
+    this.items = this.menusService.itensUsuario;
   }
 }
 

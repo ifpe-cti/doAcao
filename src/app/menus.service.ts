@@ -20,9 +20,9 @@ export class MenusService {
 
 
   itensUsuario = [
-    { label: '  Agendamento doações', icon: 'fa-calendar', routerLink: '/agendamento-de-doacoes' },
-    { label: '  Fichas médicas', icon: 'fa-book', routerLink: '/fichas-medicas' },
-    { label: '  Solicitação de doação', icon: 'fa-book', routerLink: '' },
+    { label: '  Página inicial', icon: 'fa-calendar', routerLink: '/dashboard' },
+    { label: '  Fichas médicas', icon: 'fa-book', routerLink: '' },
+    { label: '  Solicitação de doação', icon: 'fa-book', routerLink: '/agendamento-de-doacoes' },
   ];
 
 }
