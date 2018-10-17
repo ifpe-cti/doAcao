@@ -14,7 +14,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginGoogleComponent } from './login-google/login-google.component';
 import { VisualizacaoAgendamentosComponent } from './visualizacao-agendamentos/visualizacao-agendamentos.component';
 import { VisualizacaoFichasMedicasComponent } from './visualizacao-fichas-medicas/visualizacao-fichas-medicas.component';
-import { VisualizacaoBancoDeSangueComponent } from './visualizacao-banco-de-sangue/visualizacao-banco-de-sangue.component';
 import { ListagemDeUsuariosComponent } from './listagem-de-usuarios/listagem-de-usuarios.component';
 import { VisualizacaoRequisicaoExamesComponent } from './visualizacao-requisicao-exames/visualizacao-requisicao-exames.component';
 import { DashboardHemopeComponent } from './dashboard-hemope/dashboard-hemope.component';
@@ -38,7 +37,6 @@ const APP_ROUTES: Routes = [
 { path: 'dashboard-hemope', component: DashboardHemopeComponent},
 { path: 'visualizacao-agendamentos', component: VisualizacaoAgendamentosComponent },
 { path: 'visualizacao-fichas-medicas', component: VisualizacaoFichasMedicasComponent },
-{ path: 'visualizacao-banco-de-sangue', component: VisualizacaoBancoDeSangueComponent },
 { path: 'listagem-de-usuarios', component: ListagemDeUsuariosComponent },
 { path: 'visualizacao-requisicao-exames', component: VisualizacaoRequisicaoExamesComponent },
 { path: 'agendamento-de-doacoes-hemope', component: AgendamentoDoacoesHemopeComponent },

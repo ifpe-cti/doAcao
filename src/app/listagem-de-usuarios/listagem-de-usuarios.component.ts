@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UsuariosService} from './../usuarios.service';
 import { Router} from '@angular/router';
 import { MenuItem } from 'primeng/primeng';
+import { MenusService } from '../menus.service';
 
 @Component({
   selector: 'app-listagem-de-usuarios',
@@ -18,7 +19,7 @@ export class ListagemDeUsuariosComponent implements OnInit {
   activeItem: MenuItem;
 
   constructor(private usuariosService: UsuariosService, 
-    private router:Router) { }
+    private router:Router, private menusService: MenusService) { }
 
     voltarPaginaInicial(){
       this.router.navigate(['dashboard-hemope']);
@@ -29,15 +30,7 @@ export class ListagemDeUsuariosComponent implements OnInit {
         this.usuarios = usuarios;   
        });
 
-       this.items = [
-        {label: '  Página inicial', icon: '', routerLink:'/dashboard-hemope'},
-        {label: '  Adicioanr exame', icon: '', routerLink:'/requisicao-de-exames'},
-        {label: '  Adicionar ficha médica', icon: '', routerLink:'/fichas-medicas'},
-        {label: '  Agendar doação', icon: '', routerLink:'/agendamento-de-doacoes'},
-        {label: '  Todos os exames', icon: '', routerLink:'/visualizacao-requisicao-exames'},
-        {label: '  Todas as fichas médicas', icon: '', routerLink:'/visualizacao-fichas-medicas'},
-        {label: '  Todas os usuários', icon: '', routerLink:'/listagem-usuarios'},
-    ];
+       this.items = this.menusService.itensHemope;
   
       this.activeItem = this.items[6];
     }

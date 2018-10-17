@@ -51,7 +51,7 @@ export class RequisicaoDoExameComponent implements OnInit {
         
       }
       ngOnInit() {
-        this.items =   this.items = this.menusService.itensHemope;
+        this.items =  this.items = this.menusService.itensHemope;
     
 
       }

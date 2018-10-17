@@ -17,7 +17,6 @@ import { AgendamentoDeDoacoesComponent } from './agendamento-de-doacoes/agendame
 import { LoginGoogleComponent } from './login-google/login-google.component';
 import { VisualizacaoAgendamentosComponent } from './visualizacao-agendamentos/visualizacao-agendamentos.component';
 import { VisualizacaoFichasMedicasComponent } from './visualizacao-fichas-medicas/visualizacao-fichas-medicas.component';
-import { VisualizacaoBancoDeSangueComponent } from './visualizacao-banco-de-sangue/visualizacao-banco-de-sangue.component';
 import { ListagemDeUsuariosComponent } from './listagem-de-usuarios/listagem-de-usuarios.component';
 import { VisualizacaoRequisicaoExamesComponent } from './visualizacao-requisicao-exames/visualizacao-requisicao-exames.component';
 import { DashboardHemopeComponent } from './dashboard-hemope/dashboard-hemope.component';
@@ -82,7 +81,6 @@ import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
     LoginGoogleComponent,
     VisualizacaoAgendamentosComponent,
     VisualizacaoFichasMedicasComponent,
-    VisualizacaoBancoDeSangueComponent,
     ListagemDeUsuariosComponent,
     DashboardHemopeComponent,
     VisualizacaoRequisicaoExamesComponent,
