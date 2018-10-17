@@ -1,24 +1,26 @@
 <body>
 
-<div class="ui-g">
-    <div class="ui-g-1"><p-button (onClick)="voltarPaginaInicial()" label="Voltar"></p-button></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1">   
-        <p-dataTable [style]="{'width':'900px'}" [value]="requisicaoExames" selectionMode="single" [contextMenu]="cm" [(selection)]="requisicaoSelecionada">
-            <p-column field="nomeDoador" header="Nome do Doador"></p-column>
-            <p-column field="numeroDeDocumentoDoador" header="Número do documento"></p-column>
-            <p-column field="etiquetaDaAmostra" header="Etiqueta da amostra"></p-column>
-          </p-dataTable>
-</div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-</div>
+    <p-tabMenu [model]="items"></p-tabMenu>
+
+    <div class="ui-g">
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1">
+            <p-dataTable [style]="{'width':'900px'}" [value]="requisicaoExames" selectionMode="single" [contextMenu]="cm" [(selection)]="requisicaoSelecionada">
+                <p-column field="nomeDoador" header="Nome do Doador"></p-column>
+                <p-column field="numeroDeDocumentoDoador" header="Número do documento"></p-column>
+                <p-column field="etiquetaDaAmostra" header="Etiqueta da amostra"></p-column>
+            </p-dataTable>
+        </div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+    </div>
 
 </body>

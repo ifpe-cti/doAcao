@@ -22,6 +22,7 @@ export class AgendamentoDoacoesHemopeComponent implements OnInit {
     }
   }
 
+
   agendamentoDoacao: AgendamentoDoacao;
   items: MenuItem[];
   results:String [];
@@ -46,14 +47,16 @@ export class AgendamentoDoacoesHemopeComponent implements OnInit {
 
     }
 
-      ngOnInit() {
-        this.items = [
-          {label: '  Agendamento doações', icon: '', routerLink:'/agendamento-de-doacoes'},
-          {label: '  Fichas médicas', icon: '', routerLink:'/fichas-medicas'},
-          {label: '  Banco de Sangue', icon: '', routerLink:'/dashboard'},
-        ];
-
-
+    ngOnInit() {
+      this.items = [
+        {label: '  Página inicial', icon: '', routerLink:'/dashboard-hemope'},
+        {label: '  Adicionar exame', icon: '', routerLink:'/requisicao-do-exame'},
+        {label: '  Adicionar ficha médica', icon: '', routerLink:'/fichas-medicas'},
+        {label: '  Agendar doação', icon: '', routerLink:'/agendamento-de-doacoes-hemope'},
+        {label: '  Todos os exames', icon: '', routerLink:'/visualizacao-requisicao-exames'},
+        {label: '  Todas as fichas médicas', icon: '', routerLink:'/visualizacao-fichas-medicas'},
+        {label: '  Todas os usuários', icon: '', routerLink:'/listagem-usuarios'},
+    ];
+    }
   }
-}  
   

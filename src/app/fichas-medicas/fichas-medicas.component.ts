@@ -3,6 +3,8 @@ import { FichaMedica } from '../models/ficha-medica';
 import { FichasMedicasService } from '../fichas-medicas.service';
 import { Router} from '@angular/router';
 import { UsuariosService } from '../usuarios.service';
+import { MenuItem } from 'primeng/primeng';
+import { MenusService } from '../menus.service';
 
 @Component({
   selector: 'app-fichas-medicas',
@@ -11,6 +13,7 @@ import { UsuariosService } from '../usuarios.service';
 })
 export class FichasMedicasComponent implements OnInit {
 
+  items: MenuItem[];
 
   fichaMedica: FichaMedica;
   cpfUsuario: String;
@@ -18,7 +21,7 @@ export class FichasMedicasComponent implements OnInit {
 
 
   constructor(private servicoFichaMedica: FichasMedicasService, private router:Router, 
-  private servicoUsuario: UsuariosService) { 
+  private servicoUsuario: UsuariosService, private menusService: MenusService) { 
     this.fichaMedica = { nomeDoador: "", hemoglobina:"", pressaoArterial: "", 
     temperatura: "", peso: "", altura:"", pulso:"", bracoPunsionado: "", reacoesAdversas:"",
     flebomistaResponsavel:"", tipoDeDoacao:"", numeroDoTubo:"", volumeDoSangue:""}
@@ -39,10 +42,10 @@ export class FichasMedicasComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
+    this.items = this.menusService.itensHemope;
 
+  }
 }
-  
 
 
   
