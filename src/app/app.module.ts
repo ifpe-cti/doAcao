@@ -21,6 +21,8 @@ import { VisualizacaoBancoDeSangueComponent } from './visualizacao-banco-de-sang
 import { ListagemDeUsuariosComponent } from './listagem-de-usuarios/listagem-de-usuarios.component';
 import { VisualizacaoRequisicaoExamesComponent } from './visualizacao-requisicao-exames/visualizacao-requisicao-exames.component';
 import { DashboardHemopeComponent } from './dashboard-hemope/dashboard-hemope.component';
+import { AgendamentoDoacoesHemopeComponent } from './agendamento-doacoes-hemope/agendamento-doacoes-hemope.component';
+
 
 //module
 
@@ -82,6 +84,7 @@ import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
     ListagemDeUsuariosComponent,
     DashboardHemopeComponent,
     VisualizacaoRequisicaoExamesComponent,
+    AgendamentoDoacoesHemopeComponent,
   ],
 
   imports: [

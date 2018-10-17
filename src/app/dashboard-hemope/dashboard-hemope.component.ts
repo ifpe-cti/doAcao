@@ -57,9 +57,9 @@ export class DashboardHemopeComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {label: '  Página inicial', icon: '', routerLink:'/dashboard-hemope'},
-      {label: '  Adicioanr exame', icon: '', routerLink:'/requisicao-de-exames'},
+      {label: '  Adicionar exame', icon: '', routerLink:'/requisicao-do-exame'},
       {label: '  Adicionar ficha médica', icon: '', routerLink:'/fichas-medicas'},
-      {label: '  Agendar doação', icon: '', routerLink:'/agendamento-de-doacoes'},
+      {label: '  Agendar doação', icon: '', routerLink:'/agendamento-de-doacoes-hemope'},
       {label: '  Todos os exames', icon: '', routerLink:'/visualizacao-requisicao-exames'},
       {label: '  Todas as fichas médicas', icon: '', routerLink:'/visualizacao-fichas-medicas'},
       {label: '  Todas os usuários', icon: '', routerLink:'/listagem-usuarios'},

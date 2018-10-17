@@ -18,6 +18,8 @@ import { VisualizacaoBancoDeSangueComponent } from './visualizacao-banco-de-sang
 import { ListagemDeUsuariosComponent } from './listagem-de-usuarios/listagem-de-usuarios.component';
 import { VisualizacaoRequisicaoExamesComponent } from './visualizacao-requisicao-exames/visualizacao-requisicao-exames.component';
 import { DashboardHemopeComponent } from './dashboard-hemope/dashboard-hemope.component';
+import { AgendamentoDoacoesHemopeComponent } from './agendamento-doacoes-hemope/agendamento-doacoes-hemope.component';
+
 
 
 
@@ -39,6 +41,7 @@ const APP_ROUTES: Routes = [
 { path: 'visualizacao-banco-de-sangue', component: VisualizacaoBancoDeSangueComponent },
 { path: 'listagem-de-usuarios', component: ListagemDeUsuariosComponent },
 { path: 'visualizacao-requisicao-exames', component: VisualizacaoRequisicaoExamesComponent },
+{ path: 'agendamento-de-doacoes-hemope', component: AgendamentoDoacoesHemopeComponent },
 
 ];
 
