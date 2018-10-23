@@ -45,6 +45,7 @@ import  { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 
 
+
 //angularFire
 
 import { AngularFireModule } from 'angularfire2';

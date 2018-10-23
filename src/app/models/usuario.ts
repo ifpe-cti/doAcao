@@ -7,12 +7,10 @@ export interface Usuario{
 	dataNascimento:String;
 	senha:String;
 	fichasMedicas:FichaMedica [];
-	tipo: String;
+	tipoSanguineo: String;
+	tipoUsuario: String;
 	cpf: String;
 
 	id?: String;
 
-	
-
-
-} 
+	} 

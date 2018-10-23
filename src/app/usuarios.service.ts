@@ -83,6 +83,25 @@ export class UsuariosService {
     })
   }
 
+  filtrarUsuariosPorTipoSanguineo(tipoSanguineo) {
+    return new Observable<String[]>(observer => {
+      this.listarTodos()
+        .subscribe(meuObservable => {
+          this.todosOsUsuarios = meuObservable as Usuario[]
+          let usuariosFiltrados: String[] = []
+          for (let i = 0; i < this.todosOsUsuarios.length; i++) {
+            if (this.todosOsUsuarios[i].tipoSanguineo.search(tipoSanguineo)) { 
+              usuariosFiltrados.push(this.todosOsUsuarios[i].nome);
+            }
+          }
+
+          observer.next(usuariosFiltrados);
+          observer.complete();
+        }
+        );
+    })
+  }
+
 
   loginUsuario(user: String, senha: String): Observable<any> {
     let usuario = new Observable<any>(observer => {

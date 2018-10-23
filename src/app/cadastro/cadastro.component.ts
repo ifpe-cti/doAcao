@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {Usuario} from './../models/usuario';
-import {UsuariosService} from './../usuarios.service';
-import {Message} from 'primeng/components/common/api';
-import { Router} from '@angular/router';
-import { FichaMedica } from '../models/ficha-medica';
+import { Usuario } from './../models/usuario';
+import { UsuariosService } from './../usuarios.service';
+import { Router } from '@angular/router';
+import {SelectItem} from 'primeng/api';
 
- 
+
 
 @Component({
   selector: 'cadastro',
@@ -16,32 +15,45 @@ import { FichaMedica } from '../models/ficha-medica';
 
 export class CadastroComponent implements OnInit {
 
-  usuario:Usuario;
+  tiposSanguineos: SelectItem[];
+  usuario: Usuario;
+  tipoSanguineoSelecionado: String;
 
- 
 
-  constructor(private servicoUsuario: UsuariosService, private router:Router) {
-    this.usuario = {nome:"", user:"", dataNascimento:"", senha:"", 
-    fichasMedicas: [], tipo: "usuario", cpf: ""}
-   }
-  
+  constructor(private servicoUsuario: UsuariosService, private router: Router) {
+    this.usuario = {
+      nome: "", user: "", dataNascimento: "", senha: "",
+      fichasMedicas: [], tipoUsuario: "usuario", cpf: "", tipoSanguineo: ""
+    }
+  }
 
-  cadastroUsuario() { 
+
+  cadastroUsuario() {  
     this.servicoUsuario.cadastrarUsuarioFirebase(this.usuario);
-    this.router.navigate(['/login']); 
+    this.router.navigate(['/login']);
+   
     console.log("Novo usuário cadastrado: " + this.usuario.nome);
+  }
 
-   
-  
-   } 
-   
-   ngOnInit() {
-  
-  }  
-      
- }
+  ngOnInit() {
 
-     
- 
+    this.tiposSanguineos = [
+      {label: 'Tipo Sanguíneo', value: null},
+      {label:"A+", value: "A+"},         
+      {label: 'A-', value: 'A-'},
+      {label: 'B+', value: 'B+'},
+      {label: 'B-', value: 'B-'},
+      {label: 'AB+', value: 'AB+'},
+      {label: 'AB-', value: 'AB-'},
+      {label: 'O+', value: 'O+'},
+      {label: 'O-', value: 'O-'}
+    ];
 
-  
+  }
+
+}
+
+
+
+
+

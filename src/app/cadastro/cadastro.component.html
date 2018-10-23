@@ -19,6 +19,9 @@
  pPassword [(ngModel)] = "usuario.senha" required/>
 <p></p>
 
+<p></p> <p-dropdown [options]="tiposSanguineos" [(ngModel)]="usuario.tipoSanguineo"></p-dropdown>
+<p></p>
+
 <button pButton type="button" label="Enviar dados" 
      (click) = "cadastroUsuario()"  class="ui-button-danger"></button>
 
