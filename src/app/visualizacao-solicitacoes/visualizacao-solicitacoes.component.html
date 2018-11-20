@@ -1,8 +1,10 @@
 
 
 <body>
+    <p-tabMenu [model]="items"></p-tabMenu>
+    
     <div class="ui-g">
-        <div class="ui-g-1"><p-tabMenu [model]="items"></p-tabMenu></div>
+        <div class="ui-g-1"></div>
         <div class="ui-g-1"></div>
         <div class="ui-g-1">   
             <p-dataTable [style]="{'width':'900px'}" [value]="solicitacoesSanguineas" selectionMode="single" [contextMenu]="cm" [(selection)]="agendamentoSelecionado">

@@ -15,7 +15,7 @@ export class MenusService {
     { label: '  Agendar doação', icon: '', routerLink: '/agendamento-de-doacoes-hemope' },
     { label: '  Todos os exames', icon: '', routerLink: '/visualizacao-requisicao-exames' },
     { label: '  Todas as fichas médicas', icon: '', routerLink: '/visualizacao-fichas-medicas' },
-    { label: '  Todas os usuários', icon: '', routerLink: '/listagem-usuarios' },
+    { label: '  Todas os usuários', icon: '', routerLink: '/listagem-de-usuarios' },
     { label: '  Todas as solicitações sanguíneas', icon: '', routerLink: '/visualizacao-solicitacoes' },
 
     
