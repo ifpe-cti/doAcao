@@ -16,6 +16,9 @@ export class MenusService {
     { label: '  Todos os exames', icon: '', routerLink: '/visualizacao-requisicao-exames' },
     { label: '  Todas as fichas médicas', icon: '', routerLink: '/visualizacao-fichas-medicas' },
     { label: '  Todas os usuários', icon: '', routerLink: '/listagem-usuarios' },
+    { label: '  Todas as solicitações sanguíneas', icon: '', routerLink: '' },
+
+    
   ];
 
 
@@ -23,6 +26,7 @@ export class MenusService {
     { label: '  Página inicial', icon: 'fa-calendar', routerLink: '/dashboard' },
     { label: '  Fichas médicas', icon: 'fa-book', routerLink: '' },
     { label: '  Solicitação de doação', icon: 'fa-book', routerLink: '/agendamento-de-doacoes' },
+    { label: '  Solicitar sangue ', icon: '', routerLink: '/solicitacao-de-sangue' },
   ];
 
 }

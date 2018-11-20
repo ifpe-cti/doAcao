@@ -1,10 +1,24 @@
 <body>
+  
+    <p-tabMenu [model]="items"></p-tabMenu>
 
-    <input id="float-input" [(ngModel)]= "cpf" type="text" size="30" placeholder="CPF" pInputText> 
-    <input id="float-input" [(ngModel)]= "senha" type="password" size="30" placeholder = "Senha" pInputText> 
 
-       <button pButton type="button" label="Confirmar" 
-       (click) = "buscarDados()"  class="ui-button-danger"></button> </div>
+    <div class="ui-g">
+        <div class="ui-g-4"></div>
+        <div class="ui-g-4"><input id="float-input" [(ngModel)]= "cpf" type="text" size="30" placeholder="CPF" pInputText></div>
+        <div class="ui-g-4"></div>
+    </div>
+      
+    <div class="ui-g">
+        <div class="ui-g-4"></div>
+        <div class="ui-g-4"><input id="float-input" [(ngModel)]= "senha" type="password" size="30" placeholder = "Senha" pInputText></div>
+        <div class="ui-g-4"></div>
+    </div>
 
+    <div class="ui-g">
+        <div class="ui-g-4"></div>
+        <div class="ui-g-4"><button pButton type="button" label="Confirmar" (click) = "buscarDados()"  class="ui-button-danger"></button></div>
+        <div class="ui-g-4"></div>
+    </div>
  
  </body>
