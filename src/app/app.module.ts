@@ -62,6 +62,7 @@ import { UsuariosService } from './usuarios.service';
 import { FichasMedicasService } from './fichas-medicas.service';
 import { MenusService } from './menus.service';
 import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
+import { SolicitacaoDeSangueComponent } from './solicitacao-de-sangue/solicitacao-de-sangue.component';
 
 
 
@@ -86,6 +87,7 @@ import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
     DashboardHemopeComponent,
     VisualizacaoRequisicaoExamesComponent,
     AgendamentoDoacoesHemopeComponent,
+    SolicitacaoDeSangueComponent,
    
   ],
 
