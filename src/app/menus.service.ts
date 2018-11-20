@@ -26,7 +26,7 @@ export class MenusService {
     { label: '  Página inicial', icon: 'fa-calendar', routerLink: '/dashboard' },
     { label: '  Fichas médicas', icon: 'fa-book', routerLink: '' },
     { label: '  Solicitação de doação', icon: 'fa-book', routerLink: '/agendamento-de-doacoes' },
-    { label: '  Solicitar sangue ', icon: '', routerLink: '/solicitacao-de-sangue' },
+    { label: '  Solicitar sangue ', icon: 'fa-calendar', routerLink: '/solicitacao-de-sangue' },
   ];
 
 }

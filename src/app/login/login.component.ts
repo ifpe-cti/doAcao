@@ -60,9 +60,11 @@ export class LoginComponent implements OnInit {
         if(usuario == null){
           alert("Usuário não cadastrado no banco.")
         } else{
-          console.log("Usuario "+ usuario.nome + " logado.");
-          // this.servicoUsuario.usuarioLogado = usuario; 
-         
+          this.servicoUsuario.loginUsuario(user, senha).subscribe(meuObservable => 
+           this.servicoUsuario.usuarioLogado = meuObservable as Usuario); 
+          
+        //  console.log(this.servicoUsuario.usuarioLogado.cpf)
+
           if(usuario.tipo == "hemope"){
              this.router.navigate(['/dashboard-hemope']);
           } 
