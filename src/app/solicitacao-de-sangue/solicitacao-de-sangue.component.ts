@@ -35,11 +35,13 @@ export class SolicitacaoDeSangueComponent implements OnInit {
    
 
   buscarDados(){
-  if(this.usuariosService.usuarioLogado.cpf = this.cpf){
+  if(this.usuariosService.usuarioLogado.cpf == this.cpf && this.usuariosService.usuarioLogado.senha == this.senha){
     this.usuariosService.usuarioLogado.nome = this.solicitacaoSanguinea.nomeUsuario;
     this.usuariosService.usuarioLogado.cpf = this.solicitacaoSanguinea.numeroDocumentoDoador;
     this.usuariosService.usuarioLogado.tipoSanguineo = this.solicitacaoSanguinea.tipoSanguineo;
-  }  
+  }  else{
+
+  }
   
  
 }
