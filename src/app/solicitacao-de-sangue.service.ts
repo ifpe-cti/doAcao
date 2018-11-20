@@ -21,4 +21,21 @@ export class SolicitacaoDeSangueService {
         solicitacaoSangue.id = resultado.id;
       });
   }
+
+  listarTodas(): Observable<any[]> {
+    let resultados: any[] = [];
+    let solicitacoes = new Observable<any[]>(observer => {
+      this.solicitacaoSangueCollection.snapshotChanges().subscribe(result => {
+        result.map(documents => {
+          let id = documents.payload.doc.id;
+          let data = documents.payload.doc.data();
+          let document = { id: id, ...data };
+          resultados.push(document);
+        });
+        observer.next(resultados);
+        observer.complete();
+      });
+    });
+    return solicitacoes;
+  }
 }

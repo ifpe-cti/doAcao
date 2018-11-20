@@ -1,3 +1,28 @@
-<p>
-  visualizacao-solicitacoes works!
-</p>
+
+
+<body>
+    <div class="ui-g">
+        <div class="ui-g-1"><p-tabMenu [model]="items"></p-tabMenu></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1">   
+            <p-dataTable [style]="{'width':'900px'}" [value]="solicitacoesSanguineas" selectionMode="single" [contextMenu]="cm" [(selection)]="agendamentoSelecionado">
+                <p-column field="nomeUsuario" header="Nome do Usuário"></p-column>
+                <p-column field="numeroDocumentoDoador" header="Número do Documento"></p-column>
+                <p-column field="tipoSanguineo" header="Tipo Sanguíneo"></p-column>
+              </p-dataTable>
+    </div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+    </div>
+    
+    </body>
+    
+    
+    
