@@ -19,6 +19,7 @@ import { VisualizacaoRequisicaoExamesComponent } from './visualizacao-requisicao
 import { DashboardHemopeComponent } from './dashboard-hemope/dashboard-hemope.component';
 import { AgendamentoDoacoesHemopeComponent } from './agendamento-doacoes-hemope/agendamento-doacoes-hemope.component';
 import { SolicitacaoDeSangueComponent } from './solicitacao-de-sangue/solicitacao-de-sangue.component';
+import { VisualizacaoSolicitacoesComponent } from './visualizacao-solicitacoes/visualizacao-solicitacoes.component';
 
 
 
@@ -42,6 +43,7 @@ const APP_ROUTES: Routes = [
 { path: 'visualizacao-requisicao-exames', component: VisualizacaoRequisicaoExamesComponent },
 { path: 'agendamento-de-doacoes-hemope', component: AgendamentoDoacoesHemopeComponent },
 { path: 'solicitacao-de-sangue', component: SolicitacaoDeSangueComponent },
+{ path: 'visualizacao-solicitacoes', component: VisualizacaoSolicitacoesComponent },
 
 ];
 
