@@ -3,6 +3,7 @@ import {UsuariosService} from './../usuarios.service';
 import { Router} from '@angular/router';
 import { MenuItem } from 'primeng/primeng';
 import { MenusService } from '../menus.service';
+import { SolicitacaoDeSangueService } from '../solicitacao-de-sangue.service';
 import { SolicitacaoSanguinea } from '../models/solicitacaoSanguinea';
 import { Usuario } from '../models/usuario';
 
@@ -24,15 +25,18 @@ export class SolicitacaoDeSangueComponent implements OnInit {
   usuario: Usuario[];
   
 
-  constructor(private usuariosService: UsuariosService, private router:Router, private menusService: MenusService){ 
+  constructor(private usuariosService: UsuariosService, private router:Router, private menusService: MenusService,
+  private solicitacaoSanguineaService: SolicitacaoDeSangueService){ 
       this.solicitacaoSanguinea = {
        nomeUsuario: "", numeroDocumentoDoador: "", tipoSanguineo: ""
 
       }
     }
 
-  buscarDados(){
-
+  enviarSolicitacao(){
+    this.solicitacaoSanguineaService.cadastrarSolicitacaoSanguineaFirebase(this.solicitacaoSanguinea);
+    this.router.navigate(['/dashboard']);
+    
     /**
      *  this.usuariosService.usuarioLogado.nome = this.solicitacaoSanguinea.nomeUsuario;
     this.usuariosService.usuarioLogado.cpf = this.solicitacaoSanguinea.numeroDocumentoDoador;
@@ -40,8 +44,6 @@ export class SolicitacaoDeSangueComponent implements OnInit {
     console.log("ooooi")
 
      * 
-     */
-
   if(this.usuariosService.usuarioLogado.cpf == this.cpf && this.usuariosService.usuarioLogado.senha == this.senha){
    console.log(this.usuariosService.usuarioLogado.tipoSanguineo) 
    
@@ -49,7 +51,8 @@ export class SolicitacaoDeSangueComponent implements OnInit {
   }  else{
     alert("os dados não batem")
   }
-  
+     */
+
  
 }
   ngOnInit() {

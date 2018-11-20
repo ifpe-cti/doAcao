@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from "angularfire2/firestore";
-import {Observable} from 'rxjs/Observable';
+import { Observable } from 'rxjs/Observable';
 import { SolicitacaoSanguinea } from './models/solicitacaoSanguinea';
 
 @Injectable({
@@ -14,11 +14,11 @@ export class SolicitacaoDeSangueService {
   }
 
   private solicitacaoSangueCollection: AngularFirestoreCollection<SolicitacaoSanguinea>;
-  
-cadastrarSolicitacaoSanguineaFirebase(solicitacaoSangue: SolicitacaoSanguinea) {
-  this.solicitacaoSangueCollection.add(solicitacaoSangue).then(
-    resultado => {
-      solicitacaoSangue.id = resultado.id;
-    });
-}
+
+  cadastrarSolicitacaoSanguineaFirebase(solicitacaoSangue: SolicitacaoSanguinea) {
+    this.solicitacaoSangueCollection.add(solicitacaoSangue).then(
+      resultado => {
+        solicitacaoSangue.id = resultado.id;
+      });
+  }
 }

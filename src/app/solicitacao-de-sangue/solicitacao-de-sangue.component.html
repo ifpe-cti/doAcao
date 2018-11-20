@@ -2,22 +2,27 @@
   
     <p-tabMenu [model]="items"></p-tabMenu>
 
+    <div class="ui-g">
+        <div class="ui-g-4"></div>
+        <div class="ui-g-4"><input [(ngModel)]= "solicitacaoSanguinea.nomeUsuario" type="text" size="30" placeholder="Nome Completo" pInputText></div>
+        <div class="ui-g-4"></div>
+    </div>
 
     <div class="ui-g">
         <div class="ui-g-4"></div>
-        <div class="ui-g-4"><input [(ngModel)]= "cpf" type="text" size="30" placeholder="CPF" pInputText></div>
+        <div class="ui-g-4"><input [(ngModel)]= "solicitacaoSanguinea.numeroDocumentoDoador" type="text" size="30" placeholder="CPF" pInputText></div>
         <div class="ui-g-4"></div>
     </div>
       
     <div class="ui-g">
         <div class="ui-g-4"></div>
-        <div class="ui-g-4"><input [(ngModel)]= "senha" type="password" size="30" placeholder = "Senha" pInputText></div>
+        <div class="ui-g-4"><input [(ngModel)]= "solicitacaoSanguinea.tipoSanguineo" type="password" size="30" placeholder = "Tipo Sanguíneo" pInputText></div>
         <div class="ui-g-4"></div>
     </div>
 
     <div class="ui-g">
         <div class="ui-g-4"></div>
-        <div class="ui-g-4"><button pButton type="button" label="Confirmar" (click) = "buscarDados()"  class="ui-button-danger"></button></div>
+        <div class="ui-g-4"><button pButton type="button" label="Confirmar" (click) = "enviarSolicitacao()"  class="ui-button-danger"></button></div>
         <div class="ui-g-4"></div>
     </div>
  
