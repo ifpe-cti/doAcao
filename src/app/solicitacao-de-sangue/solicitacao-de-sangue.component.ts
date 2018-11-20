@@ -5,6 +5,8 @@ import { MenuItem } from 'primeng/primeng';
 import { MenusService } from '../menus.service';
 import { SolicitacaoSanguinea } from '../models/solicitacaoSanguinea';
 import { Usuario } from '../models/usuario';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
 
 
 @Component({
@@ -18,21 +20,15 @@ export class SolicitacaoDeSangueComponent implements OnInit {
   senha: String;
   solicitacaoSanguinea: SolicitacaoSanguinea;
   usuario: Usuario[];
+  
 
   constructor(private usuariosService: UsuariosService, 
-    private router:Router, private menusService: MenusService) { 
+    private router:Router, private menusService: MenusService, ) { 
       this.solicitacaoSanguinea = {
        nomeUsuario: "", numeroDocumentoDoador: "", tipoSanguineo: ""
 
       }
     }
-/**
- *  this.listarTodos()
-    .subscribe(meuObservable => 
-      this.todosOsUsuarios = meuObservable as Usuario[]
-    );
- */
-   
 
   buscarDados(){
   if(this.usuariosService.usuarioLogado.cpf == this.cpf && this.usuariosService.usuarioLogado.senha == this.senha){
@@ -40,12 +36,13 @@ export class SolicitacaoDeSangueComponent implements OnInit {
     this.usuariosService.usuarioLogado.cpf = this.solicitacaoSanguinea.numeroDocumentoDoador;
     this.usuariosService.usuarioLogado.tipoSanguineo = this.solicitacaoSanguinea.tipoSanguineo;
   }  else{
-
+    alert("os dados não batem")
   }
   
  
 }
   ngOnInit() {
+   
   }
 
 }
