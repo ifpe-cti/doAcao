@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { RouterLink } from '../../node_modules/@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -18,17 +19,27 @@ export class MenusService {
     { label: '  Todas os usuários', icon: '', routerLink: '/listagem-de-usuarios' },
     { label: '  Todas as solicitações sanguíneas', icon: '', routerLink: '/visualizacao-solicitacoes' },
     { label: '  Encerrar sessão', icon: '', routerLink: '/login' },
-
-    
-  ];
-
-
+    { label: 'Adicionar exame', icon: '',routerLink: '/requisicao-do-exame',
+          items: [
+              [
+                  {
+                      label: 'TV 1',
+                      items: [{label: 'TV 1.1'},{label: 'TV 1.2'}]
+                  },
+                  {
+                      label: 'TV 2',
+                      items: [{label: 'TV 2.1'},{label: 'TV 2.2'}]
+                  }
+              ]
+            ] 
+          }
+        ]
   itensUsuario = [
     { label: '  Página inicial', icon: 'fa-calendar', routerLink: '/dashboard' },
     { label: '  Fichas médicas', icon: 'fa-book', routerLink: '' },
     { label: '  Solicitação de doação', icon: 'fa-book', routerLink: '/agendamento-de-doacoes' },
     { label: '  Solicitar sangue ', icon: 'fa-calendar', routerLink: '/solicitacao-de-sangue' },
     { label: '  Encerrar sessão', icon: '', routerLink: '/login' },
-  ];
+  ]
 
-}
+    }
