@@ -43,8 +43,8 @@ import {InputTextareaModule} from 'primeng/primeng';
 import {DropdownModule} from 'primeng/dropdown';
 import { ChartModule } from 'primeng/chart';
 import  { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
-import {AutoCompleteModule} from 'primeng/autocomplete';
-
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { MegaMenuModule } from 'primeng/megamenu';
 
 
 //angularFire
@@ -117,6 +117,7 @@ import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
     ChartModule,
     BrowserAnimationsModule,
     AutoCompleteModule,
+    MegaMenuModule,
 
     AngularFireModule.initializeApp(FirebaseConfig),
     //AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
