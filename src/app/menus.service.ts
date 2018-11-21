@@ -19,6 +19,20 @@ export class MenusService {
     { label: '  Todas os usuários', icon: '', routerLink: '/listagem-de-usuarios' },
     { label: '  Todas as solicitações sanguíneas', icon: '', routerLink: '/visualizacao-solicitacoes' },
     { label: '  Encerrar sessão', icon: '', routerLink: '/login' },
+    { label: '  Exames', icon: '',
+          items: [
+              [
+                  {
+                      label: 'Adicionar exame',
+                      items: [{label: 'TV 1.1'}]
+                  },
+                  {
+                      label: 'Listar todos os exames',
+                      items: [{label: 'TV 2.1'}]
+                  }
+              ]
+            ] 
+          }
         ]
   itensUsuario = [
     { label: '  Página inicial', icon: 'fa-calendar', routerLink: '/dashboard' },
