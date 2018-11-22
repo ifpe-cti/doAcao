@@ -13,19 +13,13 @@ export class MenusService {
 
   itensHemope = [
     { label: '  Página inicial', icon: '', routerLink: '/dashboard-hemope' },
-    //{ label: '  Adicionar exame', icon: '', routerLink: '/requisicao-do-exame' },
-    //{ label: '  Agendar doação', icon: '', routerLink: '/agendamento-de-doacoes-hemope' },
-    //{ label: '  Todos os exames', icon: '', routerLink: '/visualizacao-requisicao-exames' },
-    //{ label: '  Todas as fichas médicas', icon: '', routerLink: '/visualizacao-fichas-medicas' },
-    //{ label: '  Todas os usuários', icon: '', routerLink: '/listagem-de-usuarios' },
-   // { label: '  Todas as solicitações sanguíneas', icon: '', routerLink: '/visualizacao-solicitacoes' },
     { label: ' Exames ', icon: '',
           items: [
               [
                   { items: [{label: 'Adicionar exame', routerLink:['/requisicao-do-exame']}]
                   },
                   {
-                    items: [{label: 'Listar todos os exames'}],  RouterLink: '/visualizacao-requisicao-exames'
+                    items: [{label: 'Listar todos os exames',  routerLink: '/visualizacao-requisicao-exames'}]
 
                   }
               ]
@@ -35,10 +29,10 @@ export class MenusService {
           items: [
               [
                   {
-                      items: [{label: 'Adicionar ficha médica'}],  RouterLink: '/requisicao-do-exame'
+                    items: [{label: 'Adicionar fichas médicas', routerLink: '/fichas-medicas'}]
                   },
                   {
-                    items: [{label: 'Listar todas as fichas'}],  RouterLink: '/visualizacao-requisicao-exames'
+                    items: [{label: 'Listar todas as fichas', routerLink: '/visualizacao-fichas-medicas'}]
 
                   }
               ]
@@ -48,20 +42,19 @@ export class MenusService {
           items: [
               [
                   {
-                      items: [{label: 'Agendar doação'}],  RouterLink: '/requisicao-do-exame'
+                    items: [{label: 'Agendar doação', routerLink: '/agendamento-de-doacoes-hemope'}]
                   },
                   {
-                    items: [{label: 'Listar as solicitações sanguíneas'}],  RouterLink: '/visualizacao-requisicao-exames'
+                    items: [{label: 'Listar as solicitações sanguíneas', routerLink: '/visualizacao-solicitacoes'}]
 
                   },
                   {
-                    items: [{label: 'Listar todos os usuários'}],  RouterLink: '/visualizacao-requisicao-exames'
+                    items: [{label: 'Listar todos os usuários', routerLink: '/listagem-de-usuarios'}]
 
                   }
               ]
             ] 
           },
-        //  { label: '  Adicionar ficha médica', icon: '', routerLink: '/fichas-medicas' },
           { label: '  Encerrar sessão', icon: '', routerLink: '/login' },
         ]
   itensUsuario = [
