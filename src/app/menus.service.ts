@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { RouterLink } from '../../node_modules/@angular/router';
+import { MegaMenuModule } from 'primeng/megamenu';
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,28 +13,49 @@ export class MenusService {
 
   itensHemope = [
     { label: '  Página inicial', icon: '', routerLink: '/dashboard-hemope' },
-    { label: '  Adicionar exame', icon: '', routerLink: '/requisicao-do-exame' },
-    { label: '  Adicionar ficha médica', icon: '', routerLink: '/fichas-medicas' },
-    { label: '  Agendar doação', icon: '', routerLink: '/agendamento-de-doacoes-hemope' },
-    { label: '  Todos os exames', icon: '', routerLink: '/visualizacao-requisicao-exames' },
-    { label: '  Todas as fichas médicas', icon: '', routerLink: '/visualizacao-fichas-medicas' },
-    { label: '  Todas os usuários', icon: '', routerLink: '/listagem-de-usuarios' },
-    { label: '  Todas as solicitações sanguíneas', icon: '', routerLink: '/visualizacao-solicitacoes' },
-    { label: '  Encerrar sessão', icon: '', routerLink: '/login' },
-    { label: 'Adicionar exame', icon: '',routerLink: '/requisicao-do-exame',
+    { label: ' Exames ', icon: '',
           items: [
               [
-                  {
-                      label: 'TV 1',
-                      items: [{label: 'TV 1.1'},{label: 'TV 1.2'}]
+                  { items: [{label: 'Adicionar exame', routerLink:['/requisicao-do-exame']}]
                   },
                   {
-                      label: 'TV 2',
-                      items: [{label: 'TV 2.1'},{label: 'TV 2.2'}]
+                    items: [{label: 'Listar todos os exames',  routerLink: '/visualizacao-requisicao-exames'}]
+
                   }
               ]
             ] 
-          }
+          },
+          { label: '  Fichas médicas', icon: '',
+          items: [
+              [
+                  {
+                    items: [{label: 'Adicionar fichas médicas', routerLink: '/fichas-medicas'}]
+                  },
+                  {
+                    items: [{label: 'Listar todas as fichas', routerLink: '/visualizacao-fichas-medicas'}]
+
+                  }
+              ]
+            ] 
+          },
+          { label: ' Solicitações e pedidos ', icon: '',
+          items: [
+              [
+                  {
+                    items: [{label: 'Agendar doação', routerLink: '/agendamento-de-doacoes-hemope'}]
+                  },
+                  {
+                    items: [{label: 'Listar as solicitações sanguíneas', routerLink: '/visualizacao-solicitacoes'}]
+
+                  },
+                  {
+                    items: [{label: 'Listar todos os usuários', routerLink: '/listagem-de-usuarios'}]
+
+                  }
+              ]
+            ] 
+          },
+          { label: '  Encerrar sessão', icon: '', routerLink: '/login' },
         ]
   itensUsuario = [
     { label: '  Página inicial', icon: 'fa-calendar', routerLink: '/dashboard' },
