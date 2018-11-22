@@ -30,6 +30,36 @@ export class MenusService {
               ]
             ] 
           },
+          { label: '  Ficha médica', icon: '',
+          items: [
+              [
+                  {
+                      items: [{label: 'Adicionar ficha médica'}],  RouterLink: '/requisicao-do-exame'
+                  },
+                  {
+                    items: [{label: 'Listar todas as fichas'}],  RouterLink: '/visualizacao-requisicao-exames'
+
+                  }
+              ]
+            ] 
+          },
+          { label: ' Solicitações e pedidos ', icon: '',
+          items: [
+              [
+                  {
+                      items: [{label: 'Agendar doação'}],  RouterLink: '/requisicao-do-exame'
+                  },
+                  {
+                    items: [{label: 'Listar as solicitações sanguíneas'}],  RouterLink: '/visualizacao-requisicao-exames'
+
+                  },
+                  {
+                    items: [{label: 'Listar todos os usuários'}],  RouterLink: '/visualizacao-requisicao-exames'
+
+                  }
+              ]
+            ] 
+          },
         //  { label: '  Adicionar ficha médica', icon: '', routerLink: '/fichas-medicas' },
           { label: '  Encerrar sessão', icon: '', routerLink: '/login' },
         ]
