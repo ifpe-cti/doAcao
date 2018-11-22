@@ -11,28 +11,27 @@ export class MenusService {
 
   itensHemope = [
     { label: '  Página inicial', icon: '', routerLink: '/dashboard-hemope' },
-    { label: '  Adicionar exame', icon: '', routerLink: '/requisicao-do-exame' },
-    { label: '  Adicionar ficha médica', icon: '', routerLink: '/fichas-medicas' },
-    { label: '  Agendar doação', icon: '', routerLink: '/agendamento-de-doacoes-hemope' },
-    { label: '  Todos os exames', icon: '', routerLink: '/visualizacao-requisicao-exames' },
-    { label: '  Todas as fichas médicas', icon: '', routerLink: '/visualizacao-fichas-medicas' },
-    { label: '  Todas os usuários', icon: '', routerLink: '/listagem-de-usuarios' },
-    { label: '  Todas as solicitações sanguíneas', icon: '', routerLink: '/visualizacao-solicitacoes' },
-    { label: '  Encerrar sessão', icon: '', routerLink: '/login' },
+    //{ label: '  Adicionar exame', icon: '', routerLink: '/requisicao-do-exame' },
+    //{ label: '  Agendar doação', icon: '', routerLink: '/agendamento-de-doacoes-hemope' },
+    //{ label: '  Todos os exames', icon: '', routerLink: '/visualizacao-requisicao-exames' },
+    //{ label: '  Todas as fichas médicas', icon: '', routerLink: '/visualizacao-fichas-medicas' },
+    //{ label: '  Todas os usuários', icon: '', routerLink: '/listagem-de-usuarios' },
+   // { label: '  Todas as solicitações sanguíneas', icon: '', routerLink: '/visualizacao-solicitacoes' },
     { label: '  Exames', icon: '',
           items: [
               [
                   {
-                      label: 'Adicionar exame',
-                      items: [{label: 'TV 1.1'}]
+                      items: [{label: 'Adicionar exame'}],  RouterLink: '/requisicao-do-exame'
                   },
                   {
-                      label: 'Listar todos os exames',
-                      items: [{label: 'TV 2.1'}]
+                    items: [{label: 'Listar todos os exames'}],  RouterLink: '/visualizacao-requisicao-exames'
+
                   }
               ]
             ] 
-          }
+          },
+        //  { label: '  Adicionar ficha médica', icon: '', routerLink: '/fichas-medicas' },
+          { label: '  Encerrar sessão', icon: '', routerLink: '/login' },
         ]
   itensUsuario = [
     { label: '  Página inicial', icon: 'fa-calendar', routerLink: '/dashboard' },
