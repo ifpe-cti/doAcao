@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { RouterLink } from '../../node_modules/@angular/router';
+import { MegaMenuModule } from 'primeng/megamenu';
+
 
 @Injectable({
   providedIn: 'root'
@@ -17,11 +19,10 @@ export class MenusService {
     //{ label: '  Todas as fichas médicas', icon: '', routerLink: '/visualizacao-fichas-medicas' },
     //{ label: '  Todas os usuários', icon: '', routerLink: '/listagem-de-usuarios' },
    // { label: '  Todas as solicitações sanguíneas', icon: '', routerLink: '/visualizacao-solicitacoes' },
-    { label: '  Exames', icon: '',
+    { label: ' Exames ', icon: '',
           items: [
               [
-                  {
-                      items: [{label: 'Adicionar exame'}],  RouterLink: '/requisicao-do-exame'
+                  { items: [{label: 'Adicionar exame', routerLink:['/requisicao-do-exame']}]
                   },
                   {
                     items: [{label: 'Listar todos os exames'}],  RouterLink: '/visualizacao-requisicao-exames'
@@ -30,7 +31,7 @@ export class MenusService {
               ]
             ] 
           },
-          { label: '  Ficha médica', icon: '',
+          { label: '  Fichas médicas', icon: '',
           items: [
               [
                   {
