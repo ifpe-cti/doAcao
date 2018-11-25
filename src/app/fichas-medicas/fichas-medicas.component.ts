@@ -33,14 +33,11 @@ export class FichasMedicasComponent implements OnInit {
 
   }
 
-
   search(cpf) {
     this.servicoUsuario.filtrarUsuariosPorCPF(cpf.query).subscribe(data => {
       this.results = data;
     });    
   }
-
- 
 
    buscarPorCPF(){
     this.servicoUsuario.listarTodos().subscribe(usuarios =>
@@ -52,13 +49,14 @@ export class FichasMedicasComponent implements OnInit {
       }
   }
 
-
   adicionarFichaMedica(){
        this.servicoFichaMedica.adicionarFichaMedicaFirebase(this.fichaMedica);
        console.log("Nova ficha médica adicionada: " + this.fichaMedica.id);
        this.router.navigate(['dashboard']);
   }
 
+
+  
   ngOnInit() {
     this.items = this.menusService.itensHemope;
 
