@@ -92,8 +92,28 @@ export class UsuariosService {
               usuariosFiltrados.push(this.todosOsUsuarios[i].cpf);
             }
           }
-
           observer.next(usuariosFiltrados);
+          observer.complete();
+        }
+        );
+    })
+  }
+
+
+  resgatarUsuarioPorCPF(cpf) {
+    return new Observable<Usuario[]>(observer => {
+      this.listarTodos()
+        .subscribe(meuObservable => {
+          this.todosOsUsuarios = meuObservable as Usuario[]
+          let usuarios: Usuario[];
+          let usuariosCPF: String[];
+          for (let i = 0; i < this.todosOsUsuarios.length; i++) {
+            if (this.todosOsUsuarios[i].cpf.search(cpf) != -1) { // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 
+              usuarios.push(this.todosOsUsuarios[i]);
+              usuariosCPF.push(this.todosOsUsuarios[i].cpf);
+            }
+          }
+          observer.next(usuarios);
           observer.complete();
         }
         );

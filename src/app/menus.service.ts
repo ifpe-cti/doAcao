@@ -57,6 +57,8 @@ export class MenusService {
           },
           { label: '  Encerrar sessão', icon: '', routerLink: '/login' },
         ]
+
+        
   itensUsuario = [
     { label: '  Página inicial', icon: 'fa-calendar', routerLink: '/dashboard' },
     { label: '  Fichas médicas', icon: 'fa-book', routerLink: '' },

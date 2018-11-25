@@ -28,7 +28,9 @@ export class FichasMedicasComponent implements OnInit {
 
   }
 
-    
+    procuraPorCPF(){
+      this.servicoUsuario.filtrarUsuariosPorCPF(this.cpfUsuario);
+    }
   
   voltarPaginaInicial(){
     this.router.navigate(['dashboard']);

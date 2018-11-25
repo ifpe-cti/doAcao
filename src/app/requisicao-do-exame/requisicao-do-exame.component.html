@@ -1,14 +1,22 @@
 <body>
 
+ 
+
  <div class="ui-g">
   
   <div class="ui-g-12"><p-megaMenu [model]="items"></p-megaMenu></div>
   <div class="ui-g-4"></div>
 
-  <div class="ui-g-4"> <h3>Dados Pessoais</h3>
-    <span class="ui-float-label">
+  <div class="ui-g-4"><p-autoComplete [(ngModel)]="cpf" placeholder="Buscar por CPF" 
+    [suggestions]="results" (completeMethod)="search($event)"></p-autoComplete>   
+    
+  <button pButton type="button" label="Buscar por CPF" (click) = "buscarPorCPF()"
+  class="ui-button"></button>
+  <p></p>
 
-      <input id="float-input" [(ngModel)]= "requisicaoExames.nomeDoador" type="text" size="30" pInputText> 
+  <span class="ui-float-label">
+
+      <input id="float-input" [(ngModel)]= "nomeUsuarioResgatadoPorCPF" type="text" size="30" pInputText> 
       <label for="float-input">Nome Completo</label>
   </span>
   
@@ -19,9 +27,6 @@
     <label for="float-input">Número de Documento</label>
   </span>
 <p></p>
-  <p-autoComplete [(ngModel)]="cpf" [suggestions]="results" (completeMethod)="search($event)"></p-autoComplete>
-  
-  <p></p>
   
   <span class="ui-float-label">
     <input id="float-input" [(ngModel)]= "requisicaoExames.tipoDeDocumentoDoador " type="text" size="30" pInputText> 
