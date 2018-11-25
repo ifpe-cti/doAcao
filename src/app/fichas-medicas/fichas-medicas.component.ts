@@ -40,9 +40,7 @@ export class FichasMedicasComponent implements OnInit {
     });    
   }
 
-  voltarPaginaInicial(){
-    this.router.navigate(['dashboard']);
-   }
+ 
 
    buscarPorCPF(){
     this.servicoUsuario.listarTodos().subscribe(usuarios =>
