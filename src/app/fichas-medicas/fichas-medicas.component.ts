@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FichaMedica } from '../models/ficha-medica';
 import { Usuario } from '../models/usuario';
 import { FichasMedicasService } from '../fichas-medicas.service';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
 import { UsuariosService } from '../usuarios.service';
 import { MenuItem } from 'primeng/primeng';
 import { MenusService } from '../menus.service';
@@ -18,45 +18,46 @@ export class FichasMedicasComponent implements OnInit {
 
   fichaMedica: FichaMedica;
   cpfUsuario: String;
-  results: String [];
+  results: String[];
 
   usuarios: Usuario[];
   nomeUsuarioResgatadoPorCPF: String;
   cpf: String;
 
 
-  constructor(private servicoFichaMedica: FichasMedicasService, private router:Router, 
-  private servicoUsuario: UsuariosService, private menusService: MenusService) { 
-    this.fichaMedica = { nomeDoador: this.nomeUsuarioResgatadoPorCPF, hemoglobina:"", pressaoArterial: "", 
-    temperatura: "", peso: "", altura:"", pulso:"", bracoPunsionado: "", reacoesAdversas:"",
-    flebomistaResponsavel:"", tipoDeDoacao:"", numeroDoTubo:"", volumeDoSangue:""}
-
+  constructor(private servicoFichaMedica: FichasMedicasService, private router: Router,
+    private servicoUsuario: UsuariosService, private menusService: MenusService) {
+    this.fichaMedica = {
+      nomeDoador: this.nomeUsuarioResgatadoPorCPF, hemoglobina: "", pressaoArterial: "",
+      temperatura: "", peso: "", altura: "", pulso: "", bracoPunsionado: "", reacoesAdversas: "",
+      flebomistaResponsavel: "", tipoDeDoacao: "", numeroDoTubo: "", volumeDoSangue: ""
+    }
   }
 
   search(cpf) {
     this.servicoUsuario.filtrarUsuariosPorCPF(cpf.query).subscribe(data => {
       this.results = data;
-    });    
+    });
   }
 
-   buscarPorCPF(){
+  buscarPorCPF() {
     this.servicoUsuario.listarTodos().subscribe(usuarios =>
       this.usuarios = usuarios as Usuario[]);
-      for(let i = 0; i < this.usuarios.length; i++){
-       if(this.usuarios[i].cpf == this.cpf){
+    for (let i = 0; i < this.usuarios.length; i++) {
+      if (this.usuarios[i].cpf == this.cpf) {
         this.nomeUsuarioResgatadoPorCPF = this.usuarios[i].nome;
-       }
       }
+    }
   }
 
-  adicionarFichaMedica(){
-       this.servicoFichaMedica.adicionarFichaMedicaFirebase(this.fichaMedica);
-       console.log("Nova ficha médica adicionada: " + this.fichaMedica.id);
-       this.router.navigate(['dashboard']);
+  adicionarFichaMedica() {
+    this.servicoFichaMedica.adicionarFichaMedicaFirebase(this.fichaMedica);
+    console.log("Nova ficha médica adicionada: " + this.fichaMedica.id);
+    this.router.navigate(['dashboard']);
   }
 
 
-  
+
   ngOnInit() {
     this.items = this.menusService.itensHemope;
 
@@ -64,6 +65,6 @@ export class FichasMedicasComponent implements OnInit {
 }
 
 
-  
 
-  
+
+
