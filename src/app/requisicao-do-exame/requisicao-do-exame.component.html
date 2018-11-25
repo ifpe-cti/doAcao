@@ -7,8 +7,8 @@
   <div class="ui-g-12"><p-megaMenu [model]="items"></p-megaMenu></div>
   <div class="ui-g-4"></div>
 
-  <div class="ui-g-4"><p-autoComplete [(ngModel)]="cpf" placeholder="Buscar por CPF" 
-    [suggestions]="results" (completeMethod)="search($event)"></p-autoComplete>   
+  <div class="ui-g-4"> <p-autoComplete [(ngModel)]="cpf" placeholder="Buscar por CPF" 
+    [suggestions]="results" (completeMethod)="search($event)"> </p-autoComplete>   
     
   <button pButton type="button" label="Buscar por CPF" (click) = "buscarPorCPF()"
   class="ui-button"></button>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FichaMedica } from '../models/ficha-medica';
+import { Usuario } from '../models/usuario';
 import { FichasMedicasService } from '../fichas-medicas.service';
 import { Router} from '@angular/router';
 import { UsuariosService } from '../usuarios.service';
@@ -19,25 +20,42 @@ export class FichasMedicasComponent implements OnInit {
   cpfUsuario: String;
   results: String [];
 
+  usuarios: Usuario[];
+  nomeUsuarioResgatadoPorCPF: String;
+  cpf: String;
+
 
   constructor(private servicoFichaMedica: FichasMedicasService, private router:Router, 
   private servicoUsuario: UsuariosService, private menusService: MenusService) { 
-    this.fichaMedica = { nomeDoador: "", hemoglobina:"", pressaoArterial: "", 
+    this.fichaMedica = { nomeDoador: this.nomeUsuarioResgatadoPorCPF, hemoglobina:"", pressaoArterial: "", 
     temperatura: "", peso: "", altura:"", pulso:"", bracoPunsionado: "", reacoesAdversas:"",
     flebomistaResponsavel:"", tipoDeDoacao:"", numeroDoTubo:"", volumeDoSangue:""}
 
   }
 
-    procuraPorCPF(){
-      this.servicoUsuario.filtrarUsuariosPorCPF(this.cpfUsuario);
-    }
-  
+
+  search(cpf) {
+    this.servicoUsuario.filtrarUsuariosPorCPF(cpf.query).subscribe(data => {
+      this.results = data;
+    });    
+  }
+
   voltarPaginaInicial(){
     this.router.navigate(['dashboard']);
    }
 
+   buscarPorCPF(){
+    this.servicoUsuario.listarTodos().subscribe(usuarios =>
+      this.usuarios = usuarios as Usuario[]);
+      for(let i = 0; i < this.usuarios.length; i++){
+       if(this.usuarios[i].cpf == this.cpf){
+        this.nomeUsuarioResgatadoPorCPF = this.usuarios[i].nome;
+       }
+      }
+  }
+
+
   adicionarFichaMedica(){
-  
        this.servicoFichaMedica.adicionarFichaMedicaFirebase(this.fichaMedica);
        console.log("Nova ficha médica adicionada: " + this.fichaMedica.id);
        this.router.navigate(['dashboard']);

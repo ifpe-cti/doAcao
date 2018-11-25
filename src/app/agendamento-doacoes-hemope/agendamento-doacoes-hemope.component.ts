@@ -28,6 +28,9 @@ export class AgendamentoDoacoesHemopeComponent implements OnInit {
   agendamentoDoacao: AgendamentoDoacao;
   items: MenuItem[];
   results:String [];
+  usuarios: Usuario[];
+  nomeUsuarioResgatadoPorCPF: String;
+  cpf: String;
 
   search(cpf) {
     this.servicoUsuario.filtrarUsuariosPorCPF(cpf.query).subscribe(data => {
@@ -44,9 +47,16 @@ export class AgendamentoDoacoesHemopeComponent implements OnInit {
      console.log("Nova doação agendada: " + this.agendamentoDoacao.nomeDoador + 
      this.agendamentoDoacao.numeroDocumentoDoador);
      this.router.navigate(['dashboard-hemope']);
-  
+    }
 
-
+    buscarPorCPF(){
+      this.servicoUsuario.listarTodos().subscribe(usuarios =>
+        this.usuarios = usuarios as Usuario[]);
+        for(let i = 0; i < this.usuarios.length; i++){
+         if(this.usuarios[i].cpf == this.cpf){
+          this.nomeUsuarioResgatadoPorCPF = this.usuarios[i].nome;
+         }
+        }
     }
 
     ngOnInit() {
