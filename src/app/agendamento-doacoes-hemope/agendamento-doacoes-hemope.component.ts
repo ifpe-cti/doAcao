@@ -32,22 +32,18 @@ export class AgendamentoDoacoesHemopeComponent implements OnInit {
   nomeUsuarioResgatadoPorCPF: String;
   cpf: String;
 
-  search(cpf) {
-    this.servicoUsuario.filtrarUsuariosPorCPF(cpf.query).subscribe(data => {
-        this.results = data;
-    });
-} 
- 
-  voltarPaginaInicial(){
-    this.router.navigate(['dashboard']);
-   }
-   
   agendarDoacao(){
      this.AgendamentoDeDoacoesService.adicionarAgendamentoDeDoacao(this.agendamentoDoacao);
      console.log("Nova doação agendada: " + this.agendamentoDoacao.nomeDoador + 
      this.agendamentoDoacao.numeroDocumentoDoador);
      this.router.navigate(['dashboard-hemope']);
     }
+
+  search(cpf) {
+    this.servicoUsuario.filtrarUsuariosPorCPF(cpf.query).subscribe(data => {
+        this.results = data;
+    });
+} 
 
     buscarPorCPF(){
       this.servicoUsuario.listarTodos().subscribe(usuarios =>
