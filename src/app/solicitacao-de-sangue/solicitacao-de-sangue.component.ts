@@ -35,7 +35,7 @@ export class SolicitacaoDeSangueComponent implements OnInit {
 
   enviarSolicitacao(){
     this.solicitacaoSanguineaService.cadastrarSolicitacaoSanguineaFirebase(this.solicitacaoSanguinea);
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/dashboard-hemope']);
     
     /**
      *  this.usuariosService.usuarioLogado.nome = this.solicitacaoSanguinea.nomeUsuario;
