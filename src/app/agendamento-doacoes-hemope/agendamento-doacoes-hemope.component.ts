@@ -17,9 +17,9 @@ export class AgendamentoDoacoesHemopeComponent implements OnInit {
 
   agendamentoDoacao: AgendamentoDoacao;
   items: MenuItem[];
-  results: String[];
+  results: String[] = [] ;
 
-  usuarios: Usuario[];
+  usuarios: Usuario[] = [];
   nomeUsuarioResgatadoPorCPF: String;
   cpf: String;
 
