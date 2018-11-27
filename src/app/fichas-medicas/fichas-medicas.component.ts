@@ -18,11 +18,12 @@ export class FichasMedicasComponent implements OnInit {
 
   fichaMedica: FichaMedica;
   cpfUsuario: String;
-  results: String[];
+  results: String[] = [];
 
-  usuarios: Usuario[];
+  usuarios: Usuario[] = [];
   nomeUsuarioResgatadoPorCPF: String;
   cpf: String;
+  usuarioResgatadoPorCPF: Usuario;
 
 
   constructor(private servicoFichaMedica: FichasMedicasService, private router: Router,
@@ -45,18 +46,19 @@ export class FichasMedicasComponent implements OnInit {
       this.usuarios = usuarios as Usuario[]);
     for (let i = 0; i < this.usuarios.length; i++) {
       if (this.usuarios[i].cpf == this.cpf) {
+        this.usuarioResgatadoPorCPF = this.usuarios[i];
         this.nomeUsuarioResgatadoPorCPF = this.usuarios[i].nome;
       }
     }
   }
 
-  adicionarFichaMedica() {
+   adicionarFichaMedica() {
     this.servicoFichaMedica.adicionarFichaMedicaFirebase(this.fichaMedica);
     console.log("Nova ficha médica adicionada: " + this.fichaMedica.id);
     this.router.navigate(['dashboard']);
+    
+  //  this.usuarioResgatadoPorCPF.fichasMedicas.push(this.fichaMedica);
   }
-
-
 
   ngOnInit() {
     this.items = this.menusService.itensHemope;

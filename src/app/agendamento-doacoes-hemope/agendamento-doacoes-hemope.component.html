@@ -2,6 +2,21 @@
 
   <p-megaMenu [model]="items"></p-megaMenu>
     
+
+  <div class="ui-g">
+      <div class="ui-g-4"></div>
+      <div class="ui-g-4">
+          <p-autoComplete [(ngModel)]="cpf" placeholder="Buscar por CPF" 
+          [suggestions]="results" (completeMethod)="search($event)"> </p-autoComplete> 
+          
+          <button pButton type="button" label="Buscar por CPF" (click) = "buscarPorCPF()"
+        class="ui-button"></button> 
+        
+      </div>
+      <div class="ui-g-4"></div>
+    </div>
+
+
   <div class="ui-g">
     <div class="ui-g-4"></div>
     <div class="ui-g-4">
@@ -10,17 +25,7 @@
     <div class="ui-g-4"></div>
   </div>
 
-
-  <div class="ui-g">
-    <div class="ui-g-4"></div>
-    <div class="ui-g-4">
-      <p></p>
-      <input type="text" placeholder="Nome do Doador" pInputText [(ngModel)]="agendamentoDoacao.nomeDoador" required/>
-    </div>
-    <div class="ui-g-4"></div>
-  </div>
-
-
+  
   <div class="ui-g">
     <div class="ui-g-4"></div>
     <div class="ui-g-4">
