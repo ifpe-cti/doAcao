@@ -37,17 +37,21 @@ export class AgendamentoDoacoesHemopeComponent implements OnInit {
 
   agendarDoacao() {
     this.AgendamentoDeDoacoesService.adicionarAgendamentoDeDoacao(this.agendamentoDoacao);
-    console.log("Nova doação agendada: " + this.agendamentoDoacao.nomeDoador +
-      this.agendamentoDoacao.numeroDocumentoDoador);
-    this.router.navigate(['dashboard-hemope']);
-  }
+     console.log("Nova doação agendada: " + this.agendamentoDoacao.nomeDoador + 
+     this.agendamentoDoacao.numeroDocumentoDoador);
+     this.router.navigate(['dashboard-hemope']);
+    }
 
   search(cpf) {
     this.servicoUsuario.filtrarUsuariosPorCPF(cpf.query).subscribe(data => {
       this.results = data;
     });
-  }
-
+} 
+ 
+  voltarPaginaInicial(){
+    this.router.navigate(['dashboard-hemope']);
+   }
+   
   buscarPorCPF() {
     this.servicoUsuario.listarTodos().subscribe(usuarios =>
       this.usuarios = usuarios as Usuario[]);

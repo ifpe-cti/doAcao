@@ -61,8 +61,8 @@ export class RequisicaoDoExameComponent implements OnInit {
 
   adicionarRequisicaoExame() {
     this.servicoRequisicaoExames.cadastrarRequisicaoExamesFirebase(this.requisicaoExames);
-    console.log("Nova requisicao adicionada: " + this.requisicaoExames.id);
-    this.router.navigate(['dashboard']);
+    console.log("Nova ficha médica adicionada: " + this.requisicaoExames.id);
+    this.router.navigate(['dashboard-hemope']);
   }
 
   ngOnInit() {
