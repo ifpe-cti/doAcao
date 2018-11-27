@@ -20,7 +20,7 @@ export class RequisicaoDoExameComponent implements OnInit {
 
   cpf: String;
   requisicaoExames: RequisicaoDeExames;
-  results: String[];
+  results: String[] = [];
 
   usuarios: Usuario[] = [];
   nomeUsuarioResgatadoPorCPF: String = "";
