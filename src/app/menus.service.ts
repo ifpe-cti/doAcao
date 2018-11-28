@@ -61,9 +61,20 @@ export class MenusService {
         
   itensUsuario = [
     { label: '  Página inicial', icon: 'fa-calendar', routerLink: '/dashboard' },
+    { label: ' Doação ', icon: 'fa-book',
+    items: [
+        [
+            { items: [{label: 'Solicitar doação', routerLink:['/solicitacao-de-sangue']}]
+            },
+            {
+              items: [{label: 'Agendar doação',  routerLink: '/agendamento-de-doacoes'}]
+
+            }
+        ]
+      ] 
+    },
     { label: '  Fichas médicas', icon: 'fa-book', routerLink: '' },
-    { label: '  Solicitação de doação', icon: 'fa-book', routerLink: '/agendamento-de-doacoes' },
-    { label: '  Solicitar sangue ', icon: 'fa-calendar', routerLink: '/solicitacao-de-sangue' },
+    { label: '  Mais informações', icon: 'fa-book', routerLink: '' },
     { label: '  Encerrar sessão', icon: '', routerLink: '/login' },
   ]
 
