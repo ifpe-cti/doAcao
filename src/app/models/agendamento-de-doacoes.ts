@@ -1,9 +1,9 @@
 
 export interface AgendamentoDoacao{
 
-	nomeDoador:String;
+	cpfDoador:String;
 	dataAgendamento:Date;
-	numeroDocumentoDoador:String;
+	idDoador:String;
 
 	id?:String;
 

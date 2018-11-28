@@ -47,7 +47,7 @@ export class FichasMedicasComponent implements OnInit {
       if (this.usuarios[i].cpf == this.cpf) {
         this.usuarioResgatadoPorCPF = this.usuarios[i];
         this.nomeUsuarioResgatadoPorCPF = this.usuarioResgatadoPorCPF.nome;
-        this.fichaMedica.id = this.usuarioResgatadoPorCPF.id;
+        this.fichaMedica.idDoador = this.usuarioResgatadoPorCPF.id;
         this.fichaMedica.cpfDoador = this.usuarioResgatadoPorCPF.cpf // relacionando o usuário encontrado no firebase com o usuario local
        
       }

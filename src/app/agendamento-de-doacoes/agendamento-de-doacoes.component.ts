@@ -17,8 +17,8 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
   constructor(private AgendamentoDeDoacoesService: AgendamentoDeDoacoesService, 
     private router:Router, private menusService: MenusService) {
 
-      this.agendamentoDoacao = {nomeDoador:"", dataAgendamento: null, 
-      numeroDocumentoDoador:""
+      this.agendamentoDoacao = {idDoador:"", dataAgendamento: null, 
+      cpfDoador:""
     }
   }
 
@@ -31,8 +31,8 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
    
   agendarDoacao(){
      this.AgendamentoDeDoacoesService.adicionarAgendamentoDeDoacao(this.agendamentoDoacao);
-     console.log("Nova doação agendada: " + this.agendamentoDoacao.nomeDoador + 
-     this.agendamentoDoacao.numeroDocumentoDoador);
+     console.log("Nova doação agendada: " + this.agendamentoDoacao.idDoador + 
+     this.agendamentoDoacao.cpfDoador);
      this.router.navigate(['dashboard-hemope']);
   
     }
