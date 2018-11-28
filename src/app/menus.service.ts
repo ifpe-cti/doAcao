@@ -13,43 +13,41 @@ export class MenusService {
 
   itensHemope = [
     { label: '  Página inicial', icon: '', routerLink: '/dashboard-hemope' },
-    { label: ' Exames ', icon: '',
+    {label: 'Agendar doação',icon: 'fa-calendar', routerLink: '/agendamento-de-doacoes-hemope'},
+    { label: ' Exames ',  icon: 'fa-book',
           items: [
               [
-                  { items: [{label: 'Adicionar exame', routerLink:['/requisicao-do-exame']}]
-                  },
-                  {
-                    items: [{label: 'Listar todos os exames',  routerLink: '/visualizacao-requisicao-exames'}]
-
+                  { items: [{label: 'Adicionar exame',  routerLink:['/requisicao-do-exame']}]
                   }
               ]
             ] 
           },
-          { label: '  Fichas médicas', icon: '',
+          { label: '  Fichas médicas', icon: 'fa-book',
           items: [
               [
                   {
                     items: [{label: 'Adicionar fichas médicas', routerLink: '/fichas-medicas'}]
-                  },
-                  {
-                    items: [{label: 'Listar todas as fichas', routerLink: '/visualizacao-fichas-medicas'}]
-
                   }
               ]
             ] 
           },
-          { label: ' Solicitações e pedidos ', icon: '',
+          { label: ' Listar ',icon: 'fa-book',
           items: [
               [
-                  {
-                    items: [{label: 'Agendar doação', routerLink: '/agendamento-de-doacoes-hemope'}]
-                  },
                   {
                     items: [{label: 'Listar as solicitações sanguíneas', routerLink: '/visualizacao-solicitacoes'}]
 
                   },
                   {
                     items: [{label: 'Listar todos os usuários', routerLink: '/listagem-de-usuarios'}]
+
+                  },
+                  {
+                    items: [{label: 'Listar todas as fichas médicas', routerLink: '/visualizacao-fichas-medicas'}]
+
+                  },
+                  {
+                    items: [{label: 'Listar todos os exames',  routerLink: '/visualizacao-requisicao-exames'}]
 
                   }
               ]
