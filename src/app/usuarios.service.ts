@@ -44,6 +44,13 @@ export class UsuariosService {
     return usuario;
   }
 
+  adicionarFichaMedica(cpf: String){
+  
+         
+  }
+
+
+
   listarTodos(): Observable<any[]> {
     let resultados: any[] = [];
     let usuarios = new Observable<any[]>(observer => {

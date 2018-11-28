@@ -23,7 +23,7 @@ export class CadastroComponent implements OnInit {
   constructor(private servicoUsuario: UsuariosService, private router: Router) {
     this.usuario = {
       nome: "", user: "", dataNascimento: "", senha: "",
-      fichasMedicas: [], tipoUsuario: "usuario", cpf: "", tipoSanguineo: ""
+      tipoUsuario: "usuario", cpf: "", tipoSanguineo: ""
     }
   }
 

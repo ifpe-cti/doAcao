@@ -19,6 +19,8 @@ export class LoginComponent implements OnInit {
   userUsuario: String;
   senhaUsuario: String;
 
+
+
   user = {
     email: '',
     password: ''
@@ -60,6 +62,13 @@ export class LoginComponent implements OnInit {
         if(usuario == null){
           alert("Usuário não cadastrado no banco.")
         } else{
+
+          this.servicoUsuario.loginUsuario(user, senha).subscribe(meuObservable => {
+          this.servicoUsuario.usuarioLogado = meuObservable as Usuario 
+
+          console.log(this.servicoUsuario.usuarioLogado.cpf)
+          
+        })
          /**
           *       
           this.servicoUsuario.loginUsuario(user, senha).subscribe(meuObservable => 

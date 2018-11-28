@@ -17,21 +17,20 @@ export class FichasMedicasComponent implements OnInit {
   items: MenuItem[];
 
   fichaMedica: FichaMedica;
-  cpfUsuario: String;
-  results: String[] = [];
 
+  results: String[] = [];
   usuarios: Usuario[] = [];
-  nomeUsuarioResgatadoPorCPF: String;
   cpf: String;
+  nomeUsuarioResgatadoPorCPF: String = "";
   usuarioResgatadoPorCPF: Usuario;
 
 
   constructor(private servicoFichaMedica: FichasMedicasService, private router: Router,
     private servicoUsuario: UsuariosService, private menusService: MenusService) {
     this.fichaMedica = {
-      nomeDoador: this.nomeUsuarioResgatadoPorCPF, hemoglobina: "", pressaoArterial: "",
-      temperatura: "", peso: "", altura: "", pulso: "", bracoPunsionado: "", reacoesAdversas: "",
-      flebomistaResponsavel: "", tipoDeDoacao: "", numeroDoTubo: "", volumeDoSangue: ""
+      idDoador: "", cpfDoador: "", hemoglobina: "",
+      pressaoArterial: "", temperatura: "", peso: "", altura: "", pulso: "", bracoPunsionado: "", 
+      reacoesAdversas: "", flebomistaResponsavel: "", tipoDeDoacao: "", numeroDoTubo: "", volumeDoSangue: ""
     }
   }
 
@@ -47,7 +46,10 @@ export class FichasMedicasComponent implements OnInit {
     for (let i = 0; i < this.usuarios.length; i++) {
       if (this.usuarios[i].cpf == this.cpf) {
         this.usuarioResgatadoPorCPF = this.usuarios[i];
-        this.nomeUsuarioResgatadoPorCPF = this.usuarios[i].nome;
+        this.nomeUsuarioResgatadoPorCPF = this.usuarioResgatadoPorCPF.nome;
+        this.fichaMedica.id = this.usuarioResgatadoPorCPF.id;
+        this.fichaMedica.cpfDoador = this.usuarioResgatadoPorCPF.cpf // relacionando o usuário encontrado no firebase com o usuario local
+       
       }
     }
   }
@@ -57,6 +59,8 @@ export class FichasMedicasComponent implements OnInit {
     console.log("Nova ficha médica adicionada: " + this.fichaMedica.id);
     this.router.navigate(['dashboard-hemope']);
   }
+
+
 
   ngOnInit() {
     this.items = this.menusService.itensHemope;
