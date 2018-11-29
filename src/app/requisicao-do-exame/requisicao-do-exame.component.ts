@@ -25,15 +25,19 @@ export class RequisicaoDoExameComponent implements OnInit {
   usuarios: Usuario[] = [];
   nomeUsuarioResgatadoPorCPF: String = "";
 
+  hemope: Usuario;
+
  // nomeUsuario: String;
 
   constructor(private servicoRequisicaoExames: RequisicaoDeExameService, private router: Router,
     private servicoUsuario: UsuariosService, private menusService: MenusService) {
     this.requisicaoExames = {
-      idDoador: this.nomeUsuarioResgatadoPorCPF, numeroDocumentoDoador: "", tipoDocumentoDoador: "",
+      idDoador: "", numeroDocumentoDoador: "", tipoDocumentoDoador: "",
       orgaoExpeditorDoador: "", nomeMaeDoador: "", nomePaiDoador: "", tecnicoResponsavel: "",
       etiquetaDaAmostra: ""
     }
+
+   
 
   }
 
@@ -70,4 +74,6 @@ export class RequisicaoDoExameComponent implements OnInit {
   ngOnInit() {
     this.items = this.items = this.menusService.itensHemope;
   }
+
+  
 }
