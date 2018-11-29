@@ -17,11 +17,10 @@ export class AgendamentoDoacoesHemopeComponent implements OnInit {
 
   agendamentoDoacao: AgendamentoDoacao;
   items: MenuItem[];
-  results: String[] = [];
 
+  results: String[] = [];
   usuarios: Usuario[] = [];
-  usuarioResgatadoPorCPF: Usuario;
-  nomeUsuarioResgatadoPorCPF: String;
+
   cpf: String;
 
   constructor(private AgendamentoDeDoacoesService: AgendamentoDeDoacoesService,
@@ -29,29 +28,14 @@ export class AgendamentoDoacoesHemopeComponent implements OnInit {
     private menusService: MenusService) {
 
     this.agendamentoDoacao = {
-      cpfDoador: "", dataAgendamento: null,
-      idDoador: ""
+      idDoador: "", dataAgendamento: null
     }
   }
 
+  // INSERIR CAMPOS DE CONFIRMAÇÃO DE INFORMAÇÕES COM BUSCA DE CPF
+
   agendarDoacao() {
     this.AgendamentoDeDoacoesService.adicionarAgendamentoDeDoacao(this.agendamentoDoacao);
-    console.log("Nova doação agendada: " + this.agendamentoDoacao.cpfDoador +
-      this.agendamentoDoacao.idDoador);
-    // buscar por cpf 
-      this.servicoUsuario.listarTodos().subscribe(usuarios =>
-        this.usuarios = usuarios as Usuario[]);
-
-      for (let i = 0; i < this.usuarios.length; i++) {
-        if (this.usuarios[i].cpf == this.cpf) {
-  
-          this.usuarioResgatadoPorCPF = this.usuarios[i];
-  
-          this.agendamentoDoacao.idDoador = this.usuarios[i].id;
-          this.agendamentoDoacao.cpfDoador = this.usuarios[i].cpf;
-        }
-      }
-
     this.router.navigate(['dashboard-hemope']);
   }
 
@@ -62,29 +46,15 @@ export class AgendamentoDoacoesHemopeComponent implements OnInit {
   }
 
   buscarPorCPF() {
-
-   /**
-    *  this.servicoUsuario.listarTodos().subscribe(usuarios =>
+    this.servicoUsuario.listarTodos().subscribe(usuarios =>
       this.usuarios = usuarios as Usuario[]);
+
     for (let i = 0; i < this.usuarios.length; i++) {
       if (this.usuarios[i].cpf == this.cpf) {
-
-        this.usuarioResgatadoPorCPF = this.usuarios[i];
-
         this.agendamentoDoacao.idDoador = this.usuarios[i].id;
-        this.agendamentoDoacao.cpfDoador = this.usuarios[i].cpf;
       }
     }
-    * 
-    */
-   
   }
-
-  voltarPaginaInicial() {
-    this.router.navigate(['dashboard-hemope']);
-  }
-
-
 
 
   ngOnInit() {

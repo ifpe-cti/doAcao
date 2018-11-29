@@ -5,6 +5,7 @@ import {AgendamentoDoacao} from './../models/agendamento-de-doacoes';
 import { Router} from '@angular/router';
 import { MenuItem } from 'primeng/primeng';
 import { MenusService } from '../menus.service';
+import { UsuariosService } from './../usuarios.service';
 
 
 @Component({
@@ -15,27 +16,34 @@ import { MenusService } from '../menus.service';
 export class AgendamentoDeDoacoesComponent implements OnInit {
 
   constructor(private AgendamentoDeDoacoesService: AgendamentoDeDoacoesService, 
-    private router:Router, private menusService: MenusService) {
+    private router:Router, private menusService: MenusService, private servicoUsuario: UsuariosService) {
 
       this.agendamentoDoacao = {idDoador:"", dataAgendamento: null, 
-      cpfDoador:""
     }
   }
 
   agendamentoDoacao: AgendamentoDoacao;
   items: MenuItem[];
+
+  usuarios: Usuario [] = [];
+  cpf: String;
  
-  voltarPaginaInicial(){
-    this.router.navigate(['dashboard']);
-   }
-   
   agendarDoacao(){
      this.AgendamentoDeDoacoesService.adicionarAgendamentoDeDoacao(this.agendamentoDoacao);
-     console.log("Nova doação agendada: " + this.agendamentoDoacao.idDoador + 
-     this.agendamentoDoacao.cpfDoador);
      this.router.navigate(['dashboard-hemope']);
-  
     }
+
+    buscarPorCPF() {
+      this.servicoUsuario.listarTodos().subscribe(usuarios =>
+        this.usuarios = usuarios as Usuario[]);
+  
+      for (let i = 0; i < this.usuarios.length; i++) {
+        if (this.usuarios[i].cpf == this.cpf) {
+          this.agendamentoDoacao.idDoador = this.usuarios[i].id;
+        }
+      }
+    }
+  
 
       ngOnInit() {
         this.items = this.menusService.itensUsuario;
