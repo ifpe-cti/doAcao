@@ -25,10 +25,7 @@ export class RequisicaoDoExameComponent implements OnInit {
   usuarios: Usuario[] = [];
   nomeUsuarioResgatadoPorCPF: String = "";
 
-  hemope: Usuario;
-
- // nomeUsuario: String;
-
+  
   constructor(private servicoRequisicaoExames: RequisicaoDeExameService, private router: Router,
     private servicoUsuario: UsuariosService, private menusService: MenusService) {
     this.requisicaoExames = {
@@ -36,13 +33,6 @@ export class RequisicaoDoExameComponent implements OnInit {
       orgaoExpeditorDoador: "", nomeMaeDoador: "", nomePaiDoador: "", tecnicoResponsavel: "",
       etiquetaDaAmostra: ""
     }
-
-   
-
-  }
-
-  voltarPaginaInicial() {
-    this.router.navigate(['dashboard-hemope']);
   }
 
   search(cpf) {

@@ -1,9 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {Usuario} from './../models/usuario';
-import {UsuariosService} from './../usuarios.service';
-import {Message} from 'primeng/components/common/api';
+import { Component, OnInit } from '@angular/core';
+import { Usuario } from './../models/usuario';
+import { UsuariosService } from './../usuarios.service';
+import { Message } from 'primeng/components/common/api';
 
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 
@@ -25,76 +25,63 @@ export class LoginComponent implements OnInit {
     email: '',
     password: ''
   };
- 
-    constructor(private servicoUsuario: UsuariosService, private router:Router, private authService: AuthService) { }
+
+  constructor(private servicoUsuario: UsuariosService, private router: Router, private authService: AuthService) { }
 
   signInWithGoogle() {
-      this.authService.signInWithGoogle()
+    this.authService.signInWithGoogle()
       .then((res) => {
-          this.router.navigate(['dashboard'])
-        })
+        this.router.navigate(['dashboard'])
+      })
       .catch((err) => console.log(err));
-    }
-   
-    /*
-    signInWithEmail() {
-      this.authService.signInRegular(this.user.email, this.user.password)
-        .then((res) => {
-          console.log(res);
-          this.router.navigate(['dashboard']);
-        })
-        .catch((err) => console.log('error: ' + err));
-    }*/
+  }
 
-       redirecionarCadastro(){
-        this.router.navigate(['/cadastro']); 
-       }
+  /*
+  signInWithEmail() {
+    this.authService.signInRegular(this.user.email, this.user.password)
+      .then((res) => {
+        console.log(res);
+        this.router.navigate(['dashboard']);
+      })
+      .catch((err) => console.log('error: ' + err));
+  }*/
 
-       redirecionarLoginGoogle(){
-        this.router.navigate(['/login-google']); 
-       }
-    
-  
-    loginUsuario(user, senha){
-      user = this.userUsuario;
-      senha = this.senhaUsuario;
-      this.servicoUsuario.loginUsuario(user, senha).subscribe(usuario => {
-        if(usuario == null){
-          alert("Usuário não cadastrado no banco.")
-        } else{
+  redirecionarCadastro() {
+    this.router.navigate(['/cadastro']);
+  }
 
-          this.servicoUsuario.loginUsuario(user, senha).subscribe(meuObservable => {
-          this.servicoUsuario.usuarioLogado = meuObservable as Usuario 
+  redirecionarLoginGoogle() {
+    this.router.navigate(['/login-google']);
+  }
+
+
+  loginUsuario(user, senha) {
+    user = this.userUsuario;
+    senha = this.senhaUsuario;
+    this.servicoUsuario.loginUsuario(user, senha).subscribe(usuario => {
+      if (usuario == null) {
+        alert("Usuário não cadastrado no banco.")
+      } else {
+
+        this.servicoUsuario.loginUsuario(user, senha).subscribe(meuObservable => {
+          this.servicoUsuario.usuarioLogado = meuObservable as Usuario
 
           console.log(this.servicoUsuario.usuarioLogado.cpf)
-          
-        })
-         /**
-          *       
-          this.servicoUsuario.loginUsuario(user, senha).subscribe(meuObservable => 
-          this.servicoUsuario.usuarioLogado = meuObservable as Usuario); 
-          * 
-          */
 
+          if (this.servicoUsuario.usuarioLogado.tipoUsuario == "hemocentro") {
+            this.router.navigate(['/dashboard-hemope']);
+          }
 
-         
-    
-          
-        //  console.log(this.servicoUsuario.usuarioLogado.cpf)
-
-          if(usuario.tipo == "hemope"){
-             this.router.navigate(['/dashboard-hemope']);
-          } 
-          else{
+          if (this.servicoUsuario.usuarioLogado.tipoUsuario == "usuario") {
             this.router.navigate(['/dashboard']);
           }
-        
-        }
-      });
-     }
-  
+        })
+      }
+    });
+  }
+
 
   ngOnInit() {
-     
+
   }
 }
