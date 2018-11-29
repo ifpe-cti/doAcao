@@ -1,85 +1,87 @@
 <body>
 
- 
 
- <div class="ui-g">
-  
-  <div class="ui-g-12"><p-megaMenu [model]="items"></p-megaMenu></div>
-  <div class="ui-g-4"></div>
 
-  <div class="ui-g-4"> <p-autoComplete [(ngModel)]="cpf" placeholder="Buscar por CPF" 
-    [suggestions]="results" (completeMethod)="search($event)"> </p-autoComplete>   
-    
-  <button pButton type="button" label="Buscar por CPF" (click) = "buscarPorCPF()"
-  class="ui-button"></button>
-  <p></p>
+  <div class="ui-g">
 
-  <span class="ui-float-label">
+    <div class="ui-g-12">
+      <p-megaMenu [model]="items"></p-megaMenu>
+    </div>
+    <div class="ui-g-4"></div>
 
-      <input id="float-input" [(ngModel)]= "nomeUsuarioResgatadoPorCPF" type="text" size="30" pInputText> 
-      <label for="float-input">Nome Completo</label>
-  </span>
-  
-  <p></p>
-  
-  <span class="ui-float-label">
-    <input id="float-input" [(ngModel)]= "requisicaoExames.numeroDeDocumentoDoador" type="text" size="30" pInputText> 
-    <label for="float-input">Número de Documento</label>
-  </span>
-<p></p>
-  
-  <span class="ui-float-label">
-    <input id="float-input" [(ngModel)]= "requisicaoExames.tipoDeDocumentoDoador " type="text" size="30" pInputText> 
-    <label for="float-input">Tipo de Documento</label>
-  </span>
-  
-  <p></p>
-  
-  <span class="ui-float-label">
-    <input id="float-input" [(ngModel)]= "requisicaoExames.orgaoExpeditorDoador" type="text" size="30" pInputText> 
-    <label for="float-input">Órgão Expeditor</label>
-  </span>
-  
-  <p></p>
-  
-  
-  <h3>Filiação</h3>
-  
-  <span class="ui-float-label">
-    <input id="float-input" [(ngModel)]= "requisicaoExames.nomePaiDoador" type="text" size="30" pInputText> 
-    <label for="float-input">Nome do Pai</label>
-  </span>
-  
-  <p></p>
-  
-  <span class="ui-float-label">
-    <input id="float-input" [(ngModel)]= "requisicaoExames.nomeMaeDoador" type="text" size="30" pInputText> 
-    <label for="float-input">Nome da Mãe</label>
-  </span>
-  
-  <p></p>
-  
-  <h3>Informações Técnicas</h3>
-  
-  <span class="ui-float-label">
-    <input id="float-input" [(ngModel)]= "requisicaoExames.tecnicoResponsavel" type="text" size="30" pInputText> 
-    <label for="float-input">Técnico Responsável</label>
-  </span>
-  
-  <p></p>
-  
-  <span class="ui-float-label">
-    <input id="float-input" [(ngModel)]= "requisicaoExames.etiquetaDaAmostra" type="text" size="30" pInputText> 
-    <label for="float-input">Etiqueta da Amostra</label>
-  </span>
-  
-  <p></p>
-  
-  <button pButton type="button" label="Enviar Dados" 
-       (click) = "adicionarRequisicaoExame()"  class="ui-button-danger"></button> </div>
+    <div class="ui-g-4">
+      <p-autoComplete [(ngModel)]="cpf" placeholder="Buscar por CPF" [suggestions]="results" (completeMethod)="search($event)">
+      </p-autoComplete>
 
-  
-  <div class="ui-g-4"></div>
-</div>
+      <button pButton type="button" label="Buscar por CPF" (click)="buscarPorCPF()" class="ui-button"></button>
+      <p></p>
+
+      <span class="ui-float-label">
+
+        <input id="float-input" [(ngModel)]="nomeUsuarioResgatadoPorCPF" type="text" size="30" pInputText>
+        <label for="float-input">Nome Completo</label>
+      </span>
+
+      <p></p>
+
+      <span class="ui-float-label">
+        <input id="float-input" [(ngModel)]="requisicaoExames.numeroDocumentoDoador" type="text" size="30" pInputText>
+        <label for="float-input">Número de Documento</label>
+      </span>
+      <p></p>
+
+      <span class="ui-float-label">
+        <input id="float-input" [(ngModel)]="requisicaoExames.tipoDocumentoDoador " type="text" size="30" pInputText>
+        <label for="float-input">Tipo de Documento</label>
+      </span>
+
+      <p></p>
+
+      <span class="ui-float-label">
+        <input id="float-input" [(ngModel)]="requisicaoExames.orgaoExpeditorDoador" type="text" size="30" pInputText>
+        <label for="float-input">Órgão Expeditor</label>
+      </span>
+
+      <p></p>
+
+
+      <h3>Filiação</h3>
+
+      <span class="ui-float-label">
+        <input id="float-input" [(ngModel)]="requisicaoExames.nomePaiDoador" type="text" size="30" pInputText>
+        <label for="float-input">Nome do Pai</label>
+      </span>
+
+      <p></p>
+
+      <span class="ui-float-label">
+        <input id="float-input" [(ngModel)]="requisicaoExames.nomeMaeDoador" type="text" size="30" pInputText>
+        <label for="float-input">Nome da Mãe</label>
+      </span>
+
+      <p></p>
+
+      <h3>Informações Técnicas</h3>
+
+      <span class="ui-float-label">
+        <input id="float-input" [(ngModel)]="requisicaoExames.tecnicoResponsavel" type="text" size="30" pInputText>
+        <label for="float-input">Técnico Responsável</label>
+      </span>
+
+      <p></p>
+
+      <span class="ui-float-label">
+        <input id="float-input" [(ngModel)]="requisicaoExames.etiquetaDaAmostra" type="text" size="30" pInputText>
+        <label for="float-input">Etiqueta da Amostra</label>
+      </span>
+
+      <p></p>
+
+      <button pButton type="button" label="Enviar Dados" (click)="adicionarRequisicaoExame()" class="ui-button-danger"></button>
+    </div>
+
+
+    <div class="ui-g-4"></div>
+  </div>
 
 </body>

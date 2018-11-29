@@ -54,7 +54,6 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/login-google']);
   }
 
-
   loginUsuario(user, senha) {
     user = this.userUsuario;
     senha = this.senhaUsuario;

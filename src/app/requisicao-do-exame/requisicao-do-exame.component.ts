@@ -21,11 +21,10 @@ export class RequisicaoDoExameComponent implements OnInit {
   cpf: String;
   requisicaoExames: RequisicaoDeExames;
   results: String[] = [];
+  nomeUsuarioResgatadoPorCPF: String;
 
   usuarios: Usuario[] = [];
-  nomeUsuarioResgatadoPorCPF: String = "";
 
-  
   constructor(private servicoRequisicaoExames: RequisicaoDeExameService, private router: Router,
     private servicoUsuario: UsuariosService, private menusService: MenusService) {
     this.requisicaoExames = {
@@ -46,9 +45,12 @@ export class RequisicaoDoExameComponent implements OnInit {
       this.usuarios = usuarios as Usuario[]);
       for(let i = 0; i < this.usuarios.length; i++){
        if(this.usuarios[i].cpf == this.cpf){
+        this.nomeUsuarioResgatadoPorCPF = this.usuarios[i].nome;
+
         this.requisicaoExames.idDoador = this.usuarios[i].id;
         this.requisicaoExames.numeroDocumentoDoador = this.usuarios[i].numeroDocumento;
         this.requisicaoExames.tipoDocumentoDoador = this.usuarios[i].tipoDocumento;
+        this.requisicaoExames.orgaoExpeditorDoador = this.usuarios[i].orgaoExpeditorDocumento;
         this.requisicaoExames.nomeMaeDoador =  this.usuarios[i].nomeMae;
         this.requisicaoExames.nomePaiDoador = this.usuarios[i].nomePai;
        }
