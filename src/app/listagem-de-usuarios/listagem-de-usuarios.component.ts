@@ -15,12 +15,13 @@ export class ListagemDeUsuariosComponent implements OnInit {
  
 
   usuarios: any[] = [];
-  usuarioSelecionado;
+  cols: any[];
+  usuario: Usuario;
+
+  //usuarioSelecionado;
   items: MenuItem[];
   activeItem: MenuItem;
-
-  cols: any[];
-  usuariosSelecionados: Usuario[] = [];
+  //usuariosSelecionados: Usuario[] = [];
 
   constructor(private usuariosService: UsuariosService, 
     private router:Router, private menusService: MenusService) { }
@@ -28,9 +29,27 @@ export class ListagemDeUsuariosComponent implements OnInit {
     voltarPaginaInicial(){
       this.router.navigate(['dashboard-hemope']);
      }
+   
+     listar(){
+      this.usuariosService.listarTodos().subscribe(usuarios => {
+        this.usuarios = usuarios;
+      });
+    }
+    aceitar(){
+      //aceitou o pedido, faz o que?
+      alert("ok");
+    }
+    rejeitar(){
+      this.usuariosService.apagarUsuarioFirebase(this.usuarios)
+    }
 
- ngOnInit() {
-    this.usuariosService.listarTodos().subscribe(usuarios => {
+    ngOnInit() {
+      this.listar();
+    this.cols = [
+      { field: 'nome', header: 'Nome' },
+      { field: 'idUsuarioPedido', header: 'Usuário' }
+    ]
+    /*this.usuariosService.listarTodos().subscribe(usuarios => {
         this.usuarios = usuarios;   
 
         this.cols = [
@@ -40,11 +59,14 @@ export class ListagemDeUsuariosComponent implements OnInit {
           { field: 'dataNascimento', header: 'Data de Nascimento' }
       ];
 
-       });
+       });*/
+       
 
        this.items = this.menusService.itensHemope;
   
       this.activeItem = this.items[6];
-    }
-
+    
 }
+
+  }
+ 
