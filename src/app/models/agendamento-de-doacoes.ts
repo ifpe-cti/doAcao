@@ -1,7 +1,6 @@
 
 export interface AgendamentoDoacao{
-
-	cpfDoador:String;
+	cpfDoador: String;
 	dataAgendamento:Date;
 	idDoador:String;
 

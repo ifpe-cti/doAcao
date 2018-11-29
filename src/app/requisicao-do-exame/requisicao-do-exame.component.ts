@@ -55,8 +55,7 @@ export class RequisicaoDoExameComponent implements OnInit {
         this.nomeUsuarioResgatadoPorCPF = this.usuarios[i].nome;
        }
       }
-  }
-    
+  }  
 
   adicionarRequisicaoExame() {
     this.servicoRequisicaoExames.cadastrarRequisicaoExamesFirebase(this.requisicaoExames);

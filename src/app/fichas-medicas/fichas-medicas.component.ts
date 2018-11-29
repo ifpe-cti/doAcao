@@ -21,14 +21,11 @@ export class FichasMedicasComponent implements OnInit {
   results: String[] = [];
   usuarios: Usuario[] = [];
   cpf: String;
-  nomeUsuarioResgatadoPorCPF: String = "";
-  usuarioResgatadoPorCPF: Usuario;
-
-
+ 
   constructor(private servicoFichaMedica: FichasMedicasService, private router: Router,
     private servicoUsuario: UsuariosService, private menusService: MenusService) {
     this.fichaMedica = {
-      idDoador: "", cpfDoador: "", hemoglobina: "",
+      idDoador: "", hemoglobina: "",
       pressaoArterial: "", temperatura: "", peso: "", altura: "", pulso: "", bracoPunsionado: "", 
       reacoesAdversas: "", flebomistaResponsavel: "", tipoDeDoacao: "", numeroDoTubo: "", volumeDoSangue: ""
     }
@@ -45,11 +42,8 @@ export class FichasMedicasComponent implements OnInit {
       this.usuarios = usuarios as Usuario[]);
     for (let i = 0; i < this.usuarios.length; i++) {
       if (this.usuarios[i].cpf == this.cpf) {
-        this.usuarioResgatadoPorCPF = this.usuarios[i];
-        this.nomeUsuarioResgatadoPorCPF = this.usuarioResgatadoPorCPF.nome;
-        this.fichaMedica.idDoador = this.usuarioResgatadoPorCPF.id;
-        this.fichaMedica.cpfDoador = this.usuarioResgatadoPorCPF.cpf // relacionando o usuário encontrado no firebase com o usuario local
-       
+        this.fichaMedica.idDoador = this.usuarios[i].id;
+    
       }
     }
   }
