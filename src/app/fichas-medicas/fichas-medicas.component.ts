@@ -21,6 +21,10 @@ export class FichasMedicasComponent implements OnInit {
   results: String[] = [];
   usuarios: Usuario[] = [];
   cpf: String;
+
+  nomeUsuarioResgatadoPorCPF: String;
+  CPFUsuarioResgatadoPorCPF: String;
+  numeroDocumentoUsuarioResgatadoPorCPF: String;
  
   constructor(private servicoFichaMedica: FichasMedicasService, private router: Router,
     private servicoUsuario: UsuariosService, private menusService: MenusService) {
@@ -29,6 +33,8 @@ export class FichasMedicasComponent implements OnInit {
       pressaoArterial: "", temperatura: "", peso: "", altura: "", pulso: "", bracoPunsionado: "", 
       reacoesAdversas: "", flebomistaResponsavel: "", tipoDeDoacao: "", numeroDoTubo: "", volumeDoSangue: ""
     }
+
+
   }
 
   search(cpf) {
@@ -43,18 +49,17 @@ export class FichasMedicasComponent implements OnInit {
     for (let i = 0; i < this.usuarios.length; i++) {
       if (this.usuarios[i].cpf == this.cpf) {
         this.fichaMedica.idDoador = this.usuarios[i].id;
-    
+        this.nomeUsuarioResgatadoPorCPF = this.usuarios[i].nome;
+        this.CPFUsuarioResgatadoPorCPF = this.usuarios[i].cpf;
+        this.numeroDocumentoUsuarioResgatadoPorCPF = this.usuarios[i].numeroDocumento;
       }
     }
   }
 
    adicionarFichaMedica() {
     this.servicoFichaMedica.adicionarFichaMedicaFirebase(this.fichaMedica);
-    console.log("Nova ficha médica adicionada: " + this.fichaMedica.id);
     this.router.navigate(['dashboard-hemope']);
   }
-
-
 
   ngOnInit() {
     this.items = this.menusService.itensHemope;
