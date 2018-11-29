@@ -9,6 +9,8 @@ export interface Usuario{
 	tipoSanguineo: String;
 	tipoUsuario: String;
 	cpf: String;
+	nomePai: String;
+	nomeMae: String;
 
 	numeroDocumento: String;
 	tipoDocumento: String;

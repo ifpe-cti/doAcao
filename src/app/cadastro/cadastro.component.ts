@@ -27,7 +27,7 @@ export class CadastroComponent implements OnInit {
     this.usuario = {
       nome: "", user: "", dataNascimento: "", senha: "",
       tipoUsuario: "usuario", cpf: "", tipoSanguineo: "", numeroDocumento: "",
-      tipoDocumento: "", orgaoExpeditorDocumento: ""
+      tipoDocumento: "", orgaoExpeditorDocumento: "", nomePai: "", nomeMae: ""
     }
   }
 
