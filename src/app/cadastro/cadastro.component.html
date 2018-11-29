@@ -24,6 +24,15 @@
 <p></p> <p-dropdown [options]="tiposSanguineos" [(ngModel)]="usuario.tipoSanguineo"></p-dropdown>
 <p></p>
 
+<p></p> <input type="text" placeholder="Número de Documento"
+pInputText [(ngModel)] = "usuario.numeroDocumento" required/> 
+
+<p></p> <p-dropdown [options]="tiposDocumento" [(ngModel)]="usuario.tipoDocumento"></p-dropdown>
+<p></p>
+
+<p></p> <p-dropdown [options]="orgaosExpeditores" [(ngModel)]="usuario.orgaoExpeditorDocumento"></p-dropdown>
+<p></p>
+
 <button pButton type="button" label="Enviar dados" 
      (click) = "cadastroUsuario()"  class="ui-button-danger"></button>
 

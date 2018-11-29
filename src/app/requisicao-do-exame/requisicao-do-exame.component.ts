@@ -56,8 +56,7 @@ export class RequisicaoDoExameComponent implements OnInit {
        }
       }
   }
-
-  
+    
 
   adicionarRequisicaoExame() {
     this.servicoRequisicaoExames.cadastrarRequisicaoExamesFirebase(this.requisicaoExames);

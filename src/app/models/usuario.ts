@@ -10,6 +10,10 @@ export interface Usuario{
 	tipoUsuario: String;
 	cpf: String;
 
+	numeroDocumento: String;
+	tipoDocumento: String;
+	orgaoExpeditorDocumento: String;
+
 	id?: String;
 
 	} 
