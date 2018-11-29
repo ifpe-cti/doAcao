@@ -24,7 +24,6 @@ export class CadastroComponent implements OnInit {
 
   hemope: Usuario;
 
-
   constructor(private servicoUsuario: UsuariosService, private router: Router) {
     this.usuario = {
       nome: "", user: "", dataNascimento: "", senha: "",
@@ -47,8 +46,6 @@ export class CadastroComponent implements OnInit {
   cadastroUsuario() {  
     this.servicoUsuario.cadastrarUsuarioFirebase(this.usuario);
     this.router.navigate(['/login']);
-   
-    console.log("Novo usuário cadastrado: " + this.usuario.nome);
   }
 
   ngOnInit() {

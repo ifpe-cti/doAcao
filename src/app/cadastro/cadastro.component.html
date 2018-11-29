@@ -1,53 +1,52 @@
 <body>
-<div class="ui-g">
-    <div class="ui-g-4"></div>
-    <div class="ui-g-4"><h3>Formulário de Cadastro</h3>
-    
-<p></p> <input type="text" placeholder ="Nome" 
-  pInputText [(ngModel)] = "usuario.nome" required/> 
+    <div class="ui-g">
+        <div class="ui-g-4"></div>
+        <div class="ui-g-4">
+            <h3>Formulário de Cadastro</h3>
 
-<p></p> <input type="text" placeholder="Usuário"
- pInputText [(ngModel)] = "usuario.user" required/> 
+            <p></p>
+            <input type="text" placeholder="Nome" pInputText [(ngModel)]="usuario.nome" required/>
 
- <p></p> <input type="text" placeholder="CPF"
- pInputText [(ngModel)] = "usuario.cpf" required/> 
+            <p></p>
+            <input type="text" placeholder="Usuário" pInputText [(ngModel)]="usuario.user" required/>
 
- <p></p> <input type="text" placeholder="Nome da Mãe"
- pInputText [(ngModel)] = "usuario.nomeMae" required/> 
- 
- <p></p> <input type="text" placeholder="Nome do Pai"
- pInputText [(ngModel)] = "usuario.nomePai" required/> 
+            <p></p>
+            <input type="text" placeholder="CPF" pInputText [(ngModel)]="usuario.cpf" required/>
 
- <p></p> <input type="text" placeholder="Data de Nascimento"
- pInputText [(ngModel)] = "usuario.dataNascimento" required/>
+            <p></p>
+            <input type="text" placeholder="Nome da Mãe" pInputText [(ngModel)]="usuario.nomeMae" required/>
 
- <p></p>
+            <p></p>
+            <input type="text" placeholder="Nome do Pai" pInputText [(ngModel)]="usuario.nomePai" required/>
 
-<p></p> <input type="password" placeholder="Senha"
- pPassword [(ngModel)] = "usuario.senha" required/>
-<p></p>
+            <p></p>
+            <p-calendar [(ngModel)]="usuario.dataNascimento" placeholder="Data de Nascimento" [monthNavigator]="true"
+                [yearNavigator]="true" yearRange="2000:2020"></p-calendar>
 
-<p></p> <p-dropdown [options]="tiposSanguineos" [(ngModel)]="usuario.tipoSanguineo"></p-dropdown>
-<p></p>
+            <p></p>
 
-<p></p> <input type="text" placeholder="Número de Documento"
-pInputText [(ngModel)] = "usuario.numeroDocumento" required/> 
+            <p></p>
+            <input type="password" placeholder="Senha" pPassword [(ngModel)]="usuario.senha" required/>
+            <p></p>
 
-<p></p> <p-dropdown [options]="tiposDocumento" [(ngModel)]="usuario.tipoDocumento"></p-dropdown>
-<p></p>
+            <p></p>
+            <p-dropdown [options]="tiposSanguineos" [(ngModel)]="usuario.tipoSanguineo"></p-dropdown>
+            <p></p>
 
-<p></p> <p-dropdown [options]="orgaosExpeditores" [(ngModel)]="usuario.orgaoExpeditorDocumento"></p-dropdown>
-<p></p>
+            <p></p>
+            <input type="text" placeholder="Número de Documento" pInputText [(ngModel)]="usuario.numeroDocumento" required/>
 
-<button pButton type="button" label="Enviar dados" 
-     (click) = "cadastroUsuario()"  class="ui-button-danger"></button>
-    
+            <p></p>
+            <p-dropdown [options]="tiposDocumento" [(ngModel)]="usuario.tipoDocumento"></p-dropdown>
+            <p></p>
 
-     <button pButton type="button" label="Enviar dados" 
-     (click) = "criarHemope()"  class="ui-button-danger"></button>
-    
+            <p></p>
+            <p-dropdown [options]="orgaosExpeditores" [(ngModel)]="usuario.orgaoExpeditorDocumento"></p-dropdown>
+            <p></p>
 
-</div>
-    <div class="ui-g-4"></div>
-</div>
+            <button pButton type="button" label="Enviar dados" (click)="cadastroUsuario()" class="ui-button-danger"></button>
+
+        </div>
+        <div class="ui-g-4"></div>
+    </div>
 </body>

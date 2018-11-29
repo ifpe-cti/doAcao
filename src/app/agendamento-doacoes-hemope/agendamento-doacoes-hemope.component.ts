@@ -17,18 +17,22 @@ export class AgendamentoDoacoesHemopeComponent implements OnInit {
 
   agendamentoDoacao: AgendamentoDoacao;
   items: MenuItem[];
-
   results: String[] = [];
   usuarios: Usuario[] = [];
-
   cpf: String;
+ 
+  nomeUsuarioResgatadoPorCPF: String;
+  CPFUsuarioResgatadoPorCPF: String;
+  numeroDocumentoUsuarioResgatadoPorCPF: String;
+
+  
 
   constructor(private AgendamentoDeDoacoesService: AgendamentoDeDoacoesService,
     private router: Router, private servicoUsuario: UsuariosService,
     private menusService: MenusService) {
 
     this.agendamentoDoacao = {
-      idDoador: "", dataAgendamento: null
+      idDoador: "", cpfDoador: "", dataAgendamento: null
     }
   }
 
@@ -52,6 +56,10 @@ export class AgendamentoDoacoesHemopeComponent implements OnInit {
     for (let i = 0; i < this.usuarios.length; i++) {
       if (this.usuarios[i].cpf == this.cpf) {
         this.agendamentoDoacao.idDoador = this.usuarios[i].id;
+        this.agendamentoDoacao.cpfDoador = this.usuarios[i].cpf;
+        this.nomeUsuarioResgatadoPorCPF = this.usuarios[i].nome;
+        this.CPFUsuarioResgatadoPorCPF = this.usuarios[i].cpf;
+        this.numeroDocumentoUsuarioResgatadoPorCPF = this.usuarios[i].numeroDocumento;
       }
     }
   }
