@@ -18,7 +18,7 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
   constructor(private AgendamentoDeDoacoesService: AgendamentoDeDoacoesService, 
     private router:Router, private menusService: MenusService, private servicoUsuario: UsuariosService) {
 
-      this.agendamentoDoacao = {idDoador:"", dataAgendamento: null, 
+    this.agendamentoDoacao = {idDoador:"", cpfDoador: "", dataAgendamento: null, 
     }
   }
 
@@ -40,6 +40,7 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
       for (let i = 0; i < this.usuarios.length; i++) {
         if (this.usuarios[i].cpf == this.cpf) {
           this.agendamentoDoacao.idDoador = this.usuarios[i].id;
+          this.agendamentoDoacao.cpfDoador = this.usuarios[i].cpf;
         }
       }
     }
