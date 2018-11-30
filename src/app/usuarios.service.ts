@@ -18,8 +18,7 @@ export class UsuariosService {
   private usuarioCollection: AngularFirestoreCollection<Usuario>;
 
   cadastrarUsuarioFirebase(usuario: Usuario) {
-    console.log(usuario)
-    this.usuarioCollection.add(usuario).then(
+      this.usuarioCollection.add(usuario).then(
       resultado => {
         usuario.id = resultado.id;
       });
@@ -44,14 +43,7 @@ export class UsuariosService {
     return usuario;
   }
 
-  adicionarFichaMedica(cpf: String){
-  
-         
-  }
-
-
-
-  listarTodos(): Observable<any[]> {
+    listarTodos(): Observable<any[]> {
     let resultados: any[] = [];
     let usuarios = new Observable<any[]>(observer => {
       this.usuarioCollection.snapshotChanges().subscribe(result => {
