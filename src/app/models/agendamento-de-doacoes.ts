@@ -6,8 +6,4 @@ export interface AgendamentoDoacao {
 	dataAgendamento: Date;
 	cpfDoador: String;
 
-
-
-
-
 } 
