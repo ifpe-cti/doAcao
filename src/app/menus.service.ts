@@ -31,6 +31,17 @@ export class MenusService {
               ]
             ] 
           },
+
+          { label: '  Técnicos', icon: 'fa-book',
+          items: [
+              [
+                  {
+                    items: [{label: 'Cadastrar técnico', routerLink: '/cadastro-tecnicos'}]
+                  }
+              ]
+            ] 
+          },
+
           { label: ' Listar ',icon: 'fa-book',
           items: [
               [
@@ -49,11 +60,16 @@ export class MenusService {
                   {
                     items: [{label: 'Listar todos os exames',  routerLink: '/visualizacao-requisicao-exames'}]
 
+                  },
+
+                  {
+                    items: [{label: 'Listar todos os técnicos',  routerLink: '/listagem-tecnicos'}]
                   }
               ]
             ] 
           },
           { label: '  Encerrar sessão', icon: '', routerLink: '/login' },
+
         ]
 
         

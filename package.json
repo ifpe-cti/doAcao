@@ -31,6 +31,7 @@
     "firebase": "^4.13.1",
     "firestore": "^1.1.6",
     "font-awesome": "^4.7.0",
+    "primeicons": "^1.0.0",
     "primeng": "^5.2.6",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.1.0",

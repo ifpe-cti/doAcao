@@ -3,6 +3,7 @@ import { Usuario } from '../models/usuario';
 import { TecnicoService } from '../tecnicos.service';
 import { Router } from '@angular/router';
 import {SelectItem} from 'primeng/api';
+import { Tecnico } from '../models/tecnico';
 
 @Component({
   selector: 'app-cadastro-tecnicos',
@@ -11,10 +12,22 @@ import {SelectItem} from 'primeng/api';
 })
 export class CadastroTecnicosComponent implements OnInit {
 
+  tecnico: Tecnico;
 
-  constructor() { }
+  constructor(private tecnicoService: TecnicoService, private router: Router) {   
+    this.tecnico = {
+      nomeTecnico: "", cpfTecnico: ""
+    }
+  }
+
+  cadastrarTecnico(){
+    this.tecnicoService.cadastrarTecnicoFirebase(this.tecnico);
+    this.router.navigate(['/dashboard-hemope']);
+  }
 
   ngOnInit() {
+
+    
   }
 
 }

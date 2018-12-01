@@ -39,10 +39,6 @@ export class CadastroComponent implements OnInit {
 
   }
 
-  criarHemope(){
-    this.servicoUsuario.cadastrarUsuarioFirebase(this.hemope);
-  }
-
   cadastroUsuario() {  
     this.servicoUsuario.cadastrarUsuarioFirebase(this.usuario);
     this.router.navigate(['/login']);
