@@ -21,6 +21,8 @@ import { AgendamentoDoacoesHemopeComponent } from './agendamento-doacoes-hemope/
 import { SolicitacaoDeSangueComponent } from './solicitacao-de-sangue/solicitacao-de-sangue.component';
 import { VisualizacaoSolicitacoesComponent } from './visualizacao-solicitacoes/visualizacao-solicitacoes.component';
 import { CadastroTecnicosComponent } from './cadastro-tecnicos/cadastro-tecnicos.component';
+import { ListagemTecnicosComponent } from './listagem-tecnicos/listagem-tecnicos.component';
+
 
 
 
@@ -46,6 +48,7 @@ const APP_ROUTES: Routes = [
 { path: 'solicitacao-de-sangue', component: SolicitacaoDeSangueComponent },
 { path: 'visualizacao-solicitacoes', component: VisualizacaoSolicitacoesComponent },
 { path: 'cadastro-tecnicos', component: CadastroTecnicosComponent },
+{ path: 'listagem-tecnicos', component: ListagemTecnicosComponent },
 
 ];
 

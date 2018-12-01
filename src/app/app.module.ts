@@ -24,6 +24,8 @@ import { AgendamentoDoacoesHemopeComponent } from './agendamento-doacoes-hemope/
 import { SolicitacaoDeSangueComponent } from './solicitacao-de-sangue/solicitacao-de-sangue.component';
 import { VisualizacaoSolicitacoesComponent } from './visualizacao-solicitacoes/visualizacao-solicitacoes.component';
 import { CadastroTecnicosComponent } from './cadastro-tecnicos/cadastro-tecnicos.component';
+import { ListagemTecnicosComponent } from './listagem-tecnicos/listagem-tecnicos.component';
+
 
 //module
 
@@ -94,6 +96,7 @@ import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
     SolicitacaoDeSangueComponent,
     VisualizacaoSolicitacoesComponent,
     CadastroTecnicosComponent,
+    ListagemTecnicosComponent,
    
   ],
 
