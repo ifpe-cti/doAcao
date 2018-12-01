@@ -16,7 +16,7 @@ export class CadastroTecnicosComponent implements OnInit {
 
   constructor(private tecnicoService: TecnicoService, private router: Router) {   
     this.tecnico = {
-      nomeTecnico: "", cpfTecnico: ""
+      nome: "", cpf: ""
     }
   }
 

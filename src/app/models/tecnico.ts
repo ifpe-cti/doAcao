@@ -1,8 +1,8 @@
 import { Usuario } from "./usuario";
 
 export interface Tecnico{
-    
-    nomeTecnico: String;
+
+    nome: String;
     id?: String;
-    cpfTecnico: String;
+    cpf: String;
 } 
