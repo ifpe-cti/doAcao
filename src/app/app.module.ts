@@ -66,6 +66,7 @@ import { UsuariosService } from './usuarios.service';
 import { FichasMedicasService } from './fichas-medicas.service';
 import { MenusService } from './menus.service';
 import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
+import { TecnicoService } from './tecnicos.service';
 
 @NgModule({
 
@@ -126,7 +127,7 @@ import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
   ], 
 
   providers: [AuthService, AuthGuard, UsuariosService, FichasMedicasService, AgendamentoDeDoacoesService, 
-              MenusService],
+              MenusService, TecnicoService],
 
   bootstrap: [AppComponent]
 
