@@ -13,8 +13,8 @@ export class MenusService {
 
   itensHemope = [
     { label: '  Página inicial', icon: '', routerLink: '/dashboard-hemope' },
-    {label: 'Agendar doação',icon: 'fa-calendar', routerLink: '/agendamento-de-doacoes-hemope'},
-    { label: ' Exames ',  icon: 'fa-book',
+    {label: '  Agendar doação', icon: 'fa-calendar-plus-o', routerLink: '/agendamento-de-doacoes-hemope'},
+    { label: ' Exames ',  icon: 'fa-heartbeat',
           items: [
               [
                   { items: [{label: 'Adicionar exame',  routerLink:['/requisicao-do-exame']}]
@@ -22,7 +22,7 @@ export class MenusService {
               ]
             ] 
           },
-          { label: '  Fichas médicas', icon: 'fa-book',
+          { label: '  Fichas médicas', icon: 'fa-stethoscope',
           items: [
               [
                   {
@@ -32,7 +32,7 @@ export class MenusService {
             ] 
           },
 
-          { label: '  Técnicos', icon: 'fa-book',
+          { label: '  Técnicos', icon: 'fa-user-md',
           items: [
               [
                   {
@@ -42,7 +42,7 @@ export class MenusService {
             ] 
           },
 
-          { label: ' Listar ',icon: 'fa-book',
+          { label: ' Listar ',icon: 'fa-list',
           items: [
               [
                   {
@@ -68,14 +68,14 @@ export class MenusService {
               ]
             ] 
           },
-          { label: '  Encerrar sessão', icon: '', routerLink: '/login' },
+          { label: '  Encerrar sessão', icon: 'fa-power-off', routerLink: '/login' },
 
         ]
 
         
   itensUsuario = [
-    { label: '  Página inicial', icon: 'fa-calendar', routerLink: '/dashboard' },
-    { label: ' Doação ', icon: 'fa-book',
+    { label: '  Página inicial', icon: '', routerLink: '/dashboard' },
+    { label: ' Doação ', icon: 'fa-heart-o',
     items: [
         [
             { items: [{label: 'Solicitar doação', routerLink:['/solicitacao-de-sangue']}]
@@ -87,9 +87,9 @@ export class MenusService {
         ]
       ] 
     },
-    { label: '  Fichas médicas', icon: 'fa-book', routerLink: '' },
-    { label: '  Mais informações', icon: 'fa-book', routerLink: '' },
-    { label: '  Encerrar sessão', icon: '', routerLink: '/login' },
+    { label: '  Fichas médicas', icon: 'fa-stethoscope', routerLink: '' },
+    { label: '  Mais informações', icon: 'fa-info', routerLink: '' },
+    { label: '  Encerrar sessão', icon: 'fa-power-off', routerLink: '/login' },
   ]
 
     }
