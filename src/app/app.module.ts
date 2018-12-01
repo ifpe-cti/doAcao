@@ -23,6 +23,7 @@ import { DashboardHemopeComponent } from './dashboard-hemope/dashboard-hemope.co
 import { AgendamentoDoacoesHemopeComponent } from './agendamento-doacoes-hemope/agendamento-doacoes-hemope.component';
 import { SolicitacaoDeSangueComponent } from './solicitacao-de-sangue/solicitacao-de-sangue.component';
 import { VisualizacaoSolicitacoesComponent } from './visualizacao-solicitacoes/visualizacao-solicitacoes.component';
+import { CadastroTecnicosComponent } from './cadastro-tecnicos/cadastro-tecnicos.component';
 
 //module
 
@@ -70,6 +71,7 @@ import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
 
 
 
+
 @NgModule({
 
   declarations: [
@@ -91,6 +93,7 @@ import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
     AgendamentoDoacoesHemopeComponent,
     SolicitacaoDeSangueComponent,
     VisualizacaoSolicitacoesComponent,
+    CadastroTecnicosComponent,
    
   ],
 
