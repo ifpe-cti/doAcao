@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from './../models/usuario';
-import { UsuariosService } from './../usuarios.service';
+import { Usuario } from '../models/usuario';
+import { UsuariosService } from '../usuarios.service';
 import { Router } from '@angular/router';
 import {SelectItem} from 'primeng/api';
 

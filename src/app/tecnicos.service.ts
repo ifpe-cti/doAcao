@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class TecnicoServiceService {
+export class TecnicoService {
 
  
   constructor(private servicoFirebase: AngularFirestore) {

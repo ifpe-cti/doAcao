@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Usuario} from './../models/usuario';
-import {UsuariosService} from './../usuarios.service';
+import {Usuario} from '../models/usuario';
+import {UsuariosService} from '../usuarios.service';
 import {Message} from 'primeng/components/common/api';
 
 import {Router} from '@angular/router';

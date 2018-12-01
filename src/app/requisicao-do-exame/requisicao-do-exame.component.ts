@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RequisicaoDeExames } from '../models/requisicao-de-exames';
 import { Usuario } from '../models/usuario';
-import { RequisicaoDeExameService } from './../requisicao-de-exame.service';
-import { UsuariosService } from './../usuarios.service';
+import { RequisicaoDeExameService } from '../requisicao-de-exame.service';
+import { UsuariosService } from '../usuarios.service';
 import { MenuItem } from 'primeng/primeng';
 import { MenusService } from '../menus.service';
 

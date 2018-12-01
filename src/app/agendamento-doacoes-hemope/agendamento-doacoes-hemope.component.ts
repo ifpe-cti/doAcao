@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from './../models/usuario';
-import { AgendamentoDeDoacoesService } from './../agendamento-de-doacoes.service';
-import { AgendamentoDoacao } from './../models/agendamento-de-doacoes';
+import { Usuario } from '../models/usuario';
+import { AgendamentoDeDoacoesService } from '../agendamento-de-doacoes.service';
+import { AgendamentoDoacao } from '../models/agendamento-de-doacoes';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/primeng';
-import { UsuariosService } from './../usuarios.service';
+import { UsuariosService } from '../usuarios.service';
 import { MenusService } from '../menus.service';
 
 

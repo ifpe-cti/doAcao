@@ -1,5 +1,5 @@
 import { Usuario } from "./usuario";
-import { Observable } from "../../../node_modules/rxjs";
+import { Observable } from "rxjs";
 
 export interface RequisicaoDeExames{
 

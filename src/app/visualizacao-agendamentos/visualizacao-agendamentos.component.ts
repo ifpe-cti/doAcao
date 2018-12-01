@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AgendamentoDeDoacoesService} from './../agendamento-de-doacoes.service';
+import {AgendamentoDeDoacoesService} from '../agendamento-de-doacoes.service';
 import { Router} from '@angular/router';
 import { MenusService } from '../menus.service';
 import { MenuItem } from 'primeng/primeng';

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SolicitacaoDeSangueService } from './../solicitacao-de-sangue.service';
+import { SolicitacaoDeSangueService } from '../solicitacao-de-sangue.service';
 import { Router } from '@angular/router';
 import { MenusService } from '../menus.service';
 import { MenuItem } from 'primeng/primeng';

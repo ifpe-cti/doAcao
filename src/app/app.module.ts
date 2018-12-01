@@ -55,7 +55,7 @@ import { MegaMenuModule } from 'primeng/megamenu';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
+import * as firebase from 'firebase';
 import { FirebaseConfig } from '../environments/firebase.config';
 import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
 
@@ -66,13 +66,6 @@ import { UsuariosService } from './usuarios.service';
 import { FichasMedicasService } from './fichas-medicas.service';
 import { MenusService } from './menus.service';
 import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
-
-
-
-
-
-
-
 
 @NgModule({
 

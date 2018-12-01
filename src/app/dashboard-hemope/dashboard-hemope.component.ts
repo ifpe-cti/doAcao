@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { MenuItem } from 'primeng/primeng';
-import {UsuariosService} from './../usuarios.service';
+import {UsuariosService} from '../usuarios.service';
 import {Router} from '@angular/router';
 import { MenusService } from '../menus.service';
 

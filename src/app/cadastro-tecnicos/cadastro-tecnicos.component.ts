@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from '../models/usuario';
+import { TecnicoService } from '../tecnicos.service';
+import { Router } from '@angular/router';
+import {SelectItem} from 'primeng/api';
 
 @Component({
   selector: 'app-cadastro-tecnicos',
@@ -6,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro-tecnicos.component.css']
 })
 export class CadastroTecnicosComponent implements OnInit {
+
 
   constructor() { }
 

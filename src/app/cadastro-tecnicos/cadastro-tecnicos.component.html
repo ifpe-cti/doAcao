@@ -1,3 +1,18 @@
-<p>
-  cadastro-tecnicos works!
-</p>
+  <body>
+    <div class="ui-g">
+        <div class="ui-g-4"></div>
+        <div class="ui-g-4">
+            <h3>Cadastro de Técnicos</h3>
+
+            <p></p>
+            <input type="text" placeholder="Nome" pInputText [(ngModel)]="tecnico.nome" required/>
+
+            <p></p>
+            <input type="text" placeholder="Usuário" pInputText [(ngModel)]="usuario.cpf" required/>
+            <p></p>
+
+            <button pButton type="button" label="Enviar dados" (click)="cadastroUsuario()" class="ui-button-danger"></button>
+        </div>
+        <div class="ui-g-4"></div>
+    </div>
+  </body>

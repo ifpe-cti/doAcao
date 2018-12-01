@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FichasMedicasService} from './../fichas-medicas.service';
+import {FichasMedicasService} from '../fichas-medicas.service';
 import { Router} from '@angular/router';
 import { MenuItem } from 'primeng/primeng';
 import { MenusService } from '../menus.service';

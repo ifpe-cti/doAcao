@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {RequisicaoDeExameService} from './../requisicao-de-exame.service';
+import {RequisicaoDeExameService} from '../requisicao-de-exame.service';
 import { Router} from '@angular/router';
 import { MenuItem } from 'primeng/primeng';
-import {MenusService} from './../menus.service';
+import {MenusService} from '../menus.service';
 
 @Component({
   selector: 'app-visualizacao-requisicao-exames',

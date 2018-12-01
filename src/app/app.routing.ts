@@ -23,10 +23,6 @@ import { VisualizacaoSolicitacoesComponent } from './visualizacao-solicitacoes/v
 import { CadastroTecnicosComponent } from './cadastro-tecnicos/cadastro-tecnicos.component';
 import { ListagemTecnicosComponent } from './listagem-tecnicos/listagem-tecnicos.component';
 
-
-
-
-
 import { AuthGuard } from './auth-guard.service';
 
 const APP_ROUTES: Routes = [
