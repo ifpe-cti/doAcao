@@ -38,7 +38,9 @@ export class CadastroComponent implements OnInit {
     }
 
   }
-
+  voltarLogin(){
+    this.router.navigate(['/login']);
+ }
   cadastroUsuario() {  
     this.servicoUsuario.cadastrarUsuarioFirebase(this.usuario);
     this.router.navigate(['/login']);
