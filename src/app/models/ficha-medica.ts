@@ -1,6 +1,5 @@
 import { Observable } from 'rxjs';
 
-
 export interface FichaMedica{
     idDoador: String; 
     id?: String;
@@ -14,7 +13,8 @@ export interface FichaMedica{
     pulso: String
     bracoPunsionado: String;
     reacoesAdversas: String;
-    flebomistaResponsavel: String;
+    idFlebomista: String;
+    nomeFlebomista: String;
     tipoDeDoacao: String;
     numeroDoTubo: String;
     volumeDoSangue: String;

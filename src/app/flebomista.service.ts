@@ -46,15 +46,15 @@ export class FlebomistaService {
     return flebomistas;
   }
 
-  filtrarFlebomistasPorCPF(cpf) {
+  filtrarFlebomistasPorNome(nome) {
     return new Observable<String[]>(observer => {
       this.listarTodos()
         .subscribe(meuObservable => {
           this.todosOsFlebomistas = meuObservable as Flebomista[]
           let FlebomistasFiltrados: String[] = []
           for (let i = 0; i < this.todosOsFlebomistas.length; i++) {
-            if (this.todosOsFlebomistas[i].cpf.search(cpf) != -1) { // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 
-              FlebomistasFiltrados.push(this.todosOsFlebomistas[i].cpf);
+            if (this.todosOsFlebomistas[i].nome.search(nome) != -1) { // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 
+              FlebomistasFiltrados.push(this.todosOsFlebomistas[i].nome);
             }
           }
           observer.next(FlebomistasFiltrados);

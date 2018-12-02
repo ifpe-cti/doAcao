@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FichaMedica } from '../models/ficha-medica';
 import { Usuario } from '../models/usuario';
+import { Flebomista } from '../models/flebomista';
 import { FichasMedicasService } from '../fichas-medicas.service';
 import { Router } from '@angular/router';
 import { UsuariosService } from '../usuarios.service';
+import { FlebomistaService } from '../flebomista.service';
 import { MenuItem } from 'primeng/primeng';
 import { MenusService } from '../menus.service';
 
@@ -20,26 +22,37 @@ export class FichasMedicasComponent implements OnInit {
 
   results: String[] = [];
   usuarios: Usuario[] = [];
+  flebomistas: Flebomista [] = []; 
+ 
+
   cpf: String;
+  nomeFlebomista: String;
 
   nomeUsuarioResgatadoPorCPF: String;
   CPFUsuarioResgatadoPorCPF: String;
   numeroDocumentoUsuarioResgatadoPorCPF: String;
- 
+  resultsFlebomista: String [] = [];
+  
   constructor(private servicoFichaMedica: FichasMedicasService, private router: Router,
-    private servicoUsuario: UsuariosService, private menusService: MenusService) {
+    private servicoUsuario: UsuariosService, private menusService: MenusService,
+    private flebomistaService: FlebomistaService) {
     this.fichaMedica = {
       idDoador: "", cpfDoador: "", hemoglobina: "",
       pressaoArterial: "", temperatura: "", peso: "", altura: "", pulso: "", bracoPunsionado: "", 
-      reacoesAdversas: "", flebomistaResponsavel: "", tipoDeDoacao: "", numeroDoTubo: "", volumeDoSangue: ""
+      reacoesAdversas: "", idFlebomista: "", nomeFlebomista: "", tipoDeDoacao: "", 
+      numeroDoTubo: "", volumeDoSangue: ""
     }
-
-
   }
 
   search(cpf) {
     this.servicoUsuario.filtrarUsuariosPorCPF(cpf.query).subscribe(data => {
       this.results = data;
+    });
+  }
+
+  searchFleb(nomeFlebomista) {
+    this.flebomistaService.filtrarFlebomistasPorNome(nomeFlebomista.query).subscribe(data => {
+      this.resultsFlebomista = data;
     });
   }
 
@@ -52,6 +65,18 @@ export class FichasMedicasComponent implements OnInit {
         this.nomeUsuarioResgatadoPorCPF = this.usuarios[i].nome;
         this.fichaMedica.cpfDoador = this.usuarios[i].cpf;
         this.numeroDocumentoUsuarioResgatadoPorCPF = this.usuarios[i].numeroDocumento;
+      }
+    }
+  }
+
+  buscarPorNome() {
+    this.flebomistaService.listarTodos().subscribe(flebomistas =>
+      this.flebomistas = flebomistas as Flebomista[]);
+    for (let i = 0; i < this.flebomistas.length; i++) {
+      if (this.flebomistas[i].nome == this.nomeFlebomista) {
+        this.nomeFlebomista = this.flebomistas[i].nome;
+        this.fichaMedica.nomeFlebomista = this.flebomistas[i].nome;
+        this.fichaMedica.idFlebomista = this.flebomistas[i].id;
       }
     }
   }
