@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { MenuItem } from 'primeng/primeng';
-import {UsuariosService} from '../usuarios.service';
-import {Router} from '@angular/router';
+import { UsuariosService } from '../usuarios.service';
+import { Router } from '@angular/router';
 import { MenusService } from '../menus.service';
 import { Message } from 'primeng/components/common/api';
 import { FormGroup } from '../../../node_modules/@angular/forms';
@@ -26,8 +26,11 @@ export class DashboardHemopeComponent implements OnInit {
     quemSomos(){
       alert("Esse projeto é uma Prática Profissional Orientada (PPO). Orientado por Leonardo Soares e cujas orientandas são Joanne Gabriela e Milena Siqueira.");
     }
+    
+    maisInformacoes(){
+      this.router.navigate(['/informacoes-sobre-doacao']);
+   }
 
-    maisInformacoes(){}
 
   ngOnInit() {
     this.items = this.menusSevice.itensHemope;
