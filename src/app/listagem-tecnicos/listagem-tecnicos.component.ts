@@ -55,6 +55,8 @@ delete() {
     this.tecnicos = this.tecnicos.filter((val, i) => i != index);
     this.tecnico = null;
     this.displayDialog = false;
+
+    this.tecnicoService.apagarTecnicoFirebase(this.selectedTecnico);
 }
 
 onRowSelect(event) {
@@ -64,7 +66,7 @@ onRowSelect(event) {
 }
 
 cloneCar(t: Tecnico): Tecnico {
-  let tecnico = {nome: "xiuxiu", cpf: "123"};
+  let tecnico = {nome: "", cpf: ""};
   for (let prop in t) {
       tecnico[prop] = t[prop];
   }
