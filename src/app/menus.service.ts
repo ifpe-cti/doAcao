@@ -32,11 +32,15 @@ export class MenusService {
             ] 
           },
 
-          { label: '  Técnicos', icon: 'fa-user-md',
+          { label: '  Funcionários', icon: 'fa-user-md',
           items: [
               [
                   {
                     items: [{label: 'Cadastrar técnico', routerLink: '/cadastro-tecnicos'}]
+                  },
+
+                  {
+                    items: [{label: 'Cadastrar flebomista', routerLink: '/cadastro-flebomistas'}]
                   }
               ]
             ] 
@@ -65,6 +69,11 @@ export class MenusService {
                   {
                     items: [{label: 'Listar todos os técnicos',  routerLink: '/listagem-tecnicos'}]
                   },
+
+                  {
+                    items: [{label: 'Listar todos os flebomistas',  routerLink: '/listagem-flebomistas'}]
+                  },
+
                   {
                     items: [{label: 'Listar todos os agendamentos de doação',  routerLink: '/visualizacao-agendamentos'}]
                   }

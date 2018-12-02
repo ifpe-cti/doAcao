@@ -27,6 +27,7 @@ import { CadastroTecnicosComponent } from './cadastro-tecnicos/cadastro-tecnicos
 import { ListagemTecnicosComponent } from './listagem-tecnicos/listagem-tecnicos.component';
 import { InformacoesSobreDoacaoComponent } from './informacoes-sobre-doacao/informacoes-sobre-doacao.component';
 import { ListagemFlebomistasComponent } from './listagem-flebomistas/listagem-flebomistas.component';
+import { CadastroFlebomistaComponent } from './cadastro-flebomista/cadastro-flebomista.component';
 
 
 //module
@@ -73,6 +74,7 @@ import { TecnicoService } from './tecnicos.service';
 import { FlebomistaService } from './flebomista.service';
 
 
+
 @NgModule({
 
   declarations: [
@@ -98,6 +100,7 @@ import { FlebomistaService } from './flebomista.service';
     ListagemTecnicosComponent,
     InformacoesSobreDoacaoComponent,
     ListagemFlebomistasComponent,
+    CadastroFlebomistaComponent,
    
   ],
 

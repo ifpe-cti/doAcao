@@ -23,6 +23,8 @@ import { VisualizacaoSolicitacoesComponent } from './visualizacao-solicitacoes/v
 import { CadastroTecnicosComponent } from './cadastro-tecnicos/cadastro-tecnicos.component';
 import { ListagemTecnicosComponent } from './listagem-tecnicos/listagem-tecnicos.component';
 import { InformacoesSobreDoacaoComponent } from './informacoes-sobre-doacao/informacoes-sobre-doacao.component';
+import { ListagemFlebomistasComponent } from './listagem-flebomistas/listagem-flebomistas.component';
+import { CadastroFlebomistaComponent } from './cadastro-flebomista/cadastro-flebomista.component';
 
 import { AuthGuard } from './auth-guard.service';
 
@@ -46,7 +48,9 @@ const APP_ROUTES: Routes = [
 { path: 'visualizacao-solicitacoes', component: VisualizacaoSolicitacoesComponent },
 { path: 'cadastro-tecnicos', component: CadastroTecnicosComponent },
 { path: 'listagem-tecnicos', component: ListagemTecnicosComponent },
-{ path: 'informacoes-sobre-doacao', component: InformacoesSobreDoacaoComponent}
+{ path: 'informacoes-sobre-doacao', component: InformacoesSobreDoacaoComponent},
+{ path: 'listagem-flebomistas', component: ListagemFlebomistasComponent},
+{ path: 'cadastro-flebomistas', component: CadastroFlebomistaComponent},
 
 ];
 

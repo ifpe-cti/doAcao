@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from '../models/usuario';
 import { TecnicoService } from '../tecnicos.service';
-import { Router } from '@angular/router';
-import {SelectItem} from 'primeng/api';
+import { Router } from '@angular/router'
 import { Tecnico } from '../models/tecnico';
 import { MenuItem } from 'primeng/primeng';
 import { MenusService } from '../menus.service';

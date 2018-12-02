@@ -1,0 +1,19 @@
+<body>
+    <div class="ui-g">
+            <p-megaMenu [model]="items"></p-megaMenu>
+        <div class="ui-g-4"></div>
+        <div class="ui-g-4">
+            <h3>Cadastro de Flebomistas</h3>
+
+            <p></p>
+            <input type="text" placeholder="Nome Completo" pInputText [(ngModel)]="flebomista.nome" required/>
+
+            <p></p>
+            <input type="text" placeholder="CPF" pInputText [(ngModel)]="flebomista.cpf" required/>
+            <p></p>
+
+            <button pButton type="button" label="Enviar dados" (click)="cadastrarFlebomista()" class="ui-button-danger"></button>
+        </div>
+        <div class="ui-g-4"></div>
+    </div>
+  </body>
