@@ -4,7 +4,7 @@ export interface Usuario{
 
 	nome:String;
 	user:String;
-	dataNascimento:String;
+	dataNascimento: String;
 	senha:String;
 	tipoSanguineo: String;
 	tipoUsuario: String;

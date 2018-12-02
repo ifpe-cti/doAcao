@@ -29,7 +29,7 @@ export class FichasMedicasComponent implements OnInit {
   constructor(private servicoFichaMedica: FichasMedicasService, private router: Router,
     private servicoUsuario: UsuariosService, private menusService: MenusService) {
     this.fichaMedica = {
-      idDoador: "", hemoglobina: "",
+      idDoador: "", cpfDoador: "", hemoglobina: "",
       pressaoArterial: "", temperatura: "", peso: "", altura: "", pulso: "", bracoPunsionado: "", 
       reacoesAdversas: "", flebomistaResponsavel: "", tipoDeDoacao: "", numeroDoTubo: "", volumeDoSangue: ""
     }
@@ -50,7 +50,7 @@ export class FichasMedicasComponent implements OnInit {
       if (this.usuarios[i].cpf == this.cpf) {
         this.fichaMedica.idDoador = this.usuarios[i].id;
         this.nomeUsuarioResgatadoPorCPF = this.usuarios[i].nome;
-        this.CPFUsuarioResgatadoPorCPF = this.usuarios[i].cpf;
+        this.fichaMedica.cpfDoador = this.usuarios[i].cpf;
         this.numeroDocumentoUsuarioResgatadoPorCPF = this.usuarios[i].numeroDocumento;
       }
     }

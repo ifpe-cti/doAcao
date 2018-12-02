@@ -16,6 +16,7 @@ export class ListagemDeUsuariosComponent implements OnInit {
   usuarios: any[] = [];
   usuarioSelecionado;
   items: MenuItem[];
+
   activeItem: MenuItem;
   tiposDocumento: SelectItem[];
   orgaosExpeditores: SelectItem[];
@@ -25,14 +26,10 @@ export class ListagemDeUsuariosComponent implements OnInit {
   tipoDocumento: "", orgaoExpeditorDocumento: ""  }; 
    
   displayDialog: boolean;
-
   selectedUsuario: Usuario;
-
   newUsuario: boolean;
-
   cols: any[];
-
-  usuariosSelecionados: Usuario[] = [];
+  
 
   constructor(private usuariosService: UsuariosService, 
     private router:Router, private menusService: MenusService) { }

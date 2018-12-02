@@ -19,7 +19,7 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
     private router: Router, private menusService: MenusService, private servicoUsuario: UsuariosService) {
 
     this.agendamentoDoacao = {
-      idDoador: "", cpfDoador: "", dataAgendamento: null,
+      idDoador: "", cpfDoador: "", data: "",
     }
   }
 

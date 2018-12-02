@@ -32,7 +32,7 @@ export class AgendamentoDoacoesHemopeComponent implements OnInit {
     private menusService: MenusService) {
 
     this.agendamentoDoacao = {
-      idDoador: "", cpfDoador: "", dataAgendamento: null
+      idDoador: "", cpfDoador: "", data: ""
     }
   }
 

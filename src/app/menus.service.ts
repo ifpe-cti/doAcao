@@ -64,6 +64,9 @@ export class MenusService {
 
                   {
                     items: [{label: 'Listar todos os técnicos',  routerLink: '/listagem-tecnicos'}]
+                  },
+                  {
+                    items: [{label: 'Listar todos os agendamentos de doação',  routerLink: '/visualizacao-agendamentos'}]
                   }
               ]
             ] 

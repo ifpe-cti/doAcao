@@ -5,6 +5,7 @@ export interface FichaMedica{
     idDoador: String; 
     id?: String;
 
+    cpfDoador: String;
     hemoglobina: String;
     pressaoArterial: String;
     temperatura: String; 
@@ -18,9 +19,5 @@ export interface FichaMedica{
     numeroDoTubo: String;
     volumeDoSangue: String;
     
-
-
-    
-
 } 
  

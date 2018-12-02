@@ -16,8 +16,6 @@
       <div class="ui-g-4"></div>
     </div>
 
-
-
 <div class="ui-g">
     <div class="ui-g-4"><span class="ui-float-label">
         <input id="float-input" [(ngModel)] = "nomeUsuarioResgatadoPorCPF" type="text" size="40" pInputText> 
@@ -36,8 +34,8 @@
 
   <div class="ui-g">
     <div class="ui-g-4"></div>
-    <div class="ui-g-4">
-      <p-calendar [(ngModel)]="agendamentoDoacao.dataAgendamento" [showIcon]="true"></p-calendar>
+    <div class="ui-g-4">  
+        <p-calendar id="data" dateFormat="dd.mm.yy" [(ngModel)]="agendamentoDoacao.data"></p-calendar>
     </div>
     <div class="ui-g-4"></div>
   </div>
