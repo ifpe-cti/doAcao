@@ -4,6 +4,8 @@ import { TecnicoService } from '../tecnicos.service';
 import { Router } from '@angular/router';
 import {SelectItem} from 'primeng/api';
 import { Tecnico } from '../models/tecnico';
+import { MenuItem } from 'primeng/primeng';
+import { MenusService } from '../menus.service';
 
 @Component({
   selector: 'app-cadastro-tecnicos',
@@ -13,8 +15,10 @@ import { Tecnico } from '../models/tecnico';
 export class CadastroTecnicosComponent implements OnInit {
 
   tecnico: Tecnico;
+  items: MenuItem[];
 
-  constructor(private tecnicoService: TecnicoService, private router: Router) {   
+  constructor(private tecnicoService: TecnicoService, private router: Router,
+     private menusSevice: MenusService) {   
     this.tecnico = {
       nome: "", cpf: ""
     }
@@ -26,7 +30,7 @@ export class CadastroTecnicosComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.items = this.menusSevice.itensHemope;
     
   }
 
