@@ -21,15 +21,15 @@ export class ListagemTecnicosComponent implements OnInit {
   activeItem: MenuItem;
 
   cols: any[];
-  tecnicosSelecionados: Usuario[] = [];
+  tecnicosSelecionados: Tecnico[] = [];
 
   constructor(private tecnicoService: TecnicoService, 
     private router:Router, private menusService: MenusService) { }
 
 
  ngOnInit() {
-    this.tecnicoService.listarTodos().subscribe(usuarios => {
-        this.tecnicos = usuarios;   
+    this.tecnicoService.listarTodos().subscribe(tecnicos => {
+        this.tecnicos = this.tecnicos;   
 
         this.cols = [
           { field: 'nome', header: 'Nome' },
