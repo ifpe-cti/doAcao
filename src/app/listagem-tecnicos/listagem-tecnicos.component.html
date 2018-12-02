@@ -27,7 +27,6 @@
             </ng-template>
             <ng-template pTemplate="summary" let-rowData>
                 <div style="text-align:left">
-                    <button type="button" pButton class="ui-button-danger" icon="fa fa-plus" (click)="showDialogToAdd()" label="Novo Técnico"></button>
                 </div>
             </ng-template>    
           </p-table>
@@ -55,7 +54,7 @@
             <p-footer>
                 <div class="ui-dialog-buttonpane ui-helper-clearfix">
                     <button type="button" class="ui-button-danger" pButton icon="fa fa-close" (click)="delete()" label="Delete"></button>
-                    <button type="button" pButton icon="fa fa-check" (click)="save()" label="Save"></button>
+                    <button type="button"  class="ui-button-danger" pButton icon="fa fa-check" (click)="save()" label="Save"></button>
                 </div>
             </p-footer>
           </p-dialog>
