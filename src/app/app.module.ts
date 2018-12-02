@@ -25,6 +25,8 @@ import { SolicitacaoDeSangueComponent } from './solicitacao-de-sangue/solicitaca
 import { VisualizacaoSolicitacoesComponent } from './visualizacao-solicitacoes/visualizacao-solicitacoes.component';
 import { CadastroTecnicosComponent } from './cadastro-tecnicos/cadastro-tecnicos.component';
 import { ListagemTecnicosComponent } from './listagem-tecnicos/listagem-tecnicos.component';
+import { InformacoesSobreDoacaoComponent } from './informacoes-sobre-doacao/informacoes-sobre-doacao.component';
+import { ListagemFlebomistasComponent } from './listagem-flebomistas/listagem-flebomistas.component';
 
 
 //module
@@ -68,7 +70,8 @@ import { FichasMedicasService } from './fichas-medicas.service';
 import { MenusService } from './menus.service';
 import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
 import { TecnicoService } from './tecnicos.service';
-import { InformacoesSobreDoacaoComponent } from './informacoes-sobre-doacao/informacoes-sobre-doacao.component';
+import { FlebomistaService } from './flebomista.service';
+
 
 @NgModule({
 
@@ -94,6 +97,7 @@ import { InformacoesSobreDoacaoComponent } from './informacoes-sobre-doacao/info
     CadastroTecnicosComponent,
     ListagemTecnicosComponent,
     InformacoesSobreDoacaoComponent,
+    ListagemFlebomistasComponent,
    
   ],
 
@@ -132,7 +136,7 @@ import { InformacoesSobreDoacaoComponent } from './informacoes-sobre-doacao/info
   ], 
 
   providers: [AuthService, AuthGuard, UsuariosService, FichasMedicasService, AgendamentoDeDoacoesService, 
-              MenusService, TecnicoService],
+              MenusService, TecnicoService, FlebomistaService],
 
   bootstrap: [AppComponent]
 
