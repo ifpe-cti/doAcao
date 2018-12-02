@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { TecnicoService } from '../tecnicos.service';
-import { Router } from '@angular/router';
-import { SelectItem } from 'primeng/api';
-import { Tecnico } from '../models/tecnico';
-import { MenusService } from '../menus.service';
+import {UsuariosService} from '../usuarios.service';
+import { Router} from '@angular/router';
 import { MenuItem } from 'primeng/primeng';
+import { MenusService } from '../menus.service';
+import { Usuario } from '../models/usuario';
+import { TecnicoService } from '../tecnicos.service';
+import { Tecnico } from '../models/tecnico';
+
 
 @Component({
   selector: 'app-listagem-tecnicos',

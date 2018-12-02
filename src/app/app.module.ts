@@ -68,6 +68,7 @@ import { FichasMedicasService } from './fichas-medicas.service';
 import { MenusService } from './menus.service';
 import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
 import { TecnicoService } from './tecnicos.service';
+import { InformacoesSobreDoacaoComponent } from './informacoes-sobre-doacao/informacoes-sobre-doacao.component';
 
 @NgModule({
 
@@ -92,6 +93,7 @@ import { TecnicoService } from './tecnicos.service';
     VisualizacaoSolicitacoesComponent,
     CadastroTecnicosComponent,
     ListagemTecnicosComponent,
+    InformacoesSobreDoacaoComponent,
    
   ],
 
