@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, APP_BOOTSTRAP_LISTENER } from '@angular/core';
 import { routing } from './app.routing';
-import { FormsModule } from '@angular/forms';
+
 
 //component
 
@@ -48,8 +48,7 @@ import { ChartModule } from 'primeng/chart';
 import  { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { MegaMenuModule } from 'primeng/megamenu';
-import {TableModule} from 'primeng/table';
-
+import { FormsModule } from '@angular/forms';
 
 //angularFire
 
@@ -121,7 +120,7 @@ import { InformacoesSobreDoacaoComponent } from './informacoes-sobre-doacao/info
     BrowserAnimationsModule,
     AutoCompleteModule,
     MegaMenuModule,
-    TableModule,
+
 
     AngularFireModule.initializeApp(FirebaseConfig),
     //AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),

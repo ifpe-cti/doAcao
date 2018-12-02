@@ -1,10 +1,32 @@
 <div class="container"> </div>
-<body>
     <div>
         <p-megaMenu [model]="items"></p-megaMenu>
-    </div>
-    <div class="ui-g">
-        <div class="ui-g-4"></div>
-        <div class="ui-g-4"></div>
-    </div>
-</body>
+        <div class="ui-g">
+                <div class="ui-g-4"></div>
+                <div class="ui-g-4"><img width="200" alt="Doacao Logo" src="assets/images/doAcao.png"></div>
+                <div class="ui-g-4"></div>
+            </div>
+            <div class="panel ui-g-8 ui-g-nopad">
+                <div class="ui-g-1"></div>
+                <div class="ui-g-6">
+                    <p class="frase" align="justify">
+                        Doar sangue é compartilhar o amor que percorre em suas veias ❤
+                    </p>
+                    <button type="button" class=" botao btn btn-danger" (click)="quemSomos()">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                            Quem somos?
+                        </button>
+                </div>
+            </div>
+            <div class="panel ui-g-4">
+                <h3> Para mais informações sobre doação de sangue: </h3>
+                <br>
+                <tr>
+                    <td>
+                        <button type="button" class=" botao btn btn-danger" (click)="maisInformacoes()">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                            Mais informações
+                        </button>
+                    </td>
+                </tr>
+            </div>
