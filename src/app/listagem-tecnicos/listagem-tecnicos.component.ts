@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import {UsuariosService} from '../usuarios.service';
+import { Router} from '@angular/router';
+import { MenuItem } from 'primeng/primeng';
+import { MenusService } from '../menus.service';
+import { Usuario } from '../models/usuario';
+import { TecnicoService } from '../tecnicos.service';
+import { Tecnico } from '../models/tecnico';
+
 
 @Component({
   selector: 'app-listagem-tecnicos',
@@ -7,9 +15,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListagemTecnicosComponent implements OnInit {
 
-  constructor() { }
+  tecnicos: any[] = [];
+  tecnicoSelecionado;
+  items: MenuItem[];
+  activeItem: MenuItem;
 
-  ngOnInit() {
-  }
+  cols: any[];
+  tecnicosSelecionados: Usuario[] = [];
+
+  constructor(private tecnicoService: TecnicoService, 
+    private router:Router, private menusService: MenusService) { }
+
+
+ ngOnInit() {
+    this.tecnicoService.listarTodos().subscribe(usuarios => {
+        this.tecnicos = usuarios;   
+
+        this.cols = [
+          { field: 'nome', header: 'Nome' },
+          { field: 'id', header: 'Id do técnico' },
+  
+      ];
+
+       });
+
+       this.items = this.menusService.itensHemope;
+  
+      this.activeItem = this.items[6];
+    }
 
 }

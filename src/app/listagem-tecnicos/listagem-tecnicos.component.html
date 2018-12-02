@@ -1,3 +1,28 @@
-<p>
-  listagem-tecnicos works!
-</p>
+x<body>
+
+  <p-megaMenu [model]="items"></p-megaMenu>
+<div class="ui-g">
+  <div class="ui-g-1"></div>
+  <div class="ui-g-1"></div>
+  <div class="ui-g-1">
+    
+    <p-dataTable [style]="{'width':'900px'}" [value]="usuarios" selectionMode="single" [contextMenu]="cm" [(selection)]="usuarioSelcionado">
+      <p-column field="nome" header="Nome do técnico"></p-column>
+      <p-column field="id" header="Id do técnico"></p-column>
+    </p-dataTable>
+</div>
+  <div class="ui-g-1"></div>
+  <div class="ui-g-1"></div>
+  <div class="ui-g-1"></div>
+  <div class="ui-g-1"></div>
+  <div class="ui-g-1"></div>
+  <div class="ui-g-1"></div>
+  <div class="ui-g-1"></div>
+  <div class="ui-g-1"></div>
+  <div class="ui-g-1"></div>
+  
+</div>
+
+</body>
+
+
