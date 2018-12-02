@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from '../models/usuario';
 import { TecnicoService } from '../tecnicos.service';
 import { Router } from '@angular/router';
 import { SelectItem } from 'primeng/api';
 import { Tecnico } from '../models/tecnico';
-
+import { MenusService } from '../menus.service';
+import { MenuItem } from 'primeng/primeng';
 
 @Component({
   selector: 'app-listagem-tecnicos',
@@ -13,6 +13,7 @@ import { Tecnico } from '../models/tecnico';
 })
 export class ListagemTecnicosComponent implements OnInit {
 
+  items: MenuItem[];
   tecnico: Tecnico = {nome: "", cpf: ""}; 
 
   displayDialog: boolean;
@@ -26,7 +27,8 @@ export class ListagemTecnicosComponent implements OnInit {
   cols: any[];
 
 
-  constructor(private tecnicoService: TecnicoService) { }
+  constructor(private tecnicoService: TecnicoService,
+    private menusService: MenusService, private router:Router) { }
  
   showDialogToAdd() {
     this.newTecnico = true;
@@ -69,6 +71,8 @@ cloneCar(t: Tecnico): Tecnico {
 }
 
   ngOnInit() {
+    this.items = this.menusService.itensHemope;
+
     this.tecnicoService.listarTodos().subscribe(tecnicos => {
       this.tecnicos = tecnicos;
 

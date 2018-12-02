@@ -11,8 +11,6 @@ import { Usuario } from '../models/usuario';
   styleUrls: ['./listagem-de-usuarios.component.css']
 })
 export class ListagemDeUsuariosComponent implements OnInit {
- 
- 
 
   usuarios: any[] = [];
   usuarioSelecionado;
@@ -24,10 +22,6 @@ export class ListagemDeUsuariosComponent implements OnInit {
 
   constructor(private usuariosService: UsuariosService, 
     private router:Router, private menusService: MenusService) { }
-
-    voltarPaginaInicial(){
-      this.router.navigate(['dashboard-hemope']);
-     }
 
  ngOnInit() {
     this.usuariosService.listarTodos().subscribe(usuarios => {

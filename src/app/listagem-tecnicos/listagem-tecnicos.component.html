@@ -1,53 +1,80 @@
-<p-table [columns]="cols" [value]="tecnicos" selectionMode="single" [(selection)]="selectedTecnico" (onRowSelect)="onRowSelect($event)" [paginator]="true" [rows]="15">
-  <ng-template pTemplate="caption">
-      List of Tecnicos
-  </ng-template>
-  <ng-template pTemplate="header" let-columns>
-      <tr>
-          <th *ngFor="let col of columns" [pSortableColumn]="col.field">
-              {{col.header}}
-              <p-sortIcon [field]="col.field"></p-sortIcon>
-          </th>
-      </tr>
-  </ng-template>
-  <ng-template pTemplate="body" let-rowData let-columns="columns">
-      <tr [pSelectableRow]="rowData">
-          <td *ngFor="let col of columns">
-              {{rowData[col.field]}}
-          </td>
-      </tr>
-  </ng-template>
-  <ng-template pTemplate="summary" let-rowData>
-      <div style="text-align:left">
-          <button type="button" pButton icon="fa fa-plus" (click)="showDialogToAdd()" label="ADDDD"></button>
-      </div>
-  </ng-template>    
-</p-table>
+<body>
 
-<p-dialog header="Tecnico Details" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" [width]="300">
-  <div class="ui-g ui-fluid" *ngIf="tecnico">
-      <div class="ui-g-12">
-          <div class="ui-g-4">
-              <label for="nome">Nome</label>
+  <p-megaMenu [model]="items"></p-megaMenu>
+
+  <div class="ui-g">
+      <div class="ui-g-1"></div>
+      <div class="ui-g-1"></div>
+      <div class="ui-g-1">
+        <p-table [style]="{'width':'900px'}" [columns]="cols" [value]="tecnicos" selectionMode="single" [(selection)]="selectedTecnico" (onRowSelect)="onRowSelect($event)" [paginator]="true" [rows]="15">
+          <ng-template pTemplate="caption">
+             Técnicos
+          </ng-template>
+          <ng-template pTemplate="header" let-columns>
+              <tr>
+                  <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                      {{col.header}}
+                      <p-sortIcon [field]="col.field"></p-sortIcon>
+                  </th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-rowData let-columns="columns">
+              <tr [pSelectableRow]="rowData">
+                  <td *ngFor="let col of columns">
+                      {{rowData[col.field]}}
+                  </td>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="summary" let-rowData>
+              <div style="text-align:left">
+                  <button type="button" pButton class="ui-button-danger" icon="fa fa-plus" (click)="showDialogToAdd()" label="Novo Técnico"></button>
+              </div>
+          </ng-template>    
+        </p-table>
+        
+        <p-dialog header="Tecnico Details" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" [width]="300">
+          <div class="ui-g ui-fluid" *ngIf="tecnico">
+              <div class="ui-g-12">
+                  <div class="ui-g-4">
+                      <label for="nome">Nome</label>
+                  </div>
+                  <div class="ui-g-8">
+                      <input pInputText id="nome" [(ngModel)]="tecnico.nome" />
+                  </div>
+              </div>
+              <div class="ui-g-12">
+                  <div class="ui-g-4">
+                      <label for="cpf">CPF</label>
+                  </div>
+                  <div class="ui-g-8">
+                      <input pInputText id="cpf" [(ngModel)]="tecnico.cpf" />
+                  </div>
+              </div>
+          
           </div>
-          <div class="ui-g-8">
-              <input pInputText id="nome" [(ngModel)]="tecnico.nome" />
-          </div>
+          <p-footer>
+              <div class="ui-dialog-buttonpane ui-helper-clearfix">
+                  <button type="button" class="ui-button-danger" pButton icon="fa fa-close" (click)="delete()" label="Delete"></button>
+                  <button type="button" pButton icon="fa fa-check" (click)="save()" label="Save"></button>
+              </div>
+          </p-footer>
+        </p-dialog>
       </div>
-      <div class="ui-g-12">
-          <div class="ui-g-4">
-              <label for="cpf">CPF</label>
-          </div>
-          <div class="ui-g-8">
-              <input pInputText id="cpf" [(ngModel)]="tecnico.cpf" />
-          </div>
-      </div>
-  
+      <div class="ui-g-1"></div>
+      <div class="ui-g-1"></div>
+      <div class="ui-g-1"></div>
+      <div class="ui-g-1"></div>
+      <div class="ui-g-1"></div>
+      <div class="ui-g-1"></div>
+      <div class="ui-g-1"></div>
+      <div class="ui-g-1"></div>
+      <div class="ui-g-1"></div>
   </div>
-  <p-footer>
-      <div class="ui-dialog-buttonpane ui-helper-clearfix">
-          <button type="button" pButton icon="fa fa-close" (click)="delete()" label="Delete"></button>
-          <button type="button" pButton icon="fa fa-check" (click)="save()" label="Save"></button>
-      </div>
-  </p-footer>
-</p-dialog>
+
+</body>
+
+
+
+
+
+
