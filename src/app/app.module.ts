@@ -48,6 +48,7 @@ import { ChartModule } from 'primeng/chart';
 import  { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { MegaMenuModule } from 'primeng/megamenu';
+import {TableModule} from 'primeng/table';
 
 
 //angularFire
@@ -118,6 +119,7 @@ import { TecnicoService } from './tecnicos.service';
     BrowserAnimationsModule,
     AutoCompleteModule,
     MegaMenuModule,
+    TableModule,
 
     AngularFireModule.initializeApp(FirebaseConfig),
     //AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
