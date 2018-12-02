@@ -121,6 +121,7 @@ import { InformacoesSobreDoacaoComponent } from './informacoes-sobre-doacao/info
     AutoCompleteModule,
     MegaMenuModule,
 
+
     AngularFireModule.initializeApp(FirebaseConfig),
     //AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
     AngularFireDatabaseModule,
