@@ -1,30 +1,117 @@
 <body>
 
     <p-megaMenu [model]="items"></p-megaMenu>
-<div class="ui-g">
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1">
-      
-      <p-dataTable [style]="{'width':'900px'}" [value]="usuarios" selectionMode="single" [contextMenu]="cm" [(selection)]="usuarioSelcionado">
-        <p-column field="nome" header="Nome do usuário"></p-column>
-        <p-column field="dataNascimento" header="Data de Nascimento"></p-column>
-        <p-column field="cpf" header="CPF"></p-column>
-        <p-column field="user" header="User"></p-column>
-      </p-dataTable>
-</div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1"></div>
-    
-</div>
+
+    <div class="ui-g">
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1">
+            <p-table [style]="{'width':'900px'}" [columns]="cols" [value]="usuarios" selectionMode="single" [(selection)]="selectedUsuario"
+                (onRowSelect)="onRowSelect($event)" [paginator]="true" [rows]="15">
+                <ng-template pTemplate="caption">
+                    Usuários
+                </ng-template>
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                            {{col.header}}
+                            <p-sortIcon [field]="col.field"></p-sortIcon>
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-columns="columns">
+                    <tr [pSelectableRow]="rowData">
+                        <td *ngFor="let col of columns">
+                            {{rowData[col.field]}}
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="summary" let-rowData>
+                    <div style="text-align:left">
+                    </div>
+                </ng-template>
+            </p-table>
+
+            <p-dialog header="Usuário" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" [width]="700">
+                <div class="ui-g ui-fluid" *ngIf="usuario">
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="nome">Nome</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="nome" [(ngModel)]="usuario.nome" />
+                        </div>
+                    </div>
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="cpf">CPF</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="cpf" [(ngModel)]="usuario.cpf" />
+                        </div>
+                    </div>
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="nomeMae">Nome da Mãe</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="nomeMae" [(ngModel)]="usuario.nomeMae" />
+                        </div>
+                    </div>
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="nomePai">Nome do Pai</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="nomePai" [(ngModel)]="usuario.nomePai" />
+                        </div>
+                    </div>
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="numeroDocumento">Número do Documento</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="numeroDocumento" [(ngModel)]="usuario.numeroDocumento" />
+                        </div>
+                    </div>
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="tipoDocumento">Tipo do Documento</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <p-dropdown [options]="tiposDocumento" [(ngModel)]="usuario.tipoDocumento"></p-dropdown>
+                        </div>
+                    </div>
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="orgaoExpeditor">Órgão Expeditor</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <p-dropdown [options]="orgaosExpeditores" [(ngModel)]="usuario.orgaoExpeditor"></p-dropdown>
+                        </div>
+                    </div>
+                    
+                </div>
+                <p-footer>
+                    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+                        <button type="button" class="ui-button-danger" pButton icon="fa fa-close" (click)="delete()" label="Delete"></button>
+                        <button type="button" class="ui-button-danger" pButton icon="fa fa-check" (click)="save()" label="Save"></button>
+                    </div>
+                </p-footer>
+            </p-dialog>
+        </div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1"></div>
+    </div>
 
 </body>
-
-

@@ -61,11 +61,11 @@ delete() {
 
 onRowSelect(event) {
   this.newTecnico = false;
-  this.tecnico = this.cloneCar(event.data);
+  this.tecnico = this.cloneTecnico(event.data);
   this.displayDialog = true;
 }
 
-cloneCar(t: Tecnico): Tecnico {
+cloneTecnico(t: Tecnico): Tecnico {
   let tecnico = {nome: "", cpf: ""};
   for (let prop in t) {
       tecnico[prop] = t[prop];

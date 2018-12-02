@@ -4,6 +4,7 @@ import { Router} from '@angular/router';
 import { MenuItem } from 'primeng/primeng';
 import { MenusService } from '../menus.service';
 import { Usuario } from '../models/usuario';
+import {SelectItem} from 'primeng/api';
 
 @Component({
   selector: 'app-listagem-de-usuarios',
@@ -16,12 +17,71 @@ export class ListagemDeUsuariosComponent implements OnInit {
   usuarioSelecionado;
   items: MenuItem[];
   activeItem: MenuItem;
+  tiposDocumento: SelectItem[];
+  orgaosExpeditores: SelectItem[];
+
+  usuario: Usuario = {nome: "", user: "", dataNascimento: null, senha: "", 
+  tipoSanguineo: "", tipoUsuario: "usuario", cpf: "", nomeMae:"" , nomePai: "", numeroDocumento: "",
+  tipoDocumento: "", orgaoExpeditorDocumento: ""  }; 
+   
+  displayDialog: boolean;
+
+  selectedUsuario: Usuario;
+
+  newUsuario: boolean;
 
   cols: any[];
+
   usuariosSelecionados: Usuario[] = [];
 
   constructor(private usuariosService: UsuariosService, 
     private router:Router, private menusService: MenusService) { }
+
+    showDialogToAdd() {
+      this.newUsuario = true;
+      this.usuario = {nome: "", user: "", dataNascimento: null, senha: "", 
+      tipoSanguineo: "", tipoUsuario: "usuario", cpf: "", nomeMae:"" , nomePai: "", numeroDocumento: "",
+      tipoDocumento: "", orgaoExpeditorDocumento: ""  }; 
+      this.displayDialog = true;
+    }
+  
+  save() {
+      let tecnicos = [...this.usuarios];
+      if (this.newUsuario)
+          tecnicos.push(this.usuario);
+      else
+          tecnicos[this.usuarios.indexOf(this.selectedUsuario)] = this.usuario;
+  
+      this.usuarios = tecnicos;
+      this.usuario = null;
+      this.displayDialog = false;
+  }
+  
+  delete() {
+      let index = this.usuarios.indexOf(this.selectedUsuario);
+      this.usuarios = this.usuarios.filter((val, i) => i != index);
+      this.usuario = null;
+      this.displayDialog = false;
+  
+      this.usuariosService.apagarUsuarioFirebase(this.selectedUsuario);
+  }
+  
+  onRowSelect(event) {
+    this.newUsuario = false;
+    this.usuario = this.cloneUsuario(event.data);
+    this.displayDialog = true;
+  }
+  
+  cloneUsuario(u: Usuario): Usuario {
+    let usuario = {nome: "", user: "", dataNascimento: null, senha: "", 
+    tipoSanguineo: "", tipoUsuario: "usuario", cpf: "", nomeMae:"" , nomePai: "", numeroDocumento: "",
+    tipoDocumento: "", orgaoExpeditorDocumento: ""  }; 
+    for (let prop in u) {
+        usuario[prop] = u[prop];
+    }
+    return usuario;
+  
+  }
 
  ngOnInit() {
     this.usuariosService.listarTodos().subscribe(usuarios => {
@@ -35,6 +95,28 @@ export class ListagemDeUsuariosComponent implements OnInit {
       ];
 
        });
+
+       this.tiposDocumento = [
+        {label: 'Tipo de Documento', value: null},
+        {label: 'Cédula de Identidade', value: "Carteira de Identidade"},         
+        {label: 'Identificação Oficial para Estrangeiros', value: 'Identificação Oficial para Estrangeiros'},
+        {label: 'Carteira de Previcência Social', value: 'Carteira de Previcência Social'},
+        {label: 'Passaporte', value: 'Passaporte'},
+        {label: 'Certificado de Reservista', value: 'Certificado de Reservista'},
+        {label: 'Carteira Nacional de Habilitação', value: 'Carteira Nacional de Habilitação'}
+      ]
+  
+      this.orgaosExpeditores = [
+        {label: 'Órgão Expeditor', value: null},
+        {label:'SSP — Secretaria de Segurança Pública', value: "SSP"},
+        {label:'SSD — Secretaria de Defesa Social', value: "SSD"},
+        {label:'DETRAN — Departamento Estadual de Trânsito', value: "DETRAN"},
+        {label:'MA — Ministério da Aeronáutica', value: "MA"},
+        {label:'MM — Ministério da Marinha', value: "MM"},
+        {label:'ME — Ministério do Exército', value: "ME"},
+        {label:'MT — Ministério do Trabalho', value: "MT"},
+        {label:'CNIG — Conselho Nacional de Imigração', value: "CNIG"},
+      ]
 
        this.items = this.menusService.itensHemope;
   
