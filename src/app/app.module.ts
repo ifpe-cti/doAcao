@@ -49,6 +49,7 @@ import  { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { FormsModule } from '@angular/forms';
+import {TableModule} from 'primeng/table';
 
 //angularFire
 
@@ -120,6 +121,7 @@ import { InformacoesSobreDoacaoComponent } from './informacoes-sobre-doacao/info
     BrowserAnimationsModule,
     AutoCompleteModule,
     MegaMenuModule,
+    TableModule,
 
 
     AngularFireModule.initializeApp(FirebaseConfig),
