@@ -21,7 +21,7 @@ import { AgendamentoDoacoesHemopeComponent } from './agendamento-doacoes-hemope/
 import { SolicitacaoDeSangueComponent } from './solicitacao-de-sangue/solicitacao-de-sangue.component';
 import { VisualizacaoSolicitacoesComponent } from './visualizacao-solicitacoes/visualizacao-solicitacoes.component';
 import { CadastroTecnicosComponent } from './cadastro-tecnicos/cadastro-tecnicos.component';
-//import { ListagemTecnicosComponent } from './listagem-tecnicos/listagem-tecnicos.component';
+import { ListagemTecnicosComponent } from './listagem-tecnicos/listagem-tecnicos.component';
 import { InformacoesSobreDoacaoComponent } from './informacoes-sobre-doacao/informacoes-sobre-doacao.component';
 
 import { AuthGuard } from './auth-guard.service';
@@ -45,7 +45,7 @@ const APP_ROUTES: Routes = [
 { path: 'solicitacao-de-sangue', component: SolicitacaoDeSangueComponent },
 { path: 'visualizacao-solicitacoes', component: VisualizacaoSolicitacoesComponent },
 { path: 'cadastro-tecnicos', component: CadastroTecnicosComponent },
-//{ path: 'listagem-tecnicos', component: ListagemTecnicosComponent },
+{ path: 'listagem-tecnicos', component: ListagemTecnicosComponent },
 { path: 'informacoes-sobre-doacao', component: InformacoesSobreDoacaoComponent}
 
 ];
