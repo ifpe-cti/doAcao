@@ -34,7 +34,7 @@ export class ListagemTecnicosComponent implements OnInit {
  
   showDialogToAdd() {
     this.newTecnico = true;
-    this.tecnico = {nome: "qualquer nome", cpf: "kkk"};
+    this.tecnico = {nome: "", cpf: ""};
     this.displayDialog = true;
   }
 
