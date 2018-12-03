@@ -12,13 +12,13 @@ export class UsuariosService {
   todosOsUsuarios: Usuario[];
 
   constructor(private servicoFirebase: AngularFirestore) {
-    this.usuarioCollection = this.servicoFirebase.collection("usuario");
+    this.usuarioCollection = this.servicoFirebase.collection('usuario');
   }
 
   private usuarioCollection: AngularFirestoreCollection<Usuario>;
 
   cadastrarUsuarioFirebase(usuario: Usuario) {
-      this.usuarioCollection.add(usuario).then(
+    this.usuarioCollection.add(usuario).then(
       resultado => {
         usuario.id = resultado.id;
       });
@@ -43,7 +43,7 @@ export class UsuariosService {
     return usuario;
   }
 
-    listarTodos(): Observable<any[]> {
+  listarTodos(): Observable<any[]> {
     let resultados: any[] = [];
     let usuarios = new Observable<any[]>(observer => {
       this.usuarioCollection.snapshotChanges().subscribe(result => {
@@ -126,7 +126,7 @@ export class UsuariosService {
           this.todosOsUsuarios = meuObservable as Usuario[]
           let usuariosFiltrados: String[] = []
           for (let i = 0; i < this.todosOsUsuarios.length; i++) {
-            if (this.todosOsUsuarios[i].tipoSanguineo.search(tipoSanguineo)) { 
+            if (this.todosOsUsuarios[i].tipoSanguineo.search(tipoSanguineo)) {
               usuariosFiltrados.push(this.todosOsUsuarios[i].nome);
             }
           }
@@ -138,9 +138,22 @@ export class UsuariosService {
     })
   }
 
-  apagarUsuarioFirebase(usuario): Promise<void> {
-    return this.usuarioCollection.doc(usuario.id).delete();
+
+  updateUsuarioFirebase(idObjeto: String, objeto: Usuario) {
+    let usuarioEditado = new Observable<any>(observer => {
+      this.usuarioCollection.doc('usuario' + '/' + idObjeto).update(objeto).then(result => {
+        observer.next();
+        observer.complete();
+      });
+    });
+    return usuarioEditado;
   }
+
+
+
+apagarUsuarioFirebase(usuario): Promise < void> {
+  return this.usuarioCollection.doc(usuario.id).delete();
+}
 
 
 
