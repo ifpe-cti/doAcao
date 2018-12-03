@@ -81,7 +81,7 @@ export class VisualizacaoRequisicaoExamesComponent implements OnInit {
  
       this.cols = [
         { field: 'numeroDocumentoDoador', header: 'Número do documento do doador' },
-        { field: 'etiquetaAmostra', header: 'Etiqueta da amostra' },
+        { field: 'etiquetaDaAmostra', header: 'Etiqueta da amostra' },
       ];
 
     this.requisicaoExamesService.listarTodos().subscribe(requisicaoExames => {
