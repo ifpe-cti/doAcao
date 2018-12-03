@@ -3,6 +3,7 @@ import { SolicitacaoDeSangueService } from '../solicitacao-de-sangue.service';
 import { Router } from '@angular/router';
 import { MenusService } from '../menus.service';
 import { MenuItem } from 'primeng/primeng';
+import { SolicitacaoSanguinea } from '../models/solicitacaoSanguinea';
 
 @Component({
   selector: 'app-visualizacao-solicitacoes',
@@ -13,18 +14,78 @@ export class VisualizacaoSolicitacoesComponent implements OnInit {
 
   items: MenuItem[];
 
-  solicitacoesSanguineas: any[] = [];
-  solicitacaoSelecionada;
+  solicitacaoSanguinea: SolicitacaoSanguinea = {nomeUsuario: "", numeroDocumentoDoador: "",
+  tipoSanguineo: ""}; 
+
+  displayDialog: boolean;
+
+  selectedSolicitacao: SolicitacaoSanguinea;
+
+  newSolicitacao: boolean;
+
+  solicitacoes: SolicitacaoSanguinea[];
+
+  cols: any[];
 
 
   constructor(private solicitacaoDeSangueService: SolicitacaoDeSangueService,
     private router: Router, private menusService: MenusService) { }
 
+    showDialogToAdd() {
+      this.newSolicitacao = true;
+      this.solicitacaoSanguinea = {nomeUsuario: "", numeroDocumentoDoador: "",
+      tipoSanguineo: ""}; 
+      this.displayDialog = true;
+    }
+  
+  save() {
+      let solicitacoes = [...this.solicitacoes];
+      if (this.newSolicitacao)
+      solicitacoes.push(this.solicitacaoSanguinea);
+      else
+          solicitacoes[this.solicitacoes.indexOf(this.selectedSolicitacao)] = this.solicitacaoSanguinea;
+  
+      this.solicitacoes = solicitacoes;
+      this.solicitacaoSanguinea = null;
+      this.displayDialog = false;
+  }
+  
+  delete() {
+      let index = this.solicitacoes.indexOf(this.selectedSolicitacao);
+      this.solicitacoes = this.solicitacoes.filter((val, i) => i != index);
+      this.solicitacaoSanguinea = null;
+      this.displayDialog = false;
+  
+      this.solicitacaoDeSangueService.apagarSolicitacaoFirebase(this.selectedSolicitacao);
+  }
+  
+  onRowSelect(event) {
+    this.newSolicitacao = false;
+    this.solicitacaoSanguinea = this.cloneSolicitacao(event.data);
+    this.displayDialog = true;
+  }
+  
+  cloneSolicitacao(s: SolicitacaoSanguinea): SolicitacaoSanguinea {
+    let solicitacao = {nomeUsuario: "", numeroDocumentoDoador: "",
+    tipoSanguineo: ""}; 
+    for (let prop in s) {
+      solicitacao[prop] = s[prop];
+    }
+    return solicitacao;
+  
+  }
+
   ngOnInit() {
     this.items = this.items = this.menusService.itensHemope;
 
-    this.solicitacaoDeSangueService.listarTodas().subscribe(solicitacoes => {
-      this.solicitacoesSanguineas = solicitacoes;
+    this.cols = [
+      { field: 'nomeUsuario', header: 'Nome do solicitante' },
+      { field: 'numeroDocumentoDoador', header: 'Número de documento do solicitante' },
+      { field: 'tipoSanguineo', header: 'Tipo Sanguíneo'}
+    ]
+
+    this.solicitacaoDeSangueService.listarTodas().subscribe(solicitacoesSanguineas => {
+      this.solicitacoes = solicitacoesSanguineas;
     });
   }
 }

@@ -38,4 +38,10 @@ export class SolicitacaoDeSangueService {
     });
     return solicitacoes;
   }
+
+  apagarSolicitacaoFirebase(solicitacao): Promise<void> {
+    return this.solicitacaoSangueCollection.doc(solicitacao.id).delete();
+  }
+
+
 }
