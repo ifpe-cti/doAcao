@@ -10,13 +10,13 @@
 
     <div class="ui-g">
         <div class="ui-g-4"></div>
-        <div class="ui-g-4"><input [(ngModel)]= "solicitacaoSanguinea.numeroDocumentoDoador" type="text" size="30" placeholder="CPF" pInputText></div>
+        <div class="ui-g-4"><input [(ngModel)]= "solicitacaoSanguinea.cpfUsuario" type="text" size="30" placeholder="CPF" pInputText></div>
         <div class="ui-g-4"></div>
     </div>
       
     <div class="ui-g">
         <div class="ui-g-4"></div>
-        <div class="ui-g-4"><input [(ngModel)]= "solicitacaoSanguinea.tipoSanguineo" type="password" size="30" placeholder = "Tipo Sanguíneo" pInputText></div>
+        <div class="ui-g-4"><p-dropdown [options]="tiposSanguineos" [(ngModel)]="solicitacaoSanguinea.tipoSanguineo"></p-dropdown></div>
         <div class="ui-g-4"></div>
     </div>
 

@@ -14,78 +14,83 @@ export class VisualizacaoSolicitacoesComponent implements OnInit {
 
   items: MenuItem[];
 
-  solicitacaoSanguinea: SolicitacaoSanguinea = {nomeUsuario: "", numeroDocumentoDoador: "",
-  tipoSanguineo: ""}; 
+  solicitacaoSanguinea: SolicitacaoSanguinea = {
+    nomeUsuario: "", cpfUsuario: "",
+    tipoSanguineo: ""
+  };
 
   displayDialog: boolean;
-
   selectedSolicitacao: SolicitacaoSanguinea;
-
   newSolicitacao: boolean;
 
-  solicitacoes: SolicitacaoSanguinea[];
-
+  solicitacoes: SolicitacaoSanguinea[] = [];
   cols: any[];
 
 
   constructor(private solicitacaoDeSangueService: SolicitacaoDeSangueService,
     private router: Router, private menusService: MenusService) { }
 
-    showDialogToAdd() {
-      this.newSolicitacao = true;
-      this.solicitacaoSanguinea = {nomeUsuario: "", numeroDocumentoDoador: "",
-      tipoSanguineo: ""}; 
-      this.displayDialog = true;
-    }
-  
+  showDialogToAdd() {
+    this.newSolicitacao = true;
+    this.solicitacaoSanguinea = {
+      nomeUsuario: "", cpfUsuario: "",
+      tipoSanguineo: ""
+    };
+    this.displayDialog = true;
+  }
+
   save() {
-      let solicitacoes = [...this.solicitacoes];
-      if (this.newSolicitacao)
+    let solicitacoes = [...this.solicitacoes];
+    if (this.newSolicitacao)
       solicitacoes.push(this.solicitacaoSanguinea);
-      else
-          solicitacoes[this.solicitacoes.indexOf(this.selectedSolicitacao)] = this.solicitacaoSanguinea;
-  
-      this.solicitacoes = solicitacoes;
-      this.solicitacaoSanguinea = null;
-      this.displayDialog = false;
+    else
+      solicitacoes[this.solicitacoes.indexOf(this.selectedSolicitacao)] = this.solicitacaoSanguinea;
+
+    this.solicitacoes = solicitacoes;
+    this.solicitacaoSanguinea = null;
+    this.displayDialog = false;
   }
-  
+
   delete() {
-      let index = this.solicitacoes.indexOf(this.selectedSolicitacao);
-      this.solicitacoes = this.solicitacoes.filter((val, i) => i != index);
-      this.solicitacaoSanguinea = null;
-      this.displayDialog = false;
-  
-      this.solicitacaoDeSangueService.apagarSolicitacaoFirebase(this.selectedSolicitacao);
+    let index = this.solicitacoes.indexOf(this.selectedSolicitacao);
+    this.solicitacoes = this.solicitacoes.filter((val, i) => i != index);
+    this.solicitacaoSanguinea = null;
+    this.displayDialog = false;
+
+    this.solicitacaoDeSangueService.apagarSolicitacaoFirebase(this.selectedSolicitacao);
   }
-  
+
   onRowSelect(event) {
     this.newSolicitacao = false;
     this.solicitacaoSanguinea = this.cloneSolicitacao(event.data);
     this.displayDialog = true;
   }
-  
+
   cloneSolicitacao(s: SolicitacaoSanguinea): SolicitacaoSanguinea {
-    let solicitacao = {nomeUsuario: "", numeroDocumentoDoador: "",
-    tipoSanguineo: ""}; 
+    let solicitacao = {
+      nomeUsuario: "", cpfUsuario: "",
+      tipoSanguineo: ""
+    };
     for (let prop in s) {
       solicitacao[prop] = s[prop];
     }
     return solicitacao;
-  
+
   }
 
   ngOnInit() {
     this.items = this.items = this.menusService.itensHemope;
 
-    this.cols = [
-      { field: 'nomeUsuario', header: 'Nome do solicitante' },
-      { field: 'numeroDocumentoDoador', header: 'Número de documento do solicitante' },
-      { field: 'tipoSanguineo', header: 'Tipo Sanguíneo'}
-    ]
-
     this.solicitacaoDeSangueService.listarTodas().subscribe(solicitacoesSanguineas => {
       this.solicitacoes = solicitacoesSanguineas;
     });
+
+    this.cols = [
+      { field: 'nomeUsuario', header: 'Nome do solicitante' },
+      { field: 'cpfUsuario', header: 'CPF do solicitante' },
+      { field: 'tipoSanguineo', header: 'Tipo do sangue solicitado' }
+    ]
+
+
   }
 }

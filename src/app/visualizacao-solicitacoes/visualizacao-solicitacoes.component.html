@@ -6,7 +6,7 @@
         <div class="ui-g-1"></div>
         <div class="ui-g-1"></div>
         <div class="ui-g-1">
-            <p-table [style]="{'width':'900px'}" [columns]="cols" [value]="solicitacaoes" selectionMode="single" [(selection)]="selectedSolicitacao"
+            <p-table [style]="{'width':'900px'}" [columns]="cols" [value]="solicitacoes" selectionMode="single" [(selection)]="selectedSolicitacao"
                 (onRowSelect)="onRowSelect($event)" [paginator]="true" [rows]="15">
                 <ng-template pTemplate="caption">
                     Técnicos
@@ -45,10 +45,10 @@
                     </div>
                     <div class="ui-g-12">
                         <div class="ui-g-4">
-                            <label for="numeroDocumentoDoador">Número do documento do doador</label>
+                            <label for="cpfUsuario">CPF do solicitante doador</label>
                         </div>
                         <div class="ui-g-8">
-                            <input pInputText id="numeroDocumentoDoador" [(ngModel)]="solicitacaoSanguinea.numeroDocumentoDoador" />
+                            <input pInputText id="cpfUsuario" [(ngModel)]="solicitacaoSanguinea.cpfUsuario" />
                         </div>
                     </div>
 
@@ -64,7 +64,8 @@
                 </div>
                 <p-footer>
                     <div class="ui-dialog-buttonpane ui-helper-clearfix">
-                        <button type="button" class="ui-button-danger" pButton icon="fa fa-close" (click)="delete()" label="Deletar"></button>
+                        <button type="button" class="ui-button-danger" pButton icon="fa fa-close" (click)="delete()" label="Aprovar"></button>
+                        <button type="button" class="ui-button-danger" pButton icon="fa fa-close" (click)="delete()" label="Recusar"></button>
                         <button type="button" class="ui-button-danger" pButton icon="fa fa-check" (click)="save()" label="Salvar"></button>
                     </div>
                 </p-footer>

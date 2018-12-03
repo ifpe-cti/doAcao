@@ -3,7 +3,7 @@ import { Usuario } from "./usuario";
 export interface SolicitacaoSanguinea{
 
     nomeUsuario: String;
-    numeroDocumentoDoador: String;
+    cpfUsuario: String;
     tipoSanguineo: String;
     id?: String;
    

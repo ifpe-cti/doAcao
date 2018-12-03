@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {UsuariosService} from '../usuarios.service';
-import { Router} from '@angular/router';
+import { UsuariosService } from '../usuarios.service';
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/primeng';
 import { MenusService } from '../menus.service';
 import { SolicitacaoDeSangueService } from '../solicitacao-de-sangue.service';
 import { SolicitacaoSanguinea } from '../models/solicitacaoSanguinea';
 import { Usuario } from '../models/usuario';
+import { SelectItem } from 'primeng/api';
 
 
 
@@ -16,47 +17,55 @@ import { Usuario } from '../models/usuario';
   styleUrls: ['./solicitacao-de-sangue.component.css']
 })
 export class SolicitacaoDeSangueComponent implements OnInit {
-  
+
   items: MenuItem[];
 
   cpf: String;
   senha: String;
   solicitacaoSanguinea: SolicitacaoSanguinea;
   usuario: Usuario[];
-  
 
-  constructor(private usuariosService: UsuariosService, private router:Router, private menusService: MenusService,
-  private solicitacaoSanguineaService: SolicitacaoDeSangueService){ 
-      this.solicitacaoSanguinea = {
-       nomeUsuario: "", numeroDocumentoDoador: "", tipoSanguineo: ""
+  tiposSanguineos: SelectItem[];
 
-      }
+
+  constructor(private usuariosService: UsuariosService, private router: Router, private menusService: MenusService,
+    private solicitacaoSanguineaService: SolicitacaoDeSangueService) {
+    this.solicitacaoSanguinea = {
+      nomeUsuario: "", cpfUsuario: "", tipoSanguineo: ""
+    }
+  }
+
+  enviarSolicitacao() {
+    if (this.usuariosService.usuarioLogado.cpf == this.solicitacaoSanguinea.cpfUsuario) {
+      this.solicitacaoSanguineaService.cadastrarSolicitacaoSanguineaFirebase(this.solicitacaoSanguinea);
+      this.router.navigate(['/dashboard-hemope']);
+    } else {
+      alert("O CPF inserido não condiz com o que está cadastrado nessa conta. Por favor, apresente seu CPF.")
     }
 
-  enviarSolicitacao(){
-    this.solicitacaoSanguineaService.cadastrarSolicitacaoSanguineaFirebase(this.solicitacaoSanguinea);
-    this.router.navigate(['/dashboard-hemope']);
-    
-    /**
-     *  this.usuariosService.usuarioLogado.nome = this.solicitacaoSanguinea.nomeUsuario;
-    this.usuariosService.usuarioLogado.cpf = this.solicitacaoSanguinea.numeroDocumentoDoador;
-    this.usuariosService.usuarioLogado.tipoSanguineo = this.solicitacaoSanguinea.tipoSanguineo;
-    console.log("ooooi")
+    // adicionar mensagem de aviso: "sobre a confirmação"
 
-     * 
-  if(this.usuariosService.usuarioLogado.cpf == this.cpf && this.usuariosService.usuarioLogado.senha == this.senha){
-   console.log(this.usuariosService.usuarioLogado.tipoSanguineo) 
-   
-   console.log(this.solicitacaoSanguinea.tipoSanguineo) 
-  }  else{
-    alert("os dados não batem")
+
+
   }
-     */
-
- 
-}
   ngOnInit() {
+
+    this.tiposSanguineos = [
+      { label: 'Tipo Sanguíneo', value: null },
+      { label: "A+", value: "A+" },
+      { label: 'A-', value: 'A-' },
+      { label: 'B+', value: 'B+' },
+      { label: 'B-', value: 'B-' },
+      { label: 'AB+', value: 'AB+' },
+      { label: 'AB-', value: 'AB-' },
+      { label: 'O+', value: 'O+' },
+      { label: 'O-', value: 'O-' }
+    ];
+
+
     this.items = this.menusService.itensUsuario;
+
+
   }
 
 }

@@ -43,13 +43,13 @@ export class ListagemDeUsuariosComponent implements OnInit {
     }
   
   save() {
-      let tecnicos = [...this.usuarios];
+      let usuarios = [...this.usuarios];
       if (this.newUsuario)
-          tecnicos.push(this.usuario);
+      usuarios.push(this.usuario);
       else
-          tecnicos[this.usuarios.indexOf(this.selectedUsuario)] = this.usuario;
+      usuarios[this.usuarios.indexOf(this.selectedUsuario)] = this.usuario;
   
-      this.usuarios = tecnicos;
+      this.usuarios = usuarios;
       this.usuario = null;
       this.displayDialog = false;
   }
