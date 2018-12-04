@@ -25,6 +25,7 @@ import { ListagemTecnicosComponent } from './listagem-tecnicos/listagem-tecnicos
 import { InformacoesSobreDoacaoComponent } from './informacoes-sobre-doacao/informacoes-sobre-doacao.component';
 import { ListagemFlebomistasComponent } from './listagem-flebomistas/listagem-flebomistas.component';
 import { CadastroFlebomistaComponent } from './cadastro-flebomista/cadastro-flebomista.component';
+import { ImpedimentosComponent } from './maisInformacoes/impedimentos/impedimentos.component';
 
 import { AuthGuard } from './auth-guard.service';
 
@@ -51,6 +52,7 @@ const APP_ROUTES: Routes = [
 { path: 'informacoes-sobre-doacao', component: InformacoesSobreDoacaoComponent},
 { path: 'listagem-flebomistas', component: ListagemFlebomistasComponent},
 { path: 'cadastro-flebomistas', component: CadastroFlebomistaComponent},
+{ path: 'impedimentos', component: ImpedimentosComponent},
 
 ];
 

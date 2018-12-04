@@ -110,14 +110,9 @@ export class MenusService {
       { label: ' Requisitos básicos ', icon: 'fa-heart-o',
       items: [
           [
-              { items: [{label: 'Impedimentos temporários'}]
-              },
-              {
-                items: [{label: 'Impedimentos definitivos'}]
+              { items: [{label: 'Impedimentos', routerLink: '/impedimentos'}]
               },
               { items: [{label: 'Quem não pode doar?'}]
-              },
-              { items: [{label: 'Na dúvida, não doe!'}]
               },
               { items: [{label: 'Cigurgias, tatuagens, vacinas e viagens'}]
               },
@@ -145,11 +140,11 @@ export class MenusService {
               { items: [{label: 'Importância'}]
               },
               {
-                items: [{label: 'Doação de plaquetas'}]
+                items: [{label: 'Por que doar?'}]
               },
               { items: [{label: 'Doação de medula'}]
               },
-              { items: [{label: 'Por que doar?'}]
+              { items: [{label: 'Doação de plaquetas'}]
               },
               { items: [{label: 'Benefícios para o doador'}]
               },

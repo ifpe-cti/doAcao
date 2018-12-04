@@ -28,6 +28,7 @@ import { ListagemTecnicosComponent } from './listagem-tecnicos/listagem-tecnicos
 import { InformacoesSobreDoacaoComponent } from './informacoes-sobre-doacao/informacoes-sobre-doacao.component';
 import { ListagemFlebomistasComponent } from './listagem-flebomistas/listagem-flebomistas.component';
 import { CadastroFlebomistaComponent } from './cadastro-flebomista/cadastro-flebomista.component';
+import { ImpedimentosComponent } from './maisInformacoes/impedimentos/impedimentos.component';
 
 
 //module
@@ -102,6 +103,7 @@ import { FlebomistaService } from './flebomista.service';
     InformacoesSobreDoacaoComponent,
     ListagemFlebomistasComponent,
     CadastroFlebomistaComponent,
+    ImpedimentosComponent,
    
   ],
 
