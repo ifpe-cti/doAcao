@@ -140,9 +140,9 @@ export class MenusService {
               {
                 items: [{label: 'Por que doar?', routerLink: '/porque-doar'}]
               },
-              { items: [{label: 'Doação de medula'}]
+              { items: [{label: 'Doação de medula', routerLink: '/doacao-de-medula'}]
               },
-              { items: [{label: 'Doação de plaquetas'}]
+              { items: [{label: 'Doação de plaquetas', routerLink: '/doacao-de-plaquetas'}]
               },
               { items: [{label: 'Benefícios para o doador'}]
               },

@@ -81,6 +81,8 @@ import { EstoqueDeSangueComponent } from './maisInformacoes/estoque-de-sangue/es
 import { JanelaImunologicaComponent } from './maisInformacoes/janela-imunologica/janela-imunologica.component';
 import { ImportanciaComponent } from './maisInformacoes/importancia/importancia.component';
 import { PorqueDoarComponent } from './maisInformacoes/porque-doar/porque-doar.component';
+import { DoacaoDeMedulaComponent } from './maisInformacoes/doacao-de-medula/doacao-de-medula.component';
+import { DoacaoDePlaquetasComponent } from './maisInformacoes/doacao-de-plaquetas/doacao-de-plaquetas.component';
 
 
 
@@ -119,6 +121,8 @@ import { PorqueDoarComponent } from './maisInformacoes/porque-doar/porque-doar.c
     JanelaImunologicaComponent,
     ImportanciaComponent,
     PorqueDoarComponent,
+    DoacaoDeMedulaComponent,
+    DoacaoDePlaquetasComponent,
    
   ],
 
