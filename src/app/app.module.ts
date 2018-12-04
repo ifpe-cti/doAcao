@@ -54,6 +54,7 @@ import { MegaMenuModule } from 'primeng/megamenu';
 import { FormsModule } from '@angular/forms';
 import {TableModule} from 'primeng/table';
 
+
 //angularFire
 
 import { AngularFireModule } from 'angularfire2';

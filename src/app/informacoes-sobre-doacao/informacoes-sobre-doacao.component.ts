@@ -9,6 +9,8 @@ export class InformacoesSobreDoacaoComponent implements OnInit {
 
   constructor() { }
 
+
+
   ngOnInit() {
   }
 
