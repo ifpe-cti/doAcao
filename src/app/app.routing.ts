@@ -27,6 +27,7 @@ import { ListagemFlebomistasComponent } from './listagem-flebomistas/listagem-fl
 import { CadastroFlebomistaComponent } from './cadastro-flebomista/cadastro-flebomista.component';
 import { ImpedimentosComponent } from './maisInformacoes/impedimentos/impedimentos.component';
 import { QuemNaoPodeDoarComponent } from './maisInformacoes/quem-nao-pode-doar/quem-nao-pode-doar.component';
+import { TerceiroRequisitoComponent } from './maisInformacoes/terceiro-requisito/terceiro-requisito.component';
 
 import { AuthGuard } from './auth-guard.service';
 
@@ -55,6 +56,7 @@ const APP_ROUTES: Routes = [
 { path: 'cadastro-flebomistas', component: CadastroFlebomistaComponent},
 { path: 'impedimentos', component: ImpedimentosComponent},
 { path: 'quem-nao-pode-doar', component: QuemNaoPodeDoarComponent},
+{ path: 'terceiro-requisito', component: TerceiroRequisitoComponent},
 
 ];
 

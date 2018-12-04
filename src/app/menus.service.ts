@@ -114,7 +114,7 @@ export class MenusService {
               },
               { items: [{label: 'Quem não pode doar?', routerLink: '/quem-nao-pode-doar'}]
               },
-              { items: [{label: 'Cigurgias, tatuagens, vacinas e viagens'}]
+              { items: [{label: 'Cigurgias, tatuagens, vacinas e viagens', routerLink: '/terceiro-requisito'}]
               },
           ]
         ] 
