@@ -142,7 +142,7 @@ export class MenusService {
               },
               { items: [{label: 'Doação de medula', routerLink: '/doacao-de-medula'}]
               },
-              { items: [{label: 'Doação de plaquetas'}]
+              { items: [{label: 'Doação de plaquetas', routerLink: '/doacao-de-plaquetas'}]
               },
               { items: [{label: 'Benefícios para o doador'}]
               },

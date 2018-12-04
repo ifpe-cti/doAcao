@@ -82,6 +82,7 @@ import { JanelaImunologicaComponent } from './maisInformacoes/janela-imunologica
 import { ImportanciaComponent } from './maisInformacoes/importancia/importancia.component';
 import { PorqueDoarComponent } from './maisInformacoes/porque-doar/porque-doar.component';
 import { DoacaoDeMedulaComponent } from './maisInformacoes/doacao-de-medula/doacao-de-medula.component';
+import { DoacaoDePlaquetasComponent } from './maisInformacoes/doacao-de-plaquetas/doacao-de-plaquetas.component';
 
 
 
@@ -121,6 +122,7 @@ import { DoacaoDeMedulaComponent } from './maisInformacoes/doacao-de-medula/doac
     ImportanciaComponent,
     PorqueDoarComponent,
     DoacaoDeMedulaComponent,
+    DoacaoDePlaquetasComponent,
    
   ],
 
