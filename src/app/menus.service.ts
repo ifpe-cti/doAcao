@@ -103,4 +103,80 @@ export class MenusService {
     { label: '  Encerrar sessão', icon: 'fa-power-off', routerLink: '/login' },
   ]
 
+  
+
+    itensMaisInformacoes = [
+      { label: '  Voltar', icon: '', routerLink: '/dashboard' },
+      { label: ' Requisitos básicos ', icon: 'fa-heart-o',
+      items: [
+          [
+              { items: [{label: 'Impedimentos temporários'}]
+              },
+              {
+                items: [{label: 'Impedimentos definitivos'}]
+              },
+              { items: [{label: 'Quem não pode doar?'}]
+              },
+              { items: [{label: 'Na dúvida, não doe!'}]
+              },
+              { items: [{label: 'Cigurgias, tatuagens, vacinas e viagens'}]
+              },
+          ]
+        ] 
+      },{ label: ' Dados ', icon: 'fa-heart-o',
+      items: [
+          [
+              { items: [{label: 'História'}]
+              },
+              {
+                items: [{label: 'Tipos sanguíneos'}]
+              },
+              { items: [{label: 'O que acontece com o sangue doado?'}]
+              },
+              { items: [{label: 'Estoque de sangue'}]
+              },
+              { items: [{label: 'Janela imunológica'}]
+              },
+          ]
+        ] 
+      },{ label: ' Por que doar sangue? ', icon: 'fa-heart-o',
+      items: [
+          [
+              { items: [{label: 'Importância'}]
+              },
+              {
+                items: [{label: 'Doação de plaquetas'}]
+              },
+              { items: [{label: 'Doação de medula'}]
+              },
+              { items: [{label: 'Por que doar?'}]
+              },
+              { items: [{label: 'Benefícios para o doador'}]
+              },
+              { items: [{label: 'Alterações nos exames'}]
+              },
+          ]
+        ] 
+      },{ label: ' Quais as etapas? ', icon: 'fa-stethoscope',
+      items: [
+          [
+              { items: [{label: 'Quais as etapas?'}]
+              },
+              {
+                items: [{label: 'Reações adversas'}]
+              },
+              { items: [{label: 'Intervalo para doação'}]
+              },
+              { items: [{label: 'Reações adversas'}]
+              },
+              { items: [{label: 'Volume de sangue coletado'}]
+              },
+              { items: [{label: 'Cuidados pós doação'}]
+              },
+          ]
+        ] 
+      },
+      { label: '  Encerrar sessão', icon: 'fa-power-off', routerLink: '/login' },
+    ]
     }
+  
