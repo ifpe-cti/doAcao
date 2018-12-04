@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-impedimentos',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImpedimentosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
+  voltarPagina(){
+    this.router.navigate(['informacoes-sobre-doacao'])
+  }
   ngOnInit() {
   }
 

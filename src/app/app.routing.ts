@@ -54,6 +54,7 @@ const APP_ROUTES: Routes = [
 { path: 'cadastro-flebomistas', component: CadastroFlebomistaComponent},
 { path: 'impedimentos', component: ImpedimentosComponent},
 
+
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
