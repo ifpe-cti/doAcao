@@ -146,7 +146,7 @@ export class MenusService {
               },
               { items: [{label: 'Benefícios para o doador', routerLink: '/beneficios'}]
               },
-              { items: [{label: 'Alterações nos exames'}]
+              { items: [{label: 'Alterações nos exames', routerLink: '/alteracoes-nos-exames'}]
               },
           ]
         ] 

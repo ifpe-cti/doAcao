@@ -84,6 +84,7 @@ import { PorqueDoarComponent } from './maisInformacoes/porque-doar/porque-doar.c
 import { DoacaoDeMedulaComponent } from './maisInformacoes/doacao-de-medula/doacao-de-medula.component';
 import { DoacaoDePlaquetasComponent } from './maisInformacoes/doacao-de-plaquetas/doacao-de-plaquetas.component';
 import { BeneficiosComponent } from './maisInformacoes/beneficios/beneficios.component';
+import { AlteracoesNosExamesComponent } from './maisInformacoes/alteracoes-nos-exames/alteracoes-nos-exames.component';
 
 
 
@@ -125,6 +126,7 @@ import { BeneficiosComponent } from './maisInformacoes/beneficios/beneficios.com
     DoacaoDeMedulaComponent,
     DoacaoDePlaquetasComponent,
     BeneficiosComponent,
+    AlteracoesNosExamesComponent,
    
   ],
 
