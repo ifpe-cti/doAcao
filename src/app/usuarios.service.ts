@@ -150,6 +150,10 @@ export class UsuariosService {
   }
 
 
+  atualizarUsuarioFirebase(usuario: Usuario){
+    return this.usuarioCollection.doc(usuario.id).update(usuario);
+  }
+
 
 apagarUsuarioFirebase(usuario): Promise < void> {
   return this.usuarioCollection.doc(usuario.id).delete();

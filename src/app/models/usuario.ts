@@ -16,6 +16,6 @@ export interface Usuario{
 	tipoDocumento: String;
 	orgaoExpeditorDocumento: String;
 
-	id?: String;
+	id?: string;
 
 	} 
