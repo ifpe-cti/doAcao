@@ -100,7 +100,6 @@ export class MenusService {
       ] 
     },
     { label: '  Fichas médicas', icon: 'fa-stethoscope', routerLink: '' },
-    { label: '  Mais informações', icon: 'fa-info', routerLink: '' },
     { label: '  Encerrar sessão', icon: 'fa-power-off', routerLink: '/login' },
   ]
 
