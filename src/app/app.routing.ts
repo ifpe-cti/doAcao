@@ -36,6 +36,7 @@ import { ImportanciaComponent } from './maisInformacoes/importancia/importancia.
 import { PorqueDoarComponent } from './maisInformacoes/porque-doar/porque-doar.component';
 import { DoacaoDeMedulaComponent } from './maisInformacoes/doacao-de-medula/doacao-de-medula.component';
 import { DoacaoDePlaquetasComponent } from './maisInformacoes/doacao-de-plaquetas/doacao-de-plaquetas.component';
+import { BeneficiosComponent } from './maisInformacoes/beneficios/beneficios.component';
 
 import { AuthGuard } from './auth-guard.service';
 
@@ -73,6 +74,7 @@ const APP_ROUTES: Routes = [
 { path: 'porque-doar', component: PorqueDoarComponent},
 { path: 'doacao-de-medula', component: DoacaoDeMedulaComponent},
 { path: 'doacao-de-plaquetas', component: DoacaoDePlaquetasComponent},
+{ path: 'beneficios', component: BeneficiosComponent},
 
 ];
 

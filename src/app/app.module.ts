@@ -83,6 +83,7 @@ import { ImportanciaComponent } from './maisInformacoes/importancia/importancia.
 import { PorqueDoarComponent } from './maisInformacoes/porque-doar/porque-doar.component';
 import { DoacaoDeMedulaComponent } from './maisInformacoes/doacao-de-medula/doacao-de-medula.component';
 import { DoacaoDePlaquetasComponent } from './maisInformacoes/doacao-de-plaquetas/doacao-de-plaquetas.component';
+import { BeneficiosComponent } from './maisInformacoes/beneficios/beneficios.component';
 
 
 
@@ -123,6 +124,7 @@ import { DoacaoDePlaquetasComponent } from './maisInformacoes/doacao-de-plaqueta
     PorqueDoarComponent,
     DoacaoDeMedulaComponent,
     DoacaoDePlaquetasComponent,
+    BeneficiosComponent,
    
   ],
 

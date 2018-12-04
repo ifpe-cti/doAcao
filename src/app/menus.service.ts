@@ -144,7 +144,7 @@ export class MenusService {
               },
               { items: [{label: 'Doação de plaquetas', routerLink: '/doacao-de-plaquetas'}]
               },
-              { items: [{label: 'Benefícios para o doador'}]
+              { items: [{label: 'Benefícios para o doador', routerLink: '/beneficios'}]
               },
               { items: [{label: 'Alterações nos exames'}]
               },
