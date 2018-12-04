@@ -38,7 +38,7 @@ export class SolicitacaoDeSangueComponent implements OnInit {
   enviarSolicitacao() {
     if (this.usuariosService.usuarioLogado.cpf == this.solicitacaoSanguinea.cpfUsuario) {
       this.solicitacaoSanguineaService.cadastrarSolicitacaoSanguineaFirebase(this.solicitacaoSanguinea);
-      this.router.navigate(['/dashboard-hemope']);
+      this.router.navigate(['/dashboard']);
     } else {
       alert("O CPF inserido não condiz com o que está cadastrado nessa conta. Por favor, apresente seu CPF.")
     }
