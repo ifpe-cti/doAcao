@@ -76,6 +76,7 @@ import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
 import { TecnicoService } from './tecnicos.service';
 import { FlebomistaService } from './flebomista.service';
 import { TiposSanguineosComponent } from './maisInformacoes/tipos-sanguineos/tipos-sanguineos.component';
+import { SangueDoadoComponent } from './maisInformacoes/sangue-doado/sangue-doado.component';
 
 
 
@@ -109,6 +110,7 @@ import { TiposSanguineosComponent } from './maisInformacoes/tipos-sanguineos/tip
     QuemNaoPodeDoarComponent,
     TerceiroRequisitoComponent,
     TiposSanguineosComponent,
+    SangueDoadoComponent,
    
   ],
 

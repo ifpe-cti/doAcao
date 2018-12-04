@@ -124,7 +124,7 @@ export class MenusService {
               {
                 items: [{label: 'Tipos sanguíneos', routerLink: '/tipos-sanguineos'}]
               },
-              { items: [{label: 'O que acontece com o sangue doado?'}]
+              { items: [{label: 'O que acontece com o sangue doado?', routerLink: '/sangue-doado'}]
               },
               { items: [{label: 'Estoque de sangue'}]
               },

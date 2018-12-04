@@ -29,6 +29,7 @@ import { ImpedimentosComponent } from './maisInformacoes/impedimentos/impediment
 import { QuemNaoPodeDoarComponent } from './maisInformacoes/quem-nao-pode-doar/quem-nao-pode-doar.component';
 import { TerceiroRequisitoComponent } from './maisInformacoes/terceiro-requisito/terceiro-requisito.component';
 import { TiposSanguineosComponent } from './maisInformacoes/tipos-sanguineos/tipos-sanguineos.component';
+import { SangueDoadoComponent } from './maisInformacoes/sangue-doado/sangue-doado.component';
 
 import { AuthGuard } from './auth-guard.service';
 
@@ -59,6 +60,7 @@ const APP_ROUTES: Routes = [
 { path: 'quem-nao-pode-doar', component: QuemNaoPodeDoarComponent},
 { path: 'terceiro-requisito', component: TerceiroRequisitoComponent},
 { path: 'tipos-sanguineos', component: TiposSanguineosComponent},
+{ path: 'sangue-doado', component: SangueDoadoComponent},
 
 ];
 
