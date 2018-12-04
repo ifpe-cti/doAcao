@@ -80,6 +80,7 @@ import { SangueDoadoComponent } from './maisInformacoes/sangue-doado/sangue-doad
 import { EstoqueDeSangueComponent } from './maisInformacoes/estoque-de-sangue/estoque-de-sangue.component';
 import { JanelaImunologicaComponent } from './maisInformacoes/janela-imunologica/janela-imunologica.component';
 import { ImportanciaComponent } from './maisInformacoes/importancia/importancia.component';
+import { PorqueDoarComponent } from './maisInformacoes/porque-doar/porque-doar.component';
 
 
 
@@ -117,6 +118,7 @@ import { ImportanciaComponent } from './maisInformacoes/importancia/importancia.
     EstoqueDeSangueComponent,
     JanelaImunologicaComponent,
     ImportanciaComponent,
+    PorqueDoarComponent,
    
   ],
 

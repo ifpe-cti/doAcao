@@ -138,7 +138,7 @@ export class MenusService {
               { items: [{label: 'Importância', routerLink: '/importancia'}]
               },
               {
-                items: [{label: 'Por que doar?'}]
+                items: [{label: 'Por que doar?', routerLink: '/porque-doar'}]
               },
               { items: [{label: 'Doação de medula'}]
               },

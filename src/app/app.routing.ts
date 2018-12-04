@@ -33,6 +33,7 @@ import { SangueDoadoComponent } from './maisInformacoes/sangue-doado/sangue-doad
 import { EstoqueDeSangueComponent } from './maisInformacoes/estoque-de-sangue/estoque-de-sangue.component';
 import { JanelaImunologicaComponent } from './maisInformacoes/janela-imunologica/janela-imunologica.component';
 import { ImportanciaComponent } from './maisInformacoes/importancia/importancia.component';
+import { PorqueDoarComponent } from './maisInformacoes/porque-doar/porque-doar.component';
 
 import { AuthGuard } from './auth-guard.service';
 
@@ -67,6 +68,7 @@ const APP_ROUTES: Routes = [
 { path: 'estoque-de-sangue', component: EstoqueDeSangueComponent},
 { path: 'janela-imunologica', component: JanelaImunologicaComponent},
 { path: 'importancia', component: ImportanciaComponent},
+{ path: 'porque-doar', component: PorqueDoarComponent},
 
 ];
 
