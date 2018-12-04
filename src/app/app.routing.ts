@@ -34,6 +34,7 @@ import { EstoqueDeSangueComponent } from './maisInformacoes/estoque-de-sangue/es
 import { JanelaImunologicaComponent } from './maisInformacoes/janela-imunologica/janela-imunologica.component';
 import { ImportanciaComponent } from './maisInformacoes/importancia/importancia.component';
 import { PorqueDoarComponent } from './maisInformacoes/porque-doar/porque-doar.component';
+import { DoacaoDeMedulaComponent } from './maisInformacoes/doacao-de-medula/doacao-de-medula.component';
 
 import { AuthGuard } from './auth-guard.service';
 
@@ -69,7 +70,7 @@ const APP_ROUTES: Routes = [
 { path: 'janela-imunologica', component: JanelaImunologicaComponent},
 { path: 'importancia', component: ImportanciaComponent},
 { path: 'porque-doar', component: PorqueDoarComponent},
-
+{ path: 'doacao-de-medula', component: DoacaoDeMedulaComponent},
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
