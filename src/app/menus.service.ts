@@ -153,7 +153,7 @@ export class MenusService {
       },{ label: ' Quais as etapas? ', icon: 'fa-stethoscope',
       items: [
           [
-              { items: [{label: 'Quais as etapas?'}]
+              { items: [{label: 'Quais as etapas?', routerLink: '/etapas'}]
               },
               {
                 items: [{label: 'Reações adversas'}]
