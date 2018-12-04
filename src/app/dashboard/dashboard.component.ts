@@ -19,8 +19,11 @@ export class DashboardComponent implements OnInit {
   items: MenuItem[];
   gruposUsuario: any[];
   //idUsuarioLogado = this.usuarioService.usuarioLogado.id;
-  quemSomos(){
-    alert("Esse projeto é uma Prática Profissional Orientada (PPO). Orientado por Leonardo Soares e cujas orientandas são Joanne Gabriela e Milena Siqueira.");
+  
+  display: boolean = false;
+
+  quemSomos() {
+      this.display = true;
   }
   
   maisInformacoes(){

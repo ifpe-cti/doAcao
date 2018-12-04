@@ -25,12 +25,8 @@ export class DashboardHemopeComponent implements OnInit {
    
     display: boolean = false;
 
-    showDialog() {
+    quemSomos() {
         this.display = true;
-    }
-
-    quemSomos(){
-      alert("Esse projeto é uma Prática Profissional Orientada (PPO). Orientado por Leonardo Soares e cujas orientandas são Joanne Gabriela e Milena Siqueira.");
     }
     
     maisInformacoes(){
