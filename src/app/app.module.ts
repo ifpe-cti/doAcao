@@ -79,6 +79,7 @@ import { TiposSanguineosComponent } from './maisInformacoes/tipos-sanguineos/tip
 import { SangueDoadoComponent } from './maisInformacoes/sangue-doado/sangue-doado.component';
 import { EstoqueDeSangueComponent } from './maisInformacoes/estoque-de-sangue/estoque-de-sangue.component';
 import { JanelaImunologicaComponent } from './maisInformacoes/janela-imunologica/janela-imunologica.component';
+import { ImportanciaComponent } from './maisInformacoes/importancia/importancia.component';
 
 
 
@@ -115,6 +116,7 @@ import { JanelaImunologicaComponent } from './maisInformacoes/janela-imunologica
     SangueDoadoComponent,
     EstoqueDeSangueComponent,
     JanelaImunologicaComponent,
+    ImportanciaComponent,
    
   ],
 

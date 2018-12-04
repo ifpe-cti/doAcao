@@ -135,7 +135,7 @@ export class MenusService {
       },{ label: ' Por que doar sangue? ', icon: 'fa-heart-o',
       items: [
           [
-              { items: [{label: 'Importância'}]
+              { items: [{label: 'Importância', routerLink: '/importancia'}]
               },
               {
                 items: [{label: 'Por que doar?'}]
