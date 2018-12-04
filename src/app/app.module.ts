@@ -77,6 +77,7 @@ import { TecnicoService } from './tecnicos.service';
 import { FlebomistaService } from './flebomista.service';
 import { TiposSanguineosComponent } from './maisInformacoes/tipos-sanguineos/tipos-sanguineos.component';
 import { SangueDoadoComponent } from './maisInformacoes/sangue-doado/sangue-doado.component';
+import { EstoqueDeSangueComponent } from './maisInformacoes/estoque-de-sangue/estoque-de-sangue.component';
 
 
 
@@ -111,6 +112,7 @@ import { SangueDoadoComponent } from './maisInformacoes/sangue-doado/sangue-doad
     TerceiroRequisitoComponent,
     TiposSanguineosComponent,
     SangueDoadoComponent,
+    EstoqueDeSangueComponent,
    
   ],
 

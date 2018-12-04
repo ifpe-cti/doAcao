@@ -126,7 +126,7 @@ export class MenusService {
               },
               { items: [{label: 'O que acontece com o sangue doado?', routerLink: '/sangue-doado'}]
               },
-              { items: [{label: 'Estoque de sangue'}]
+              { items: [{label: 'Estoque de sangue', routerLink: '/estoque-de-sangue'}]
               },
               { items: [{label: 'Janela imunológica'}]
               },

@@ -30,6 +30,7 @@ import { QuemNaoPodeDoarComponent } from './maisInformacoes/quem-nao-pode-doar/q
 import { TerceiroRequisitoComponent } from './maisInformacoes/terceiro-requisito/terceiro-requisito.component';
 import { TiposSanguineosComponent } from './maisInformacoes/tipos-sanguineos/tipos-sanguineos.component';
 import { SangueDoadoComponent } from './maisInformacoes/sangue-doado/sangue-doado.component';
+import { EstoqueDeSangueComponent } from './maisInformacoes/estoque-de-sangue/estoque-de-sangue.component';
 
 import { AuthGuard } from './auth-guard.service';
 
@@ -61,6 +62,7 @@ const APP_ROUTES: Routes = [
 { path: 'terceiro-requisito', component: TerceiroRequisitoComponent},
 { path: 'tipos-sanguineos', component: TiposSanguineosComponent},
 { path: 'sangue-doado', component: SangueDoadoComponent},
+{ path: 'estoque-de-sangue', component: EstoqueDeSangueComponent},
 
 ];
 
