@@ -29,6 +29,7 @@ import { InformacoesSobreDoacaoComponent } from './informacoes-sobre-doacao/info
 import { ListagemFlebomistasComponent } from './listagem-flebomistas/listagem-flebomistas.component';
 import { CadastroFlebomistaComponent } from './cadastro-flebomista/cadastro-flebomista.component';
 import { ImpedimentosComponent } from './maisInformacoes/impedimentos/impedimentos.component';
+import { QuemNaoPodeDoarComponent } from './maisInformacoes/quem-nao-pode-doar/quem-nao-pode-doar.component';
 
 
 //module
@@ -104,6 +105,7 @@ import { FlebomistaService } from './flebomista.service';
     ListagemFlebomistasComponent,
     CadastroFlebomistaComponent,
     ImpedimentosComponent,
+    QuemNaoPodeDoarComponent,
    
   ],
 

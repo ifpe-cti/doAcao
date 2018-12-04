@@ -112,7 +112,7 @@ export class MenusService {
           [
               { items: [{label: 'Impedimentos', routerLink: '/impedimentos'}]
               },
-              { items: [{label: 'Quem não pode doar?'}]
+              { items: [{label: 'Quem não pode doar?', routerLink: '/quem-nao-pode-doar'}]
               },
               { items: [{label: 'Cigurgias, tatuagens, vacinas e viagens'}]
               },
