@@ -31,6 +31,7 @@ import { TerceiroRequisitoComponent } from './maisInformacoes/terceiro-requisito
 import { TiposSanguineosComponent } from './maisInformacoes/tipos-sanguineos/tipos-sanguineos.component';
 import { SangueDoadoComponent } from './maisInformacoes/sangue-doado/sangue-doado.component';
 import { EstoqueDeSangueComponent } from './maisInformacoes/estoque-de-sangue/estoque-de-sangue.component';
+import { JanelaImunologicaComponent } from './maisInformacoes/janela-imunologica/janela-imunologica.component';
 
 import { AuthGuard } from './auth-guard.service';
 
@@ -63,6 +64,7 @@ const APP_ROUTES: Routes = [
 { path: 'tipos-sanguineos', component: TiposSanguineosComponent},
 { path: 'sangue-doado', component: SangueDoadoComponent},
 { path: 'estoque-de-sangue', component: EstoqueDeSangueComponent},
+{ path: 'janela-imunologica', component: JanelaImunologicaComponent},
 
 ];
 

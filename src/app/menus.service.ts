@@ -128,7 +128,7 @@ export class MenusService {
               },
               { items: [{label: 'Estoque de sangue', routerLink: '/estoque-de-sangue'}]
               },
-              { items: [{label: 'Janela imunológica'}]
+              { items: [{label: 'Janela imunológica', routerLink: '/janela-imunologica'}]
               },
           ]
         ] 
