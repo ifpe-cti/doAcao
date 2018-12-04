@@ -76,6 +76,7 @@ import { MenusService } from './menus.service';
 import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
 import { TecnicoService } from './tecnicos.service';
 import { FlebomistaService } from './flebomista.service';
+import { TiposSanguineosComponent } from './maisInformacoes/tipos-sanguineos/tipos-sanguineos.component';
 
 
 
@@ -108,6 +109,7 @@ import { FlebomistaService } from './flebomista.service';
     ImpedimentosComponent,
     QuemNaoPodeDoarComponent,
     TerceiroRequisitoComponent,
+    TiposSanguineosComponent,
    
   ],
 

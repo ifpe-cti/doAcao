@@ -121,10 +121,8 @@ export class MenusService {
       },{ label: ' Dados ', icon: 'fa-heart-o',
       items: [
           [
-              { items: [{label: 'História'}]
-              },
               {
-                items: [{label: 'Tipos sanguíneos'}]
+                items: [{label: 'Tipos sanguíneos', routerLink: '/tipos-sanguineos'}]
               },
               { items: [{label: 'O que acontece com o sangue doado?'}]
               },

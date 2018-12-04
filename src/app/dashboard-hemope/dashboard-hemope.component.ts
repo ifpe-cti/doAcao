@@ -5,7 +5,7 @@ import { UsuariosService } from '../usuarios.service';
 import { Router } from '@angular/router';
 import { MenusService } from '../menus.service';
 import { Message } from 'primeng/components/common/api';
-import { FormGroup } from '../../../node_modules/@angular/forms';
+import { FormGroup } from '@angular/forms';
 
 
 @Component({
