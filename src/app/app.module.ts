@@ -86,6 +86,7 @@ import { DoacaoDePlaquetasComponent } from './maisInformacoes/doacao-de-plaqueta
 import { BeneficiosComponent } from './maisInformacoes/beneficios/beneficios.component';
 import { AlteracoesNosExamesComponent } from './maisInformacoes/alteracoes-nos-exames/alteracoes-nos-exames.component';
 import { EtapasComponent } from './maisInformacoes/etapas/etapas.component';
+import { ReacoesAdversasComponent } from './maisInformacoes/reacoes-adversas/reacoes-adversas.component';
 
 
 
@@ -129,6 +130,7 @@ import { EtapasComponent } from './maisInformacoes/etapas/etapas.component';
     BeneficiosComponent,
     AlteracoesNosExamesComponent,
     EtapasComponent,
+    ReacoesAdversasComponent,
    
   ],
 

@@ -39,6 +39,7 @@ import { DoacaoDePlaquetasComponent } from './maisInformacoes/doacao-de-plaqueta
 import { BeneficiosComponent } from './maisInformacoes/beneficios/beneficios.component';
 import { AlteracoesNosExamesComponent } from './maisInformacoes/alteracoes-nos-exames/alteracoes-nos-exames.component';
 import { EtapasComponent } from './maisInformacoes/etapas/etapas.component';
+import { ReacoesAdversasComponent } from './maisInformacoes/reacoes-adversas/reacoes-adversas.component';
 
 import { AuthGuard } from './auth-guard.service';
 
@@ -79,6 +80,7 @@ const APP_ROUTES: Routes = [
 { path: 'beneficios', component: BeneficiosComponent},
 { path: 'alteracoes-nos-exames', component: AlteracoesNosExamesComponent},
 { path: 'etapas', component: EtapasComponent},
+{ path: 'reacoes-adversas', component: ReacoesAdversasComponent},
 
 ];
 

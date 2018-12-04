@@ -156,7 +156,7 @@ export class MenusService {
               { items: [{label: 'Quais as etapas?', routerLink: '/etapas'}]
               },
               {
-                items: [{label: 'Reações adversas'}]
+                items: [{label: 'Reações adversas', routerLink: '/reacoes-adversas'}]
               },
               { items: [{label: 'Intervalo para doação'}]
               },
