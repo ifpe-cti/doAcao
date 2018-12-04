@@ -37,21 +37,21 @@ export class ListagemDeUsuariosComponent implements OnInit {
     private router: Router, private menusService: MenusService) { }
 
   update() {
-    /**
-     *
-     let usuarios = [...this.usuarios]; 
-      if (this.newUsuario)
+
+    //
+    let usuarios = [...this.usuarios];
+    if (this.newUsuario)
       usuarios.push(this.usuario);
-      else
+    else
       usuarios[this.usuarios.indexOf(this.selectedUsuario)] = this.usuario;
-  
-      this.usuarios = usuarios;
-      this.usuario = null;
-      this.displayDialog = false;
-     */
 
-    this.usuariosService.updateUsuarioFirebase(this.selectedUsuario.id, this.usuario);
+    this.usuarios = usuarios;
+    this.usuario = null;
+    this.displayDialog = false;
+    
+    //
 
+    this.usuariosService.atualizarUsuarioFirebase(this.usuario);
   }
 
   delete() {
@@ -79,7 +79,6 @@ export class ListagemDeUsuariosComponent implements OnInit {
       usuario[prop] = u[prop];
     }
     return usuario;
-
   }
 
   ngOnInit() {
