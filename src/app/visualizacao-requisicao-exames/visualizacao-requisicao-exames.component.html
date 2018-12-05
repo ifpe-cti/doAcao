@@ -1,63 +1,113 @@
 <body>
 
     <p-megaMenu [model]="items"></p-megaMenu>
-  
+
     <div class="ui-g">
         <div class="ui-g-1"></div>
         <div class="ui-g-1"></div>
         <div class="ui-g-1">
-          <p-table [style]="{'width':'900px'}" [columns]="cols" [value]="exames" selectionMode="single" [(selection)]="selectedExame" (onRowSelect)="onRowSelect($event)" [paginator]="true" [rows]="15">
-            <ng-template pTemplate="caption">
-               Requisições de Exames
-            </ng-template>
-            <ng-template pTemplate="header" let-columns>
-                <tr>
-                    <th *ngFor="let col of columns" [pSortableColumn]="col.field">
-                        {{col.header}}
-                        <p-sortIcon [field]="col.field"></p-sortIcon>
-                    </th>
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-rowData let-columns="columns">
-                <tr [pSelectableRow]="rowData">
-                    <td *ngFor="let col of columns">
-                        {{rowData[col.field]}}
-                    </td>
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="summary" let-rowData>
-                <div style="text-align:left">
-                </div>
-            </ng-template>    
-          </p-table>
-          
-          <p-dialog header="Requisição de Exame" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" [width]="300">
-            <div class="ui-g ui-fluid" *ngIf="exame">
-                <div class="ui-g-12">
-                    <div class="ui-g-4">
-                        <label for="numeroDocumento">Número do Documento</label>
+            <p-table [style]="{'width':'900px'}" [columns]="cols" [value]="exames" selectionMode="single" [(selection)]="selectedExame"
+                (onRowSelect)="onRowSelect($event)" [paginator]="true" [rows]="15">
+                <ng-template pTemplate="caption">
+                    Requisições de Exames
+                </ng-template>
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                            {{col.header}}
+                            <p-sortIcon [field]="col.field"></p-sortIcon>
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-columns="columns">
+                    <tr [pSelectableRow]="rowData">
+                        <td *ngFor="let col of columns">
+                            {{rowData[col.field]}}
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="summary" let-rowData>
+                    <div style="text-align:left">
                     </div>
-                    <div class="ui-g-8">
-                        <input pInputText id="numeroDocumento" [(ngModel)]="exame.numeroDocumentoDoador" />
+                </ng-template>
+            </p-table>
+
+            <p-dialog header="Requisição de Exame" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" [width]="550">
+                <div class="ui-g ui-fluid" *ngIf="exame">
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="numeroDocumento">Número do documento</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="numeroDocumento" [(ngModel)]="exame.numeroDocumentoDoador" />
+                        </div>
                     </div>
-                </div>
-                <div class="ui-g-12">
-                    <div class="ui-g-4">
-                        <label for="etiquetaDaAmostra">Etiqueta da Amostra</label>
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="tipoDocumento">Tipo do Documento</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <p-dropdown [options]="tiposDocumento" [(ngModel)]="exame.tipoDocumentoDoador"></p-dropdown>
+                        </div>
                     </div>
-                    <div class="ui-g-8">
-                        <input pInputText id="etiquetaDaAmostra" [(ngModel)]="exame.etiquetaDaAmostra" />
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="orgaoExpeditor">Órgão Expeditor</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <p-dropdown [options]="orgaosExpeditores" [(ngModel)]="exame.orgaoExpeditorDoador"></p-dropdown>
+                        </div>
                     </div>
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="nomeMaeDoador">Nome da Mãe</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="nomeMaeDoador" [(ngModel)]="exame.nomeMaeDoador" />
+                        </div>
+                    </div>
+
+                    <div class="ui-g-12">
+                            <div class="ui-g-4">
+                                <label for="tecnicoResponsavel">Técnico Responsável</label>
+                            </div>
+                            <div class="ui-g-8">
+                                <input pInputText id="tecnicoResponsavel" [(ngModel)]="exame.tecnicoResponsavel" />
+                            </div>
+                        </div>
+    
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="nomePaiDoador">Nome do Pai</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="nomePaiDoador" [(ngModel)]="exame.nomePaiDoador" />
+                        </div>
+                    </div>
+
+                                     
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="etiquetaDaAmostra">Etiqueta da Amostra</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="etiquetaDaAmostra" [(ngModel)]="exame.etiquetaDaAmostra" />
+                        </div>
+                    </div>
+
                 </div>
-            
-            </div>
-            <p-footer>
-                <div class="ui-dialog-buttonpane ui-helper-clearfix">
-                    <button type="button" class="ui-button-danger" pButton icon="fa fa-close" (click)="delete()" label="Deletar"></button>
-                    <button type="button"  class="ui-button-danger" pButton icon="fa fa-check" (click)="save()" label="Salvar"></button>
-                </div>
-            </p-footer>
-          </p-dialog>
+                <p-footer>
+                    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+                        <button type="button" class="ui-button-danger" pButton icon="fa fa-close" (click)="delete()" label="Deletar"></button>
+                        <button type="button" class="ui-button-danger" pButton icon="fa fa-check" (click)="save()" label="Salvar"></button>
+                    </div>
+                </p-footer>
+            </p-dialog>
         </div>
         <div class="ui-g-1"></div>
         <div class="ui-g-1"></div>
@@ -69,8 +119,5 @@
         <div class="ui-g-1"></div>
         <div class="ui-g-1"></div>
     </div>
-  
-  </body>
-  
-  
-  
+
+</body>

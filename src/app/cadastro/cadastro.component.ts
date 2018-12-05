@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { SelectItem } from 'primeng/api';
 
 
-
 @Component({
   selector: 'cadastro',
   templateUrl: './cadastro.component.html',

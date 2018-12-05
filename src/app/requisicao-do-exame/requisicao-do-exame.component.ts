@@ -32,6 +32,7 @@ export class RequisicaoDoExameComponent implements OnInit {
       orgaoExpeditorDoador: "", nomeMaeDoador: "", nomePaiDoador: "", tecnicoResponsavel: "",
       etiquetaDaAmostra: ""
     }
+    
   }
 
   search(cpf) {
