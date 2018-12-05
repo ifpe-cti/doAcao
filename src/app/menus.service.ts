@@ -46,7 +46,7 @@ export class MenusService {
             ] 
           },
 
-          { label: ' Listar ',icon: 'fa-list',
+          { label: ' Listar ', icon: 'fa-list',
           items: [
               [
                   {
@@ -107,7 +107,7 @@ export class MenusService {
 
     itensMaisInformacoes = [
       { label: '  Voltar', icon: '', routerLink: '/dashboard' },
-      { label: ' Requisitos básicos ', icon: 'fa-heart-o',
+      { label: ' Requisitos básicos ', icon: 'fa-calendar-plus-o',
       items: [
           [
               { items: [{label: 'Impedimentos', routerLink: '/impedimentos'}]
@@ -118,7 +118,7 @@ export class MenusService {
               },
           ]
         ] 
-      },{ label: ' Dados ', icon: 'fa-heart-o',
+      },{ label: ' Dados ', icon: 'fa-stethoscope',
       items: [
           [
               {
@@ -132,7 +132,7 @@ export class MenusService {
               },
           ]
         ] 
-      },{ label: ' Por que doar sangue? ', icon: 'fa-heart-o',
+      },{ label: ' Por que doar sangue? ',  icon: 'fa-heartbeat',
       items: [
           [
               { items: [{label: 'Importância', routerLink: '/importancia'}]
@@ -150,7 +150,7 @@ export class MenusService {
               },
           ]
         ] 
-      },{ label: ' Quais as etapas? ', icon: 'fa-stethoscope',
+      },{ label: ' Quais as etapas? ', icon: 'fa-list',
       items: [
           [
               { items: [{label: 'Quais as etapas?', routerLink: '/etapas'}]
