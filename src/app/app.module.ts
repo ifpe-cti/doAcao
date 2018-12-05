@@ -88,6 +88,7 @@ import { AlteracoesNosExamesComponent } from './maisInformacoes/alteracoes-nos-e
 import { EtapasComponent } from './maisInformacoes/etapas/etapas.component';
 import { ReacoesAdversasComponent } from './maisInformacoes/reacoes-adversas/reacoes-adversas.component';
 import { IntervaloComponent } from './maisInformacoes/intervalo/intervalo.component';
+import { VolumeDeSangueComponent } from './maisInformacoes/volume-de-sangue/volume-de-sangue.component';
 
 
 
@@ -133,6 +134,7 @@ import { IntervaloComponent } from './maisInformacoes/intervalo/intervalo.compon
     EtapasComponent,
     ReacoesAdversasComponent,
     IntervaloComponent,
+    VolumeDeSangueComponent,
    
   ],
 

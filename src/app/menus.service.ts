@@ -160,9 +160,7 @@ export class MenusService {
               },
               { items: [{label: 'Intervalo para doação', routerLink: '/intervalo'}]
               },
-              { items: [{label: 'Reações adversas'}]
-              },
-              { items: [{label: 'Volume de sangue coletado'}]
+              { items: [{label: 'Volume de sangue coletado', routerLink: '/volume-de-sangue'}]
               },
               { items: [{label: 'Cuidados pós doação'}]
               },
