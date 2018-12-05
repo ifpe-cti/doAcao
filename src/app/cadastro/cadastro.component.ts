@@ -21,20 +21,10 @@ export class CadastroComponent implements OnInit {
   usuario: Usuario;
   tipoSanguineoSelecionado: String;
 
-  hemope: Usuario;
+
 
   constructor(private servicoUsuario: UsuariosService, private router: Router) {
-    this.usuario = {
-      nome: "", user: "", dataNascimento: "", senha: "",
-      tipoUsuario: "usuario", cpf: "", tipoSanguineo: "", numeroDocumento: "",
-      tipoDocumento: "", orgaoExpeditorDocumento: "", nomePai: "", nomeMae: ""
-    }
-
-    this.hemope = {
-      nome: "Hemocentro Garanhuns", user: "hemope", dataNascimento: "-", senha: "hemope",
-      tipoUsuario: "hemocentro", cpf: "-", tipoSanguineo: "-", numeroDocumento: "-",
-      tipoDocumento: "-", orgaoExpeditorDocumento: "-", nomePai: "-", nomeMae: "-"
-    }
+    this.usuario = new Usuario();
   }
 
   voltarLogin() {

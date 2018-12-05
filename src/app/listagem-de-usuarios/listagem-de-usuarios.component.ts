@@ -21,11 +21,7 @@ export class ListagemDeUsuariosComponent implements OnInit {
   tiposDocumento: SelectItem[];
   orgaosExpeditores: SelectItem[];
 
-  usuario: Usuario = {
-    nome: "", user: "", dataNascimento: null, senha: "",
-    tipoSanguineo: "", tipoUsuario: "usuario", cpf: "", nomeMae: "", nomePai: "", numeroDocumento: "",
-    tipoDocumento: "", orgaoExpeditorDocumento: ""
-  };
+  usuario: Usuario = new Usuario();
 
   displayDialog: boolean;
   selectedUsuario: Usuario;
@@ -70,11 +66,8 @@ export class ListagemDeUsuariosComponent implements OnInit {
   }
 
   cloneUsuario(u: Usuario): Usuario {
-    let usuario = {
-      nome: "", user: "", dataNascimento: null, senha: "",
-      tipoSanguineo: "", tipoUsuario: "usuario", cpf: "", nomeMae: "", nomePai: "", numeroDocumento: "",
-      tipoDocumento: "", orgaoExpeditorDocumento: ""
-    };
+    let usuario = new Usuario();
+
     for (let prop in u) {
       usuario[prop] = u[prop];
     }

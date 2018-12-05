@@ -16,4 +16,13 @@ export class Usuario{
 
 	id?: string;
 
-	} 
+	validar() {
+		
+		if( this.nome == ""){
+			return false;
+		}
+
+		return true;
+	}
+
+} 
