@@ -40,6 +40,7 @@ import { BeneficiosComponent } from './maisInformacoes/beneficios/beneficios.com
 import { AlteracoesNosExamesComponent } from './maisInformacoes/alteracoes-nos-exames/alteracoes-nos-exames.component';
 import { EtapasComponent } from './maisInformacoes/etapas/etapas.component';
 import { ReacoesAdversasComponent } from './maisInformacoes/reacoes-adversas/reacoes-adversas.component';
+import { IntervaloComponent } from './maisInformacoes/intervalo/intervalo.component';
 
 import { AuthGuard } from './auth-guard.service';
 
@@ -81,6 +82,7 @@ const APP_ROUTES: Routes = [
 { path: 'alteracoes-nos-exames', component: AlteracoesNosExamesComponent},
 { path: 'etapas', component: EtapasComponent},
 { path: 'reacoes-adversas', component: ReacoesAdversasComponent},
+{ path: 'intervalo', component: IntervaloComponent},
 
 ];
 

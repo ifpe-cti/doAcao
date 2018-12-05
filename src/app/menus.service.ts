@@ -158,7 +158,7 @@ export class MenusService {
               {
                 items: [{label: 'Reações adversas', routerLink: '/reacoes-adversas'}]
               },
-              { items: [{label: 'Intervalo para doação'}]
+              { items: [{label: 'Intervalo para doação', routerLink: '/intervalo'}]
               },
               { items: [{label: 'Reações adversas'}]
               },

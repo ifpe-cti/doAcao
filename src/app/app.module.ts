@@ -87,6 +87,7 @@ import { BeneficiosComponent } from './maisInformacoes/beneficios/beneficios.com
 import { AlteracoesNosExamesComponent } from './maisInformacoes/alteracoes-nos-exames/alteracoes-nos-exames.component';
 import { EtapasComponent } from './maisInformacoes/etapas/etapas.component';
 import { ReacoesAdversasComponent } from './maisInformacoes/reacoes-adversas/reacoes-adversas.component';
+import { IntervaloComponent } from './maisInformacoes/intervalo/intervalo.component';
 
 
 
@@ -131,6 +132,7 @@ import { ReacoesAdversasComponent } from './maisInformacoes/reacoes-adversas/rea
     AlteracoesNosExamesComponent,
     EtapasComponent,
     ReacoesAdversasComponent,
+    IntervaloComponent,
    
   ],
 
