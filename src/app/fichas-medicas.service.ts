@@ -12,6 +12,8 @@ export class FichasMedicasService {
     this.fichaMedicaCollection = this.servicoFirebase.collection("fichas-medicas");
   }
 
+  fichasMedicas: FichaMedica[];
+
   private fichaMedicaCollection: AngularFirestoreCollection<FichaMedica>;
   
   adicionarFichaMedicaFirebase(fichaMedica: FichaMedica) {
@@ -37,6 +39,26 @@ export class FichasMedicasService {
     return fichasMedicas;
   }
   
+  filtrarFichasMedicasPorCPF(cpf) {
+    return new Observable<String[]>(observer => {
+      this.listarTodos()
+        .subscribe(meuObservable => {
+          this.fichasMedicas = meuObservable as FichaMedica[]
+          let fichasFiltradas: FichaMedica[] = []
+          for (let i = 0; i < this.fichasMedicas.length; i++) {
+            if (this.fichasMedicas[i].cpfDoador.search(cpf) != -1) { // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 
+              fichasFiltradas.push(this.fichasMedicas[i]);
+            }
+          }
+
+          observer.next();
+          observer.complete();
+        }
+        );
+    })
+  }
+
+
   apagarFichaMedicaFirebase(fichaMedica): Promise<void> {
     return this.fichaMedicaCollection.doc(fichaMedica.id).delete();
   }
