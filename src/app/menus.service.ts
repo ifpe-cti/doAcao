@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { MegaMenuModule } from 'primeng/megamenu';
+import { UsuariosService } from './usuarios.service';
 
 
 @Injectable({
