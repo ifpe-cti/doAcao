@@ -7,7 +7,7 @@
         <div class="ui-g-1"></div>
         <div class="ui-g-1">
             <p-table [style]="{'width':'900px'}" [columns]="cols" [value]="fichasMedicas" selectionMode="single" [(selection)]="selectedFicha"
-                (onRowSelect)="onRowSelect($event)" [paginator]="true" [rows]="15">
+                (onRowSelect)="onRowSelect($event)" [paginator]="true" [rows]="30">
                 <ng-template pTemplate="caption">
                     Fichas Médicas
                 </ng-template>
@@ -32,8 +32,8 @@
                 </ng-template>
             </p-table>
 
-            <p-dialog header="Ficha Médica" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" [width]="300"
-                [height]="500">
+            <p-dialog header="Ficha Médica" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" [width]="800"
+                [height]="600">
                 <div class="ui-g ui-fluid" *ngIf="fichaMedica">
 
                     <div class="ui-g-12">
@@ -42,6 +42,98 @@
                         </div>
                         <div class="ui-g-8">
                             <input pInputText id="cpfDoador" [(ngModel)]="fichaMedica.cpfDoador" />
+                        </div>
+                    </div>
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="data">Hemoglobina</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="hemoglobina" [(ngModel)]="fichaMedica.hemoglobina" />
+                        </div>
+                    </div>
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="data">Pressão Arterial</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="pressãoArterial" [(ngModel)]="fichaMedica.pressaoArterial" />
+                        </div>
+                    </div>
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="data">Temperatura</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="temperatura" [(ngModel)]="fichaMedica.temperatura" />
+                        </div>
+                    </div>
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="data">Pulso</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="pulso" [(ngModel)]="fichaMedica.pulso" />
+                        </div>
+                    </div>
+
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="data">Peso</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="peso" [(ngModel)]="fichaMedica.peso" />
+                        </div>
+                    </div>
+
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="data">Altura</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="altura" [(ngModel)]="fichaMedica.altura" />
+                        </div>
+                    </div>
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="data">Braço punsionado</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="bracoPunsionado" [(ngModel)]="fichaMedica.bracoPunsionado" />
+                        </div>
+                    </div>
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="data">Reações adversas</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="reacoesAdversas" [(ngModel)]="fichaMedica.reacoesAdversas" />
+                        </div>
+                    </div>
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="data">Tipo de doação</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="tipoDeDoacao" [(ngModel)]="fichaMedica.tipoDeDoacao" />
+                        </div>
+                    </div>
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="data">Volume do sangue</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="volumeDoSangue" [(ngModel)]="fichaMedica.volumeDoSangue" />
                         </div>
                     </div>
 
@@ -63,6 +155,7 @@
                 </p-footer>
             </p-dialog>
         </div>
+        
         <div class="ui-g-1"></div>
         <div class="ui-g-1"></div>
         <div class="ui-g-1"></div>
