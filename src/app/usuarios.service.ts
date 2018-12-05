@@ -138,7 +138,6 @@ export class UsuariosService {
     })
   }
 
-
   updateUsuarioFirebase(idObjeto: String, objeto: Usuario) {
     let usuarioEditado = new Observable<any>(observer => {
       this.usuarioCollection.doc('usuario' + '/' + idObjeto).update(objeto).then(result => {

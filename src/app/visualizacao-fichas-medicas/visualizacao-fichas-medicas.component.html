@@ -1,63 +1,67 @@
 <body>
 
     <p-megaMenu [model]="items"></p-megaMenu>
-  
+
     <div class="ui-g">
         <div class="ui-g-1"></div>
         <div class="ui-g-1"></div>
         <div class="ui-g-1">
-          <p-table [style]="{'width':'900px'}" [columns]="cols" [value]="fichasMedicas" selectionMode="single" [(selection)]="selectedFicha" (onRowSelect)="onRowSelect($event)" [paginator]="true" [rows]="15">
-            <ng-template pTemplate="caption">
-               Fichas Médicas
-            </ng-template>
-            <ng-template pTemplate="header" let-columns>
-                <tr>
-                    <th *ngFor="let col of columns" [pSortableColumn]="col.field">
-                        {{col.header}}
-                        <p-sortIcon [field]="col.field"></p-sortIcon>
-                    </th>
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-rowData let-columns="columns">
-                <tr [pSelectableRow]="rowData">
-                    <td *ngFor="let col of columns">
-                        {{rowData[col.field]}}
-                    </td>
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="summary" let-rowData>
-                <div style="text-align:left">
-                </div>
-            </ng-template>    
-          </p-table>
-          
-          <p-dialog header="Ficha Médica" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" [width]="300">
-            <div class="ui-g ui-fluid" *ngIf="exame">
-                <div class="ui-g-12">
-                    <div class="ui-g-4">
-                        <label for="cpfDoador">CPF do doador</label>
+            <p-table [style]="{'width':'900px'}" [columns]="cols" [value]="fichasMedicas" selectionMode="single" [(selection)]="selectedFicha"
+                (onRowSelect)="onRowSelect($event)" [paginator]="true" [rows]="15">
+                <ng-template pTemplate="caption">
+                    Fichas Médicas
+                </ng-template>
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                            {{col.header}}
+                            <p-sortIcon [field]="col.field"></p-sortIcon>
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-columns="columns">
+                    <tr [pSelectableRow]="rowData">
+                        <td *ngFor="let col of columns">
+                            {{rowData[col.field]}}
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="summary" let-rowData>
+                    <div style="text-align:left">
                     </div>
-                    <div class="ui-g-8">
-                        <input pInputText id="cpfDoador" [(ngModel)]="fichaMedica.cpfDoador" />
+                </ng-template>
+            </p-table>
+
+            <p-dialog header="Ficha Médica" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" [width]="300"
+                [height]="500">
+                <div class="ui-g ui-fluid" *ngIf="fichaMedica">
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="data">CPF do doador</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="cpfDoador" [(ngModel)]="fichaMedica.cpfDoador" />
+                        </div>
                     </div>
-                </div>
-                <div class="ui-g-12">
-                    <div class="ui-g-4">
-                        <label for="numeroDoTubo">Número do Tubo</label>
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
+                            <label for="cpfDoador">Número do tubo</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <input pInputText id="numeroDoTubo" [(ngModel)]="fichaMedica.numeroDoTubo" />
+                        </div>
                     </div>
-                    <div class="ui-g-8">
-                        <input pInputText id="numeroDoTubo" [(ngModel)]="fichaMedica.numeroDoTubo" />
+
+                </div>
+                <p-footer>
+                    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+                        <button type="button" class="ui-button-danger" pButton icon="fa fa-close" (click)="delete()" label="Deletar"></button>
+                        <button type="button" class="ui-button-danger" pButton icon="fa fa-check" (click)="save()" label="Salvar"></button>
                     </div>
-                </div>
-            
-            </div>
-            <p-footer>
-                <div class="ui-dialog-buttonpane ui-helper-clearfix">
-                    <button type="button" class="ui-button-danger" pButton icon="fa fa-close" (click)="delete()" label="Deletar"></button>
-                    <button type="button"  class="ui-button-danger" pButton icon="fa fa-check" (click)="save()" label="Salvar"></button>
-                </div>
-            </p-footer>
-          </p-dialog>
+                </p-footer>
+            </p-dialog>
         </div>
         <div class="ui-g-1"></div>
         <div class="ui-g-1"></div>
@@ -69,8 +73,5 @@
         <div class="ui-g-1"></div>
         <div class="ui-g-1"></div>
     </div>
-  
-  </body>
-  
-  
-  
+
+</body>
