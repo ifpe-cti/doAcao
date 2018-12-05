@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuItem } from 'primeng/primeng';
+import { MenusService } from '../../menus.service';
 
 @Component({
   selector: 'app-pos-doacao',
@@ -8,12 +10,12 @@ import { Router } from '@angular/router';
 })
 export class PosDoacaoComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private menusSevice: MenusService, private router:Router) { }
 
-  voltarPagina(){
-    this.router.navigate(['informacoes-sobre-doacao'])
-  }
+  items: MenuItem[];
+
   ngOnInit() {
+    this.items = this.menusSevice.itensMaisInformacoes;
   }
 
 }

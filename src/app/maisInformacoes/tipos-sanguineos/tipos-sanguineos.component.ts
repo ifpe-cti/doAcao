@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuItem } from 'primeng/primeng';
+import { MenusService } from '../../menus.service';
 
 @Component({
   selector: 'app-tipos-sanguineos',
@@ -9,8 +11,10 @@ import { Router } from '@angular/router';
 export class TiposSanguineosComponent implements OnInit {
   
   data: any;
+  items: MenuItem[];
 
-  constructor(private router:Router) { 
+  constructor(private menusSevice: MenusService, private router:Router) { 
+    this.items = this.menusSevice.itensMaisInformacoes;
     this.data = {
       labels: ['A+','B+','O+','AB+','A-','B-','O-','AB-'],
       datasets: [
