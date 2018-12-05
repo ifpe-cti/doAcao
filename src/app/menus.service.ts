@@ -162,7 +162,7 @@ export class MenusService {
               },
               { items: [{label: 'Volume de sangue coletado', routerLink: '/volume-de-sangue'}]
               },
-              { items: [{label: 'Cuidados pós doação'}]
+              { items: [{label: 'Cuidados pós doação', routerLink: '/pos-doacao'}]
               },
           ]
         ] 

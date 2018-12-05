@@ -89,6 +89,7 @@ import { EtapasComponent } from './maisInformacoes/etapas/etapas.component';
 import { ReacoesAdversasComponent } from './maisInformacoes/reacoes-adversas/reacoes-adversas.component';
 import { IntervaloComponent } from './maisInformacoes/intervalo/intervalo.component';
 import { VolumeDeSangueComponent } from './maisInformacoes/volume-de-sangue/volume-de-sangue.component';
+import { PosDoacaoComponent } from './maisInformacoes/pos-doacao/pos-doacao.component';
 
 
 
@@ -135,6 +136,7 @@ import { VolumeDeSangueComponent } from './maisInformacoes/volume-de-sangue/volu
     ReacoesAdversasComponent,
     IntervaloComponent,
     VolumeDeSangueComponent,
+    PosDoacaoComponent,
    
   ],
 

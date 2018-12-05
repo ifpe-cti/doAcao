@@ -42,6 +42,7 @@ import { EtapasComponent } from './maisInformacoes/etapas/etapas.component';
 import { ReacoesAdversasComponent } from './maisInformacoes/reacoes-adversas/reacoes-adversas.component';
 import { IntervaloComponent } from './maisInformacoes/intervalo/intervalo.component';
 import { VolumeDeSangueComponent } from './maisInformacoes/volume-de-sangue/volume-de-sangue.component';
+import { PosDoacaoComponent } from './maisInformacoes/pos-doacao/pos-doacao.component';
 
 import { AuthGuard } from './auth-guard.service';
 
@@ -85,6 +86,7 @@ const APP_ROUTES: Routes = [
 { path: 'reacoes-adversas', component: ReacoesAdversasComponent},
 { path: 'intervalo', component: IntervaloComponent},
 { path: 'volume-de-sangue', component: VolumeDeSangueComponent},
+{ path: 'pos-doacao', component: PosDoacaoComponent},
 
 ];
 
