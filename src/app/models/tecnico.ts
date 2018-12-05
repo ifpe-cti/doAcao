@@ -1,5 +1,5 @@
 
-export interface Tecnico{
+export class Tecnico{
 
     nome:String;
 	cpf: String;

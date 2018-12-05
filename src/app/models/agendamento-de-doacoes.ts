@@ -1,5 +1,5 @@
 
-export interface AgendamentoDoacao {
+export class AgendamentoDoacao {
 	idDoador: String;
 	id?: String;
 

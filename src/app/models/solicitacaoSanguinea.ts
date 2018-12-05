@@ -1,6 +1,6 @@
 import { Usuario } from "./usuario";
 
-export interface SolicitacaoSanguinea{
+export class SolicitacaoSanguinea{
 
     nomeUsuario: String;
     cpfUsuario: String;

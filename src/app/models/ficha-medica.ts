@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 
-export interface FichaMedica{
+export class FichaMedica{
     idDoador: String; 
     id?: String;
 

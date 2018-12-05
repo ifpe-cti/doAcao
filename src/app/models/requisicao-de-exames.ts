@@ -1,7 +1,7 @@
 import { Usuario } from "./usuario";
 import { Observable } from "rxjs";
 
-export interface RequisicaoDeExames{
+export class RequisicaoDeExames{
 
     idDoador: String;
     id?:String;

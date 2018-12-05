@@ -1,6 +1,4 @@
-import { FichaMedica } from './ficha-medica';
-
-export interface Usuario{
+export class Usuario{
 
 	nome:String;
 	user:String;
