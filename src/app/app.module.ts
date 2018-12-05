@@ -11,7 +11,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { InicialComponent } from './inicial/inicial.component'
 import { RequisicaoDoExameComponent } from './requisicao-do-exame/requisicao-do-exame.component';
-import { BancoDeSangueComponent } from './banco-de-sangue/banco-de-sangue.component';
 import { FichasMedicasComponent } from './fichas-medicas/fichas-medicas.component';
 import { AgendamentoDeDoacoesComponent } from './agendamento-de-doacoes/agendamento-de-doacoes.component';
 import { LoginGoogleComponent } from './login-google/login-google.component';
@@ -102,7 +101,6 @@ import { PosDoacaoComponent } from './maisInformacoes/pos-doacao/pos-doacao.comp
     CadastroComponent,
     InicialComponent,
     RequisicaoDoExameComponent,
-    BancoDeSangueComponent,
     FichasMedicasComponent,
     AgendamentoDeDoacoesComponent,
     LoginGoogleComponent,
