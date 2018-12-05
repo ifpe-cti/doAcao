@@ -19,7 +19,7 @@ export class TiposSanguineosComponent implements OnInit {
       labels: ['A+','B+','O+','AB+','A-','B-','O-','AB-'],
       datasets: [
           {
-              data: [300, 50, 100, 20, 12, 47,87,9],
+              data: [36,9,37,3,6,2,7,1],
               backgroundColor: [
                   "#FF6384",
                   "#36A2EB",
