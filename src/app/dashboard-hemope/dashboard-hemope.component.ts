@@ -30,7 +30,7 @@ export class DashboardHemopeComponent implements OnInit {
     }
     
     maisInformacoes(){
-      this.router.navigate(['/informacoes-sobre-doacao']);
+      this.router.navigate(['/informacoes-sobre-doacao-hemope']);
    }
 
 
