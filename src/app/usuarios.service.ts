@@ -67,7 +67,7 @@ export class UsuariosService {
           this.todosOsUsuarios = meuObservable as Usuario[]
           let usuariosFiltrados: String[] = []
           for (let i = 0; i < this.todosOsUsuarios.length; i++) {
-            if (this.todosOsUsuarios[i].nome.search(nome) != -1) { // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 
+            if (this.todosOsUsuarios[i].nome.search(nome) != -1) { 
               usuariosFiltrados.push(this.todosOsUsuarios[i].nome);
             }
           }
