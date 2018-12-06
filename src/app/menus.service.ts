@@ -20,16 +20,14 @@ export class MenusService {
               {label: 'Adicionar Exame', routerLink:['/requisicao-do-exame']}, 
               {label: 'Listar todos os Exames',  routerLink: '/visualizacao-requisicao-exames'}]},    
             ]]},
-  
-          { label: '  Fichas médicas', icon: 'fa-stethoscope',
-          items: [
+            { label: 'Fichas médicas' , icon: 'fa-stethoscope',
+            items: [
               [
-                  {
-                    items: [{label: 'Adicionar fichas médicas', routerLink: '/fichas-medicas'}]
-                  }
-              ]
-            ] 
-          }, 
+                { items: [
+                      {label: 'Adicionar Fichas Médicas', routerLink:['/fichas-medicas']}, 
+                      {label: 'Listar todas as Fichas Médicas',  routerLink: '/visualizacao-fichas-medicas'}]},    
+                    ]]},
+        
           { label: '  Funcionários' , icon: 'fa-user-md',
           items: [
             [
@@ -50,10 +48,6 @@ export class MenusService {
                   },
                   {
                     items: [{label: 'Listar todos os usuários', routerLink: '/listagem-de-usuarios'}]
-
-                  },
-                  {
-                    items: [{label: 'Listar todas as fichas médicas', routerLink: '/visualizacao-fichas-medicas'}]
 
                   },
                   {
