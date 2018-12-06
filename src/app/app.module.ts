@@ -106,6 +106,7 @@ import { ReacoesAdversasHemopeComponent } from './reacoes-adversas-hemope/reacoe
 import { SangueDoadoHemopeComponent } from './sangue-doado-hemope/sangue-doado-hemope.component';
 import { TerceiroRequisitoHemopeComponent } from './terceiro-requisito-hemope/terceiro-requisito-hemope.component';
 import { TiposSanguineosHemopeComponent } from './tipos-sanguineos-hemope/tipos-sanguineos-hemope.component';
+import { VolumeDeSangueHemopeComponent } from './volume-de-sangue-hemope/volume-de-sangue-hemope.component';
 
 
 @NgModule({
@@ -168,6 +169,7 @@ import { TiposSanguineosHemopeComponent } from './tipos-sanguineos-hemope/tipos-
     SangueDoadoHemopeComponent,
     TerceiroRequisitoHemopeComponent,
     TiposSanguineosHemopeComponent,
+    VolumeDeSangueHemopeComponent,
    
   ],
 
