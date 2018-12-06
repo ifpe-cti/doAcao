@@ -66,6 +66,7 @@ import { TiposSanguineosHemopeComponent } from './maisInformacoesHemope/tipos-sa
 import { VolumeDeSangueHemopeComponent } from './maisInformacoesHemope/volume-de-sangue-hemope/volume-de-sangue-hemope.component';
 
 
+
 //module
 
 import {ButtonModule} from 'primeng/primeng';
