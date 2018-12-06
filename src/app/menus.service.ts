@@ -151,11 +151,11 @@ export class MenusService {
       { label: ' Requisitos básicos ', icon: 'fa-calendar-plus-o',
       items: [
           [
-              { items: [{label: 'Impedimentos', routerLink: '/impedimentos'}]
+              { items: [{label: 'Impedimentos', routerLink: '/impedimentosHemope'}]
               },
-              { items: [{label: 'Quem não pode doar?', routerLink: '/quem-nao-pode-doar'}]
+              { items: [{label: 'Quem não pode doar?', routerLink: '/quem-nao-pode-doar-hemope'}]
               },
-              { items: [{label: 'Cigurgias, tatuagens, vacinas e viagens', routerLink: '/terceiro-requisito'}]
+              { items: [{label: 'Cigurgias, tatuagens, vacinas e viagens', routerLink: '/terceiro-requisito-hemope'}]
               },
           ]
         ] 
@@ -163,47 +163,47 @@ export class MenusService {
       items: [
           [
               {
-                items: [{label: 'Tipos sanguíneos', routerLink: '/tipos-sanguineos'}]
+                items: [{label: 'Tipos sanguíneos', routerLink: '/tipos-sanguineos-hemope'}]
               },
-              { items: [{label: 'O que acontece com o sangue doado?', routerLink: '/sangue-doado'}]
+              { items: [{label: 'O que acontece com o sangue doado?', routerLink: '/sangue-doado-hemope'}]
               },
-              { items: [{label: 'Estoque de sangue', routerLink: '/estoque-de-sangue'}]
+              { items: [{label: 'Estoque de sangue', routerLink: '/estoque-de-sangue-hemope'}]
               },
-              { items: [{label: 'Janela imunológica', routerLink: '/janela-imunologica'}]
+              { items: [{label: 'Janela imunológica', routerLink: '/janela-imunologica-hemope'}]
               },
           ]
         ] 
       },{ label: ' Por que doar sangue? ',  icon: 'fa-heartbeat',
       items: [
           [
-              { items: [{label: 'Importância', routerLink: '/importancia'}]
+              { items: [{label: 'Importância', routerLink: '/importanciaHemope'}]
               },
               {
-                items: [{label: 'Por que doar?', routerLink: '/porque-doar'}]
+                items: [{label: 'Por que doar?', routerLink: '/porque-doar-hemope'}]
               },
-              { items: [{label: 'Doação de medula', routerLink: '/doacao-de-medula'}]
+              { items: [{label: 'Doação de medula', routerLink: '/doacao-de-medula-hemope'}]
               },
-              { items: [{label: 'Doação de plaquetas', routerLink: '/doacao-de-plaquetas'}]
+              { items: [{label: 'Doação de plaquetas', routerLink: '/doacao-de-plaquetas-hemope'}]
               },
-              { items: [{label: 'Benefícios para o doador', routerLink: '/beneficios'}]
+              { items: [{label: 'Benefícios para o doador', routerLink: '/beneficiosHemope'}]
               },
-              { items: [{label: 'Alterações nos exames', routerLink: '/alteracoes-nos-exames'}]
+              { items: [{label: 'Alterações nos exames', routerLink: '/alteracoes-nos-exames-hemope'}]
               },
           ]
         ] 
       },{ label: ' Quais as etapas? ', icon: 'fa-list',
       items: [
           [
-              { items: [{label: 'Quais as etapas?', routerLink: '/etapas'}]
+              { items: [{label: 'Quais as etapas?', routerLink: '/etapasHemope'}]
               },
               {
-                items: [{label: 'Reações adversas', routerLink: '/reacoes-adversas'}]
+                items: [{label: 'Reações adversas', routerLink: '/reacoes-adversas-hemope'}]
               },
-              { items: [{label: 'Intervalo para doação', routerLink: '/intervalo'}]
+              { items: [{label: 'Intervalo para doação', routerLink: '/intervaloHemope'}]
               },
-              { items: [{label: 'Volume de sangue coletado', routerLink: '/volume-de-sangue'}]
+              { items: [{label: 'Volume de sangue coletado', routerLink: '/volume-de-sangue-hemope'}]
               },
-              { items: [{label: 'Cuidados pós doação', routerLink: '/pos-doacao'}]
+              { items: [{label: 'Cuidados pós doação', routerLink: '/pos-doacao-hemope'}]
               },
           ]
         ] 
