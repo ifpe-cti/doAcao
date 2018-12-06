@@ -100,6 +100,7 @@ import { ImportanciaHemopeComponent } from './importancia-hemope/importancia-hem
 import { IntervaloHemopeComponent } from './intervalo-hemope/intervalo-hemope.component';
 import { JanelaImunologicaHemopeComponent } from './janela-imunologica-hemope/janela-imunologica-hemope.component';
 import { PorqueDoarHemopeComponent } from './porque-doar-hemope/porque-doar-hemope.component';
+import { PosDoacaoHemopeComponent } from './pos-doacao-hemope/pos-doacao-hemope.component';
 
 
 @NgModule({
@@ -156,6 +157,7 @@ import { PorqueDoarHemopeComponent } from './porque-doar-hemope/porque-doar-hemo
     IntervaloHemopeComponent,
     JanelaImunologicaHemopeComponent,
     PorqueDoarHemopeComponent,
+    PosDoacaoHemopeComponent,
    
   ],
 
