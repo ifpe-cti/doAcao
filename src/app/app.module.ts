@@ -94,6 +94,7 @@ import { BeneficiosHemopeComponent } from './beneficios-hemope/beneficios-hemope
 import { AlteracoesNosExamesHemopeComponent } from './alteracoes-nos-exames-hemope/alteracoes-nos-exames-hemope.component';
 import { DoacaoDeMedulaHemopeComponent } from './doacao-de-medula-hemope/doacao-de-medula-hemope.component';
 import { DoacaoDePlaquetasHemopeComponent } from './doacao-de-plaquetas-hemope/doacao-de-plaquetas-hemope.component';
+import { EstoqueDeSangueHemopeComponent } from './estoque-de-sangue-hemope/estoque-de-sangue-hemope.component';
 
 
 @NgModule({
@@ -144,6 +145,7 @@ import { DoacaoDePlaquetasHemopeComponent } from './doacao-de-plaquetas-hemope/d
     AlteracoesNosExamesHemopeComponent,
     DoacaoDeMedulaHemopeComponent,
     DoacaoDePlaquetasHemopeComponent,
+    EstoqueDeSangueHemopeComponent,
    
   ],
 
