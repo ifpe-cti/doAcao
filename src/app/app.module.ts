@@ -98,6 +98,8 @@ import { EstoqueDeSangueHemopeComponent } from './estoque-de-sangue-hemope/estoq
 import { ImpedimentosHemopeComponent } from './impedimentos-hemope/impedimentos-hemope.component';
 import { ImportanciaHemopeComponent } from './importancia-hemope/importancia-hemope.component';
 import { IntervaloHemopeComponent } from './intervalo-hemope/intervalo-hemope.component';
+import { JanelaImunologicaHemopeComponent } from './janela-imunologica-hemope/janela-imunologica-hemope.component';
+import { PorqueDoarHemopeComponent } from './porque-doar-hemope/porque-doar-hemope.component';
 
 
 @NgModule({
@@ -152,6 +154,8 @@ import { IntervaloHemopeComponent } from './intervalo-hemope/intervalo-hemope.co
     ImpedimentosHemopeComponent,
     ImportanciaHemopeComponent,
     IntervaloHemopeComponent,
+    JanelaImunologicaHemopeComponent,
+    PorqueDoarHemopeComponent,
    
   ],
 
