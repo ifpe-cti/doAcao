@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/primeng';
 import { MenusService } from '../../menus.service';
-import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-alteracoes-nos-exames',
-  templateUrl: './alteracoes-nos-exames.component.html',
-  styleUrls: ['./alteracoes-nos-exames.component.css']
+  selector: 'app-beneficios-hemope',
+  templateUrl: './beneficios-hemope.component.html',
+  styleUrls: ['./beneficios-hemope.component.css']
 })
-export class AlteracoesNosExamesComponent implements OnInit {
+export class BeneficiosHemopeComponent implements OnInit {
 
   constructor(private menusSevice: MenusService, private router:Router) { }
 
