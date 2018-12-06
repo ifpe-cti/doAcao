@@ -102,6 +102,8 @@ import { JanelaImunologicaHemopeComponent } from './janela-imunologica-hemope/ja
 import { PorqueDoarHemopeComponent } from './porque-doar-hemope/porque-doar-hemope.component';
 import { PosDoacaoHemopeComponent } from './pos-doacao-hemope/pos-doacao-hemope.component';
 import { QuemNaoPodeDoarHemopeComponent } from './quem-nao-pode-doar-hemope/quem-nao-pode-doar-hemope.component';
+import { ReacoesAdversasHemopeComponent } from './reacoes-adversas-hemope/reacoes-adversas-hemope.component';
+import { SangueDoadoHemopeComponent } from './sangue-doado-hemope/sangue-doado-hemope.component';
 
 
 @NgModule({
@@ -160,6 +162,8 @@ import { QuemNaoPodeDoarHemopeComponent } from './quem-nao-pode-doar-hemope/quem
     PorqueDoarHemopeComponent,
     PosDoacaoHemopeComponent,
     QuemNaoPodeDoarHemopeComponent,
+    ReacoesAdversasHemopeComponent,
+    SangueDoadoHemopeComponent,
    
   ],
 
