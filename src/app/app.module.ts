@@ -93,6 +93,7 @@ import { FlebomistaService } from './flebomista.service';
 import { BeneficiosHemopeComponent } from './beneficios-hemope/beneficios-hemope.component';
 import { AlteracoesNosExamesHemopeComponent } from './alteracoes-nos-exames-hemope/alteracoes-nos-exames-hemope.component';
 import { DoacaoDeMedulaHemopeComponent } from './doacao-de-medula-hemope/doacao-de-medula-hemope.component';
+import { DoacaoDePlaquetasHemopeComponent } from './doacao-de-plaquetas-hemope/doacao-de-plaquetas-hemope.component';
 
 
 @NgModule({
@@ -142,6 +143,7 @@ import { DoacaoDeMedulaHemopeComponent } from './doacao-de-medula-hemope/doacao-
     BeneficiosHemopeComponent,
     AlteracoesNosExamesHemopeComponent,
     DoacaoDeMedulaHemopeComponent,
+    DoacaoDePlaquetasHemopeComponent,
    
   ],
 
