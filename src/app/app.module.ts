@@ -46,6 +46,24 @@ import { IntervaloComponent } from './maisInformacoes/intervalo/intervalo.compon
 import { VolumeDeSangueComponent } from './maisInformacoes/volume-de-sangue/volume-de-sangue.component';
 import { PosDoacaoComponent } from './maisInformacoes/pos-doacao/pos-doacao.component';
 import { InformacoesSobreDoacaoHemopeComponent } from './informacoes-sobre-doacao-hemope/informacoes-sobre-doacao-hemope.component';
+//informações do hemope
+import { BeneficiosHemopeComponent } from './maisInformacoesHemope/beneficios-hemope/beneficios-hemope.component';
+import { AlteracoesNosExamesHemopeComponent } from './maisInformacoesHemope/alteracoes-nos-exames-hemope/alteracoes-nos-exames-hemope.component';
+import { DoacaoDeMedulaHemopeComponent } from './maisInformacoesHemope/doacao-de-medula-hemope/doacao-de-medula-hemope.component';
+import { DoacaoDePlaquetasHemopeComponent } from './maisInformacoesHemope/doacao-de-plaquetas-hemope/doacao-de-plaquetas-hemope.component';
+import { EstoqueDeSangueHemopeComponent } from './maisInformacoesHemope/estoque-de-sangue-hemope/estoque-de-sangue-hemope.component';
+import { ImpedimentosHemopeComponent } from './maisInformacoesHemope/impedimentos-hemope/impedimentos-hemope.component';
+import { ImportanciaHemopeComponent } from './maisInformacoesHemope/importancia-hemope/importancia-hemope.component';
+import { IntervaloHemopeComponent } from './maisInformacoesHemope/intervalo-hemope/intervalo-hemope.component';
+import { JanelaImunologicaHemopeComponent } from './maisInformacoesHemope/janela-imunologica-hemope/janela-imunologica-hemope.component';
+import { PorqueDoarHemopeComponent } from './maisInformacoesHemope/porque-doar-hemope/porque-doar-hemope.component';
+import { PosDoacaoHemopeComponent } from './maisInformacoesHemope/pos-doacao-hemope/pos-doacao-hemope.component';
+import { QuemNaoPodeDoarHemopeComponent } from './maisInformacoesHemope/quem-nao-pode-doar-hemope/quem-nao-pode-doar-hemope.component';
+import { ReacoesAdversasHemopeComponent } from './maisInformacoesHemope/reacoes-adversas-hemope/reacoes-adversas-hemope.component';
+import { SangueDoadoHemopeComponent } from './maisInformacoesHemope/sangue-doado-hemope/sangue-doado-hemope.component';
+import { TerceiroRequisitoHemopeComponent } from './maisInformacoesHemope/terceiro-requisito-hemope/terceiro-requisito-hemope.component';
+import { TiposSanguineosHemopeComponent } from './maisInformacoesHemope/tipos-sanguineos-hemope/tipos-sanguineos-hemope.component';
+import { VolumeDeSangueHemopeComponent } from './maisInformacoesHemope/volume-de-sangue-hemope/volume-de-sangue-hemope.component';
 
 
 //module
@@ -90,23 +108,6 @@ import { MenusService } from './menus.service';
 import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
 import { TecnicoService } from './tecnicos.service';
 import { FlebomistaService } from './flebomista.service';
-import { BeneficiosHemopeComponent } from './maisInformacoesHemope/beneficios-hemope/beneficios-hemope.component';
-import { AlteracoesNosExamesHemopeComponent } from './maisInformacoesHemope/alteracoes-nos-exames-hemope/alteracoes-nos-exames-hemope.component';
-import { DoacaoDeMedulaHemopeComponent } from './maisInformacoesHemope/doacao-de-medula-hemope/doacao-de-medula-hemope.component';
-import { DoacaoDePlaquetasHemopeComponent } from './maisInformacoesHemope/doacao-de-plaquetas-hemope/doacao-de-plaquetas-hemope.component';
-import { EstoqueDeSangueHemopeComponent } from './maisInformacoesHemope/estoque-de-sangue-hemope/estoque-de-sangue-hemope.component';
-import { ImpedimentosHemopeComponent } from './maisInformacoesHemope/impedimentos-hemope/impedimentos-hemope.component';
-import { ImportanciaHemopeComponent } from './maisInformacoesHemope/importancia-hemope/importancia-hemope.component';
-import { IntervaloHemopeComponent } from './maisInformacoesHemope/intervalo-hemope/intervalo-hemope.component';
-import { JanelaImunologicaHemopeComponent } from './maisInformacoesHemope/janela-imunologica-hemope/janela-imunologica-hemope.component';
-import { PorqueDoarHemopeComponent } from './maisInformacoesHemope/porque-doar-hemope/porque-doar-hemope.component';
-import { PosDoacaoHemopeComponent } from './maisInformacoesHemope/pos-doacao-hemope/pos-doacao-hemope.component';
-import { QuemNaoPodeDoarHemopeComponent } from './maisInformacoesHemope/quem-nao-pode-doar-hemope/quem-nao-pode-doar-hemope.component';
-import { ReacoesAdversasHemopeComponent } from './maisInformacoesHemope/reacoes-adversas-hemope/reacoes-adversas-hemope.component';
-import { SangueDoadoHemopeComponent } from './maisInformacoesHemope/sangue-doado-hemope/sangue-doado-hemope.component';
-import { TerceiroRequisitoHemopeComponent } from './maisInformacoesHemope/terceiro-requisito-hemope/terceiro-requisito-hemope.component';
-import { TiposSanguineosHemopeComponent } from './maisInformacoesHemope/tipos-sanguineos-hemope/tipos-sanguineos-hemope.component';
-import { VolumeDeSangueHemopeComponent } from './maisInformacoesHemope/volume-de-sangue-hemope/volume-de-sangue-hemope.component';
 
 
 @NgModule({
