@@ -96,6 +96,7 @@ import { DoacaoDeMedulaHemopeComponent } from './doacao-de-medula-hemope/doacao-
 import { DoacaoDePlaquetasHemopeComponent } from './doacao-de-plaquetas-hemope/doacao-de-plaquetas-hemope.component';
 import { EstoqueDeSangueHemopeComponent } from './estoque-de-sangue-hemope/estoque-de-sangue-hemope.component';
 import { ImpedimentosHemopeComponent } from './impedimentos-hemope/impedimentos-hemope.component';
+import { ImportanciaHemopeComponent } from './importancia-hemope/importancia-hemope.component';
 
 
 @NgModule({
@@ -148,6 +149,7 @@ import { ImpedimentosHemopeComponent } from './impedimentos-hemope/impedimentos-
     DoacaoDePlaquetasHemopeComponent,
     EstoqueDeSangueHemopeComponent,
     ImpedimentosHemopeComponent,
+    ImportanciaHemopeComponent,
    
   ],
 
