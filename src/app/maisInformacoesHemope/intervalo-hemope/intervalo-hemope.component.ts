@@ -4,11 +4,11 @@ import { MenuItem } from 'primeng/primeng';
 import { MenusService } from '../../menus.service';
 
 @Component({
-  selector: 'app-importancia-hemope',
-  templateUrl: './importancia-hemope.component.html',
-  styleUrls: ['./importancia-hemope.component.css']
+  selector: 'app-intervalo-hemope',
+  templateUrl: './intervalo-hemope.component.html',
+  styleUrls: ['./intervalo-hemope.component.css']
 })
-export class ImportanciaHemopeComponent implements OnInit {
+export class IntervaloHemopeComponent implements OnInit {
 
   constructor(private menusSevice: MenusService, private router:Router) { }
 

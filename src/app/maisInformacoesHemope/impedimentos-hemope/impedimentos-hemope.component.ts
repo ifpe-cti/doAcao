@@ -15,7 +15,7 @@ export class ImpedimentosHemopeComponent implements OnInit {
   items: MenuItem[];
 
   ngOnInit() {
-    this.items = this.menusSevice.itensMaisInformacoes;
+    this.items = this.menusSevice.itensMaisInformacoesHemope;
   }
 
 }
