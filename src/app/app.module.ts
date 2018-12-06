@@ -105,6 +105,7 @@ import { QuemNaoPodeDoarHemopeComponent } from './quem-nao-pode-doar-hemope/quem
 import { ReacoesAdversasHemopeComponent } from './reacoes-adversas-hemope/reacoes-adversas-hemope.component';
 import { SangueDoadoHemopeComponent } from './sangue-doado-hemope/sangue-doado-hemope.component';
 import { TerceiroRequisitoHemopeComponent } from './terceiro-requisito-hemope/terceiro-requisito-hemope.component';
+import { TiposSanguineosHemopeComponent } from './tipos-sanguineos-hemope/tipos-sanguineos-hemope.component';
 
 
 @NgModule({
@@ -166,6 +167,7 @@ import { TerceiroRequisitoHemopeComponent } from './terceiro-requisito-hemope/te
     ReacoesAdversasHemopeComponent,
     SangueDoadoHemopeComponent,
     TerceiroRequisitoHemopeComponent,
+    TiposSanguineosHemopeComponent,
    
   ],
 
