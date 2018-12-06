@@ -29,21 +29,17 @@ export class MenusService {
                   }
               ]
             ] 
-          },
-
-          { label: '  Funcionários', icon: 'fa-user-md',
+          }, 
+          { label: '  Funcionários' , icon: 'fa-user-md',
           items: [
-              [
-                  {
-                    items: [{label: 'Cadastrar técnico', routerLink: '/cadastro-tecnicos'}]
-                  },
-
-                  {
-                    items: [{label: 'Cadastrar flebomista', routerLink: '/cadastro-flebomistas'}]
-                  }
-              ]
-            ] 
-          },
+            [
+              {label: 'Técnico', items: [
+                    {label: 'Adicionar Técnico', routerLink: '/cadastro-tecnicos'}, 
+                    {label: 'Listar Técnico', routerLink: '/listagem-tecnicos'}]},
+              {label: 'Flebomista', items: [
+                      {label: 'Adicionar Flebomista', routerLink: '/cadastro-flebomistas'}, 
+                      {label: 'Listar Flebomista', routerLink: '/listagem-flebomistas'}]}    
+                  ]]},
 
           { label: ' Listar ', icon: 'fa-list',
           items: [
@@ -63,14 +59,6 @@ export class MenusService {
                   {
                     items: [{label: 'Listar todos os exames',  routerLink: '/visualizacao-requisicao-exames'}]
 
-                  },
-
-                  {
-                    items: [{label: 'Listar todos os técnicos',  routerLink: '/listagem-tecnicos'}]
-                  },
-
-                  {
-                    items: [{label: 'Listar todos os flebomistas',  routerLink: '/listagem-flebomistas'}]
                   },
 
                   {
