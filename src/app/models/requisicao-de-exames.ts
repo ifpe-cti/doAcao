@@ -15,4 +15,6 @@ export class RequisicaoDeExames{
     tecnicoResponsavel: String;
     etiquetaDaAmostra: String;
 
+  
+
 } 

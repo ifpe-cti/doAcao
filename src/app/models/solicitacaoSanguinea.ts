@@ -7,4 +7,5 @@ export class SolicitacaoSanguinea{
     tipoSanguineo: String;
     id?: String;
    
+   
 } 

@@ -30,6 +30,22 @@ import { CadastroFlebomistaComponent } from './cadastro-flebomista/cadastro-fleb
 import { ImpedimentosComponent } from './maisInformacoes/impedimentos/impedimentos.component';
 import { QuemNaoPodeDoarComponent } from './maisInformacoes/quem-nao-pode-doar/quem-nao-pode-doar.component';
 import { TerceiroRequisitoComponent } from './maisInformacoes/terceiro-requisito/terceiro-requisito.component';
+import { TiposSanguineosComponent } from './maisInformacoes/tipos-sanguineos/tipos-sanguineos.component';
+import { SangueDoadoComponent } from './maisInformacoes/sangue-doado/sangue-doado.component';
+import { EstoqueDeSangueComponent } from './maisInformacoes/estoque-de-sangue/estoque-de-sangue.component';
+import { JanelaImunologicaComponent } from './maisInformacoes/janela-imunologica/janela-imunologica.component';
+import { ImportanciaComponent } from './maisInformacoes/importancia/importancia.component';
+import { PorqueDoarComponent } from './maisInformacoes/porque-doar/porque-doar.component';
+import { DoacaoDeMedulaComponent } from './maisInformacoes/doacao-de-medula/doacao-de-medula.component';
+import { DoacaoDePlaquetasComponent } from './maisInformacoes/doacao-de-plaquetas/doacao-de-plaquetas.component';
+import { BeneficiosComponent } from './maisInformacoes/beneficios/beneficios.component';
+import { AlteracoesNosExamesComponent } from './maisInformacoes/alteracoes-nos-exames/alteracoes-nos-exames.component';
+import { EtapasComponent } from './maisInformacoes/etapas/etapas.component';
+import { ReacoesAdversasComponent } from './maisInformacoes/reacoes-adversas/reacoes-adversas.component';
+import { IntervaloComponent } from './maisInformacoes/intervalo/intervalo.component';
+import { VolumeDeSangueComponent } from './maisInformacoes/volume-de-sangue/volume-de-sangue.component';
+import { PosDoacaoComponent } from './maisInformacoes/pos-doacao/pos-doacao.component';
+import { InformacoesSobreDoacaoHemopeComponent } from './informacoes-sobre-doacao-hemope/informacoes-sobre-doacao-hemope.component';
 
 
 //module
@@ -74,23 +90,6 @@ import { MenusService } from './menus.service';
 import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
 import { TecnicoService } from './tecnicos.service';
 import { FlebomistaService } from './flebomista.service';
-import { TiposSanguineosComponent } from './maisInformacoes/tipos-sanguineos/tipos-sanguineos.component';
-import { SangueDoadoComponent } from './maisInformacoes/sangue-doado/sangue-doado.component';
-import { EstoqueDeSangueComponent } from './maisInformacoes/estoque-de-sangue/estoque-de-sangue.component';
-import { JanelaImunologicaComponent } from './maisInformacoes/janela-imunologica/janela-imunologica.component';
-import { ImportanciaComponent } from './maisInformacoes/importancia/importancia.component';
-import { PorqueDoarComponent } from './maisInformacoes/porque-doar/porque-doar.component';
-import { DoacaoDeMedulaComponent } from './maisInformacoes/doacao-de-medula/doacao-de-medula.component';
-import { DoacaoDePlaquetasComponent } from './maisInformacoes/doacao-de-plaquetas/doacao-de-plaquetas.component';
-import { BeneficiosComponent } from './maisInformacoes/beneficios/beneficios.component';
-import { AlteracoesNosExamesComponent } from './maisInformacoes/alteracoes-nos-exames/alteracoes-nos-exames.component';
-import { EtapasComponent } from './maisInformacoes/etapas/etapas.component';
-import { ReacoesAdversasComponent } from './maisInformacoes/reacoes-adversas/reacoes-adversas.component';
-import { IntervaloComponent } from './maisInformacoes/intervalo/intervalo.component';
-import { VolumeDeSangueComponent } from './maisInformacoes/volume-de-sangue/volume-de-sangue.component';
-import { PosDoacaoComponent } from './maisInformacoes/pos-doacao/pos-doacao.component';
-import { InformacoesSobreDoacaoHemopeComponent } from './informacoes-sobre-doacao-hemope/informacoes-sobre-doacao-hemope.component';
-
 
 
 @NgModule({
