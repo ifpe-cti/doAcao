@@ -13,14 +13,14 @@ export class MenusService {
   itensHemope = [
     { label: '  Página inicial', icon: '', routerLink: '/dashboard-hemope' },
     {label: '  Agendar doação', icon: 'fa-calendar-plus-o', routerLink: '/agendamento-de-doacoes-hemope'},
-    { label: ' Exames ',  icon: 'fa-heartbeat',
-          items: [
-              [
-                  { items: [{label: 'Adicionar exame',  routerLink:['/requisicao-do-exame']}]
-                  }
-              ]
-            ] 
-          },
+    { label: '  Exames' , icon: 'fa-heartbeat',
+    items: [
+      [
+        { items: [
+              {label: 'Adicionar Exame', routerLink:['/requisicao-do-exame']}, 
+              {label: 'Listar todos os Exames',  routerLink: '/visualizacao-requisicao-exames'}]},    
+            ]]},
+  
           { label: '  Fichas médicas', icon: 'fa-stethoscope',
           items: [
               [
@@ -56,11 +56,6 @@ export class MenusService {
                     items: [{label: 'Listar todas as fichas médicas', routerLink: '/visualizacao-fichas-medicas'}]
 
                   },
-                  {
-                    items: [{label: 'Listar todos os exames',  routerLink: '/visualizacao-requisicao-exames'}]
-
-                  },
-
                   {
                     items: [{label: 'Listar todos os agendamentos de doação',  routerLink: '/visualizacao-agendamentos'}]
                   }
