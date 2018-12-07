@@ -82,6 +82,5 @@ export class VisualizacaoSolicitacoesComponent implements OnInit {
       { field: 'tipoSanguineo', header: 'Tipo do sangue solicitado' }
     ]
 
-
   }
 }

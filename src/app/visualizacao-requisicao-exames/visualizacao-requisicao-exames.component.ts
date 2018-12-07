@@ -16,9 +16,7 @@ import { SelectItem } from 'primeng/api';
 export class VisualizacaoRequisicaoExamesComponent implements OnInit {
 
   items: MenuItem[];
-  exame: RequisicaoDeExames = {idDoador: "", numeroDocumentoDoador: "", 
-  tipoDocumentoDoador: "", orgaoExpeditorDoador: "", nomeMaeDoador:"", 
-  nomePaiDoador: "", tecnicoResponsavel: "", etiquetaDaAmostra: ""}; 
+  exame: RequisicaoDeExames = new RequisicaoDeExames()
 
   displayDialog: boolean;
   selectedExame: RequisicaoDeExames;
@@ -63,9 +61,7 @@ export class VisualizacaoRequisicaoExamesComponent implements OnInit {
   }
   
   cloneExame(e: RequisicaoDeExames): RequisicaoDeExames {
-    let exame = {idDoador: "", numeroDocumentoDoador: "", 
-    tipoDocumentoDoador: "", orgaoExpeditorDoador: "", nomeMaeDoador:"", 
-    nomePaiDoador: "", tecnicoResponsavel: "", etiquetaDaAmostra: ""};
+    let exame: RequisicaoDeExames = new RequisicaoDeExames()
 
     for (let prop in e) {
         exame[prop] = e[prop];

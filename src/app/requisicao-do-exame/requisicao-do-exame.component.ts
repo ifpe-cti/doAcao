@@ -27,11 +27,7 @@ export class RequisicaoDoExameComponent implements OnInit {
 
   constructor(private servicoRequisicaoExames: RequisicaoDeExameService, private router: Router,
     private servicoUsuario: UsuariosService, private menusService: MenusService) {
-    this.requisicaoExames = {
-      idDoador: "", numeroDocumentoDoador: "", tipoDocumentoDoador: "",
-      orgaoExpeditorDoador: "", nomeMaeDoador: "", nomePaiDoador: "", tecnicoResponsavel: "",
-      etiquetaDaAmostra: ""
-    }
+    this.requisicaoExames = new RequisicaoDeExames();
     
   }
 
