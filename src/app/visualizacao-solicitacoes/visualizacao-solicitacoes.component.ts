@@ -14,10 +14,7 @@ export class VisualizacaoSolicitacoesComponent implements OnInit {
 
   items: MenuItem[];
 
-  solicitacaoSanguinea: SolicitacaoSanguinea = {
-    nomeUsuario: "", cpfUsuario: "",
-    tipoSanguineo: ""
-  };
+  solicitacaoSanguinea: SolicitacaoSanguinea = new SolicitacaoSanguinea();
 
   displayDialog: boolean;
   selectedSolicitacao: SolicitacaoSanguinea;
@@ -32,10 +29,7 @@ export class VisualizacaoSolicitacoesComponent implements OnInit {
 
   showDialogToAdd() {
     this.newSolicitacao = true;
-    this.solicitacaoSanguinea = {
-      nomeUsuario: "", cpfUsuario: "",
-      tipoSanguineo: ""
-    };
+    this.solicitacaoSanguinea = new SolicitacaoSanguinea();
     this.displayDialog = true;
   }
 
@@ -67,10 +61,7 @@ export class VisualizacaoSolicitacoesComponent implements OnInit {
   }
 
   cloneSolicitacao(s: SolicitacaoSanguinea): SolicitacaoSanguinea {
-    let solicitacao = {
-      nomeUsuario: "", cpfUsuario: "",
-      tipoSanguineo: ""
-    };
+    let solicitacao: SolicitacaoSanguinea = new SolicitacaoSanguinea()
     for (let prop in s) {
       solicitacao[prop] = s[prop];
     }
