@@ -30,9 +30,7 @@ export class SolicitacaoDeSangueComponent implements OnInit {
 
   constructor(private usuariosService: UsuariosService, private router: Router, private menusService: MenusService,
     private solicitacaoSanguineaService: SolicitacaoDeSangueService) {
-    this.solicitacaoSanguinea = {
-      nomeUsuario: "", cpfUsuario: "", tipoSanguineo: ""
-    }
+    this.solicitacaoSanguinea = new SolicitacaoSanguinea();
   }
 
   enviarSolicitacao() {
@@ -43,7 +41,7 @@ export class SolicitacaoDeSangueComponent implements OnInit {
       alert("Para que a solicitação seja concluída, compareça ao hemocentro portando o CPF inserido junto a um documento de identificação.")
     
   }
-  
+
   ngOnInit() {
 
     this.tiposSanguineos = [

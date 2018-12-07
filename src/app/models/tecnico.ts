@@ -1,15 +1,16 @@
 
-export class Tecnico{
+export class Tecnico {
 
-    nome:String;
+	nome: String;
 	cpf: String;
 	id?: String;
 
-	validarTecnico(){
-		if(this.nome == "" || this.cpf == "" || this.id == ""){
+
+	validarTecnico() {
+		if (this.nome == "" || this.cpf == "" || this.id == "") {
 			return false
-		} 
-			return true
 		}
+		return true
 	}
-	
+}
+

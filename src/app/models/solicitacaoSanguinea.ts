@@ -7,5 +7,10 @@ export class SolicitacaoSanguinea{
     tipoSanguineo: String;
     id?: String;
    
-   
+   validarSolicitacaoSanguinea(){
+       if(this.nomeUsuario == "" || this.cpfUsuario == "" || this.tipoSanguineo == "" || this.id == ""){
+           return false
+       }
+       return true
+   }
 } 
