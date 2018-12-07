@@ -17,7 +17,7 @@ export class VisualizacaoAgendamentosComponent implements OnInit {
 
   agendamentos: any[] = [];
 
-  agendamento: AgendamentoDoacao = { data: null, cpfDoador: "", idDoador: "" };
+  agendamento: AgendamentoDoacao = new AgendamentoDoacao()
   displayDialog: boolean;
   selectedAgendamento: AgendamentoDoacao;
   newAgendamento: boolean;
@@ -55,7 +55,7 @@ export class VisualizacaoAgendamentosComponent implements OnInit {
   }
 
   cloneUsuario(a: AgendamentoDoacao): AgendamentoDoacao {
-    let agendamento = { data: null, cpfDoador: "", idDoador: "" };
+    let agendamento: AgendamentoDoacao = new AgendamentoDoacao()
     for (let prop in a) {
       agendamento[prop] = a[prop];
     }

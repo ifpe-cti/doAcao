@@ -31,9 +31,7 @@ export class AgendamentoDoacoesHemopeComponent implements OnInit {
     private router: Router, private servicoUsuario: UsuariosService,
     private menusService: MenusService) {
 
-    this.agendamentoDoacao = {
-      idDoador: "", cpfDoador: "", data: ""
-    }
+    this.agendamentoDoacao = new AgendamentoDoacao()
   }
 
   // INSERIR CAMPOS DE CONFIRMAÇÃO DE INFORMAÇÕES COM BUSCA DE CPF

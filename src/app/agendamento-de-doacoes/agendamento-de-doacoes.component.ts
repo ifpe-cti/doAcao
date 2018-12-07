@@ -18,9 +18,7 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
   constructor(private AgendamentoDeDoacoesService: AgendamentoDeDoacoesService,
     private router: Router, private menusService: MenusService, private servicoUsuario: UsuariosService) {
 
-    this.agendamentoDoacao = {
-      idDoador: "", cpfDoador: "", data: "",
-    }
+    this.agendamentoDoacao = new AgendamentoDoacao()
   }
 
   agendamentoDoacao: AgendamentoDoacao;
