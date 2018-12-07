@@ -28,15 +28,12 @@ export class AgendamentoDeDoacoesComponent implements OnInit {
   cpfConfirmacao: String;
 
   agendarDoacao() {
-    if(this.servicoUsuario.usuarioLogado.cpf == this.cpfConfirmacao){
       this.agendamentoDoacao.idDoador = this.servicoUsuario.usuarioLogado.id;
       this.agendamentoDoacao.cpfDoador = this.servicoUsuario.usuarioLogado.cpf;
       this.AgendamentoDeDoacoesService.adicionarAgendamentoDeDoacao(this.agendamentoDoacao);
       this.router.navigate(['dashboard']);
-    } else {
-      alert("O CPF digitado não corresponde ao CPF cadastrado nessa conta")
     }
-  }
+  
 
 
   ngOnInit() {

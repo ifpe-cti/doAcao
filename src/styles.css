@@ -4,3 +4,8 @@
 @import  "../node_modules/primeng/resources/themes/omega/theme.css";
 @import  "~bootstrap/dist/css/bootstrap.min.css";
 @import  "~font-awesome/css/font-awesome.css";
+
+html, body {
+    height: 100%;
+    background: #ccc;
+}
