@@ -15,7 +15,7 @@ export class ListagemFlebomistasComponent implements OnInit {
 
   items: MenuItem[];
 
-  flebomista: Flebomista = {nome: "", cpf: ""}; 
+  flebomista: Flebomista = new Flebomista()
 
   displayDialog: boolean;
 
@@ -59,7 +59,7 @@ onRowSelect(event) {
 }
 
 cloneFlebomista(f: Flebomista): Flebomista {
-  let flebomista = {nome: "", cpf: ""};
+  let flebomista: Flebomista = new Flebomista()
   for (let prop in f) {
       flebomista[prop] = f[prop];
   }

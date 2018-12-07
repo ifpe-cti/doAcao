@@ -19,9 +19,7 @@ export class CadastroFlebomistaComponent implements OnInit {
 
   constructor(private flebomistaService: FlebomistaService, private router: Router,
      private menusSevice: MenusService) {   
-    this.flebomista = {
-      nome: "", cpf: ""
-    }
+    this.flebomista = new Flebomista()
   }
 
   cadastrarFlebomista(){
