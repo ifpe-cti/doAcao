@@ -15,11 +15,7 @@ export class VisualizacaoFichasMedicasComponent implements OnInit {
  
   items: MenuItem[];
 
-  fichaMedica: FichaMedica = {
-    idDoador: "", cpfDoador: "", hemoglobina: "",
-    pressaoArterial: "", temperatura: "", peso: "", altura: "", pulso: "", 
-    bracoPunsionado: "", reacoesAdversas: "", idFlebomista: "", nomeFlebomista: "", 
-    tipoDeDoacao: "", numeroDoTubo: "", volumeDoSangue: ""}; 
+  fichaMedica: FichaMedica = new FichaMedica()
 
   displayDialog: boolean;
   selectedFicha: FichaMedica;
@@ -30,16 +26,6 @@ export class VisualizacaoFichasMedicasComponent implements OnInit {
   constructor(private fichasMedicasService: FichasMedicasService, 
     private router:Router, private menusService: MenusService) { }
 
-    showDialogToAdd() {
-      this.newFicha = true;
-
-      this.fichaMedica = {
-        idDoador: "", cpfDoador: "", hemoglobina: "",
-        pressaoArterial: "", temperatura: "", peso: "", altura: "", pulso: "", 
-        bracoPunsionado: "", reacoesAdversas: "", idFlebomista: "", nomeFlebomista: "", 
-        tipoDeDoacao: "", numeroDoTubo: "", volumeDoSangue: ""}; 
-      }
-  
   save() {
       let fichas = [...this.fichasMedicas];
       if (this.newFicha)
@@ -68,11 +54,7 @@ export class VisualizacaoFichasMedicasComponent implements OnInit {
   }
   
   cloneFichaMedica(f: FichaMedica): FichaMedica {
-    let ficha = {
-      idDoador: "", cpfDoador: "", hemoglobina: "",
-      pressaoArterial: "", temperatura: "", peso: "", altura: "", pulso: "", 
-      bracoPunsionado: "", reacoesAdversas: "", idFlebomista: "", nomeFlebomista: "", 
-      tipoDeDoacao: "", numeroDoTubo: "", volumeDoSangue: ""}; 
+    let ficha: FichaMedica = new FichaMedica()
 
     for (let prop in f) {
         ficha[prop] = f[prop];

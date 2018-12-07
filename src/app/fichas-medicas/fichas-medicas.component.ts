@@ -36,12 +36,7 @@ export class FichasMedicasComponent implements OnInit {
   constructor(private servicoFichaMedica: FichasMedicasService, private router: Router,
     private servicoUsuario: UsuariosService, private menusService: MenusService,
     private flebomistaService: FlebomistaService) {
-    this.fichaMedica = {
-      idDoador: "", cpfDoador: "", hemoglobina: "",
-      pressaoArterial: "", temperatura: "", peso: "", altura: "", pulso: "", bracoPunsionado: "", 
-      reacoesAdversas: "", idFlebomista: "", nomeFlebomista: "", tipoDeDoacao: "", 
-      numeroDoTubo: "", volumeDoSangue: ""
-    }
+    this.fichaMedica = new FichaMedica()
   }
 
   search(cpf) {
