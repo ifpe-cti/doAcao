@@ -18,10 +18,10 @@ export class Usuario {
 
 
 	// se algum dos campos estiver vazio, a função retornará false 
-	validar() {
+	validarUsuario() {
 		if (this.nome == "" || this.user == "" || this.dataNascimento == null || this.senha == "" ||
 			this.tipoSanguineo == "" || this.tipoUsuario == "" || this.cpf == "" || this.nomePai == "" || this.nomeMae == "" ||
-			this.numeroDocumento == "" || this.tipoDocumento == "" || this.orgaoExpeditorDocumento == "") {
+			this.numeroDocumento == "" || this.tipoDocumento == "" || this.orgaoExpeditorDocumento == "" || this.id == "") {
 			return false;
 		}
 		return true;

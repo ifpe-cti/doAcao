@@ -5,5 +5,12 @@ export class Tecnico{
 	cpf: String;
 	id?: String;
 	
+	validarTecnico(){
+		if(this.nome == "" || this.cpf == "" || this.id == ""){
+			return false
+		} else {
+			return true
+		}
+	}
 	
 } 

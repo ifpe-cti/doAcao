@@ -70,7 +70,7 @@ export class FlebomistaService {
       this.listarTodos()
         .subscribe(meuObservable => {
           this.todosOsFlebomistas = meuObservable as Flebomista[]
-          let flebomistas: Tecnico[];
+          let flebomistas: Flebomista[];
           let tecnicoCPF: String[];
           for (let i = 0; i < this.todosOsFlebomistas.length; i++) {
             if (this.todosOsFlebomistas[i].cpf.search(cpf) != -1) { // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 

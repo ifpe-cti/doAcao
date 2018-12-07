@@ -14,7 +14,7 @@ import { Tecnico } from '../models/tecnico';
 export class ListagemTecnicosComponent implements OnInit {
 
   items: MenuItem[];
-  tecnico: Tecnico = {nome: "", cpf: ""}; 
+  tecnico: Tecnico = new Tecnico()
 
   displayDialog: boolean;
 
@@ -29,12 +29,7 @@ export class ListagemTecnicosComponent implements OnInit {
 
   constructor(private tecnicoService: TecnicoService,
     private menusService: MenusService, private router:Router) { }
- 
-  showDialogToAdd() {
-    this.newTecnico = true;
-    this.tecnico = {nome: "", cpf: ""};
-    this.displayDialog = true;
-  }
+
 
 save() {
     let tecnicos = [...this.tecnicos];
@@ -64,7 +59,7 @@ onRowSelect(event) {
 }
 
 cloneTecnico(t: Tecnico): Tecnico {
-  let tecnico = {nome: "", cpf: ""};
+  let tecnico: Tecnico = new Tecnico()
   for (let prop in t) {
       tecnico[prop] = t[prop];
   }
