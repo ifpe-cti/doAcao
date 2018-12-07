@@ -33,8 +33,6 @@ export class ListagemDeUsuariosComponent implements OnInit {
     private router: Router, private menusService: MenusService) { }
 
   update() {
-
-    //
     let usuarios = [...this.usuarios];
     if (this.newUsuario)
       usuarios.push(this.usuario);
@@ -45,8 +43,6 @@ export class ListagemDeUsuariosComponent implements OnInit {
     this.usuario = null;
     this.displayDialog = false;
     
-    //
-
     this.usuariosService.atualizarUsuarioFirebase(this.usuario);
   }
 

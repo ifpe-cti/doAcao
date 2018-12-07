@@ -36,17 +36,12 @@ export class SolicitacaoDeSangueComponent implements OnInit {
   }
 
   enviarSolicitacao() {
-    if (this.usuariosService.usuarioLogado.cpf == this.solicitacaoSanguinea.cpfUsuario) {
+  
       this.solicitacaoSanguineaService.cadastrarSolicitacaoSanguineaFirebase(this.solicitacaoSanguinea);
       this.router.navigate(['/dashboard']);
-    } else {
-      alert("O CPF inserido não condiz com o que está cadastrado nessa conta. Por favor, apresente seu CPF.")
-    }
-
-    // adicionar mensagem de aviso: "sobre a confirmação"
-
-
-
+   
+      alert("Para que a solicitação seja concluída, compareça ao hemocentro portando o CPF inserido junto a um documento de identificação.")
+    
   }
   ngOnInit() {
 
