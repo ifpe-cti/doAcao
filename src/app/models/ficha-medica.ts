@@ -30,4 +30,24 @@ export class FichaMedica {
         return true
     }
 
+    toDocument(){
+        return{
+            idDoador: this.idDoador,
+            id: this.id,
+            cpfDoador: this.cpfDoador,
+            hemoglobina: this.hemoglobina,
+            pressaoArterial: this.pressaoArterial,
+            temperatura: this.temperatura, 
+            preso: this.peso,
+            altura: this.altura,
+            bracoPunsionado: this.bracoPunsionado, 
+            reacoesAdversas: this.reacoesAdversas, 
+            idFlebomista: this.idFlebomista,
+            nomeFlebomista: this.nomeFlebomista,
+            tipoDeDoacao: this.tipoDeDoacao,
+            numeroDoTubo: this.numeroDoTubo,
+            volumeDoSangue: this.volumeDoSangue
+        }
+    }
+
 }
