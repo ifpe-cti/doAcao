@@ -27,4 +27,13 @@ export class Usuario {
 		return true;
 	}
 
+	toDocument() {
+		return {
+			nome: this.nome, user: this.user, dataNascimento: this.dataNascimento,
+			senha: this.senha, tipoSanguineo: this.tipoSanguineo, tipoUsuario: "usuario",
+			cpf: this.cpf, nomePai: this.nomePai, nomeMae: this.nomeMae, numeroDocumento: this.numeroDocumento,
+			tipoDocumento: this.tipoDocumento, orgaoExpeditorDocumento: this.orgaoExpeditorDocumento, id: this.id
+		}
+	}
+
 } 

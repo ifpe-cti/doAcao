@@ -24,4 +24,18 @@ export class RequisicaoDeExames {
         return true
     }
 
+    toDocument(){
+        return {
+            idDoador: this.idDoador,
+            id: this.id,
+            numeroDocumentoDoador: this.numeroDocumentoDoador, 
+            tipoDocumentoDoador: this.tipoDocumentoDoador,
+            orgaoExpeditorDoador: this.orgaoExpeditorDoador,
+            nomeMaeDoador: this.nomeMaeDoador,
+            nomePaiDoador: this.nomePaiDoador, 
+            tecnicoResponsavel: this.tecnicoResponsavel,
+            etiquetaDaAmostra: this.etiquetaDaAmostra
+        }
+    }
+
 } 

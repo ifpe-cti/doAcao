@@ -13,4 +13,14 @@ export class SolicitacaoSanguinea{
        }
        return true
    }
+
+   toDocument(){
+       return{
+           nomeUsuario: this.nomeUsuario,
+           cpfUsuario: this.cpfUsuario,
+           tipoSanguineo: this.tipoSanguineo, 
+           id: this.id
+
+       }
+   }
 } 

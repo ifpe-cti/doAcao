@@ -14,23 +14,20 @@ export class UsuariosService {
   usuarioModel = new Usuario();
 
 
-    private usuarioCollection: AngularFirestoreCollection<Usuario>;
+  private usuarioCollection: AngularFirestoreCollection<Usuario>;
   usuariosRef: AngularFirestoreCollection<Usuario>
 
 
   constructor(private servicoFirebase: AngularFirestore) {
 
     this.usuariosRef = this.servicoFirebase.collection<Usuario>('usuarios');
-    
+
     this.usuarioCollection = this.servicoFirebase.collection('usuario')
 
   }
 
-  save(){
-    this.usuariosRef.add(this.usuarioModel);
-  }
-
   cadastrarUsuarioFirebase(usuario: Usuario) {
+
     this.usuarioCollection.add(usuario).then(
       resultado => {
         usuario.id = resultado.id;
@@ -80,7 +77,7 @@ export class UsuariosService {
           this.todosOsUsuarios = meuObservable as Usuario[]
           let usuariosFiltrados: String[] = []
           for (let i = 0; i < this.todosOsUsuarios.length; i++) {
-            if (this.todosOsUsuarios[i].nome.search(nome) != -1) { 
+            if (this.todosOsUsuarios[i].nome.search(nome) != -1) {
               usuariosFiltrados.push(this.todosOsUsuarios[i].nome);
             }
           }
@@ -162,18 +159,18 @@ export class UsuariosService {
   }
 
 
-  atualizarUsuarioFirebase(usuario: Usuario){
+  atualizarUsuarioFirebase(usuario: Usuario) {
     return this.usuarioCollection.doc(usuario.id).update(usuario);
   }
 
 
-apagarUsuarioFirebase(usuario): Promise < void> {
-  return this.usuarioCollection.doc(usuario.id).delete();
-}
+  apagarUsuarioFirebase(usuario): Promise<void> {
+    return this.usuarioCollection.doc(usuario.id).delete();
+  }
 
-logoutUsuario(){
-  this.usuarioLogado = null;
-}
+  logoutUsuario() {
+    this.usuarioLogado = null;
+  }
 
 
 }

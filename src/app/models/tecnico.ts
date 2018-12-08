@@ -12,5 +12,13 @@ export class Tecnico {
 		}
 		return true
 	}
+
+	toDocument() {
+		return {
+			nome: this.nome,
+			cpf: this.cpf,
+			id: this.id
+		}
+	}
 }
 
