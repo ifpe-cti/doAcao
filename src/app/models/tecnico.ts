@@ -17,7 +17,7 @@ export class Tecnico {
 		return {
 			nome: this.nome,
 			cpf: this.cpf,
-			id: this.id
+
 		}
 	}
 }

@@ -8,7 +8,7 @@ export class AgendamentoDoacao {
 
 
 	validarAgendamentoDoacao() {
-		if (this.id == "" || this.id == "" || this.data == "" || this.cpfDoador == "") {
+		if (this.idDoador == ""  || this.data == "" || this.cpfDoador == "") {
 			return false
 		}
 		return true
@@ -17,7 +17,6 @@ export class AgendamentoDoacao {
 	toDocument() {
 		return {
 			idDoador: this.idDoador,
-			id: this.id,
 			data: this.data,
 			cpfDoador: this.cpfDoador
 		}

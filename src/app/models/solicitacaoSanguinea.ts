@@ -8,7 +8,7 @@ export class SolicitacaoSanguinea{
     id?: String;
    
    validarSolicitacaoSanguinea(){
-       if(this.nomeUsuario == "" || this.cpfUsuario == "" || this.tipoSanguineo == "" || this.id == ""){
+       if(this.nomeUsuario == "" || this.cpfUsuario == "" || this.tipoSanguineo == ""){
            return false
        }
        return true
@@ -19,7 +19,7 @@ export class SolicitacaoSanguinea{
            nomeUsuario: this.nomeUsuario,
            cpfUsuario: this.cpfUsuario,
            tipoSanguineo: this.tipoSanguineo, 
-           id: this.id
+
 
        }
    }

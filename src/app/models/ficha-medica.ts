@@ -33,7 +33,6 @@ export class FichaMedica {
     toDocument(){
         return{
             idDoador: this.idDoador,
-            id: this.id,
             cpfDoador: this.cpfDoador,
             hemoglobina: this.hemoglobina,
             pressaoArterial: this.pressaoArterial,

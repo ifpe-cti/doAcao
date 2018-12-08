@@ -4,7 +4,7 @@ export class Flebomista {
 	id?: String;
 
 	validarFlebomista() {
-		if (this.nome == "" || this.cpf == "" || this.id == "") {
+		if (this.nome == "" || this.cpf == "") {
 			return false
 		}
 		return true
@@ -13,7 +13,7 @@ export class Flebomista {
 		return {
 			nome: this.nome,
 			cpf: this.cpf, 
-			id: this.id
+
 		}
 	}
 } 
