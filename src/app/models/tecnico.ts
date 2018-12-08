@@ -7,7 +7,7 @@ export class Tecnico {
 
 
 	validarTecnico() {
-		if (this.nome == "" || this.cpf == "" || this.id == "") {
+		if (this.nome == "" || this.cpf == "") {
 			return false
 		}
 		return true

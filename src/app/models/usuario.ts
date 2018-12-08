@@ -2,7 +2,7 @@ export class Usuario {
 
 	nome: String;
 	user: String;
-	dataNascimento: Date;
+	dataNascimento: String;
 	senha: String;
 	tipoSanguineo: String;
 	tipoUsuario: String;
@@ -21,7 +21,7 @@ export class Usuario {
 	validarUsuario() {
 		if (this.nome == "" || this.user == "" || this.dataNascimento == null || this.senha == "" ||
 			this.tipoSanguineo == "" || this.tipoUsuario == "" || this.cpf == "" || this.nomePai == "" || this.nomeMae == "" ||
-			this.numeroDocumento == "" || this.tipoDocumento == "" || this.orgaoExpeditorDocumento == "" || this.id == "") {
+			this.numeroDocumento == "" || this.tipoDocumento == "" || this.orgaoExpeditorDocumento == "") {
 			return false;
 		}
 		return true;

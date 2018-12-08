@@ -18,10 +18,8 @@ export class AgendamentoDoacao {
 		return {
 			idDoador: this.idDoador,
 			id: this.id,
-			data: this.data, 
+			data: this.data,
 			cpfDoador: this.cpfDoador
 		}
-
-
 	}
 } 
