@@ -36,6 +36,7 @@ export class CadastroComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
+
   ngOnInit() {
 
     this.tiposSanguineos = [
