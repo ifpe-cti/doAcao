@@ -8,12 +8,11 @@ describe("Conjunto de testes do Técnico", () => {
 
 
 
-    it("Deve retornar verdadeiro, pois todos os dados do usuário sá válidos", () => {
+    it("Deve retornar verdadeiro, pois todos os dados do técnico são válidos", () => {
         let tecnico: Tecnico = new Tecnico();
 
-      tecnico.nome = "Kim Junmyeon"
-      tecnico.cpf = "123.456.789-10"
-      
+        tecnico.nome = "Kim Junmyeon"
+        tecnico.cpf = "123.456.789-10"
 
         expect(tecnico.validarTecnico()).toBeTruthy();
     })
