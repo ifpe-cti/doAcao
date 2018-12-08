@@ -8,7 +8,12 @@ export class Flebomista {
 			return false
 		}
 		return true
-
 	}
-
+	toDocument(){
+		return {
+			nome: this.nome,
+			cpf: this.cpf, 
+			id: this.id
+		}
+	}
 } 
