@@ -13,4 +13,15 @@ export class AgendamentoDoacao {
 		}
 		return true
 	}
+
+	toDocument() {
+		return {
+			idDoador: this.idDoador,
+			id: this.id,
+			data: this.data, 
+			cpfDoador: this.cpfDoador
+		}
+
+
+	}
 } 
