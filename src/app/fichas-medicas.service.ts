@@ -40,13 +40,13 @@ export class FichasMedicasService {
   }
   
   filtrarFichasMedicasPorCPF(cpf) {
-    return new Observable<String[]>(observer => {
+    return new Observable<FichaMedica[]>(observer => {
       this.listarTodos()
         .subscribe(meuObservable => {
           this.fichasMedicas = meuObservable as FichaMedica[]
           let fichasFiltradas: FichaMedica[] = []
           for (let i = 0; i < this.fichasMedicas.length; i++) {
-            if (this.fichasMedicas[i].cpfDoador.search(cpf) != -1) { // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 
+            if (this.fichasMedicas[i].cpfDoador == cpf) { 
               fichasFiltradas.push(this.fichasMedicas[i]);
             }
           }
