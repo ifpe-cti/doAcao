@@ -14,6 +14,8 @@ import { FichaMedica } from '../models/ficha-medica';
 export class VisualizacaoFichaMedicaIndividualComponent implements OnInit {
 
   fichasFiltradas: FichaMedica [] = [];
+  cols: any[];
+  
 
   constructor(private usuariosService: UsuariosService, private fichasMedicasService: FichasMedicasService) { }
 
@@ -21,5 +23,11 @@ export class VisualizacaoFichaMedicaIndividualComponent implements OnInit {
     this.fichasMedicasService.filtrarFichasMedicasPorCPF(this.usuariosService.usuarioLogado.cpf).subscribe(fichasFiltradas => {
       this.fichasFiltradas = fichasFiltradas;
     });
+
+    this.cols = [
+      { field: 'cpfDoador', header: 'CPF do Doador' },
+      { field: 'numeroDoTubo', header: 'Número do tubo' },
+    ];
+
   }
 }
