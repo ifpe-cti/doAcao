@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-import { InicialComponent } from './inicial/inicial.component'
 import { RequisicaoDoExameComponent } from './requisicao-do-exame/requisicao-do-exame.component';
 import { FichasMedicasComponent } from './fichas-medicas/fichas-medicas.component';
 import { AgendamentoDeDoacoesComponent } from './agendamento-de-doacoes/agendamento-de-doacoes.component';
@@ -69,27 +68,27 @@ import { VolumeDeSangueHemopeComponent } from './maisInformacoesHemope/volume-de
 
 //module
 
-import {ButtonModule} from 'primeng/primeng';
-import {EditorModule} from 'primeng/primeng'; 
-import {InputTextModule} from 'primeng/primeng';
-import {PasswordModule} from 'primeng/primeng';
-import {TabMenuModule, MenuItem} from 'primeng/primeng';
-import {DataListModule} from 'primeng/primeng';
-import {ScheduleModule} from 'primeng/primeng';
-import {CalendarModule} from 'primeng/primeng';
-import {CardModule} from 'primeng/card';
-import {DataTableModule,SharedModule} from 'primeng/primeng';
-import {GrowlModule} from 'primeng/primeng';
-import {DialogModule} from 'primeng/primeng';
-import {MessagesModule} from 'primeng/primeng';
-import {InputTextareaModule} from 'primeng/primeng';
-import {DropdownModule} from 'primeng/dropdown';
+import { ButtonModule } from 'primeng/primeng';
+import { EditorModule } from 'primeng/primeng';
+import { InputTextModule } from 'primeng/primeng';
+import { PasswordModule } from 'primeng/primeng';
+import { TabMenuModule, MenuItem } from 'primeng/primeng';
+import { DataListModule } from 'primeng/primeng';
+import { ScheduleModule } from 'primeng/primeng';
+import { CalendarModule } from 'primeng/primeng';
+import { CardModule } from 'primeng/card';
+import { DataTableModule, SharedModule } from 'primeng/primeng';
+import { GrowlModule } from 'primeng/primeng';
+import { DialogModule } from 'primeng/primeng';
+import { MessagesModule } from 'primeng/primeng';
+import { InputTextareaModule } from 'primeng/primeng';
+import { DropdownModule } from 'primeng/dropdown';
 import { ChartModule } from 'primeng/chart';
-import  { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { FormsModule } from '@angular/forms';
-import {TableModule} from 'primeng/table';
+import { TableModule } from 'primeng/table';
 
 //angularFire
 
@@ -119,7 +118,6 @@ import { VisualizacaoFichaMedicaIndividualComponent } from './visualizacao-ficha
     LoginComponent,
     DashboardComponent,
     CadastroComponent,
-    InicialComponent,
     RequisicaoDoExameComponent,
     FichasMedicasComponent,
     AgendamentoDeDoacoesComponent,
@@ -173,7 +171,7 @@ import { VisualizacaoFichaMedicaIndividualComponent } from './visualizacao-ficha
     TerceiroRequisitoHemopeComponent,
     TiposSanguineosHemopeComponent,
     VolumeDeSangueHemopeComponent,
-    VisualizacaoFichaMedicaIndividualComponent,   
+    VisualizacaoFichaMedicaIndividualComponent,
   ],
 
   imports: [
@@ -208,10 +206,10 @@ import { VisualizacaoFichaMedicaIndividualComponent } from './visualizacao-ficha
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFirestoreModule.enablePersistence(),
-  ], 
+  ],
 
-  providers: [AuthService, AuthGuard, UsuariosService, FichasMedicasService, AgendamentoDeDoacoesService, 
-              MenusService, TecnicoService, FlebomistaService],
+  providers: [AuthService, AuthGuard, UsuariosService, FichasMedicasService, AgendamentoDeDoacoesService,
+    MenusService, TecnicoService, FlebomistaService],
 
   bootstrap: [AppComponent]
 

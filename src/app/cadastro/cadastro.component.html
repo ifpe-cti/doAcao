@@ -1,8 +1,15 @@
-<img class= "header" src="assets/images/header.png">
+<div class="ui-g">
+    <div class="ui-g-12">
+        <img class="header" src="assets/images/header.png">
+    </div>
+</div>
+
 
 <body>
     <div class="ui-g">
-        <div class="ui-g-4"> <button pButton type="button" label="Voltar" (click)="voltarLogin()" class="ui-button-danger"></button></div>
+        <div class="ui-g-4">
+            <button pButton type="button" label="Voltar" (click)="voltarLogin()" class="ui-button-danger"></button>
+        </div>
         <div class="ui-g-4">
             <h3>Formulário de Cadastro</h3>
 
@@ -22,8 +29,8 @@
             <input type="text" placeholder="Nome do Pai" pInputText [(ngModel)]="usuario.nomePai" required/>
 
             <p></p>
-            <p-calendar [(ngModel)]="usuario.dataNascimento" placeholder="Data de Nascimento" [monthNavigator]="true"
-                [yearNavigator]="true" yearRange="1945:2000"></p-calendar>
+            <p-calendar [(ngModel)]="usuario.dataNascimento" placeholder="Data de Nascimento" [monthNavigator]="true" [yearNavigator]="true"
+                yearRange="1945:2000"></p-calendar>
 
             <p></p>
 
