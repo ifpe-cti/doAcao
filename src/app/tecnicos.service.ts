@@ -16,16 +16,14 @@ export class TecnicoService {
     this.tecnicoCollection = this.servicoFirebase.collection("tecnico");
   }
 
-  private tecnicoCollection: AngularFirestoreCollection<Tecnico>;
+  private tecnicoCollection: AngularFirestoreCollection<any>;
 
   cadastrarTecnicoFirebase(tecnico: Tecnico) {
-      this.tecnicoCollection.add(tecnico).then(
+      this.tecnicoCollection.add(tecnico.toDocument()).then(
       resultado => {
         tecnico.id = resultado.id;
       });
   }
-
- 
 
     listarTodos(): Observable<any[]> {
     let resultados: any[] = [];
@@ -62,7 +60,6 @@ export class TecnicoService {
     })
   }
 
-
   resgatarTecnicoPorCPF(cpf) {
     return new Observable<Tecnico[]>(observer => {
       this.listarTodos()
@@ -83,48 +80,11 @@ export class TecnicoService {
     })
   }
 
-  
-
   apagarTecnicoFirebase(tecnico): Promise<void> {
     return this.tecnicoCollection.doc(tecnico.id).delete();
   }
 
 
 
- /* constructor(private servicoFirebase: AngularFirestore) {
-    this.tecnicoCollection = this.servicoFirebase.collection("tecnico");
-  }
-
-  private tecnicoCollection: AngularFirestoreCollection<Tecnico>;
-  
  
-  cadastrarTecnicoFirebase(tecnico: Tecnico) {
-    this.tecnicoCollection.add(tecnico).then(
-      resultado => {
-        tecnico.id = resultado.id;
-      });
-  }
-
-  listarTodos(): Observable<any[]> {
-    let resultados: any[] = [];
-    let tecnicos = new Observable<any[]>(observer => {
-      this.tecnicoCollection.snapshotChanges().subscribe(result => {
-        result.map(documents => {
-          let id = documents.payload.doc.id;
-          let data = documents.payload.doc.data();
-          let document = { id: id, ...data };
-          resultados.push(document);
-        });
-        observer.next(resultados);
-        observer.complete();
-      });
-    });
-    return tecnicos;
-  }
-
-  apagarTecnicoFirebase(tecnico): Promise<void> {
-    return this.tecnicoCollection.doc(tecnico.id).delete();
-  }*/
-
-
 }

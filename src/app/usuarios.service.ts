@@ -14,20 +14,16 @@ export class UsuariosService {
   usuarioModel = new Usuario();
 
 
-  private usuarioCollection: AngularFirestoreCollection<Usuario>;
-  usuariosRef: AngularFirestoreCollection<Usuario>
-
+  private usuarioCollection: AngularFirestoreCollection<any>;
 
   constructor(private servicoFirebase: AngularFirestore) {
-
-    this.usuariosRef = this.servicoFirebase.collection<Usuario>('usuarios');
 
     this.usuarioCollection = this.servicoFirebase.collection('usuario')
 
   }
-
+  
   cadastrarUsuarioFirebase(usuario: Usuario) {
-    this.usuarioCollection.add(usuario).then(
+    this.usuarioCollection.add(usuario.toDocument()).then(
       resultado => {
         usuario.id = resultado.id;
       });

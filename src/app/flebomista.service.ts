@@ -18,10 +18,10 @@ export class FlebomistaService {
     this.flebomistaCollection = this.servicoFirebase.collection("flebomista");
   }
 
-  private flebomistaCollection: AngularFirestoreCollection<Flebomista>;
+  private flebomistaCollection: AngularFirestoreCollection<any>;
 
   cadastrarFlebomistaFirebase(flebomista: Flebomista) {
-      this.flebomistaCollection.add(flebomista).then(
+      this.flebomistaCollection.add(flebomista.toDocument()).then(
       resultado => {
         flebomista.id = resultado.id;
       });

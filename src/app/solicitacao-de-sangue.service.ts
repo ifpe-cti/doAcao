@@ -13,10 +13,10 @@ export class SolicitacaoDeSangueService {
     this.solicitacaoSangueCollection = this.servicoFirebase.collection("solicitacao-sanguinea");
   }
 
-  private solicitacaoSangueCollection: AngularFirestoreCollection<SolicitacaoSanguinea>;
+  private solicitacaoSangueCollection: AngularFirestoreCollection<any>;
 
   cadastrarSolicitacaoSanguineaFirebase(solicitacaoSangue: SolicitacaoSanguinea) {
-    this.solicitacaoSangueCollection.add(solicitacaoSangue).then(
+    this.solicitacaoSangueCollection.add(solicitacaoSangue.toDocument()).then(
       resultado => {
         solicitacaoSangue.id = resultado.id;
       });

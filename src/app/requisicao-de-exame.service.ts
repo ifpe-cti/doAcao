@@ -12,10 +12,10 @@ export class RequisicaoDeExameService {
     this.requisicaoDeExamesCollection = this.servicoFirebase.collection("requisicao-de-exames");
   }
 
-  private requisicaoDeExamesCollection: AngularFirestoreCollection<RequisicaoDeExames>;  
+  private requisicaoDeExamesCollection: AngularFirestoreCollection<any>;  
 
   cadastrarRequisicaoExamesFirebase(requisicao: RequisicaoDeExames) {
-    this.requisicaoDeExamesCollection.add(requisicao).then(
+    this.requisicaoDeExamesCollection.add(requisicao.toDocument()).then(
       resultado => {
         requisicao.id = resultado.id;
       });

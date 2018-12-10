@@ -14,10 +14,10 @@ export class FichasMedicasService {
 
   fichasMedicas: FichaMedica[];
 
-  private fichaMedicaCollection: AngularFirestoreCollection<FichaMedica>;
+  private fichaMedicaCollection: AngularFirestoreCollection<any>;
   
   adicionarFichaMedicaFirebase(fichaMedica: FichaMedica) {
-    this.fichaMedicaCollection.add(fichaMedica).then(
+    this.fichaMedicaCollection.add(fichaMedica.toDocument()).then(
       resultado => {
         fichaMedica.id = resultado.id;
       });

@@ -19,8 +19,6 @@ export class LoginComponent implements OnInit {
 
   msgs: Message[] = [];
 
-
-
   user = {
     email: '',
     password: ''
@@ -45,16 +43,6 @@ export class LoginComponent implements OnInit {
       .catch((err) => console.log(err));
   }
 
-  /*
-  signInWithEmail() {
-    this.authService.signInRegular(this.user.email, this.user.password)
-      .then((res) => {
-        console.log(res);
-        this.router.navigate(['dashboard']);
-      })
-      .catch((err) => console.log('error: ' + err));
-  }*/
-
   redirecionarCadastro() {
     this.router.navigate(['/cadastro']);
   }
@@ -77,13 +65,16 @@ export class LoginComponent implements OnInit {
           console.log(this.servicoUsuario.usuarioLogado.cpf)
 
           if (this.servicoUsuario.usuarioLogado.tipoUsuario == "hemocentro") {
-            this.router.navigate(['/dashboard-hemope']);
+          this.router.navigate(['/dashboard-hemope']);
           }
 
           if (this.servicoUsuario.usuarioLogado.tipoUsuario == "usuario") {
             this.router.navigate(['/dashboard']);
           }
         })
+
+        this.showSuccess();
+
       }
     });
   }
