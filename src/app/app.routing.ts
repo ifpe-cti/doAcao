@@ -5,7 +5,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-import { InicialComponent } from './inicial/inicial.component';
 import { RequisicaoDoExameComponent } from './requisicao-do-exame/requisicao-do-exame.component';
 import { FichasMedicasComponent } from './fichas-medicas/fichas-medicas.component';
 import { AgendamentoDeDoacoesComponent } from './agendamento-de-doacoes/agendamento-de-doacoes.component';
@@ -61,6 +60,7 @@ import { SangueDoadoHemopeComponent } from './maisInformacoesHemope/sangue-doado
 import { TerceiroRequisitoHemopeComponent } from './maisInformacoesHemope/terceiro-requisito-hemope/terceiro-requisito-hemope.component';
 import { TiposSanguineosHemopeComponent } from './maisInformacoesHemope/tipos-sanguineos-hemope/tipos-sanguineos-hemope.component';
 import { VolumeDeSangueHemopeComponent } from './maisInformacoesHemope/volume-de-sangue-hemope/volume-de-sangue-hemope.component';
+import { VisualizacaoFichaMedicaIndividualComponent } from './visualizacao-ficha-medica-individual/visualizacao-ficha-medica-individual.component';
 
 import { AuthGuard } from './auth-guard.service';
 
@@ -86,6 +86,9 @@ const APP_ROUTES: Routes = [
 { path: 'informacoes-sobre-doacao', component: InformacoesSobreDoacaoComponent},
 { path: 'listagem-flebomistas', component: ListagemFlebomistasComponent},
 { path: 'cadastro-flebomistas', component: CadastroFlebomistaComponent},
+
+
+{ path: 'fichas-medicas-individuais', component: VisualizacaoFichaMedicaIndividualComponent},
 { path: 'impedimentos', component: ImpedimentosComponent},
 { path: 'quem-nao-pode-doar', component: QuemNaoPodeDoarComponent},
 { path: 'terceiro-requisito', component: TerceiroRequisitoComponent},

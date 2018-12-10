@@ -27,7 +27,6 @@ export class UsuariosService {
   }
 
   cadastrarUsuarioFirebase(usuario: Usuario) {
-
     this.usuarioCollection.add(usuario).then(
       resultado => {
         usuario.id = resultado.id;
