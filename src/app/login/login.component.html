@@ -22,7 +22,7 @@
                         <label for="float-input">Senha</label>
                 </span>
                 <p></p>
-                <button pButton type="button" label="Login" (click)="loginUsuario()" class="ui-button-danger"></button>
+                <button pButton [disabled]="!userUsuario || !senhaUsuario" type="button" label="Login" (click)="loginUsuario()" class="ui-button-danger"></button>
                 <p></p>
                 Ainda não possui uma conta?
                 <p></p>

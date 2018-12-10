@@ -1,46 +1,51 @@
 <body>
 
   <p-megaMenu [model]="items"></p-megaMenu>
-    
+
 
   <div class="ui-g">
-      <div class="ui-g-4"></div>
-      <div class="ui-g-4">
-          <p-autoComplete [(ngModel)]="cpf" placeholder="Buscar por CPF" 
-          [suggestions]="results" (completeMethod)="search($event)"> </p-autoComplete> 
-          
-          <button pButton type="button" label="Buscar por CPF" (click) = "buscarPorCPF()"
-        class="ui-button"></button> 
-        
-      </div>
-      <div class="ui-g-4"></div>
-    </div>
+    <div class="ui-g-4"></div>
+    <div class="ui-g-4">
+      <p-autoComplete [(ngModel)]="cpf" placeholder="Buscar por CPF" [suggestions]="results" (completeMethod)="search($event)">
+      </p-autoComplete>
 
-<div class="ui-g">
-    <div class="ui-g-4"><span class="ui-float-label">
-        <input id="float-input" [(ngModel)] = "nomeUsuarioResgatadoPorCPF" type="text" size="40" pInputText> 
+      <button pButton type="button" label="Buscar por CPF" (click)="buscarPorCPF()" class="ui-button"></button>
+
+    </div>
+    <div class="ui-g-4"></div>
+  </div>
+
+  <div class="ui-g">
+    <div class="ui-g-4">
+      <span class="ui-float-label">
+        <input id="float-input" [(ngModel)]="nomeUsuarioResgatadoPorCPF" type="text" size="40" pInputText>
         <label for="float-input">Nome Completo</label>
-    </span></div>
-    <div class="ui-g-4"><span class="ui-float-label">
-        <input id="float-input" [(ngModel)] = "CPFUsuarioResgatadoPorCPF" type="text" size="40" pInputText> 
+      </span>
+    </div>
+    <div class="ui-g-4">
+      <span class="ui-float-label">
+        <input id="float-input" [(ngModel)]="CPFUsuarioResgatadoPorCPF" type="text" size="40" pInputText>
         <label for="float-input">CPF</label>
-    </span></div>
-    <div class="ui-g-4"><span class="ui-float-label">
-        <input id="float-input" [(ngModel)] = "numeroDocumentoUsuarioResgatadoPorCPF" type="text" size="40" pInputText> 
+      </span>
+    </div>
+    <div class="ui-g-4">
+      <span class="ui-float-label">
+        <input id="float-input" [(ngModel)]="numeroDocumentoUsuarioResgatadoPorCPF" type="text" size="40" pInputText>
         <label for="float-input">Número do Documento</label>
-    </span></div>
-</div>
+      </span>
+    </div>
+  </div>
 
 
   <div class="ui-g">
     <div class="ui-g-4"></div>
-    <div class="ui-g-4">  
-        <p-calendar id="data" dateFormat="dd.mm.yy" [(ngModel)]="agendamentoDoacao.data"></p-calendar>
+    <div class="ui-g-4">
+      <p-calendar id="data" dateFormat="dd.mm.yy" [(ngModel)]="agendamentoDoacao.data"></p-calendar>
     </div>
     <div class="ui-g-4"></div>
   </div>
 
-  
+
   <div class="ui-g">
     <div class="ui-g-4"></div>
     <div class="ui-g-4">
@@ -53,7 +58,7 @@
   <div class="ui-g">
     <div class="ui-g-4"></div>
     <div class="ui-g-4">
-      <p-button (onClick)="agendarDoacao()" label="Agendar"></p-button>
+      <p-button class="ui-button-danger" [disabled]="!cpf || !agendamentoDoacao.data" (onClick)="agendarDoacao()" label="Agendar"></p-button>
     </div>
     <div class="ui-g-4"></div>
   </div>
