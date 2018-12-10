@@ -14,7 +14,7 @@
             <h3>Formulário de Cadastro</h3>
 
             <p></p>
-            <input type="text" placeholder="Nome" pInputText [(ngModel)]="usuario.nome" required/>
+            <input type="text" placeholder="Nome Completo" [(ngModel)]="usuario.nome" pInputText pKeyFilter="alpha" required/>
 
             <p></p>
             <input type="text" pInputText placeholder="User" [pKeyFilter]="blockSpace" [(ngModel)]="usuario.user" required/>
@@ -23,14 +23,13 @@
             <input type="text" placeholder="CPF" pInputText [(ngModel)]="usuario.cpf" required/>
 
             <p></p>
-            <input type="text" placeholder="Nome da Mãe" pInputText [(ngModel)]="usuario.nomeMae" required/>
+            <input type="text" placeholder="Nome da Mãe" [(ngModel)]="usuario.nomeMae" pInputText pKeyFilter="alpha" required/>
 
             <p></p>
-            <input type="text" placeholder="Nome do Pai" pInputText [(ngModel)]="usuario.nomePai" required/>
+            <input type="text" placeholder="Nome do Pai" [(ngModel)]="usuario.nomePai" pInputText pKeyFilter="alpha" required/>
 
             <p></p>
-            <p-calendar [(ngModel)]="usuario.dataNascimento" placeholder="Data de Nascimento" [monthNavigator]="true" [yearNavigator]="true"
-                yearRange="1945:2000"></p-calendar>
+            <p-inputMask mask="99/99/9999" [(ngModel)]="usuario.dataNascimento" placeholder="Data de Nascimento" slotChar="dd/mm/aaaa"></p-inputMask>
 
             <p></p>
 
@@ -55,9 +54,7 @@
 
             <button pButton [disabled]="!usuario.nome || !usuario.user || !usuario.cpf || !usuario.nomeMae || !usuario.nomePai 
             || !usuario.dataNascimento || !usuario.senha || !usuario.tipoSanguineo || !usuario.numeroDocumento || !usuario.tipoDocumento
-            || !usuario.orgaoExpeditorDocumento" 
-            type="button" label="Enviar dados" (click)="cadastroUsuario()" 
-            class="ui-button-danger"></button>
+            || !usuario.orgaoExpeditorDocumento" type="button" label="Enviar dados" (click)="cadastroUsuario()" class="ui-button-danger"></button>
 
 
 

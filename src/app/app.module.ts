@@ -90,6 +90,7 @@ import { MegaMenuModule } from 'primeng/megamenu';
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import {KeyFilterModule} from 'primeng/keyfilter';
+import {InputMaskModule} from 'primeng/inputmask';
 
 
 //angularFire
@@ -204,7 +205,7 @@ import { VisualizacaoFichaMedicaIndividualComponent } from './visualizacao-ficha
     MegaMenuModule,
     TableModule,
     KeyFilterModule,
-
+    InputMaskModule,
 
     AngularFireModule.initializeApp(FirebaseConfig),
     //AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
