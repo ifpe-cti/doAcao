@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Usuario } from './models/usuario';
+
 import { AngularFirestore, AngularFirestoreCollection } from "angularfire2/firestore";
 
 import { Observable } from 'rxjs';
+import { MessagesService } from './messages.service';
+
 
 
 @Injectable()
@@ -13,31 +16,39 @@ export class UsuariosService {
 
   usuarioModel = new Usuario();
 
-
   private usuarioCollection: AngularFirestoreCollection<any>;
 
-  constructor(private servicoFirebase: AngularFirestore) {
+  constructor(private servicoFirebase: AngularFirestore,
+    private messagesService: MessagesService) {
 
     this.usuarioCollection = this.servicoFirebase.collection('usuario')
-
   }
 
-  salvar(usuario: Usuario): Promise<void>{
-    return new Promise<void>((resolve, reject) => { 
+  /**
+   * salvar(usuario: Usuario): Promise<void> {
+    return new Promise<void>((resolve, reject) => {
       this.usuarioCollection.add(usuario.toDocument()).then(
         resultado => {
           usuario.id = resultado.id;
           resolve();
-        }).catch((error) => reject(error))
-  });
-}
+        }).catch((error) => {
+          this.messagesService.showErrorCadastro();
+          return Observable.throw(error);
+        });
+    });
+  }
+   * 
+   */
 
+  
   cadastrarUsuarioFirebase(usuario: Usuario) {
     this.usuarioCollection.add(usuario.toDocument()).then(
       resultado => {
         usuario.id = resultado.id;
+        this.messagesService.showSuccessCadastro();
       });
   }
+
 
   loginUsuario(user: String, senha: String): Observable<any> {
     let usuario = new Observable<any>(observer => {
@@ -57,7 +68,7 @@ export class UsuariosService {
     });
     return usuario;
   }
- 
+
   // verifica se já outro usuário com o mesmo user 
   verificaUsuario(user: String) {
     return new Observable<boolean>(observer => {

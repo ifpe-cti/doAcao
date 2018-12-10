@@ -20,6 +20,7 @@ export class CadastroComponent implements OnInit {
 
   usuario: Usuario;
   tipoSanguineoSelecionado: String;
+  blockSpace: RegExp = /[^\s]/; 
 
 
 

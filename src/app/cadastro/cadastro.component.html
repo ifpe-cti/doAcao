@@ -17,7 +17,7 @@
             <input type="text" placeholder="Nome" pInputText [(ngModel)]="usuario.nome" required/>
 
             <p></p>
-            <input type="text" placeholder="Usuário" pInputText [(ngModel)]="usuario.user" required/>
+            <input type="text" pInputText placeholder="User" [pKeyFilter]="blockSpace" [(ngModel)]="usuario.user" required/>
 
             <p></p>
             <input type="text" placeholder="CPF" pInputText [(ngModel)]="usuario.cpf" required/>
@@ -58,6 +58,9 @@
             || !usuario.orgaoExpeditorDocumento" 
             type="button" label="Enviar dados" (click)="cadastroUsuario()" 
             class="ui-button-danger"></button>
+
+
+
 
         </div>
         <div class="ui-g-4"></div>

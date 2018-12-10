@@ -89,6 +89,8 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
+import {KeyFilterModule} from 'primeng/keyfilter';
+
 
 //angularFire
 
@@ -101,6 +103,7 @@ import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore
 
 //service
 import { AuthService } from './auth.service';
+import { MessagesService } from './messages.service';
 import { AuthGuard } from './auth-guard.service';
 import { UsuariosService } from './usuarios.service';
 import { FichasMedicasService } from './fichas-medicas.service';
@@ -172,6 +175,7 @@ import { VisualizacaoFichaMedicaIndividualComponent } from './visualizacao-ficha
     TiposSanguineosHemopeComponent,
     VolumeDeSangueHemopeComponent,
     VisualizacaoFichaMedicaIndividualComponent,
+    
   ],
 
   imports: [
@@ -199,6 +203,7 @@ import { VisualizacaoFichaMedicaIndividualComponent } from './visualizacao-ficha
     AutoCompleteModule,
     MegaMenuModule,
     TableModule,
+    KeyFilterModule,
 
 
     AngularFireModule.initializeApp(FirebaseConfig),
@@ -209,7 +214,7 @@ import { VisualizacaoFichaMedicaIndividualComponent } from './visualizacao-ficha
   ],
 
   providers: [AuthService, AuthGuard, UsuariosService, FichasMedicasService, AgendamentoDeDoacoesService,
-    MenusService, TecnicoService, FlebomistaService],
+    MenusService, TecnicoService, FlebomistaService, MessagesService],
 
   bootstrap: [AppComponent]
 
