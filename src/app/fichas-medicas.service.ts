@@ -8,14 +8,14 @@ import {Observable} from 'rxjs/Observable';
 })
 export class FichasMedicasService {
 
+  private fichaMedicaCollection: AngularFirestoreCollection<any>;
+
   constructor(private servicoFirebase: AngularFirestore) {
-    this.fichaMedicaCollection = this.servicoFirebase.collection("fichas-medicas");
+    this.fichaMedicaCollection = this.servicoFirebase.collection('fichas-medicas');
   }
 
   fichasMedicas: FichaMedica[];
 
-  private fichaMedicaCollection: AngularFirestoreCollection<any>;
-  
   adicionarFichaMedicaFirebase(fichaMedica: FichaMedica) {
     this.fichaMedicaCollection.add(fichaMedica.toDocument()).then(
       resultado => {

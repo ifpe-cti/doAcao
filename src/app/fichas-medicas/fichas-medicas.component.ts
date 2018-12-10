@@ -64,7 +64,8 @@ export class FichasMedicasComponent implements OnInit {
     }
   }
 
-  buscarPorNome() {
+  /**
+   *  buscarPorNome() {
     this.flebomistaService.listarTodos().subscribe(flebomistas =>
       this.flebomistas = flebomistas as Flebomista[]);
     for (let i = 0; i < this.flebomistas.length; i++) {
@@ -75,8 +76,11 @@ export class FichasMedicasComponent implements OnInit {
       }
     }
   }
+   */
 
-   adicionarFichaMedica() {
+ 
+
+   adicionarFichaMedica() {  
     this.servicoFichaMedica.adicionarFichaMedicaFirebase(this.fichaMedica);
     this.router.navigate(['dashboard-hemope']);
   }

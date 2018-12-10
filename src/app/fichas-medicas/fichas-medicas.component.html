@@ -75,9 +75,8 @@
 
 <div class="ui-g">
         <div class="ui-g-4"></div>
-        <div class="ui-g-4"> <p-autoComplete [(ngModel)]="nomeFlebomista" placeholder="Nome do flebomista" 
+        <div class="ui-g-4"> <p-autoComplete [(ngModel)]="fichaMedica.nomeFlebomista" placeholder="Nome do flebomista" 
             [suggestions]="resultsFlebomista" (completeMethod)="searchFleb($event)"> </p-autoComplete> 
-            <button pButton type="button" label="Buscar por nome" (click) = "buscarPorCPF()" class="ui-button"></button>
         </div>
         <div class="ui-g-4"></div>
     </div>
@@ -94,9 +93,7 @@
         <div class="ui-g-12 ui-md-6 ui-lg-3">
                 <button pButton type="button" label="Confirmar Dados" 
                 (click) = "adicionarFichaMedica()" 
-                [disabled]="!fichaMedica.cpfDoador || !fichaMedica.hemoglobina || !fichaMedica.pressaoArterial || !fichaMedica.temperatura ||
-                !fichaMedica.peso || !fichaMedica.altura || !fichaMedica.pulso || !fichaMedica.bracoPunsionado || !fichaMedica.reacoesAdversas || 
-                !fichaMedica.nomeFlebomista || !fichaMedica.tipoDeDoacao || !fichaMedica.numeroDoTubo ||!fichaMedica.volumeDoSangue"  
+                [disabled]="!fichaMedica.cpfDoador"  
                 class="ui-button-danger"></button>
            
     </div>

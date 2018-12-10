@@ -13,7 +13,6 @@ export class FichaMedica {
     pulso: String
     bracoPunsionado: String;
     reacoesAdversas: String;
-    idFlebomista: String;
     nomeFlebomista: String;
     tipoDeDoacao: String;
     numeroDoTubo: String;
@@ -22,7 +21,7 @@ export class FichaMedica {
     validarFichaMedica() {
         if (this.idDoador == "" || this.id == "" || this.cpfDoador == "" || this.hemoglobina == "" || this.pressaoArterial == "" ||
             this.temperatura == "" || this.peso == "" || this.altura == "" || this.bracoPunsionado == "" || this.reacoesAdversas == "" ||
-            this.idFlebomista == "" || this.nomeFlebomista == "" || this.tipoDeDoacao == "" || this.numeroDoTubo == "" 
+            this.nomeFlebomista == "" || this.tipoDeDoacao == "" || this.numeroDoTubo == "" 
             || this.volumeDoSangue == "") {
                 return false
         }
@@ -41,7 +40,6 @@ export class FichaMedica {
             altura: this.altura,
             bracoPunsionado: this.bracoPunsionado, 
             reacoesAdversas: this.reacoesAdversas, 
-            idFlebomista: this.idFlebomista,
             nomeFlebomista: this.nomeFlebomista,
             tipoDeDoacao: this.tipoDeDoacao,
             numeroDoTubo: this.numeroDoTubo,

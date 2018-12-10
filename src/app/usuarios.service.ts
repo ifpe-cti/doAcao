@@ -14,9 +14,7 @@ export class UsuariosService {
   usuarioLogado: Usuario;
   todosOsUsuarios: Usuario[];
 
-  usuarioModel = new Usuario();
-
-  private usuarioCollection: AngularFirestoreCollection<any>;
+   private usuarioCollection: AngularFirestoreCollection<any>;
 
   constructor(private servicoFirebase: AngularFirestore,
     private messagesService: MessagesService) {
