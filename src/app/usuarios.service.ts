@@ -22,6 +22,16 @@ export class UsuariosService {
 
   }
 
+  salvar(usuario: Usuario): Promise<void>{
+    return new Promise<void>((resolve, reject) => { 
+      this.usuarioCollection.add(usuario.toDocument()).then(
+        resultado => {
+          usuario.id = resultado.id;
+          resolve();
+        }).catch((error) => reject(error))
+  });
+}
+
   cadastrarUsuarioFirebase(usuario: Usuario) {
     this.usuarioCollection.add(usuario.toDocument()).then(
       resultado => {

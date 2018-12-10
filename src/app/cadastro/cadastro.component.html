@@ -53,7 +53,11 @@
             <p-dropdown [options]="orgaosExpeditores" [(ngModel)]="usuario.orgaoExpeditorDocumento"></p-dropdown>
             <p></p>
 
-            <button pButton type="button" label="Enviar dados" (click)="cadastroUsuario()" class="ui-button-danger"></button>
+            <button pButton [disabled]="!usuario.nome || !usuario.user || !usuario.cpf || !usuario.nomeMae || !usuario.nomePai 
+            || !usuario.dataNascimento || !usuario.senha || !usuario.tipoSanguineo || !usuario.numeroDocumento || !usuario.tipoDocumento
+            || !usuario.orgaoExpeditorDocumento" 
+            type="button" label="Enviar dados" (click)="cadastroUsuario()" 
+            class="ui-button-danger"></button>
 
         </div>
         <div class="ui-g-4"></div>

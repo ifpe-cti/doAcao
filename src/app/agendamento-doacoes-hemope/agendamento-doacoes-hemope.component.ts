@@ -31,12 +31,10 @@ export class AgendamentoDoacoesHemopeComponent implements OnInit {
     private router: Router, private servicoUsuario: UsuariosService,
     private menusService: MenusService) {
 
-    this.agendamentoDoacao = new AgendamentoDoacao()
+    this.agendamentoDoacao = new AgendamentoDoacao();
   }
 
-  // INSERIR CAMPOS DE CONFIRMAÇÃO DE INFORMAÇÕES COM BUSCA DE CPF
-
-  agendarDoacao() {
+    agendarDoacao() {
     this.AgendamentoDeDoacoesService.adicionarAgendamentoDeDoacao(this.agendamentoDoacao);
     this.router.navigate(['dashboard-hemope']);
   }
