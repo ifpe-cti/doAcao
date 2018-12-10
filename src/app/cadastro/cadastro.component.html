@@ -14,7 +14,7 @@
             <h3>Formulário de Cadastro</h3>
 
             <p></p>
-            <input type="text" placeholder="Nome Completo" [(ngModel)]="usuario.nome" pInputText pKeyFilter="alpha" required/>
+            <input type="text" placeholder="Nome Completo" [(ngModel)]="usuario.nome" pInputText required/>
 
             <p></p>
             <input type="text" pInputText placeholder="User" [pKeyFilter]="blockSpace" [(ngModel)]="usuario.user" required/>
@@ -23,10 +23,10 @@
             <input type="text" placeholder="CPF" pInputText [(ngModel)]="usuario.cpf" required/>
 
             <p></p>
-            <input type="text" placeholder="Nome da Mãe" [(ngModel)]="usuario.nomeMae" pInputText pKeyFilter="alpha" required/>
+            <input type="text" placeholder="Nome da Mãe" [(ngModel)]="usuario.nomeMae" pInputText required/>
 
             <p></p>
-            <input type="text" placeholder="Nome do Pai" [(ngModel)]="usuario.nomePai" pInputText pKeyFilter="alpha" required/>
+            <input type="text" placeholder="Nome do Pai" [(ngModel)]="usuario.nomePai" pInputText required/>
 
             <p></p>
             <p-inputMask mask="99/99/9999" [(ngModel)]="usuario.dataNascimento" placeholder="Data de Nascimento" slotChar="dd/mm/aaaa"></p-inputMask>

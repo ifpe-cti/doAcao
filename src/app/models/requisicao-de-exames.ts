@@ -16,7 +16,7 @@ export class RequisicaoDeExames {
     etiquetaDaAmostra: String;
 
     validacaoRequisicaoExame() {
-        if (this.idDoador == ""  || this.numeroDocumentoDoador == "" || this.tipoDocumentoDoador == ""
+        if (this.idDoador == "" || this.numeroDocumentoDoador == "" || this.tipoDocumentoDoador == ""
             || this.orgaoExpeditorDoador == "" || this.nomeMaeDoador == "" || this.nomePaiDoador == "" || this.tecnicoResponsavel == ""
             || this.etiquetaDaAmostra == "") {
             return false
@@ -24,14 +24,14 @@ export class RequisicaoDeExames {
         return true
     }
 
-    toDocument(){
+    toDocument() {
         return {
             idDoador: this.idDoador,
-            numeroDocumentoDoador: this.numeroDocumentoDoador, 
+            numeroDocumentoDoador: this.numeroDocumentoDoador,
             tipoDocumentoDoador: this.tipoDocumentoDoador,
             orgaoExpeditorDoador: this.orgaoExpeditorDoador,
             nomeMaeDoador: this.nomeMaeDoador,
-            nomePaiDoador: this.nomePaiDoador, 
+            nomePaiDoador: this.nomePaiDoador,
             tecnicoResponsavel: this.tecnicoResponsavel,
             etiquetaDaAmostra: this.etiquetaDaAmostra
         }

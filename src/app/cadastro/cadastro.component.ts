@@ -3,6 +3,8 @@ import { Usuario } from '../models/usuario';
 import { UsuariosService } from '../usuarios.service';
 import { Router } from '@angular/router';
 import { SelectItem } from 'primeng/api';
+import { Observable } from '../../../node_modules/rxjs';
+import { MessagesService } from './../messages.service';
 
 
 @Component({
@@ -20,11 +22,12 @@ export class CadastroComponent implements OnInit {
 
   usuario: Usuario;
   tipoSanguineoSelecionado: String;
-  blockSpace: RegExp = /[^\s]/; 
+  blockSpace: RegExp = /[^\s]/;
 
 
 
-  constructor(private servicoUsuario: UsuariosService, private router: Router) {
+  constructor(private servicoUsuario: UsuariosService, private router: Router,
+    private messagesService: MessagesService) {
     this.usuario = new Usuario();
   }
 
@@ -33,10 +36,19 @@ export class CadastroComponent implements OnInit {
   }
 
   cadastroUsuario() {
-    this.servicoUsuario.cadastrarUsuarioFirebase(this.usuario);
-    this.router.navigate(['/login']);
-  }
+    let verificaUser: boolean;
 
+    this.servicoUsuario.verificaUsuario(this.usuario.user).subscribe(verificacao => {
+      verificaUser = verificacao as boolean;
+    });
+
+    if (verificaUser = false) {
+      this.messagesService.showErrorCadastro();
+    } else {
+      this.servicoUsuario.cadastrarUsuarioFirebase(this.usuario);
+      this.router.navigate(['/login']);
+    }
+  }
 
   ngOnInit() {
 

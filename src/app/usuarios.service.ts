@@ -23,24 +23,7 @@ export class UsuariosService {
 
     this.usuarioCollection = this.servicoFirebase.collection('usuario')
   }
-
-  /**
-   * salvar(usuario: Usuario): Promise<void> {
-    return new Promise<void>((resolve, reject) => {
-      this.usuarioCollection.add(usuario.toDocument()).then(
-        resultado => {
-          usuario.id = resultado.id;
-          resolve();
-        }).catch((error) => {
-          this.messagesService.showErrorCadastro();
-          return Observable.throw(error);
-        });
-    });
-  }
-   * 
-   */
-
-  
+ 
   cadastrarUsuarioFirebase(usuario: Usuario) {
     this.usuarioCollection.add(usuario.toDocument()).then(
       resultado => {
@@ -79,6 +62,7 @@ export class UsuariosService {
           for (let i = 0; i < this.todosOsUsuarios.length; i++) {
             if (this.todosOsUsuarios[i].user == user) {
               userLiberado = false;
+              break;
             }
           }
           return userLiberado

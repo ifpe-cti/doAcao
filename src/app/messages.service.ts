@@ -28,7 +28,7 @@ export class MessagesService {
 
   showSuccessCadastro() {
     this.msgs = [];
-    this.msgs.push({ severity: 'success', summary: 'Cadastro efetuado com sucesso' });
+    this.msgs.push({ severity: 'success', summary: 'User já cadastrado. Tente outro' });
   }
 
 }
