@@ -13,10 +13,10 @@ export class AgendamentoDeDoacoesService {
     this.agendamentosDoacoesCollection = this.servicoFirebase.collection("agendamento-de-doacoes");
   }
 
-  private agendamentosDoacoesCollection: AngularFirestoreCollection<AgendamentoDoacao>;
+  private agendamentosDoacoesCollection: AngularFirestoreCollection<any>;
 
   adicionarAgendamentoDeDoacao(agendamento: AgendamentoDoacao) {
-    this.agendamentosDoacoesCollection.add(agendamento).then(
+    this.agendamentosDoacoesCollection.add(agendamento.toDocument()).then(
       resultado => {
         agendamento.id = resultado.id;
       });
