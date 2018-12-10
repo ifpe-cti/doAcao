@@ -6,8 +6,6 @@ import { Message } from 'primeng/components/common/api';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
-
-
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
@@ -19,6 +17,8 @@ export class LoginComponent implements OnInit {
   userUsuario: String;
   senhaUsuario: String;
 
+  msgs: Message[] = [];
+
 
 
   user = {
@@ -27,6 +27,15 @@ export class LoginComponent implements OnInit {
   };
 
   constructor(private servicoUsuario: UsuariosService, private router: Router, private authService: AuthService) { }
+
+  showSuccess() {
+    this.msgs = [];
+    this.msgs.push({ severity: 'success', summary: 'Login efetuado com sucesso' });
+  }
+  showError() {
+    this.msgs = [];
+    this.msgs.push({ severity: 'error', summary: 'User ou senha incorretos', detail: 'Os dados digitados não estão cadastrados no banco de dados ou não condizem' });
+  }
 
   signInWithGoogle() {
     this.authService.signInWithGoogle()
@@ -59,11 +68,11 @@ export class LoginComponent implements OnInit {
     senha = this.senhaUsuario;
     this.servicoUsuario.loginUsuario(user, senha).subscribe(usuario => {
       if (usuario == null) {
-        alert("Usuário não cadastrado no banco.")
+        this.showError();
       } else {
 
         this.servicoUsuario.loginUsuario(user, senha).subscribe(meuObservable => {
-          this.servicoUsuario.usuarioLogado = meuObservable as Usuario
+          this.servicoUsuario.usuarioLogado = meuObservable as Usuario;
 
           console.log(this.servicoUsuario.usuarioLogado.cpf)
 
