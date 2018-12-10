@@ -36,6 +36,7 @@ export class FichasMedicasService {
         observer.next(resultados);
         observer.complete();
       }); });
+
     return fichasMedicas;
   }
   
@@ -44,18 +45,20 @@ export class FichasMedicasService {
       this.listarTodos()
         .subscribe(meuObservable => {
           this.fichasMedicas = meuObservable as FichaMedica[]
-          let fichasFiltradas: FichaMedica[] = []
+          let fichasFiltradas: any[] = [];
+
           for (let i = 0; i < this.fichasMedicas.length; i++) {
             if (this.fichasMedicas[i].cpfDoador == cpf) { 
               fichasFiltradas.push(this.fichasMedicas[i]);
             }
           }
-
-          observer.next();
+          observer.next(fichasFiltradas);
           observer.complete();
-        }
-        );
-    })
+          
+          return fichasFiltradas;
+        });
+    });
+
   }
 
   apagarFichaMedicaFirebase(fichaMedica): Promise<void> {

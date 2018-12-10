@@ -50,11 +50,11 @@ export class VisualizacaoAgendamentosComponent implements OnInit {
 
   onRowSelect(event) {
     this.newAgendamento = false;
-    this.agendamento = this.cloneUsuario(event.data);
+    this.agendamento = this.cloneAgendamento(event.data);
     this.displayDialog = true;
   }
 
-  cloneUsuario(a: AgendamentoDoacao): AgendamentoDoacao {
+  cloneAgendamento(a: AgendamentoDoacao): AgendamentoDoacao {
     let agendamento: AgendamentoDoacao = new AgendamentoDoacao()
     for (let prop in a) {
       agendamento[prop] = a[prop];
