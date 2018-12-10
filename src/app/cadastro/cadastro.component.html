@@ -22,6 +22,8 @@
             <p></p>
             <input type="text" placeholder="CPF" pInputText [(ngModel)]="usuario.cpf" required/>
 
+            <p-inputMask mask="___.___.___-__" [(ngModel)]="usuario.cpf" placeholder="CPF"></p-inputMask>
+
             <p></p>
             <input type="text" placeholder="Nome da Mãe" [(ngModel)]="usuario.nomeMae" pInputText pKeyFilter="alpha" required/>
 
@@ -42,7 +44,7 @@
             <p></p>
 
             <p></p>
-            <input type="text" placeholder="Número de Documento" pInputText [(ngModel)]="usuario.numeroDocumento" required/>
+            <input type="text" placeholder="Número de Documento" pInputText [(ngModel)]="usuario.numeroDocumento" pKeyFilter="num" required/>
 
             <p></p>
             <p-dropdown [options]="tiposDocumento" [(ngModel)]="usuario.tipoDocumento"></p-dropdown>
