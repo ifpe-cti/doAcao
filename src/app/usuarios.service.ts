@@ -21,7 +21,7 @@ export class UsuariosService {
     this.usuarioCollection = this.servicoFirebase.collection('usuario')
 
   }
-  
+
   cadastrarUsuarioFirebase(usuario: Usuario) {
     this.usuarioCollection.add(usuario.toDocument()).then(
       resultado => {
@@ -46,6 +46,24 @@ export class UsuariosService {
       });
     });
     return usuario;
+  }
+ 
+  // verifica se já outro usuário com o mesmo user 
+  verificaUsuario(user: String) {
+    return new Observable<boolean>(observer => {
+      this.listarTodos()
+        .subscribe(meuObservable => {
+          this.todosOsUsuarios = meuObservable as Usuario[]
+          let userLiberado: boolean = true;
+          for (let i = 0; i < this.todosOsUsuarios.length; i++) {
+            if (this.todosOsUsuarios[i].user == user) {
+              userLiberado = false;
+            }
+          }
+          return userLiberado
+        }
+        );
+    })
   }
 
   listarTodos(): Observable<any[]> {

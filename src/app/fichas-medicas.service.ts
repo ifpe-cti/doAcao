@@ -58,7 +58,6 @@ export class FichasMedicasService {
     })
   }
 
-
   apagarFichaMedicaFirebase(fichaMedica): Promise<void> {
     return this.fichaMedicaCollection.doc(fichaMedica.id).delete();
   }
