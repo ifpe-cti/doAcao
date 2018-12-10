@@ -12,7 +12,8 @@
             <input type="text" placeholder="CPF" pInputText [(ngModel)]="flebomista.cpf" required/>
             <p></p>
 
-            <button pButton type="button" label="Enviar dados" (click)="cadastrarFlebomista()" class="ui-button-danger"></button>
+            <button pButton type="button" label="Enviar dados" [disabled]="!flebomista.nome || !flebomista.cpf" 
+            (click)="cadastrarFlebomista()" class="ui-button-danger"></button>
         </div>
         <div class="ui-g-4"></div>
     </div>

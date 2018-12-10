@@ -19,7 +19,7 @@
   <div class="ui-g">
     <div class="ui-g-4"></div>
     <div class="ui-g-4">
-      <p-button (onClick)="agendarDoacao()" label="Agendar"></p-button>
+      <p-button (onClick)="agendarDoacao()" [disabled]="!agendamentoDoacao.data" label="Agendar"></p-button>
     </div>
     <div class="ui-g-4"></div>
   </div>
