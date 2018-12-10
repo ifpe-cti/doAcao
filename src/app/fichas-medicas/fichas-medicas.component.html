@@ -93,7 +93,11 @@
             <input type="text" pInputText placeholder="Volume do Sangue" [(ngModel)] = "fichaMedica.volumeDoSangue"/></div>
         <div class="ui-g-12 ui-md-6 ui-lg-3">
                 <button pButton type="button" label="Confirmar Dados" 
-                (click) = "adicionarFichaMedica()"  class="ui-button-danger"></button>
+                (click) = "adicionarFichaMedica()" 
+                [disabled]="!fichaMedica.cpfDoador || !fichaMedica.hemoglobina || !fichaMedica.pressaoArterial || !fichaMedica.temperatura ||
+                !fichaMedica.peso || !fichaMedica.altura || !fichaMedica.pulso || !fichaMedica.bracoPunsionado || !fichaMedica.reacoesAdversas || 
+                !fichaMedica.nomeFlebomista || !fichaMedica.tipoDeDoacao || !fichaMedica.numeroDoTubo ||!fichaMedica.volumeDoSangue"  
+                class="ui-button-danger"></button>
            
     </div>
 
