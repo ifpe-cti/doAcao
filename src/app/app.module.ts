@@ -177,13 +177,10 @@ import { FlebomistaService } from './flebomista.service';
     TerceiroRequisitoHemopeComponent,
     TiposSanguineosHemopeComponent,
     VolumeDeSangueHemopeComponent,
-<<<<<<< HEAD
-    VisualizacaoFichaMedicaIndividualCompone,
-    GraficoPedidosDeDoacaoComponentnt,
-=======
+
     VisualizacaoFichaMedicaIndividualComponent,
     ListagemPedidosComponent,
->>>>>>> f6f41e3f1a78d86502eed0f80cbdab02a9ff2965
+    GraficoPedidosDeDoacaoComponent,
     
   ],
 
