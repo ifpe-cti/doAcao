@@ -9,7 +9,8 @@
   <div class="ui-g">
     <div class="ui-g-4"></div>
     <div class="ui-g-4">
-      <p-calendar [(ngModel)]="agendamentoDoacao.data" [showIcon]="true"></p-calendar>
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+        <p-inputMask mask="99/99/9999" [(ngModel)]="agendamentoDoacao.data" placeholder="Data" slotChar="dd/mm/aaaa"></p-inputMask>
     </div>
     <div class="ui-g-4"></div>
   </div>

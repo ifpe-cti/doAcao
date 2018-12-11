@@ -80,7 +80,7 @@ export class VisualizacaoFichaMedicaIndividualComponent implements OnInit {
       { field: 'numeroDoTubo', header: 'Número do tubo' },
     ];
 
-    this.items = this.items = this.menusService.itensHemope;
+    this.items = this.items = this.menusService.itensUsuario;
 
 
   }
