@@ -39,17 +39,6 @@ export class MenusService {
                       {label: 'Listar Flebomista', routerLink: '/listagem-flebomistas'}]}    
                   ]]},
 
-                  {
-                    label: '  Pedidos de Doação', icon: 'fa-heart-o',
-                    items: [
-                      [
-                        {
-                          items: [
-                            { label: 'Listar todas os pedidos de doação', routerLink: ['/listagem-pedidos'] },
-                          ]
-                        },
-                      ]]
-                  },
 
           { label: ' Listar ', icon: 'fa-list',
           items: [
@@ -64,7 +53,11 @@ export class MenusService {
                   },
                   {
                     items: [{label: 'Listar todos os agendamentos de doação',  routerLink: '/visualizacao-agendamentos'}]
-                  }
+                  },
+                  
+                  { items: [{ label: 'Listar todas os pedidos de doação', routerLink: '/listagem-pedidos' }],}
+
+                 
               ]
             ] 
           },
