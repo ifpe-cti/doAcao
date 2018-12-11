@@ -80,7 +80,7 @@ export class CadastroComponent implements OnInit {
     this.orgaosExpeditores = [
       { label: 'Órgão Expeditor', value: null },
       { label: 'SSP — Secretaria de Segurança Pública', value: "SSP" },
-      { label: 'SSD — Secretaria de Defesa Social', value: "SSD" },
+      { label: 'SDS — Secretaria de Defesa Social', value: "SSD" },
       { label: 'DETRAN — Departamento Estadual de Trânsito', value: "DETRAN" },
       { label: 'MA — Ministério da Aeronáutica', value: "MA" },
       { label: 'MM — Ministério da Marinha', value: "MM" },
