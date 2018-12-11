@@ -12,6 +12,7 @@ export class TiposSanguineosComponent implements OnInit {
   
   data: any;
   items: MenuItem[];
+  
 
   constructor(private menusSevice: MenusService, private router:Router) { 
     this.items = this.menusSevice.itensMaisInformacoes;
