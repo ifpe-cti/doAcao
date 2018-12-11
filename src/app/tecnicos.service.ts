@@ -41,39 +41,18 @@ export class TecnicoService {
     });
     return tecnicos;
   }
-
-  filtrarTecnicosPorCPF(cpf) {
+  filtrarTecnicosPorNome(nome) {
     return new Observable<String[]>(observer => {
       this.listarTodos()
         .subscribe(meuObservable => {
           this.todosOsTecnicos = meuObservable as Tecnico[]
-          let TecnicosFiltrados: String[] = []
+          let tecnicosFiltrados: String[] = []
           for (let i = 0; i < this.todosOsTecnicos.length; i++) {
-            if (this.todosOsTecnicos[i].cpf.search(cpf) != -1) { // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 
-              TecnicosFiltrados.push(this.todosOsTecnicos[i].cpf);
+            if (this.todosOsTecnicos[i].nome.search(nome) != -1) { // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 
+              tecnicosFiltrados.push(this.todosOsTecnicos[i].nome);
             }
           }
-          observer.next(TecnicosFiltrados);
-          observer.complete();
-        }
-        );
-    })
-  }
-
-  resgatarTecnicoPorCPF(cpf) {
-    return new Observable<Tecnico[]>(observer => {
-      this.listarTodos()
-        .subscribe(meuObservable => {
-          this.todosOsTecnicos = meuObservable as Tecnico[]
-          let tecnicos: Tecnico[];
-          let tecnicoCPF: String[];
-          for (let i = 0; i < this.todosOsTecnicos.length; i++) {
-            if (this.todosOsTecnicos[i].cpf.search(cpf) != -1) { // VERIFICAR APENAS O INÍCIO DO CPF E NÃO ELE TODO 
-              tecnicos.push(this.todosOsTecnicos[i]);
-              tecnicoCPF.push(this.todosOsTecnicos[i].cpf);
-            }
-          }
-          observer.next(tecnicos);
+          observer.next(tecnicosFiltrados);
           observer.complete();
         }
         );

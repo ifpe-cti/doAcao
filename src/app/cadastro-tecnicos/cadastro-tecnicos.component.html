@@ -1,20 +1,29 @@
-  <body>
-    <div class="ui-g">
-            <p-megaMenu [model]="items"></p-megaMenu>
-        <div class="ui-g-4"></div>
-        <div class="ui-g-4">
-            <h3>Cadastro de Técnicos</h3>
+<p-megaMenu [model]="items"></p-megaMenu>
+<p></p>
 
-            <p></p>
-            <input type="text" placeholder="Nome Completo" pInputText [(ngModel)]="tecnico.nome" required/>
+<h3>Cadastro de Técnicos</h3>
 
-            <p></p>
-            <input type="text" placeholder="CPF" pInputText [(ngModel)]="tecnico.cpf" required/>
-            <p></p>
+<div class="ui-g">
+    <div class="ui-g-4"></div>
+    <div class="ui-g-4">
+        <div class="ui-g">
 
-            <button pButton type="button" label="Enviar dados" [disabled]="!tecnico.nome || !tecnico.cpf" 
-            (click)="cadastrarTecnico()" class="ui-button-danger"></button>
+            <div class="ui-g-4"></div>
+            <div class="ui-g-4">
+              
+
+                <p></p>
+                <input type="text" placeholder="Nome Completo" pInputText [(ngModel)]="tecnico.nome" required/>
+
+                <p></p>
+                <input type="text" placeholder="CPF" pInputText [(ngModel)]="tecnico.cpf" required/>
+                <p></p>
+
+                <button pButton type="button" label="Enviar dados" [disabled]="!tecnico.nome || !tecnico.cpf" (click)="cadastrarTecnico()"
+                    class="ui-button-danger"></button>
+            </div>
+            <div class="ui-g-4"></div>
         </div>
-        <div class="ui-g-4"></div>
     </div>
-  </body>
+    <div class="ui-g-4"></div>
+</div>

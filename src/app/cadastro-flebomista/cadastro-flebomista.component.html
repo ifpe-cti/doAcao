@@ -1,20 +1,32 @@
-<body>
-    <div class="ui-g">
-            <p-megaMenu [model]="items"></p-megaMenu>
-        <div class="ui-g-4"></div>
-        <div class="ui-g-4">
-            <h3>Cadastro de Flebomistas</h3>
+<p-megaMenu [model]="items"></p-megaMenu>
+<p></p>
 
-            <p></p>
-            <input type="text" placeholder="Nome Completo" pInputText [(ngModel)]="flebomista.nome" required/>
+<h3>Cadastro de Flebomistas</h3>
 
-            <p></p>
-            <input type="text" placeholder="CPF" pInputText [(ngModel)]="flebomista.cpf" required/>
-            <p></p>
 
-            <button pButton type="button" label="Enviar dados" [disabled]="!flebomista.nome || !flebomista.cpf" 
-            (click)="cadastrarFlebomista()" class="ui-button-danger"></button>
-        </div>
-        <div class="ui-g-4"></div>
-    </div>
-  </body>
+<div class="ui-g">
+    <div class="ui-g-4"></div>
+    <div class="ui-g-4">
+        <div class="ui-g">
+            
+            <div class="ui-g-4"></div>
+            <div class="ui-g-4">
+    
+               
+                <p></p>
+                <input type="text" placeholder="Nome Completo" pInputText [(ngModel)]="flebomista.nome" required/>
+    
+                <p></p>
+                <input type="text" placeholder="CPF" pInputText [(ngModel)]="flebomista.cpf" required/>
+                <p></p>
+    
+                <button pButton type="button" label="Enviar dados" [disabled]="!flebomista.nome || !flebomista.cpf" 
+                (click)="cadastrarFlebomista()" class="ui-button-danger"></button>
+            </div>
+            <div class="ui-g-4"></div>
+        </div></div>
+    <div class="ui-g-4"></div>
+</div>
+
+
+

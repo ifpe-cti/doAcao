@@ -6,6 +6,7 @@ import { RequisicaoDeExameService } from '../requisicao-de-exame.service';
 import { UsuariosService } from '../usuarios.service';
 import { MenuItem } from 'primeng/primeng';
 import { MenusService } from '../menus.service';
+import { TecnicoService } from '../tecnicos.service';
 
 
 
@@ -21,14 +22,21 @@ export class RequisicaoDoExameComponent implements OnInit {
   cpf: String;
   requisicaoExames: RequisicaoDeExames;
   results: String[] = [];
+  resultsTecnicos: String [] = [];
   nomeUsuarioResgatadoPorCPF: String;
 
   usuarios: Usuario[] = [];
 
   constructor(private servicoRequisicaoExames: RequisicaoDeExameService, private router: Router,
-    private servicoUsuario: UsuariosService, private menusService: MenusService) {
+    private servicoUsuario: UsuariosService, private menusService: MenusService, private tecnicosService: TecnicoService) {
     this.requisicaoExames = new RequisicaoDeExames();
     
+  }
+
+  searchTecnico(nomeTecnico) {
+    this.tecnicosService.filtrarTecnicosPorNome(nomeTecnico.query).subscribe(data => {
+      this.resultsTecnicos = data;
+    });
   }
 
   search(cpf) {

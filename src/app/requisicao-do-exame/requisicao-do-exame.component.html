@@ -64,8 +64,8 @@
       <h3>Informações Técnicas</h3>
 
       <span class="ui-float-label">
-        <input id="float-input" [(ngModel)]="requisicaoExames.tecnicoResponsavel" type="text" size="30" pInputText>
-        <label for="float-input">Técnico Responsável</label>
+        <p-autoComplete [(ngModel)]="requisicaoExames.tecnicoResponsavel" placeholder="Técnico Responsável" [suggestions]="resultsTecnicos"
+          (completeMethod)="searchTecnico($event)"> </p-autoComplete>
       </span>
 
       <p></p>
@@ -79,7 +79,8 @@
 
       <button pButton type="button" [disabled]="!cpf || !requisicaoExames.numeroDocumentoDoador || !requisicaoExames.tipoDocumentoDoador
        || !requisicaoExames.tipoDocumentoDoador || !requisicaoExames.orgaoExpeditorDoador || !requisicaoExames.nomePaiDoador
-        || !requisicaoExames.nomeMaeDoador || !requisicaoExames.tecnicoResponsavel || !requisicaoExames.etiquetaDaAmostra" label="Enviar Dados" (click)="adicionarRequisicaoExame()" class="ui-button-danger"></button>
+        || !requisicaoExames.nomeMaeDoador || !requisicaoExames.tecnicoResponsavel || !requisicaoExames.etiquetaDaAmostra"
+        label="Enviar Dados" (click)="adicionarRequisicaoExame()" class="ui-button-danger"></button>
     </div>
 
 
