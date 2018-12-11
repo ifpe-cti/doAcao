@@ -9,7 +9,7 @@
           <p-table [style]="{'width':'900px'}" [columns]="cols" [value]="pedidosDeDoacao" selectionMode="single" [(selection)]="selectedPedidoDoacao"
               (onRowSelect)="onRowSelect($event)" [paginator]="true" [rows]="15">
               <ng-template pTemplate="caption">
-                  Pedidos de doação 
+                  Pedidos de Doação
               </ng-template>
               <ng-template pTemplate="header" let-columns>
                   <tr>
@@ -64,8 +64,8 @@
               </div>
               <p-footer>
                   <div class="ui-dialog-buttonpane ui-helper-clearfix">
-                      <button type="button" class="ui-button-danger" pButton icon="fa fa-close" (click)="delete()" label="Aprovar"></button>
-                      <button type="button" class="ui-button-danger" pButton icon="fa fa-close" (click)="delete()" label="Recusar"></button>
+                      <button type="button" class="ui-button-danger" pButton icon="" (click)="aprovar()" label="Aprovar"></button>
+                      <button type="button" class="ui-button-danger" pButton icon="" (click)="delete()" label="Recusar"></button>
                       <button type="button" class="ui-button-danger" pButton icon="fa fa-check" (click)="save()" label="Salvar"></button>
                   </div>
               </p-footer>

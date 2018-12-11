@@ -49,6 +49,8 @@ export class VisualizacaoSolicitacoesComponent implements OnInit {
     this.displayDialog = false;
   }
 
+/**
+ * 
   delete() {
     let index = this.solicitacoes.indexOf(this.selectedSolicitacao);
     this.solicitacoes = this.solicitacoes.filter((val, i) => i != index);
@@ -57,6 +59,8 @@ export class VisualizacaoSolicitacoesComponent implements OnInit {
 
     this.solicitacaoDeSangueService.apagarSolicitacaoFirebase(this.selectedSolicitacao);
   }
+ */
+
 
   onRowSelect(event) {
     this.newSolicitacao = false;
@@ -74,13 +78,19 @@ export class VisualizacaoSolicitacoesComponent implements OnInit {
   }
 
   aprovar(){
-
     this.pedidoDeDoacao.cpfUsuario = this.selectedSolicitacao.cpfUsuario;
     this.pedidoDeDoacao.nomeUsuario = this.solicitacaoSanguinea.nomeUsuario;
     this.pedidoDeDoacao.tipoSanguineo = this.solicitacaoSanguinea.tipoSanguineo;
     
-    this.pedidosDoacaoService.cadastrarPedidoDeSangueFirebase(this.pedidoDeDoacao);
-    this.solicitacaoDeSangueService.apagarSolicitacaoFirebase(this.solicitacaoSanguinea);
+   this.pedidosDoacaoService.cadastrarPedidoDeSangueFirebase(this.pedidoDeDoacao);
+
+   let index = this.solicitacoes.indexOf(this.selectedSolicitacao);
+   this.solicitacoes = this.solicitacoes.filter((val, i) => i != index);
+   this.solicitacaoSanguinea = null;
+   this.displayDialog = false;
+
+  this.solicitacaoDeSangueService.apagarSolicitacaoFirebase(this.selectedSolicitacao);
+
   }
 
   ngOnInit() {

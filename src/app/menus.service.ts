@@ -40,7 +40,7 @@ export class MenusService {
                   ]]},
 
                   {
-                    label: '  Pedidos de Doação', icon: 'fa-heart',
+                    label: '  Pedidos de Doação', icon: 'fa-heart-o',
                     items: [
                       [
                         {

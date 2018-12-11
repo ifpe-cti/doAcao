@@ -66,9 +66,15 @@ export class ListagemPedidosComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.pedidosDeDoacaoService.listarTodos().subscribe( pedidos => { 
+    this.pedidosDeDoacaoService.listarTodos().subscribe(pedidos => { 
       this.pedidosDeDoacao = pedidos;
     })
+
+    this.cols = [
+      { field: 'nomeUsuario', header: 'Nome do solicitante' },
+      { field: 'cpfUsuario', header: 'CPF do solicitante' },
+      { field: 'tipoSanguineo', header: 'Tipo do sangue solicitado' }
+    ]
 
     this.items = this.menusService.itensHemope;
 
