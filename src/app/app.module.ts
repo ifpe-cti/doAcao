@@ -113,6 +113,7 @@ import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
 import { TecnicoService } from './tecnicos.service';
 import { FlebomistaService } from './flebomista.service';
 import { VisualizacaoFichaMedicaIndividualComponent } from './visualizacao-ficha-medica-individual/visualizacao-ficha-medica-individual.component';
+import { ListagemPedidosComponent } from './listagem-pedidos/listagem-pedidos.component';
 
 
 
@@ -177,6 +178,7 @@ import { VisualizacaoFichaMedicaIndividualComponent } from './visualizacao-ficha
     TiposSanguineosHemopeComponent,
     VolumeDeSangueHemopeComponent,
     VisualizacaoFichaMedicaIndividualComponent,
+    ListagemPedidosComponent,
     
   ],
 

@@ -6,8 +6,6 @@ describe("Conjunto de testes de Solicitação Sanguínea", () => {
         expect(pedidoDeDoacao.validarPedidoDeDoacao()).toBeFalsy();
     })
 
-
-
     it("Deve retornar verdadeiro, pois todos os dados da solicitação são válidos", () => {
         let pedidoDeDoacao: PedidoDeDoacao = new PedidoDeDoacao();
 

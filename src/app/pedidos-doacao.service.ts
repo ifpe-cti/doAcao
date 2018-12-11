@@ -1,29 +1,31 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from "angularfire2/firestore";
 import { Observable } from 'rxjs/Observable';
-import { SolicitacaoSanguinea } from './models/solicitacaoSanguinea';
+import { PedidoDeDoacao } from './models/pedido-de-doacao';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PedidosDoacaoService {
 
- constructor(private servicoFirebase: AngularFirestore) {
+  constructor(private servicoFirebase: AngularFirestore) {
     this.pedidoDoacaoCollection = this.servicoFirebase.collection("pedido-de-doacao");
   }
 
+  todosOsPedidos: PedidoDeDoacao[] = [];
+
   private pedidoDoacaoCollection: AngularFirestoreCollection<any>;
 
-  cadastrarPedidoDeSangueFirebase(solicitacaoSangue: SolicitacaoSanguinea) {
-    this.pedidoDoacaoCollection.add(solicitacaoSangue.toDocument()).then(
+  cadastrarPedidoDeSangueFirebase(pedidoDeDoacao: PedidoDeDoacao) {
+    this.pedidoDoacaoCollection.add(pedidoDeDoacao.toDocument()).then(
       resultado => {
-        solicitacaoSangue.id = resultado.id;
+        pedidoDeDoacao.id = resultado.id;
       });
   }
 
-  listarTodas(): Observable<any[]> {
+  listarTodos(): Observable<any[]> {
     let resultados: any[] = [];
-    let solicitacoes = new Observable<any[]>(observer => {
+    let pedidos = new Observable<any[]>(observer => {
       this.pedidoDoacaoCollection.snapshotChanges().subscribe(result => {
         result.map(documents => {
           let id = documents.payload.doc.id;
@@ -35,11 +37,31 @@ export class PedidosDoacaoService {
         observer.complete();
       });
     });
-    return solicitacoes;
+    return pedidos;
   }
 
-  apagarSolicitacaoFirebase(solicitacao): Promise<void> {
-    return this.pedidoDoacaoCollection.doc(solicitacao.id).delete();
+  filtrarPedidosDeDoacaoPorTipoSanguineo(tipoSanguineo) {
+    return new Observable<PedidoDeDoacao[]>(observer => {
+      this.listarTodos()
+        .subscribe(meuObservable => {
+          this.todosOsPedidos = meuObservable as PedidoDeDoacao[]
+          let pedidosFiltrados: any[] = [];
+
+          for (let i = 0; i < this.todosOsPedidos.length; i++) {
+            if (this.todosOsPedidos[i].tipoSanguineo == tipoSanguineo) {
+              pedidosFiltrados.push(this.todosOsPedidos[i]);
+            }
+          }
+          observer.next(pedidosFiltrados);
+          observer.complete();
+
+          return pedidosFiltrados;
+        });
+    });
+  }
+
+  apagarSolicitacaoFirebase(pedido): Promise<void> {
+    return this.pedidoDoacaoCollection.doc(pedido.id).delete();
   }
 
 
