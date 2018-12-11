@@ -106,8 +106,6 @@ export class ListagemDeUsuariosComponent implements OnInit {
     ]
 
     this.items = this.menusService.itensHemope;
-
-    this.activeItem = this.items[6];
   }
 
 }

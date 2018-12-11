@@ -4,7 +4,7 @@ export class PedidoDeDoacao{
     nomeUsuario: String;
     cpfUsuario: String;
     tipoSanguineo: String;
-    id?: String;
+    id?: string;
    
    validarPedidoDeDoacao(){
        if(this.nomeUsuario == "" || this.cpfUsuario == "" || this.tipoSanguineo == ""){
