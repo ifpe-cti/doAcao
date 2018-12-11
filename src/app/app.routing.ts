@@ -41,6 +41,7 @@ import { ReacoesAdversasComponent } from './maisInformacoes/reacoes-adversas/rea
 import { IntervaloComponent } from './maisInformacoes/intervalo/intervalo.component';
 import { VolumeDeSangueComponent } from './maisInformacoes/volume-de-sangue/volume-de-sangue.component';
 import { PosDoacaoComponent } from './maisInformacoes/pos-doacao/pos-doacao.component';
+import { GraficoPedidosDeDoacaoComponent } from './grafico-pedidos-de-doacao/grafico-pedidos-de-doacao.component';
 import { InformacoesSobreDoacaoHemopeComponent } from './informacoes-sobre-doacao-hemope/informacoes-sobre-doacao-hemope.component';
 // informações hemope
 import { BeneficiosHemopeComponent } from './maisInformacoesHemope/beneficios-hemope/beneficios-hemope.component';
@@ -86,6 +87,8 @@ const APP_ROUTES: Routes = [
 { path: 'informacoes-sobre-doacao', component: InformacoesSobreDoacaoComponent},
 { path: 'listagem-flebomistas', component: ListagemFlebomistasComponent},
 { path: 'cadastro-flebomistas', component: CadastroFlebomistaComponent},
+{ path: 'grafico-pedidos-de-doacao', component: GraficoPedidosDeDoacaoComponent},
+
 
 
 { path: 'fichas-medicas-individuais', component: VisualizacaoFichaMedicaIndividualComponent},

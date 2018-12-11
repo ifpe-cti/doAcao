@@ -56,6 +56,7 @@ export class MenusService {
               ]
             ] 
           },
+          {label: '  Gráfico com pedidos de doação', icon: 'fa-stethoscope', routerLink: '/grafico-pedidos-de-doacao'},
           { label: '  Encerrar sessão', icon: 'fa-power-off', routerLink: '/login' },
 
         ]
