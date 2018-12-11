@@ -31,7 +31,6 @@ export class VisualizacaoFichaMedicaIndividualComponent implements OnInit {
   constructor(private usuariosService: UsuariosService, private fichasMedicasService: FichasMedicasService,
     private menusService: MenusService) { }
 
- 
     save() {
       let fichas = [...this.fichasIndividuais];
       if (this.newFichaMedica)

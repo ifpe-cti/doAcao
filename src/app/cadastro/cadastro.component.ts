@@ -31,6 +31,7 @@ export class CadastroComponent implements OnInit {
     this.usuario = new Usuario();
   }
 
+  
   voltarLogin() {
     this.router.navigate(['/login']);
   }
@@ -45,6 +46,8 @@ export class CadastroComponent implements OnInit {
     if (verificaUser = false) {
       this.messagesService.showErrorCadastro();
     } else {
+
+      
       this.servicoUsuario.cadastrarUsuarioFirebase(this.usuario);
       this.router.navigate(['/login']);
     }

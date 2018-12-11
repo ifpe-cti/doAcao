@@ -28,8 +28,13 @@ export class LoginComponent implements OnInit {
   constructor(private servicoUsuario: UsuariosService, private router: Router, private authService: AuthService,
   private messagesService: MessagesService) { }
 
-  
+  showErrorLogin() {
+    this.msgs = [];
+    this.msgs.push({ severity: 'error', summary: 'User ou senha incorretos', 
+    detail: 'Os dados digitados não estão cadastrados no banco de dados ou não condizem' });
+  }
 
+ 
   signInWithGoogle() {
     this.authService.signInWithGoogle()
       .then((res) => {
@@ -51,10 +56,12 @@ export class LoginComponent implements OnInit {
     senha = this.senhaUsuario;
     this.servicoUsuario.loginUsuario(user, senha).subscribe(usuario => {
       if (usuario == null) {
-        this.messagesService.showErrorLogin();
-      } else {
+        
+        this.showErrorLogin();
 
-        this.servicoUsuario.loginUsuario(user, senha).subscribe(meuObservable => {
+      } else {
+    
+          this.servicoUsuario.loginUsuario(user, senha).subscribe(meuObservable => {
           this.servicoUsuario.usuarioLogado = meuObservable as Usuario;
 
           console.log(this.servicoUsuario.usuarioLogado.cpf)
@@ -68,7 +75,7 @@ export class LoginComponent implements OnInit {
           }
         })
 
-        this.messagesService.showSuccessLogin();
+   
 
       }
     });
