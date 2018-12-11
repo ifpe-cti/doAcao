@@ -1,4 +1,6 @@
-import { TestBed, inject } from '@angular/core/testing';
+/**
+ * 
+ * import { TestBed, inject } from '@angular/core/testing';
 
 import { TecnicoService } from './tecnicos.service';
 
@@ -13,3 +15,6 @@ describe('TecnicoServiceService', () => {
     expect(service).toBeTruthy();
   }));
 });
+
+ */
+

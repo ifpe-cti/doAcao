@@ -1,4 +1,5 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/**
+ * import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DoacaoDeMedulaHemopeComponent } from './doacao-de-medula-hemope.component';
 
@@ -23,3 +24,7 @@ describe('DoacaoDeMedulaHemopeComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+ * 
+ */
+

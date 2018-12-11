@@ -6,8 +6,6 @@ describe("Conjunto de testes de Agendamento de Doações", () => {
         expect(agendamentoDoacao.validarAgendamentoDoacao()).toBeFalsy();
     })
 
-
-
     it("Deve retornar verdadeiro, pois todos os dados do agendamento são válidos", () => {
         let agendamentoDoacao: AgendamentoDoacao = new AgendamentoDoacao();
 
@@ -18,5 +16,4 @@ describe("Conjunto de testes de Agendamento de Doações", () => {
         expect(agendamentoDoacao.validarAgendamentoDoacao()).toBeTruthy();
     })
 }
-
 );

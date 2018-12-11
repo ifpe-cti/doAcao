@@ -1,4 +1,5 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/**
+ * import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VolumeDeSangueHemopeComponent } from './volume-de-sangue-hemope.component';
 
@@ -23,3 +24,7 @@ describe('VolumeDeSangueHemopeComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+ * 
+ */
+
