@@ -65,9 +65,7 @@ import { TiposSanguineosHemopeComponent } from './maisInformacoesHemope/tipos-sa
 import { VolumeDeSangueHemopeComponent } from './maisInformacoesHemope/volume-de-sangue-hemope/volume-de-sangue-hemope.component';
 import { VisualizacaoFichaMedicaIndividualComponent } from './visualizacao-ficha-medica-individual/visualizacao-ficha-medica-individual.component';
 import { ListagemPedidosComponent } from './listagem-pedidos/listagem-pedidos.component';
-import { GraficoPedidosDeDoacaoComponent } from './grafico-pedidos-de-doacao/grafico-pedidos-de-doacao.component't';
-
-
+import { GraficoPedidosDeDoacaoComponent } from './grafico-pedidos-de-doacao/grafico-pedidos-de-doacao.component';
 
 //module
 
