@@ -24,49 +24,28 @@ export class VisualizacaoFichaMedicaIndividualComponent implements OnInit {
 
   displayDialog: boolean;
   selectedFichaMedica: FichaMedica;
-  fichaMedica: FichaMedica = new FichaMedica();
+  fichaMedica: FichaMedica;
 
   newFichaMedica: boolean;
 
   constructor(private usuariosService: UsuariosService, private fichasMedicasService: FichasMedicasService,
     private menusService: MenusService) { }
 
-    save() {
-      let fichas = [...this.fichasIndividuais];
-      if (this.newFichaMedica)
-          this.fichasIndividuais.push(this.fichaMedica);
-      else
-          fichas[this.fichasIndividuais.indexOf(this.selectedFichaMedica)] = this.fichaMedica;
-  
-      this.fichasIndividuais = fichas;
-      this.fichaMedica = null;
-      this.displayDialog = false;
-  }
-  
-  delete() {
-      let index = this.fichasIndividuais.indexOf(this.selectedFichaMedica);
-      this.fichasIndividuais = this.fichasIndividuais.filter((val, i) => i != index);
-      this.fichaMedica = null;
-      this.displayDialog = false;
-  
-      this.fichasMedicasService.apagarFichaMedicaFirebase(this.selectedFichaMedica);
-  }
-  
+
   onRowSelect(event) {
     this.newFichaMedica = false;
     this.fichaMedica = this.cloneFichaMedica(event.data);
     this.displayDialog = true;
   }
-  
+
   cloneFichaMedica(f: FichaMedica): FichaMedica {
     let ficha: FichaMedica = new FichaMedica()
 
     for (let prop in f) {
-        ficha[prop] = f[prop];
+      ficha[prop] = f[prop];
     }
     return ficha;
   }
-
 
 
   ngOnInit() {

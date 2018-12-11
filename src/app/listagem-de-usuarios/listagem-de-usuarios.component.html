@@ -79,12 +79,22 @@
 
                     <div class="ui-g-12">
                         <div class="ui-g-4">
+                            <label for="tipoDocumento">Tipo Sanguíneo</label>
+                        </div>
+                        <div class="ui-g-8">
+                            <p-dropdown [options]="tiposSanguineos" [(ngModel)]="usuario.tipoSanguineo"></p-dropdown>
+                        </div>
+                    </div>
+
+                    <div class="ui-g-12">
+                        <div class="ui-g-4">
                             <label for="tipoDocumento">Tipo do Documento</label>
                         </div>
                         <div class="ui-g-8">
                             <p-dropdown [options]="tiposDocumento" [(ngModel)]="usuario.tipoDocumento"></p-dropdown>
                         </div>
                     </div>
+
                     <div class="ui-g-12">
                         <div class="ui-g-4">
                             <label for="orgaoExpeditor">Órgão Expeditor</label>

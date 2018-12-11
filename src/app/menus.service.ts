@@ -83,6 +83,7 @@ export class MenusService {
         ]
       ] 
     },
+    { label: '  Pedidos de Doacão', icon: 'fa-plus-square', routerLink: '/listagem-pedidos-por-tipoSanguineo' },
     { label: '  Fichas médicas', icon: 'fa-stethoscope', routerLink: '/fichas-medicas-individuais' },
     { label: '  Encerrar sessão', icon: 'fa-power-off', routerLink: '/login' },
   ]

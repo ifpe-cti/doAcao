@@ -21,6 +21,8 @@ export class ListagemDeUsuariosComponent implements OnInit {
   tiposDocumento: SelectItem[];
   orgaosExpeditores: SelectItem[];
 
+  tiposSanguineos: SelectItem[];
+
   usuario: Usuario = new Usuario();
 
   displayDialog: boolean;
@@ -82,6 +84,18 @@ export class ListagemDeUsuariosComponent implements OnInit {
       ];
 
     });
+
+    this.tiposSanguineos = [
+      { label: 'Tipo Sanguíneo', value: null },
+      { label: "A+", value: "A+" },
+      { label: 'A-', value: 'A-' },
+      { label: 'B+', value: 'B+' },
+      { label: 'B-', value: 'B-' },
+      { label: 'AB+', value: 'AB+' },
+      { label: 'AB-', value: 'AB-' },
+      { label: 'O+', value: 'O+' },
+      { label: 'O-', value: 'O-' }
+    ];
 
     this.tiposDocumento = [
       { label: 'Tipo de Documento', value: null },
