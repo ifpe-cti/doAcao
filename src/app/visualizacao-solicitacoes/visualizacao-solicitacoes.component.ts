@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { SolicitacaoDeSangueService } from '../solicitacao-de-sangue.service';
+import { PedidosDoacaoService } from '../pedidos-doacao.service';
 import { Router } from '@angular/router';
 import { MenusService } from '../menus.service';
 import { MenuItem } from 'primeng/primeng';
 import { SolicitacaoSanguinea } from '../models/solicitacaoSanguinea';
+import { PedidoDeDoacao } from '../models/pedido-de-doacao';
 
 @Component({
   selector: 'app-visualizacao-solicitacoes',
@@ -16,6 +18,8 @@ export class VisualizacaoSolicitacoesComponent implements OnInit {
 
   solicitacaoSanguinea: SolicitacaoSanguinea = new SolicitacaoSanguinea();
 
+  pedidoDeDoacao: PedidoDeDoacao = new PedidoDeDoacao();
+
   displayDialog: boolean;
   selectedSolicitacao: SolicitacaoSanguinea;
   newSolicitacao: boolean;
@@ -25,7 +29,7 @@ export class VisualizacaoSolicitacoesComponent implements OnInit {
 
 
   constructor(private solicitacaoDeSangueService: SolicitacaoDeSangueService,
-    private router: Router, private menusService: MenusService) { }
+    private router: Router, private menusService: MenusService, private pedidosDoacaoService: PedidosDoacaoService) { }
 
   showDialogToAdd() {
     this.newSolicitacao = true;
@@ -67,6 +71,16 @@ export class VisualizacaoSolicitacoesComponent implements OnInit {
     }
     return solicitacao;
 
+  }
+
+  aprovar(){
+
+    this.pedidoDeDoacao.cpfUsuario = this.selectedSolicitacao.cpfUsuario;
+    this.pedidoDeDoacao.nomeUsuario = this.solicitacaoSanguinea.nomeUsuario;
+    this.pedidoDeDoacao.tipoSanguineo = this.solicitacaoSanguinea.tipoSanguineo;
+    
+    this.pedidosDoacaoService.cadastrarPedidoDeSangueFirebase(this.pedidoDeDoacao);
+    this.solicitacaoDeSangueService.apagarSolicitacaoFirebase(this.solicitacaoSanguinea);
   }
 
   ngOnInit() {

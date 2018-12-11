@@ -59,7 +59,7 @@ export class MenusService {
         [
           {
             items: [
-              { label: 'Listar todas os pedidos de doação', routerLink: ['/requisicao-do-exame'] },
+              { label: 'Listar todas os pedidos de doação', routerLink: ['/listagem-pedidos'] },
             ]
           },
         ]]

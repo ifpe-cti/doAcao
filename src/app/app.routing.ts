@@ -61,6 +61,7 @@ import { TerceiroRequisitoHemopeComponent } from './maisInformacoesHemope/tercei
 import { TiposSanguineosHemopeComponent } from './maisInformacoesHemope/tipos-sanguineos-hemope/tipos-sanguineos-hemope.component';
 import { VolumeDeSangueHemopeComponent } from './maisInformacoesHemope/volume-de-sangue-hemope/volume-de-sangue-hemope.component';
 import { VisualizacaoFichaMedicaIndividualComponent } from './visualizacao-ficha-medica-individual/visualizacao-ficha-medica-individual.component';
+import { ListagemPedidosComponent } from './listagem-pedidos/listagem-pedidos.component';
 
 import { AuthGuard } from './auth-guard.service';
 
@@ -86,6 +87,7 @@ const APP_ROUTES: Routes = [
 { path: 'informacoes-sobre-doacao', component: InformacoesSobreDoacaoComponent},
 { path: 'listagem-flebomistas', component: ListagemFlebomistasComponent},
 { path: 'cadastro-flebomistas', component: CadastroFlebomistaComponent},
+{ path: 'listagem-pedidos', component: ListagemPedidosComponent},
 
 
 { path: 'fichas-medicas-individuais', component: VisualizacaoFichaMedicaIndividualComponent},
