@@ -63,8 +63,9 @@ import { SangueDoadoHemopeComponent } from './maisInformacoesHemope/sangue-doado
 import { TerceiroRequisitoHemopeComponent } from './maisInformacoesHemope/terceiro-requisito-hemope/terceiro-requisito-hemope.component';
 import { TiposSanguineosHemopeComponent } from './maisInformacoesHemope/tipos-sanguineos-hemope/tipos-sanguineos-hemope.component';
 import { VolumeDeSangueHemopeComponent } from './maisInformacoesHemope/volume-de-sangue-hemope/volume-de-sangue-hemope.component';
-
-
+import { VisualizacaoFichaMedicaIndividualComponent } from './visualizacao-ficha-medica-individual/visualizacao-ficha-medica-individual.component';
+import { ListagemPedidosComponent } from './listagem-pedidos/listagem-pedidos.component';
+import { GraficoPedidosDeDoacaoComponent } from './grafico-pedidos-de-doacao/grafico-pedidos-de-doacao.component';
 
 //module
 
@@ -112,8 +113,7 @@ import { MenusService } from './menus.service';
 import { AgendamentoDeDoacoesService } from './agendamento-de-doacoes.service';
 import { TecnicoService } from './tecnicos.service';
 import { FlebomistaService } from './flebomista.service';
-import { VisualizacaoFichaMedicaIndividualComponent } from './visualizacao-ficha-medica-individual/visualizacao-ficha-medica-individual.component';
-import { ListagemPedidosComponent } from './listagem-pedidos/listagem-pedidos.component';
+
 
 
 
@@ -177,8 +177,10 @@ import { ListagemPedidosComponent } from './listagem-pedidos/listagem-pedidos.co
     TerceiroRequisitoHemopeComponent,
     TiposSanguineosHemopeComponent,
     VolumeDeSangueHemopeComponent,
+
     VisualizacaoFichaMedicaIndividualComponent,
     ListagemPedidosComponent,
+    GraficoPedidosDeDoacaoComponent,
     
   ],
 

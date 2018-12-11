@@ -6,7 +6,7 @@ describe("Conjunto de testes do Usuário", () => {
         expect(usuario.validarUsuario()).toBeFalsy();
     })
 
-    it("Deve retornar verdadeiro, pois todos os dados do usuário sá válidos", () => {
+    it("Deve retornar verdadeiro, pois todos os dados do usuário são válidos", () => {
         let usuario: Usuario = new Usuario();
 
         usuario.nome = "Kim Minseok"
