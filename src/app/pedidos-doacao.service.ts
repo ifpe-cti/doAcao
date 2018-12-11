@@ -60,7 +60,11 @@ export class PedidosDoacaoService {
     });
   }
 
-  apagarSolicitacaoFirebase(pedido): Promise<void> {
+  atualizarPedidoFirebase(pedido: PedidoDeDoacao) {
+    return this.pedidoDoacaoCollection.doc(pedido.id).update(pedido);
+  }
+
+  apagarPedidoFirebase(pedido): Promise<void> {
     return this.pedidoDoacaoCollection.doc(pedido.id).delete();
   }
 
