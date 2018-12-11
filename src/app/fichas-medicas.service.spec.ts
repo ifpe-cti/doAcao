@@ -1,4 +1,5 @@
-import { TestBed, inject } from '@angular/core/testing';
+/**
+ * import { TestBed, inject } from '@angular/core/testing';
 
 import { FichasMedicasService } from './fichas-medicas.service';
 
@@ -13,3 +14,7 @@ describe('FichasMedicasService', () => {
     expect(service).toBeTruthy();
   }));
 });
+
+ * 
+ */
+

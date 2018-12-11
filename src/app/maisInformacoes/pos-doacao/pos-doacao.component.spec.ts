@@ -1,4 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/**
+ * 
+ * import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PosDoacaoComponent } from './pos-doacao.component';
 
@@ -23,3 +25,6 @@ describe('PosDoacaoComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+ */
+

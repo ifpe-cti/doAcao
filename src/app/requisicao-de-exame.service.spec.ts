@@ -1,3 +1,5 @@
+/**
+ * 
 import { TestBed, inject } from '@angular/core/testing';
 
 import { RequisicaoDeExameService } from './requisicao-de-exame.service';
@@ -13,3 +15,6 @@ describe('RequisicaoDeExameService', () => {
     expect(service).toBeTruthy();
   }));
 });
+ * 
+ */
+

@@ -1,4 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/**
+ * 
+ * import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginGoogleComponent } from './login-google.component';
 
@@ -23,3 +25,6 @@ describe('LoginGoogleComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+ */
+

@@ -1,4 +1,5 @@
-import { TestBed, inject } from '@angular/core/testing';
+/**
+ * import { TestBed, inject } from '@angular/core/testing';
 
 import { UsuariosService } from './usuarios.service';
 
@@ -13,3 +14,7 @@ describe('UsuariosService', () => {
     expect(service).toBeTruthy();
   }));
 });
+ * 
+ */
+
+

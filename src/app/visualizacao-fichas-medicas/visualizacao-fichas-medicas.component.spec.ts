@@ -1,4 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/**
+ * 
+ * import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VisualizacaoFichasMedicasComponent } from './visualizacao-fichas-medicas.component';
 
@@ -23,3 +25,6 @@ describe('VisualizacaoFichasMedicasComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+ */
+

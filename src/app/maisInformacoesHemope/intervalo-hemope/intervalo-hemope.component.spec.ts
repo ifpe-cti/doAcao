@@ -1,4 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/**
+ * 
+ * import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IntervaloHemopeComponent } from './intervalo-hemope.component';
 
@@ -23,3 +25,6 @@ describe('IntervaloHemopeComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+ */
+

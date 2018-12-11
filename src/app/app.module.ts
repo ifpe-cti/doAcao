@@ -115,6 +115,7 @@ import { FlebomistaService } from './flebomista.service';
 import { VisualizacaoFichaMedicaIndividualComponent } from './visualizacao-ficha-medica-individual/visualizacao-ficha-medica-individual.component';
 
 
+
 @NgModule({
 
   declarations: [

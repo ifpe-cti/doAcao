@@ -1,4 +1,5 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/**
+ * import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DashboardHemopeComponent } from './dashboard-hemope.component';
 
@@ -23,3 +24,7 @@ describe('DashboardHemopeComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+ */
+
+

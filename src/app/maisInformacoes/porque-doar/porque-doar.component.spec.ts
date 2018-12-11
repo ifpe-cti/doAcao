@@ -1,4 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/**
+ * 
+ * import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PorqueDoarComponent } from './porque-doar.component';
 
@@ -23,3 +25,6 @@ describe('PorqueDoarComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+ */
+
