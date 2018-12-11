@@ -18,8 +18,6 @@ export class ListagemPedidosComponent implements OnInit {
 
   pedidoSelecionado;
 
-
-
   pedidoDoacao: PedidoDeDoacao = new PedidoDeDoacao();
 
   displayDialog: boolean;
@@ -66,7 +64,6 @@ export class ListagemPedidosComponent implements OnInit {
     }
     return pedido;
   }
-
 
   ngOnInit() {
     this.pedidosDeDoacaoService.listarTodos().subscribe( pedidos => { 
